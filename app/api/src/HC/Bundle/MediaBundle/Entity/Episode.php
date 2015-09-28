@@ -47,71 +47,13 @@ class Episode extends BaseMediaEntity
      */
     private $bookmark;
 
-    /**
-     *
-     * @param float $bookmark
-     */
-    public function setBookmark($bookmark)
-    {
-        $this->watched = $bookmark;
-        return $this;
-    }
 
     /**
-     *
-     * @return float
-     */
-    public function getBookmark()
-    {
-        return $this->bookmark;
-    }
-
-    /**
-     *
-     * @param boolean $watched
-     */
-    public function setWatched($watched)
-    {
-        $this->watched = $watched;
-        return $this;
-    }
-
-    /**
-     *
-     * @return boolean
-     */
-    public function getWatched()
-    {
-        return $this->watched;
-    }
-
-    /**
-     *
-     * @param integer $duration
-     */
-    public function setDuration($duration)
-    {
-        $this->duration = $duration;
-        return $this;
-    }
-
-    /**
-     *
-     * @return integer
-     */
-    public function getDuration()
-    {
-        return $this->duration;
-    }
-
-
-
-
-
-
-    /**
+     * Set pubDate
      *
      * @param integer $pubDate
+     *
+     * @return Episode
      */
     public function setPubDate($pubDate)
     {
@@ -121,6 +63,7 @@ class Episode extends BaseMediaEntity
     }
 
     /**
+     * Get pubDate
      *
      * @return integer
      */
@@ -129,16 +72,89 @@ class Episode extends BaseMediaEntity
         return $this->pubDate;
     }
 
+    /**
+     * Set duration
+     *
+     * @param integer $duration
+     *
+     * @return Episode
+     */
+    public function setDuration($duration)
+    {
+        $this->duration = $duration;
+
+        return $this;
+    }
+
+    /**
+     * Get duration
+     *
+     * @return integer
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * Set watched
+     *
+     * @param boolean $watched
+     *
+     * @return Episode
+     */
+    public function setWatched($watched)
+    {
+        $this->watched = $watched;
+
+        return $this;
+    }
+
+    /**
+     * Get watched
+     *
+     * @return boolean
+     */
+    public function getWatched()
+    {
+        return $this->watched;
+    }
+
+    /**
+     * Set bookmark
+     *
+     * @param string $bookmark
+     *
+     * @return Episode
+     */
+    public function setBookmark($bookmark)
+    {
+        $this->bookmark = $bookmark;
+
+        return $this;
+    }
+
+    /**
+     * Get bookmark
+     *
+     * @return string
+     */
+    public function getBookmark()
+    {
+        return $this->bookmark;
+    }
 
     /**
      * Set subscription
      *
      * @param \HC\Bundle\MediaBundle\Entity\Subscription $subscription
+     *
      * @return Episode
      */
-    public function setMedia(\HC\Bundle\MediaBundle\Entity\Subscription $subscription = null)
+    public function setSubscription(\HC\Bundle\MediaBundle\Entity\Subscription $subscription = null)
     {
         $this->subscription = $subscription;
+
         return $this;
     }
 
@@ -151,17 +167,4 @@ class Episode extends BaseMediaEntity
     {
         return $this->subscription;
     }
-
-    public function setUserData($userData)
-    {
-        $this->userData = $userData;
-
-        return $this;
-    }
-
-    public function getUserData()
-    {
-        return $this->userData;
-    }
-
 }

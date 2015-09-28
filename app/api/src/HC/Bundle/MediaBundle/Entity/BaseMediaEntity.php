@@ -3,13 +3,10 @@
 namespace HC\Bundle\MediaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\MappedSuperclass;
 
-/**
- * Episode
- *
- * @ORM\Table(name="hc_episodes")
- * @ORM\Entity(repositoryClass="HC\Bundle\MediaBundle\Repository\EpisodeRepository")
- */
+/** @MappedSuperclass */
+
 class BaseMediaEntity
 {
 
@@ -57,6 +54,7 @@ class BaseMediaEntity
      */
     private $createDate;
 
+
     /**
      * Get id
      *
@@ -68,16 +66,21 @@ class BaseMediaEntity
     }
 
     /**
+     * Set title
      *
      * @param string $title
+     *
+     * @return BaseMediaEntity
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
         return $this;
     }
 
     /**
+     * Get title
      *
      * @return string
      */
@@ -87,35 +90,21 @@ class BaseMediaEntity
     }
 
     /**
-     *
-     * @param string $img
-     */
-    public function setImg($img)
-    {
-        $this->img = $img;
-        return $this;
-    }
-
-    /**
-     *
-     * @return string
-     */
-    public function getImg()
-    {
-        return $this->img;
-    }
-
-    /**
+     * Set description
      *
      * @param string $description
+     *
+     * @return BaseMediaEntity
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
     /**
+     * Get description
      *
      * @return string
      */
@@ -125,16 +114,21 @@ class BaseMediaEntity
     }
 
     /**
+     * Set src
      *
      * @param string $src
+     *
+     * @return BaseMediaEntity
      */
     public function setSrc($src)
     {
         $this->src = $src;
+
         return $this;
     }
 
     /**
+     * Get src
      *
      * @return string
      */
@@ -144,16 +138,45 @@ class BaseMediaEntity
     }
 
     /**
+     * Set img
      *
-     * @param integer $date
+     * @param string $img
+     *
+     * @return BaseMediaEntity
      */
-    public function setCreateDate($date)
+    public function setImg($img)
     {
-        $this->createDate = $date;
+        $this->img = $img;
+
         return $this;
     }
 
     /**
+     * Get img
+     *
+     * @return string
+     */
+    public function getImg()
+    {
+        return $this->img;
+    }
+
+    /**
+     * Set createDate
+     *
+     * @param integer $createDate
+     *
+     * @return BaseMediaEntity
+     */
+    public function setCreateDate($createDate)
+    {
+        $this->createDate = $createDate;
+
+        return $this;
+    }
+
+    /**
+     * Get createDate
      *
      * @return integer
      */
@@ -161,5 +184,4 @@ class BaseMediaEntity
     {
         return $this->createDate;
     }
-
 }

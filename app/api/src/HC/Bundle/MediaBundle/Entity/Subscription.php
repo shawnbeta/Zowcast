@@ -1,23 +1,21 @@
 <?php
 
-namespace HC\Bundle\subscriptionBundle\Entity;
+namespace HC\Bundle\MediaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use HC\Bundle\MediaBundle\Entity\BaseMediaEntity;
-use Symfony\Component\HttpFoundation\Tests\StringableObject;
 
 /**
  * Subscription
  *
  * @ORM\Table(name="subscriptions")
- * @ORM\Entity(repositoryClass="HC\Bundle\subscriptionBundle\Repositories\SubscriptionRepository")
+ * @ORM\Entity(repositoryClass="HC\Bundle\MediaBundle\Repositories\SubscriptionRepository")
  */
 class Subscription extends BaseMediaEntity
 {
 
     /**
      *
-     * @ORM\Column(name="media_type", type="media_type")
+     * @ORM\Column(name="media_type", type="integer")
      */
     private $mediaType;
 
@@ -39,18 +37,25 @@ class Subscription extends BaseMediaEntity
      */
     private $autoDownload;
 
+
+
+
     /**
+     * Set mediaType
      *
      * @param integer $mediaType
+     *
+     * @return Subscription
      */
     public function setMediaType($mediaType)
     {
-        $this->media_type = $mediaType;
+        $this->mediaType = $mediaType;
 
         return $this;
     }
 
     /**
+     * Get mediaType
      *
      * @return integer
      */
@@ -60,8 +65,11 @@ class Subscription extends BaseMediaEntity
     }
 
     /**
+     * Set homePage
      *
-     * @param integer $homePage
+     * @param string $homePage
+     *
+     * @return Subscription
      */
     public function setHomePage($homePage)
     {
@@ -71,6 +79,7 @@ class Subscription extends BaseMediaEntity
     }
 
     /**
+     * Get homePage
      *
      * @return string
      */
@@ -80,6 +89,21 @@ class Subscription extends BaseMediaEntity
     }
 
     /**
+     * Set machineName
+     *
+     * @param string $machineName
+     *
+     * @return Subscription
+     */
+    public function setMachineName($machineName)
+    {
+        $this->machineName = $machineName;
+
+        return $this;
+    }
+
+    /**
+     * Get machineName
      *
      * @return string
      */
@@ -89,21 +113,10 @@ class Subscription extends BaseMediaEntity
     }
 
     /**
-     *
-     * @param string $machineName
-     */
-    public function setMachineName($machineName)
-    {
-        $this->machineName = $machineName;
-
-        return $this;
-    }
-
-
-    /**
      * Set autoDownload
      *
      * @param boolean $autoDownload
+     *
      * @return Subscription
      */
     public function setAutoDownload($autoDownload)
