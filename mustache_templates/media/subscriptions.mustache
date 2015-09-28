@@ -1,0 +1,34 @@
+{{=<% %>=}}
+<!--Generated Code: mustache_templates/media/subscriptions.mustache -->
+<%# Subscriptions %>
+<div ng-controller="SubscriptionController" class="mediaView">
+    <header class="viewHeader clearfix">
+        <h1>Subscriptions</h1>
+        <!--<div class="headerMenu">-->
+            <!--<button ng-click="setSubscriptionStyle('list')"><i class="fa fa-th-list"></i></button>-->
+            <!--<button ng-click="setSubscriptionStyle('grid')"><i class="fa fa-th"></i></button>-->
+        <!--</div>-->
+    </header>
+
+    <div class="subscriptions">
+        <ul class="itemWrapper" ng-class="{'list': subscriptionStyle == 'list', 'grid': subscriptionStyle == 'grid'}">
+            <li class="swItem" ng-repeat="s in subscriptions|orderByTitle">
+
+                <div class="swImg">
+                    <span><img ng-src="{{s.img}}"></span>
+                    <!--<img src="assets/img/turtle.png">-->
+                </div>
+
+                <div class="swTitle">{{s.title}}</div>
+
+                <div class="actionbar">
+                    <button ng-click="setAutoDownload(s)"><i class="fa fa-download"></i>{{downloadToggle(s)}}</button>
+                    <button ng-click="doRemove(s)"><i class="fa fa-trash-o"></i>Delete Subscription</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<%/ Subscriptions %>
+<!-- End Generated Code: mustache_templates/media/subscriptions.mustache -->

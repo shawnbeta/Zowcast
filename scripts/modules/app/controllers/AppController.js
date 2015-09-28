@@ -1,0 +1,91 @@
+hcApp.controller('AppController', [
+    '$rootScope', '$scope', '$interval', 'PersistenceService', '_',
+    'SubscriptionService', 'EpisodeService', 'DepartureService',
+    'OverlayService', 'MediaService',
+ 	function($rootScope, $scope, $interval, PersistenceService, _,
+        SubscriptionService, EpisodeService, DepartureService,
+        OverlayService, MediaService){
+
+		// Run housekeeping
+        departureService = new DepartureService();
+        departureService.initialize();
+
+        $rootScope.loading = true;
+
+        var ps = new PersistenceService();
+        var sc = ps.loadData('SubscriptionCollection')|| {};
+        var ec = ps.loadData('EpisodeCollection')|| {};
+
+        // Collect episodes
+        var oldEpisodes = EpisodeService.gatherOld(ec);
+
+        if(oldEpisodes){
+
+            // Remove episode ID from episodeCollection
+            EpisodeService.removeFromEpisodeCollection(ec, oldEpisodes);
+            // Reload the collection
+            ec = ps.loadData('EpisodeCollection');
+            // Remove each episode
+            EpisodeService.removeFromLocalStorage(oldEpisodes);
+            // Remove episode ID from sec
+            EpisodeService.removeFromSEC(oldEpisodes); // working
+        }
+
+
+        $scope.fetchBulk = function(){
+        localStorage.clear();
+        // var h = new HelperService();
+        // Get the json response
+        var f = MediaService.fetchAll();
+
+        // returns subscription collection
+        f.then(function(rsp) {
+
+           var subscriptionObjCollection =
+               SubscriptionService.executeBulkRetrieval(rsp.data.subscriptions);
+               $rootScope.subscriptions = subscriptionObjCollection;
+            $rootScope.episodes =
+             EpisodeService.executeBulkRetrieval(
+                 subscriptionObjCollection, rsp.data.episodes);
+        });
+
+    };
+
+		// Use Services to load all subscriptions & Episodes
+		// from localStorage to application memory.
+		$rootScope.subscriptions = SubscriptionService.load(sc);
+		$rootScope.episodes = EpisodeService.load(ec);
+
+        $rootScope.OverlayManager = {};
+        $rootScope.toggleOverlay = function(){
+
+            //jQuery('#overlayWrapper').css({
+            //    'z-index': 5
+            //});
+            OverlayService.toggleOverlay(updateOverlayManager);
+        };
+
+        updateOverlayManager = function(om){
+            $rootScope.OverlayManager = om;
+        };
+
+        $rootScope.notifyDisabled = function() {
+            alert('This feature has been disabled.');
+        };
+
+        $rootScope.notifiyAbout = function(){
+            alert('<a href="http://google.com">Test</a>');
+        };
+
+        $rootScope.currentPage = 'episodes';
+
+
+
+
+
+
+        }]);
+
+
+document.getElementById("overlayWrapper").style.zIndex = "5";
+document.getElementById("mask").style.zIndex = "4";

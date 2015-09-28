@@ -1,0 +1,12 @@
+hc_utility:
+    resource: "@HCUtilityBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hc_app:
+    resource: "@HCAppBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hc_media:
+    resource: "@HCMediaBundle/Resources/config/routing.yml"
+    prefix:   /
+

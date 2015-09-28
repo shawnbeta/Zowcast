@@ -1,0 +1,188 @@
+@import (reference) "styles.less";
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  list-style-type: none;
+}
+
+h1,
+h2 {
+  font-family: @lato;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+.swContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.selected {
+  background: @secondary-color !important;
+  color: @dark1;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+
+
+@media(min-width: @screen-sm-min) {
+  .largeOnly {
+    display: block !important;
+  }
+  .smallOnly {
+    display: none !important;
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .largeOnly {
+    display: none !important;
+  }
+  .smallOnly {
+    display: block !important;
+  }
+}
+
+// Links and Buttons
+.swTextLink {
+  color: @primary-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.swButtonLink {
+  color: @white1;
+  background: @primary-color;
+  padding: 10px;
+  &:hover {
+    background: @base-color;
+  }
+}
+
+.swEclipse {
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  font-size:20px;
+  line-height:30px;
+  text-align:center;
+  background: transparent;
+}
+
+
+// Links and Buttons
+.swButton {
+  padding: 5px 10px;
+  background: @primary-color;
+  color: @white1;
+  &:hover {
+    background: @base-color;
+      color: @white1;
+  }
+  span,
+  i {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  i{
+    padding-right: 10px;
+  }
+}
+
+
+// icons
+.loading {
+  &:before{
+    .fa-spin;
+    .fa-pulse;
+    content: '\f110';
+    font-family: @fa;
+  }
+}
+
+.showPlayIcon {
+  &:before{
+    content: '\f04b';
+    font-family: @fa;
+  }
+}
+
+.showPauseIcon {
+  &:before{
+    content: '\f04c';
+    font-family: @fa;
+  }
+}
+
+// Color Assignemnts
+.greenText {
+  color: @bonus-color;
+}
+.redText {
+  color: @base-color;
+}
+
+
+.viewHeader {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  h1 {
+    @media(max-width: @screen-xs-max){
+      text-align: center;
+    }
+    @media(min-width: @screen-sm-min){
+      width: 45%;
+      float: left;
+    }
+  }
+  .headerMenu {
+    margin-top: 10px;
+    @media(min-width: @screen-sm-min){
+      width: 53%;
+      text-align: right;
+      float: right;
+    }
+
+    .viewSwitch {
+      float: right;
+      margin-left: 5px;
+      background: @base-color;
+      &:hover {
+        background: @secondary-color;
+      }
+      i{
+        color: @white1;
+        padding: 5px;
+        font-size: 20px;
+
+      }
+    }
+  }
+
+}
+
+
+//@media(max-width: @screen-xs-max){}
+//@media(min-width: @screen-sm-min){} /* deprecated: @screen-tablet, or @screen-sm */
+//@media(min-width: @screen-md-min){} /* deprecated: @screen-desktop, or @screen-md */
+//@media(min-width: @screen-lg-min){} /* deprecated: @screen-lg-desktop, or @screen-lg */

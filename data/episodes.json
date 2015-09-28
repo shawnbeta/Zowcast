@@ -1,0 +1,28 @@
+{
+  "PlayerControls":
+  {
+    "links": [
+      {
+        "action": "togglePlayback",
+        "icon": "{{isPlaying(e)}}"
+      },
+      {
+        "action": "updateWatched",
+        "color": "{{isWatched(e)}}",
+        "iconStyle": "check"
+      },
+      {
+        "action": "download",
+        "icon": "download"
+      },
+      {
+        "action": "copyToServer",
+        "icon": "server"
+      },
+      {
+        "action": "toggleOverlay",
+        "icon": "info"
+      }
+    ]
+  }
+}

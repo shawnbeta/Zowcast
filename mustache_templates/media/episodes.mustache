@@ -1,0 +1,92 @@
+{{=<% %>=}}
+<!--Generated Code: mustache_templates/media/episodes.mustache -->
+
+<div ng-controller="EpisodeController" class="mediaView">
+    <header class="viewHeader clearfix">
+        <h1>Episodes</h1>
+        <div class="headerMenu">
+            <button class="subscriptionMenuToggle swButton" ng-click="toggleSubscriptionMenu()">
+                Browse By Subscription
+            </button>
+            <button class="viewSwitch" ng-click="setEpisodeStyle('list')">
+                <i class="fa fa-th-list" ng-class="{'selected' : episodeStyle == 'list'}"></i>
+            </button>
+            <button class="viewSwitch" ng-click="setEpisodeStyle('grid')">
+                <i class="fa fa-th" ng-class="{'selected' : episodeStyle == 'grid'}"></i>
+            </button>
+        </div>
+    </header>
+    <div class="subscriptionNavbar">
+        <a ng-click="toggleSubscriptionMenu()"><i class="fa fa-close"></i>Close</a>
+        <ul class="subscriptionMenu">
+            <li>
+                <a ng-class="{'selected': EpisodeManager.active.menu == 0}" ng-click="allEpisodes()">
+                    All Episodes
+                </a>
+            </li>
+            <li ng-repeat="s in subscriptions| orderByTitle">
+                <a ng-class="{'selected': EpisodeManager.active.menu == s.id}" ng-click="episodesBySubscription(s)">
+                    {{s.title}}
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <loading></loading>
+
+    <div class="mediaEmpty" ng-if="!episodesExist()">
+    NO episodes
+
+<button class="swButton" title="fetch bulk" ng-click="fetchBulk()">fetch bulk</button>
+<a class="swButton" title="Add Subscription"
+href="#/add">Add Subscription</a>
+
+    </div>
+
+
+    <span class="episodeDetails" ng-if="showDetails">
+           <span><label>Title: </label>{{episodeDetailer.title}}</span>
+           <span><label>description: </label>
+           <span ng-bind-html="episodeDetailer.description"></span></span>
+           <span><label>watched: </label>{{episodeDetailer.watched}}</span>
+           <span><label>bookmark: </label>{{episodeDetailer.bookmark}}</span>
+           <span><label>Pub Date: </label>{{episodeDetailer.pub_date}}</span>
+           <span><label>Create Date: </label>{{episodeDetailer.create_date}}</span>
+           <span><label>Modified Date: </label>{{episodeDetailer.modified_date}}</span>
+       </span>
+<ul class="itemWrapper" ng-class="{'list': episodeStyle == 'list', 'grid': episodeStyle == 'grid'}">
+    <li class="swItem" ng-repeat="e in episodes| orderByPubDate" >
+
+        <div class="teaser">
+            <div class="swDate">{{e.pub_date | date:"MMMM d, yyyy"}}</div>
+            <!--<span>{{e.id}}</span>-->
+            <div class="swImg">
+                <button ng-click="togglePlayback(e)" class="imgPlayback largeOnly">
+                    <i class="fa fa-{{isPlaying(e)}}"></i>
+                </button>
+                <span><img src="{{e.img}}"></span>
+                <!--<img src="assets/img/turtle.png">-->
+            </div>
+
+                <div class="swTitle">
+                    <span>{{e.title}}</span>
+                </div>
+                <p class="swDescription">{{e.description | htmlToPlaintext}}</p>
+        </div>
+
+        <%# PlayerControls %>
+            <div ng-controller="PlayerController" class="actionbar clearfix">
+                <%# links %>
+                    <button ng-click="<% action %>(e)">
+                        <%# text %><% text %><%/ text %>
+                        <%# icon %><i class="fa fa-<% icon %>"></i><%/ icon %>
+                        <%# color %><i class="<% color %> fa fa-<% iconStyle %>"></i><%/ color %>
+                    </button>
+                <%/ links %>
+            </div>
+        <%/ PlayerControls %>
+        </li>
+    </ul>
+
+</div>
+<!-- End Generated Code: mustache_templates/media/episodes.mustache -->

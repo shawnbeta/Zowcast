@@ -1,0 +1,3 @@
+hc_media_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: HCMediaBundle:Default:index }
