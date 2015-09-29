@@ -19,8 +19,8 @@ class EpisodeRepository extends EntityRepository
     {
         $query = $this->getEntityManager()
             ->createQuery(
-                'SELECT e, m FROM HCMediaBundle:Episode e
-        JOIN e.media m
+                'SELECT e, s FROM HCMediaBundle:Episode e
+        JOIN e.subscription_id s
         ORDER BY e.pubDate DESC'
             )
             ->setFirstResult($start)

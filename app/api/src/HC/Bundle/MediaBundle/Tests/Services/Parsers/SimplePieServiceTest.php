@@ -32,7 +32,7 @@ class SimplePieServiceTest extends \PHPUnit_Framework_TestCase
     {
         $lu = 1435546770000;
         $episodeCollection = $rawData->makeEpisodeCollection($lu);
-        $this->assertEquals(2, count($episodeCollection));
+        $this->assertCount(2, $episodeCollection);
         $this->assertEquals('de5hbdhthdfg', $episodeCollection[0]['title']);
         $this->assertEquals('SSofj5DFH7d', $episodeCollection[0]['description']);
         $this->assertEquals('d9fk5m8', $episodeCollection[0]['src']);
