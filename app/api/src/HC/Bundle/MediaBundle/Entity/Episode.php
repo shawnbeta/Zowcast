@@ -30,13 +30,6 @@ class Episode extends BaseMediaEntity
 
     /**
      *
-     * @ORM\Column(name="duration", type="bigint")
-     */
-    private $duration;
-
-
-    /**
-     *
      * @ORM\Column(name="watched", type="boolean")
      */
     private $watched;
@@ -70,30 +63,6 @@ class Episode extends BaseMediaEntity
     public function getPubDate()
     {
         return $this->pubDate;
-    }
-
-    /**
-     * Set duration
-     *
-     * @param integer $duration
-     *
-     * @return Episode
-     */
-    public function setDuration($duration)
-    {
-        $this->duration = $duration;
-
-        return $this;
-    }
-
-    /**
-     * Get duration
-     *
-     * @return integer
-     */
-    public function getDuration()
-    {
-        return $this->duration;
     }
 
     /**

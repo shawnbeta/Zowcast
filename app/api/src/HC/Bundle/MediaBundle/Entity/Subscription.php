@@ -37,9 +37,6 @@ class Subscription extends BaseMediaEntity
      */
     private $autoDownload;
 
-
-
-
     /**
      * Set mediaType
      *
