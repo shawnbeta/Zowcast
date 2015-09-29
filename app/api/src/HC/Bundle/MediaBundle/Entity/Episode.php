@@ -15,7 +15,7 @@ class Episode extends BaseMediaEntity
 {
 
     /**
-     * @ORM\ManyToOne(targetEntity="Subscription", inversedBy="episodes")
+     * @ORM\ManyToOne(targetEntity="Subscription")
      * @ORM\JoinColumn(name="subscription_id", referencedColumnName="id")
      */
     private $subscription;

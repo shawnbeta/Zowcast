@@ -1,6 +1,6 @@
 <?php
 
-namespace HC\Bundle\MediaBundle\Entity;
+namespace HC\Bundle\MediaBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Tools\Pagination\Paginator;
@@ -15,85 +15,40 @@ use Doctrine\ORM\Query;
 class EpisodeRepository extends EntityRepository
 {
 
-    public function findManyEpisodes($start, $count)
+    public function fetchEpisodes($start = 0, $count = NULL, $subscriptionId =  NULL, $dateFilter = NULL)
     {
-        $query = $this->getEntityManager()
-            ->createQuery(
-                'SELECT e, s FROM HCMediaBundle:Episode e
-        JOIN e.subscription_id s
-        ORDER BY e.pubDate DESC'
-            )
+
+//        $dql = 'SELECT e, s FROM HCMediaBundle:Episode e JOIN e.subscription s ';
+//        if($subscriptionId !== NULL)
+//            $dql .= ' WHERE (e.subscription = :subscriptionId)';
+//        $dql .= ' ORDER BY e.pubDate DESC';
+        var_dump($dateFilter);
+
+        $dql = 'SELECT e, s FROM HCMediaBundle:Episode e JOIN e.subscription s ';
+        if($subscriptionId !== NULL || $dateFilter !== NULL){
+            $dql .= ' WHERE (e.subscription = :subscriptionId OR e.pubDate ';
+            $dql .= $dateFilter['symbol'];
+            $dql .= ' :dfValue)';
+
+        }
+        $dql .= ' ORDER BY e.pubDate DESC';
+
+        $query = $this->getEntityManager()->createQuery($dql)
             ->setFirstResult($start)
             ->setMaxResults($count);
 
-        try {
-            $paginator = new Paginator($query, $fetchJoinCollection = true);
-            return $paginator;
-
-        } catch (\Doctrine\ORM\NoResultException $e) {
-            return null;
+        if($subscriptionId !== NULL || $dateFilter !== NULL){
+            $query->setParameters(array(
+                'subscriptionId' => $subscriptionId,
+                'dfValue' => $dateFilter['value']
+            ));
         }
+
+        $result = $query->getResult();
+        return $result;
     }
 
 
-    public function findEpisodesByMedia($media, $start, $page_count)
-    {
-        $query = $this->getEntityManager()
-            ->createQuery(
-                'SELECT e, m FROM HCMediaBundle:Episode e
-        JOIN e.media m
-        WHERE e.media = :media
-        ORDER BY e.pubDate DESC'
-            )
-            ->setParameter('media', $media)
-            ->setFirstResult($start)
-            ->setMaxResults($page_count);
-
-        try {
-            $paginator = new Paginator($query, $fetchJoinCollection = true);
-            return $paginator;
-
-        } catch (\Doctrine\ORM\NoResultException $e) {
-            return null;
-        }
-    }
-
-    public function getLatestEpisodePubDate($media)
-    {
-        $query = $this->getEntityManager()
-            ->createQuery(
-                'SELECT e, m FROM HCMediaBundle:Episode e
-          JOIN e.media m
-          WHERE e.media = :media
-          ORDER BY e.pubDate DESC'
-            )->setParameter('media', $media)
-            ->setFirstResult(0)
-            ->setMaxResults(1);
-
-        try {
-            return $query->getResult();
-
-        } catch (\Doctrine\ORM\NoResultException $e) {
-            return null;
-        }
-    }
-
-    public function selectOldEpisodes($date)
-    {
-        $query = $this->getEntityManager()
-            ->createQuery(
-                'SELECT e FROM HCMediaBundle:Episode e
-          WHERE e.pubDate < :date
-          ORDER BY e.pubDate DESC'
-            )->setParameter('date', $date);
-
-        try {
-            return $query->getResult();
-
-        } catch (\Doctrine\ORM\NoResultException $e) {
-            return null;
-        }
-    }
 
 
 

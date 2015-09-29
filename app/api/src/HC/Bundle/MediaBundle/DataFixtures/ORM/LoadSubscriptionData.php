@@ -17,22 +17,30 @@ class LoadSubscriptionData extends AbstractFixture implements OrderedFixtureInte
      */
     public function load(ObjectManager $om)
     {
-        $subscription = new Subscription();
-        $subscription->setTitle('test');
-        $subscription->setDescription('Description Text');
-        $subscription->setSrc('http://shawnbeta.com');
-        $subscription->setImg('http://frizzmop.com/img/molly.png');
-        $subscription->setCreateDate(6025755342);
-        $subscription->setMediaType('youtube');
-        $subscription->setHomePage('http://shawnbeta.com');
-        $subscription->setMachineName('test_subscription');
-        $subscription->setAutoDownload(0);
+        $subscriptionCollection = array();
+        for($i=0;$i<2;$i++) {
+            $subscription = 'subscription' . $i;
+            $$subscription = new Subscription();
+            $$subscription->setTitle($i . 'test');
+            $$subscription->setDescription($i . 'Description Text');
+            $$subscription->setSrc($i . 'http://shawnbeta.com');
+            $$subscription->setImg($i . 'http://frizzmop.com/img/molly.png');
+            $$subscription->setCreateDate($i . 6025755342);
+            $$subscription->setMediaType($i . 'youtube');
+            $$subscription->setHomePage($i . 'http://shawnbeta.com');
+            $$subscription->setMachineName($i . 'test_subscription');
+            $$subscription->setAutoDownload(0);
 
+            $om->persist($$subscription);
 
-        $om->persist($subscription);
+            array_push($subscriptionCollection, $$subscription);
+
+        }
         $om->flush();
+        for($i=0;$i<2;$i++) {
+            $this->addReference('subscription' . $i, $subscriptionCollection[$i]);
+        }
 
-        $this->addReference('subscription', $subscription);
     }
     /**
      * {@inheritDoc}

@@ -12,5 +12,7 @@ class ConfigService
 
     const PAGE_COUNT = 24;
 
+    const TEST_ITEM_COUNT = 20;
+
 
 }
