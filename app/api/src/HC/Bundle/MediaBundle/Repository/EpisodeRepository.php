@@ -3,9 +3,7 @@
 namespace HC\Bundle\MediaBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
-use Doctrine\ORM\Tools\Pagination\Paginator;
 use Doctrine\ORM\Query;
-use Symfony\Component\Validator\Constraints\Null;
 
 /**
  * EpisodeRepository
