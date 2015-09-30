@@ -15,6 +15,32 @@ use Doctrine\ORM\Query;
 class SubscriptionRepository extends EntityRepository
 {
 
+    private $dqlStart = 'SELECT e, s FROM HCMediaBundle:Subscription e JOIN e.subscription s ';
+
+    public function fetchEpisodes($start = 0, $count = NULL, $subscriptionId =  NULL)
+    {
+        $dql = $this->dqlStart;
+
+        if($subscriptionId !==NULL){
+            $dql .= ' WHERE (e.subscription = :subscriptionId)';
+        }
+        $dql .= ' ORDER BY e.pubDate DESC';
+
+        $query = $this->getEntityManager()->createQuery($dql)
+            ->setFirstResult($start)
+            ->setMaxResults($count);
+
+        if($subscriptionId !== NULL){
+            $query->setParameters(array(
+                'subscriptionId' => $subscriptionId
+            ));
+        }
+
+        $result = $query->getResult();
+        return $result;
+    }
+
+
     public function findManySubscriptions($start, $count)
     {
         $query = $this->getEntityManager()

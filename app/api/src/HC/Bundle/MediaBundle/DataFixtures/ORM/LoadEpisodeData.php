@@ -38,6 +38,8 @@ class LoadEpisodeData extends AbstractFixture implements OrderedFixtureInterface
             $$episode->setBookmark(25.33);
             $subscriptionCollection = $this->getReference('subscription' . $subID);
             $$episode->setSubscription($subscriptionCollection);
+            $$episode->setPublic(false);
+            $$episode->setModifiedDate(123456789);
 
             $om->persist($$episode);
             // Alternate the subscription ID's.

@@ -5,6 +5,7 @@ namespace HC\Bundle\MediaBundle\Repository;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use Doctrine\ORM\Query;
+use Symfony\Component\Validator\Constraints\Null;
 
 /**
  * EpisodeRepository
@@ -15,21 +16,14 @@ use Doctrine\ORM\Query;
 class EpisodeRepository extends EntityRepository
 {
 
-    public function fetchEpisodes($start = 0, $count = NULL, $subscriptionId =  NULL, $dateFilter = NULL)
+    private $dqlStart = 'SELECT e, s FROM HCMediaBundle:Episode e JOIN e.subscription s ';
+
+    public function fetchEpisodes($start = 0, $count = NULL, $subscriptionId =  NULL)
     {
+        $dql = $this->dqlStart;
 
-//        $dql = 'SELECT e, s FROM HCMediaBundle:Episode e JOIN e.subscription s ';
-//        if($subscriptionId !== NULL)
-//            $dql .= ' WHERE (e.subscription = :subscriptionId)';
-//        $dql .= ' ORDER BY e.pubDate DESC';
-        var_dump($dateFilter);
-
-        $dql = 'SELECT e, s FROM HCMediaBundle:Episode e JOIN e.subscription s ';
-        if($subscriptionId !== NULL || $dateFilter !== NULL){
-            $dql .= ' WHERE (e.subscription = :subscriptionId OR e.pubDate ';
-            $dql .= $dateFilter['symbol'];
-            $dql .= ' :dfValue)';
-
+        if($subscriptionId !==NULL){
+            $dql .= ' WHERE (e.subscription = :subscriptionId)';
         }
         $dql .= ' ORDER BY e.pubDate DESC';
 
@@ -37,15 +31,34 @@ class EpisodeRepository extends EntityRepository
             ->setFirstResult($start)
             ->setMaxResults($count);
 
-        if($subscriptionId !== NULL || $dateFilter !== NULL){
+        if($subscriptionId !== NULL){
             $query->setParameters(array(
-                'subscriptionId' => $subscriptionId,
-                'dfValue' => $dateFilter['value']
+                'subscriptionId' => $subscriptionId
             ));
         }
 
         $result = $query->getResult();
         return $result;
+    }
+
+    public function fetchByDate($field, $compareDate, $symbol)
+    {
+        $dql = $this->dqlStart;
+        if($symbol == '>'){
+            $dql .= ' WHERE (:field > :compareDate)';
+        }else{
+            $dql .= ' WHERE (:field < :compareDate)';
+        }
+        $dql .= ' ORDER BY e.pubDate DESC';
+
+        $query = $this->getEntityManager()->createQuery($dql);
+        $query->setParameters(array(
+            'compareDate' => $compareDate,
+            'field' => 'e.' . $field
+        ));
+        $result = $query->getResult();
+        return $result;
+
     }
 
 

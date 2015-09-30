@@ -6,14 +6,12 @@ use HC\Bundle\AppBundle\Services\ConfigService;
 class YoutubeServiceTest extends \PHPUnit_Framework_TestCase
 {
 
-    protected $stack;
     protected $src;
     protected $apiKey;
     protected $youtubeService;
 
     protected  function setUp()
     {
-        $this->stack = array();
         $configService = new ConfigService();
         $this->src = $configService::YOUTUBE_TEST_SRC;
         $this->apiKey = $configService::YOUTUBE_KEY;

@@ -132,4 +132,6 @@ class Subscription extends BaseMediaEntity
     {
         return $this->autoDownload;
     }
+
+
 }

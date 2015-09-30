@@ -56,6 +56,20 @@ class BaseMediaEntity
 
 
     /**
+     * @var BigIntType
+     *
+     * @ORM\Column(name="modified_date", type="bigint")
+     */
+    private $modifiedDate;
+
+    /**
+     *
+     * @ORM\Column(name="public", type="boolean")
+     */
+    private $public;
+
+
+    /**
      * Get id
      *
      * @return integer
@@ -183,5 +197,53 @@ class BaseMediaEntity
     public function getCreateDate()
     {
         return $this->createDate;
+    }
+
+    /**
+     * Set public
+     *
+     * @param boolean $public
+     *
+     * @return BaseMediaEntity
+     */
+    public function setPublic($public)
+    {
+        $this->public = $public;
+
+        return $this;
+    }
+
+    /**
+     * Get public
+     *
+     * @return boolean
+     */
+    public function getPublic()
+    {
+        return $this->public;
+    }
+
+    /**
+     * Set modifiedDate
+     *
+     * @param integer $modifiedDate
+     *
+     * @return BaseMediaEntity
+     */
+    public function setModifiedDate($modifiedDate)
+    {
+        $this->modifiedDate = $modifiedDate;
+
+        return $this;
+    }
+
+    /**
+     * Get modifiedDate
+     *
+     * @return integer
+     */
+    public function getModifiedDate()
+    {
+        return $this->modifiedDate;
     }
 }

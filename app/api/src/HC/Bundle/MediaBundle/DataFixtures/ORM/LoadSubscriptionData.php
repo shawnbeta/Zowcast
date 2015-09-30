@@ -29,7 +29,9 @@ class LoadSubscriptionData extends AbstractFixture implements OrderedFixtureInte
             $$subscription->setMediaType($i . 'youtube');
             $$subscription->setHomePage($i . 'http://shawnbeta.com');
             $$subscription->setMachineName($i . 'test_subscription');
-            $$subscription->setAutoDownload(0);
+            $$subscription->setAutoDownload(false);
+            $$subscription->setPublic(false);
+            $$subscription->setModifiedDate(123456789);
 
             $om->persist($$subscription);
 
