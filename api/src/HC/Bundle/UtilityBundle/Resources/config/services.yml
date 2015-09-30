@@ -1,4 +1,0 @@
-services:
-#    hc_utility.example:
-#        class: HC\Bundle\UtilityBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
