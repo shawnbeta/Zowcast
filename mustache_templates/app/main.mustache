@@ -1,7 +1,7 @@
 {{=<% %>=}}
 <!--Generated Code: mustache_templates/app/main.mustache -->
 <!doctype html>
-<html lang="en" ng-app="hcApp" ng-controller="AppController">
+<html lang="en" ng-app="hcApp" ng-controller="EmptyController">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -32,12 +32,12 @@
 <script src="<% . %>"></script><br/>
 <%/ remote %>
         <%# contrib %>
-<script src="src/contrib/<% . %>.js"></script>
+<script src="src/contrib/<%& . %>.js"></script>
 <%/ contrib %>
 <%# libs %>
-<script src="src/libs/<% . %>.js"></script>
+<script src="src/libs/<%& . %>.js"></script>
 <%/ libs %>
-<%# staging %> <script src="src/main.min.js"></script><br/> <%/ staging %>
+<%# staging %> <script src="src/main.min.js"></script> <%/ staging %>
     <%/ js %>
 <%/ assets %>
 </body>

@@ -136,37 +136,37 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower/angular-route/angular-route.js',
+                        src: 'bower_components/angular-route/angular-route.js',
                         dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower/angular-sanitize/angular-sanitize.js',
+                        src: 'bower_components/angular-sanitize/angular-sanitize.js',
                         dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower/angular-touch/angular-touch.js',
+                        src: 'bower_components/angular-touch/angular-touch.js',
                         dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower/angular-truncate/src/truncate.js',
+                        src: 'bower_components/angular-truncate/src/truncate.js',
                         dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower/jquery/dist/jquery.js',
+                        src: 'bower_components/jquery/dist/jquery.js',
                         dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower/underscore/underscore.js',
+                        src: 'bower_components/underscore/underscore.js',
                         dest: 'app/src/contrib/'
                     }
                 ]
