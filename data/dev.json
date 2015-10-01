@@ -36,46 +36,23 @@
         "app",
         "routes",
         "app/controllers/EmptyController",
-        "app/controllers/SettingsController",
-        "app/directives/SettingsActionsDirective",
-
-        "media/controllers/EpisodeController",
-        "media/controllers/SearchController",
-        "media/controllers/SubscriptionController",
-        "media/directives/EpisodeViewDirective",
-        "media/directives/SearchDirective",
+        "media/directives/EpisodeDirective",
         "media/directives/SubscriptionAddDirective",
-        "media/directives/SubscriptionNavDirective",
-        "media/directives/SubscriptionViewDirective",
-        "media/filters/EpisodeFilters",
-        "media/filters/SubscriptionFilters",
 
         "media/models/Episode",
         "media/models/Subscription",
 
         "media/services/EpisodeService",
         "media/services/SubscriptionService",
-        "media/services/SearchService",
-        "media/services/MediaService",
 
-        "player/controllers/PlayerController",
-        "player/directives/NowPlayingDirective",
-        "player/services/PlayerService",
-
-        "ui/controller/NavController",
-        "ui/directives/ActionBarDirective",
-        "ui/directives/NavDirectives",
         "ui/services/OverlayService",
 
         "utility/directives/LoadingDirective",
-        "utility/models/Departures",
-        "utility/services/DepartureService",
         "utility/services/HelperService",
         "utility/services/StorageService",
         "utility/filters/UtilityFilters",
 
         "vendors/services/UnderscoreService"
-
 
       ],
       "remote": [

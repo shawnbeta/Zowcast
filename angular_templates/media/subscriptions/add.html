@@ -1,9 +1,4 @@
-{{=<% %>=}}
-<!--Generated Code: mustache_templates/media/add.mustache -->
-
-<%# addField %>
 <div ng-controller="SubscriptionController" class="addField">
-
 
     <header class="viewHeader clearfix">
         <h1>Add Subscription</h1>
@@ -15,16 +10,9 @@
     </header>
 
 
-
-
     <div class="srcForm" ng-if="addView == 0">
         <!--<label>Feed URL or Youtube Channel ID</label>-->
         <input type="text" ng-model="addForm.src" placeholder="Feed URL or Youtube Channel ID">
-        <select ng-model="addForm.type">
-            <%# options %>
-                <option value="<% value %>"><% text %></option>
-            <%/ options %>
-        </select>
         <a ng-click="add()"><i class="fa fa-plus"></i></a>
     </div>
 
@@ -35,8 +23,3 @@
     </div>
 
 </div>
-<%/ addField %>
-
-
-
-<!-- End Generated Code: mustache_templates/media/add.mustache -->

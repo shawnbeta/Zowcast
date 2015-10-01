@@ -28,26 +28,10 @@ module.exports = function (grunt) {
                         dest: 'app/src/templates/settings.html'
                     },
                     {
-                        data: 'data/subscriptions.json',
-                        template: 'mustache_templates/media/subscriptions.mustache',
-                        dest: 'app/src/templates/subscriptions.html'
-                    },
-                    {
-                        data: 'data/episodes.json',
-                        template: 'mustache_templates/media/episodes.mustache',
-                        dest: 'app/src/templates/episodes.html'
-                    },
-                    {
                         data: 'data/dev.json',
                         template: 'mustache_templates/app/about.mustache',
                         dest: 'app/src/templates/about.html'
-                    },
-                    {
-                        data: 'data/add.json',
-                        template: 'mustache_templates/media/add.mustache',
-                        dest: 'app/src/templates/add.html'
                     }
-
                 ]
             },
 
@@ -120,6 +104,13 @@ module.exports = function (grunt) {
                         cwd: 'src',
                         src: '**',
                         dest: 'app/src/libs/'
+                    },
+                    {
+                        expand: true,
+                        flatten: false,
+                        cwd: 'angular_templates',
+                        src: '**',
+                        dest: 'app/src/templates/'
                     },
                     {
                         expand: true,
