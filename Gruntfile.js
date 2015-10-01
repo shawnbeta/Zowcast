@@ -7,31 +7,49 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
 
-        bump: {
-            options: {
-                files: ['package.json'],
-                updateConfigs: [],
-                commit: true,
-                commitMessage: 'Release v%VERSION%',
-                commitFiles: ['package.json'],
-                createTag: true,
-                tagName: 'v%VERSION%',
-                tagMessage: 'Version %VERSION%',
-                push: true,
-                pushTo: 'backup',
-                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
-                globalReplace: false,
-                prereleaseName: false,
-                regExp: false
-            }
-        },
 
         clean: {
-            assets: [ 'themes/portland/assets' ],
+            core: [
+                'app/index.html',
+                'app/src'
+            ]
         },
 
         mustache_render: {
 
+            core: {
+                options: {
+                    directory: 'mustache_templates'
+                },
+                files: [
+                    {
+                        data: 'data/dev.json',
+                        template: 'mustache_templates/app/settings.mustache',
+                        dest: 'app/src/templates/settings.html'
+                    },
+                    {
+                        data: 'data/subscriptions.json',
+                        template: 'mustache_templates/media/subscriptions.mustache',
+                        dest: 'app/src/templates/subscriptions.html'
+                    },
+                    {
+                        data: 'data/episodes.json',
+                        template: 'mustache_templates/media/episodes.mustache',
+                        dest: 'app/src/templates/episodes.html'
+                    },
+                    {
+                        data: 'data/dev.json',
+                        template: 'mustache_templates/app/about.mustache',
+                        dest: 'app/src/templates/templates/about.html'
+                    },
+                    {
+                        data: 'data/add.json',
+                        template: 'mustache_templates/media/add.mustache',
+                        dest: 'app/src/templates/templates/add.html'
+                    }
+
+                ]
+            },
 
             dev: {
                 options: {
@@ -40,38 +58,8 @@ module.exports = function (grunt) {
                 files: [
                     {
                         data: 'data/dev.json',
-                        template: 'mustache_templates/routes.mustache',
-                        dest: 'scripts/modules/routes.js'
-                    },
-                    {
-                        data: 'data/dev.json',
                         template: 'mustache_templates/app/main.mustache',
-                        dest: 'build/sandbox/index.html'
-                    },
-                    {
-                        data: 'data/dev.json',
-                        template: 'mustache_templates/app/settings.mustache',
-                        dest: 'scripts/modules/app/templates/settings.html'
-                    },
-                    {
-                        data: 'data/subscriptions.json',
-                        template: 'mustache_templates/media/subscriptions.mustache',
-                        dest: 'scripts/modules/media/templates/subscriptions.html'
-                    },
-                    {
-                        data: 'data/episodes.json',
-                        template: 'mustache_templates/media/episodes.mustache',
-                        dest: 'scripts/modules/media/templates/episodes.html'
-                    },
-                    {
-                        data: 'data/dev.json',
-                        template: 'mustache_templates/app/about.mustache',
-                        dest: 'scripts/modules/app/templates/about.html'
-                    },
-                    {
-                        data: 'data/add.json',
-                        template: 'mustache_templates/media/add.mustache',
-                        dest: 'scripts/modules/media/templates/add.html'
+                        dest: 'app/index.html'
                     }
                 ]
             },
@@ -82,38 +70,8 @@ module.exports = function (grunt) {
                 files: [
                     {
                         data: 'data/staging.json',
-                        template: 'mustache_templates/routes.mustache',
-                        dest: 'build/temp/routes.js'
-                    },
-                    {
-                        data: 'data/staging.json',
                         template: 'mustache_templates/app/main.mustache',
-                        dest: 'build/testing/index.html'
-                    },
-                    {
-                        data: 'data/staging.json',
-                        template: 'mustache_templates/app/settings.mustache',
-                        dest: 'build/testing/assets/templates/settings.html'
-                    },
-                    {
-                        data: 'data/subscriptions.json',
-                        template: 'mustache_templates/media/subscriptions.mustache',
-                        dest: 'build/testing/assets/templates/subscriptions.html'
-                    },
-                    {
-                        data: 'data/episodes.json',
-                        template: 'mustache_templates/media/episodes.mustache',
-                        dest: 'build/testing/assets/templates/episodes.html'
-                    },
-                    {
-                        data: 'data/dev.json',
-                        template: 'mustache_templates/app/about.mustache',
-                        dest: 'build/testing/assets/templates/about.html'
-                    },
-                    {
-                        data: 'data/add.json',
-                        template: 'mustache_templates/media/add.mustache',
-                        dest: 'build/testing/assets/templates/add.html'
+                        dest: 'app/index.html'
                     }
                 ]
             }
@@ -157,72 +115,64 @@ module.exports = function (grunt) {
             dev: {
                 files : [
                     {
-
-                        expand: true,
-                        flatten: false,
-                        dot: true,
-                        src: 'api/**',
-                        dest: 'build/sandbox/'
-                    },
-                    {
                         expand: true,
                         flatten: false,
                         src: 'assets/**',
-                        dest: 'build/sandbox/'
+                        dest: 'app/src/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower_components/angular/angular.js',
-                        dest: 'build/sandbox/assets/js/contrib/'
+                        src: 'node_modules/angular/angular.js',
+                        dest: 'app/src/js/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower_components/angular-mocks/angular-mocks.js',
-                        dest: 'build/sandbox/assets/js/contrib/'
+                        src: 'node_modules/angular-mocks/angular-mocks.js',
+                        dest: 'app/src/js/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower_components/angular-route/angular-route.js',
-                        dest: 'build/sandbox/assets/js/contrib/'
+                        src: 'node_modules/angular-route/angular-route.js',
+                        dest: 'app/src/js/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower_components/angular-sanitize/angular-sanitize.js',
-                        dest: 'build/sandbox/assets/js/contrib/'
+                        src: 'node_modules/angular-sanitize/angular-sanitize.js',
+                        dest: 'app/src/js/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower_components/angular-touch/angular-touch.js',
-                        dest: 'build/sandbox/assets/js/contrib/'
+                        src: 'node_modules/angular-touch/angular-touch.js',
+                        dest: 'app/src/js/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower_components/angular-truncate/src/truncate.js',
-                        dest: 'build/sandbox/assets/js/contrib/'
+                        src: 'node_modules/angular-truncate/src/truncate.js',
+                        dest: 'app/src/js/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower_components/jquery/dist/jquery.js',
-                        dest: 'build/sandbox/assets/js/contrib/'
+                        src: 'node_modules/jquery/dist/jquery.js',
+                        dest: 'app/src/js/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'bower_components/underscore/underscore.js',
-                        dest: 'build/sandbox/assets/js/contrib/'
+                        src: 'node_modules/underscore/underscore.js',
+                        dest: 'app/src/js/contrib/'
                     },
                     {
                         expand: true,
                         flatten: false,
                         src: 'scripts/modules/**',
-                        dest: 'build/sandbox/assets/js/'
+                        dest: 'app/src/js'
                     }
                 ]
             },
@@ -333,6 +283,16 @@ module.exports = function (grunt) {
                     'build/testing/assets/styles.min.css': ['build/temp/styles.css']
                 }
             }
+        },
+
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js',
+                port: 9999,
+                singleRun: true,
+                browsers: ['chrome'],
+                logLevel: 'ERROR'
+            }
         }
 
     });
@@ -341,7 +301,13 @@ module.exports = function (grunt) {
     // These plugins provide necessary tasks.
     require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
+    grunt.loadNpmTasks('grunt-karma');
+
     //Custom Build
+
+    grunt.registerTask('testdev', ['clean:core', 'mustache:core', 'mustache:dev', 'copy:dev', 'karma']);
+
+
     grunt.registerTask('build', ['clean:main', 'less', 'copy:main']);
     grunt.registerTask('test', ['clean:dev', 'copy:dev', 'karma']);
     grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'less:dev',  'copy:dev']);
