@@ -1,6 +1,6 @@
 hcUtilities.factory('HelperService', [
     '$http', 'StorageService',
-    function($http, $q, StorageService) {
+    function($http) {
 
         // Since request will be made from here set the base to prepend to path.
         var base_path = 'api';
@@ -11,7 +11,15 @@ hcUtilities.factory('HelperService', [
                     .then(function(rsp){
                         return rsp.data;
                     });
+            },
+
+            addToCollection: function(collection, newItems){
+                _.each(newItems, function(e,i){
+                    collection[i] =  e;
+                });
+                return collection;
             }
+
         }
 
 

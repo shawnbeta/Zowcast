@@ -1,16 +1,12 @@
 describe('HelperService', function(){
 
-    var httpBackend;
-
     beforeEach(function(){
         module('hcUtilities');
     });
 
-
-    beforeEach(inject(function( _HelperService_, $httpBackend){
+    beforeEach(inject(function( _HelperService_){
         helperService = _HelperService_;
     }));
-
 
     it('Should return an array', function(){
 
