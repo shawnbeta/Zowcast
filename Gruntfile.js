@@ -11,7 +11,7 @@ module.exports = function (grunt) {
         clean: {
             core: [
                 'app/index.html',
-                'app/src'
+                'app/src/**'
             ]
         },
 
@@ -40,12 +40,12 @@ module.exports = function (grunt) {
                     {
                         data: 'data/dev.json',
                         template: 'mustache_templates/app/about.mustache',
-                        dest: 'app/src/templates/templates/about.html'
+                        dest: 'app/src/templates/about.html'
                     },
                     {
                         data: 'data/add.json',
                         template: 'mustache_templates/media/add.mustache',
-                        dest: 'app/src/templates/templates/add.html'
+                        dest: 'app/src/templates/add.html'
                     }
 
                 ]
@@ -117,62 +117,57 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         flatten: false,
-                        src: 'assets/**',
-                        dest: 'app/src/'
+                        cwd: 'src',
+                        src: '**',
+                        dest: 'app/src/libs/'
                     },
                     {
                         expand: true,
                         flatten: true,
                         src: 'node_modules/angular/angular.js',
-                        dest: 'app/src/js/contrib/'
+                        dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
                         src: 'node_modules/angular-mocks/angular-mocks.js',
-                        dest: 'app/src/js/contrib/'
+                        dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'node_modules/angular-route/angular-route.js',
-                        dest: 'app/src/js/contrib/'
+                        src: 'bower/angular-route/angular-route.js',
+                        dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'node_modules/angular-sanitize/angular-sanitize.js',
-                        dest: 'app/src/js/contrib/'
+                        src: 'bower/angular-sanitize/angular-sanitize.js',
+                        dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'node_modules/angular-touch/angular-touch.js',
-                        dest: 'app/src/js/contrib/'
+                        src: 'bower/angular-touch/angular-touch.js',
+                        dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'node_modules/angular-truncate/src/truncate.js',
-                        dest: 'app/src/js/contrib/'
+                        src: 'bower/angular-truncate/src/truncate.js',
+                        dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'node_modules/jquery/dist/jquery.js',
-                        dest: 'app/src/js/contrib/'
+                        src: 'bower/jquery/dist/jquery.js',
+                        dest: 'app/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
-                        src: 'node_modules/underscore/underscore.js',
-                        dest: 'app/src/js/contrib/'
-                    },
-                    {
-                        expand: true,
-                        flatten: false,
-                        src: 'scripts/modules/**',
-                        dest: 'app/src/js'
+                        src: 'bower/underscore/underscore.js',
+                        dest: 'app/src/contrib/'
                     }
                 ]
             },
@@ -288,10 +283,10 @@ module.exports = function (grunt) {
         karma: {
             unit: {
                 configFile: 'karma.conf.js',
-                port: 9999,
-                singleRun: true,
-                browsers: ['chrome'],
-                logLevel: 'ERROR'
+                //port: 9999,
+                //singleRun: true,
+                //browsers: ['chrome'],
+                //logLevel: 'ERROR'
             }
         }
 
@@ -305,7 +300,7 @@ module.exports = function (grunt) {
 
     //Custom Build
 
-    grunt.registerTask('testdev', ['clean:core', 'mustache:core', 'mustache:dev', 'copy:dev', 'karma']);
+    grunt.registerTask('testdev', ['clean:core', 'mustache_render:core', 'mustache_render:dev', 'copy:dev', 'karma']);
 
 
     grunt.registerTask('build', ['clean:main', 'less', 'copy:main']);

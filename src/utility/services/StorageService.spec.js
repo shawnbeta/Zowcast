@@ -1,13 +1,13 @@
 describe('StorageService', function(){
 
     beforeEach(function(){
-        module('StorageService');
+        module('hcUtilities');
     });
 
     var storageService;
 
-    beforeEach(inject(function( _storageService_){
-        storageService = _storageService_;
+    beforeEach(inject(function( _StorageService_){
+        storageService = _StorageService_;
     }));
 
     it('Should save object as string in local storage', function(){
@@ -20,9 +20,6 @@ describe('StorageService', function(){
 
         // Now verify that it is set in local storage
         expect(localStorage.getItem(id)).toBe(JSON.stringify(obj));
-
-
-
     });
 
 });
