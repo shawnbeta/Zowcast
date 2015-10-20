@@ -4,14 +4,6 @@
   "description": "Web based podcast manager",
   "main": "Gruntfile.js",
   "dependencies": {
-    "jasmine-core": "~2.2.0",
-    "karma": "~0.12.31",
-    "karma-chrome-launcher": "~0.1.7",
-    "karma-firefox-launcher": "~0.1.4",
-    "karma-ie-launcher": "~0.1.5",
-    "karma-jasmine": "~0.2.2",
-    "karma-safari-launcher": "~0.1.1",
-    "angular": "~1.4.7"
   },
   "devDependencies": {
     "grunt-bump": "~0.5.0",

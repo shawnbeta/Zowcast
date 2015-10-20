@@ -40,18 +40,13 @@ module.exports = function (grunt) {
                 files: [
                     {
                         data: 'data/dev.json',
-                        template: 'mustache_templates/app/main.mustache',
+                        template: 'mustache_templates/core/main.mustache',
                         dest: 'build/sandbox/index.html'
                     },
                     {
                         data: 'data/dev.json',
-                        template: 'mustache_templates/app/settings.mustache',
-                        dest: 'build/sandbox/settings.html'
-                    },
-                    {
-                        data: 'data/dev.json',
-                        template: 'mustache_templates/app/about.mustache',
-                        dest: 'build/sandbox/about.html'
+                        template: 'mustache_templates/core/settings.mustache',
+                        dest: 'src/core/templates/settings.html'
                     }
                 ]
             },
@@ -117,49 +112,49 @@ module.exports = function (grunt) {
                         expand: true,
                         flatten: true,
                         src: 'node_modules/angular/angular.js',
-                        dest: 'app/src/contrib/'
+                        dest: 'build/sandbox/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
                         src: 'node_modules/angular-mocks/angular-mocks.js',
-                        dest: 'app/src/contrib/'
+                        dest: 'build/sandbox/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
                         src: 'bower_components/angular-route/angular-route.js',
-                        dest: 'app/src/contrib/'
+                        dest: 'build/sandbox/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
                         src: 'bower_components/angular-sanitize/angular-sanitize.js',
-                        dest: 'app/src/contrib/'
+                        dest: 'build/sandbox/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
                         src: 'bower_components/angular-touch/angular-touch.js',
-                        dest: 'app/src/contrib/'
+                        dest: 'build/sandbox/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
                         src: 'bower_components/angular-truncate/src/truncate.js',
-                        dest: 'app/src/contrib/'
+                        dest: 'build/sandbox/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
                         src: 'bower_components/jquery/dist/jquery.js',
-                        dest: 'app/src/contrib/'
+                        dest: 'build/sandbox/src/contrib/'
                     },
                     {
                         expand: true,
                         flatten: true,
                         src: 'bower_components/underscore/underscore.js',
-                        dest: 'app/src/contrib/'
+                        dest: 'build/sandbox/src/contrib/'
                     }
                 ]
             },

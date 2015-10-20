@@ -2,13 +2,18 @@ app.media.config(['$routeProvider',
 
     function($routeProvider) {
         $routeProvider
-            .when('/', {
+            .when('/episodes', {
                 controller : 'EpisodeController',
-                templateUrl : 'src/media/templates/episodes.html'
+                templateUrl : 'src/libs/libs/media/templates/episodes/page.html'
             })
-            .when('/about', {
+            .when('/subscriptions', {
                 controller : 'SubscriptionController',
-                templateUrl : 'src/media/templates/about.html'
+                templateUrl : 'src/libs/media/templates/subscriptions/subscriptions.html'
+            })
+
+            .when('/add', {
+                controller : 'SubscriptionController',
+                templateUrl : 'src/libs/media/templates/subscriptions/add.html'
             })
     }]);
 

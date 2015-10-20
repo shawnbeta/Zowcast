@@ -1,1 +1,1 @@
-app.media = angular.module('app.media', []);
+app.media = angular.module('app.media', ['ngRoute']);

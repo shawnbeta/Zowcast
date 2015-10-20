@@ -1,4 +1,4 @@
-hcUtilities.service('HelperService', function(){
+app.utility.service('HelperService', function(){
 
 	var HelperService = function(){};
 	
