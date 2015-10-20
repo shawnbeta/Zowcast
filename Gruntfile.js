@@ -9,9 +9,7 @@ module.exports = function (grunt) {
 
 
         clean: {
-            core: [
-                'app/index.html',
-                'app/src/**'
+            dev: [ 'build/sandbox'
             ]
         },
 

@@ -1,6 +1,10 @@
-hcUtilities.factory('HelperService', [
-    '$http', 'StorageService',
-    function($http) {
+(function() {
+    'use strict';
+            angular.module('app.utilities')
+                .factory('HelperService', HelperService);
+
+
+            function HelperService($http) {
 
         // Since request will be made from here set the base to prepend to path.
         var base_path = 'api';
@@ -24,4 +28,5 @@ hcUtilities.factory('HelperService', [
 
 
 
-    }]);
+            };
+})();

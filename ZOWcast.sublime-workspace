@@ -11,25 +11,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "src/utility/services/StorageService.js",
-			"settings":
-			{
-				"buffer_size": 458,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nJasmine JS\n----------\n\n  \n  First of all, thanks for installing Jasmine!\n  \n  This package is a merge of two existing packages:\n  @caiogondim's https://github.com/caiogondim \"Jasmine BDD\" package has been combined with @gja's https://github.com/gja \"Jasmine\" package.\n  \n  This repo provides a syntax highlighting, snippets and commands.\n  If you want to know a bit more or for any issue or feature request, visit the repo (https://github.com/NicoSantangelo/sublime-jasmine).\n  \n  \n  Thanks again!\n",
-			"settings":
-			{
-				"buffer_size": 549,
-				"line_ending": "Unix",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -95,6 +76,7 @@
 	],
 	"file_history":
 	[
+		"/var/www/zowcast/src/utility/services/StorageService.js",
 		"/var/www/zowcast/api/src/HC/Bundle/MediaBundle/Services/EpisodeService.php",
 		"/var/www/zowcast/api/src/HC/Bundle/MediaBundle/Resources/config/routing.yml",
 		"/var/www/zowcast/api/app/config/config.yml",
@@ -171,67 +153,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/utility/services/StorageService.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								189,
-								189
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 549,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								548,
-								548
-							]
-						],
-						"settings":
-						{
-							"auto_indent": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_width": 2,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

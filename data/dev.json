@@ -33,26 +33,25 @@
         "underscore"
       ],
       "libs": [
-        "app",
-        "routes",
-        "app/controllers/EmptyController",
-        "media/directives/EpisodeDirective",
-        "media/directives/SubscriptionAddDirective",
+        "app.module",
 
-        "media/models/Episode",
-        "media/models/Subscription",
+        "core/core.module",
+        "core/core.routes",
+        "core/controllers/CoreController",
 
+        "media/media.module",
+        "media/media.routes",
+        "media/controllers/EpisodeController",
         "media/services/EpisodeService",
         "media/services/SubscriptionService",
 
-        "ui/services/OverlayService",
-
-        "utility/directives/LoadingDirective",
+        "utility/utilities.module",
         "utility/services/HelperService",
         "utility/services/StorageService",
-        "utility/filters/UtilityFilters",
 
+        "vendors/vendors.module",
         "vendors/services/UnderscoreService"
+
 
       ],
       "remote": [

@@ -1,7 +1,7 @@
 describe('StorageService', function(){
 
     beforeEach(function(){
-        module('hcUtilities');
+        module('app.utilities');
     });
 
     var storageService;

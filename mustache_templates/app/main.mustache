@@ -1,29 +1,28 @@
 {{=<% %>=}}
 <!--Generated Code: mustache_templates/app/main.mustache -->
 <!doctype html>
-<html lang="en" ng-app="hcApp" ng-controller="EmptyController">
+<html lang="en" ng-app="app" ng-controller="CoreController as app">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Herocast</title>
     <%# assets %>
         <%# css %>
-            <%# remote %> <link href="<% . %>" rel='stylesheet' type='text/css'> <%/ remote %>
-            <%# contrib %> <link href="src/contrib/<% . %>.css" rel='stylesheet' type='text/css'> <%/ contrib %>
-    <%# libs %> <link href="src/libs/<% . %>.css" rel='stylesheet' type='text/css'> <%/ libs %>
+            <%# remote %>  <!--<link href="<% . %>" rel='stylesheet' type='text/css'>--> <%/ remote %>
+            <%# contrib %> <!--<link href="src/contrib/<% . %>.css" rel='stylesheet' type='text/css'> %>--> <%/ contrib %>
+    <%# libs %> <!--<link href="src/libs/<% . %>.css" rel='stylesheet' type='text/css'>--><%/ libs %>
     <%# staging %> <link href="src/styles.min.css" rel='stylesheet' type='text/css'> <%/ staging %>
         <%/ css %>
     <%/ assets %>
 </head>
 
-<body>
-<%! > ui/overlay %>
-<%! > player/audio %>
-<%! > player/bubble %>
+<body >
+
 
 <div id="stage">
-<%! > ui/navBar %>
-<div ng-view class="swContainer"></div>
+
+    <%! > ui/navBar %>
+    <div ng-view class="swContainer"></div>
 </div>
 
 <%# assets %>

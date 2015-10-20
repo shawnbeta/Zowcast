@@ -1,7 +1,7 @@
 describe('HelperService', function(){
 
     beforeEach(function(){
-        module('hcUtilities');
+        module('app.utilities');
     });
 
     beforeEach(inject(function( _HelperService_){
@@ -26,7 +26,7 @@ describe('HelperServiceRequest', function(){
 
 
     beforeEach(function(){
-        module('hcUtilities');
+        module('app.utilities');
     });
 
 
