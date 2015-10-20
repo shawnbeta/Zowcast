@@ -1,3 +1,0 @@
-hc_media_homepage:
-    path:     /add
-    defaults: { _controller: HCMediaBundle:Subscription:add}

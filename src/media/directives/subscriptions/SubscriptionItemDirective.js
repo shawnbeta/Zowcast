@@ -23,7 +23,7 @@ app.media.directive('subscriptionItem',['$rootScope', function($rootScope) {
             };
         },
 
-        templateUrl: 'src/libs/media/templates/subscription/item.html'
+        templateUrl: 'src/libs/media/templates/subscriptions/item.html'
     }
 
 }]);

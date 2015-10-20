@@ -7,13 +7,13 @@ $routeProvider
         templateUrl : 'src/libs/media/templates/episodes/page.html'
     })
 .when('/about', {
-controller : 'SubscriptionController',
+controller : 'CoreController',
         templateUrl : 'src/libs/core/templates/about.html'
 })
 
 .when('/settings', {
-controller : 'SettingsController',
-templateUrl : 'src/libs/media/templates/settings.html'
+controller : 'CoreController',
+templateUrl : 'src/libs/core/templates/settings.html'
 })
 
 .otherwise({

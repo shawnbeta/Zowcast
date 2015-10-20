@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Herocast</title>
+    <title>Zowcast</title>
     <%# assets %>
         <%# css %>
-            <%# remote %>  <!--<link href="<% . %>" rel='stylesheet' type='text/css'>--> <%/ remote %>
-            <%# contrib %> <!--<link href="src/contrib/<% . %>.css" rel='stylesheet' type='text/css'> %>--> <%/ contrib %>
-    <%# libs %> <!--<link href="src/libs/<% . %>.css" rel='stylesheet' type='text/css'>--><%/ libs %>
-    <%# staging %> <link href="src/styles.min.css" rel='stylesheet' type='text/css'> <%/ staging %>
+            <%# remote %><link href="<% . %>" rel='stylesheet' type='text/css'><%/ remote %>
+            <%# contrib %><link href="css/contrib/<% . %>.css" rel='stylesheet' type='text/css'> <%/ contrib %>
+    <%# libs %><link href="css/libs/<% . %>.css" rel='stylesheet' type='text/css'><%/ libs %>
+    <%# staging %><link href="css/styles.min.css" rel='stylesheet' type='text/css'> <%/ staging %>
         <%/ css %>
     <%/ assets %>
 </head>
@@ -21,7 +21,7 @@
 
 <div id="stage">
 
-    <%! > ui/navBar %>
+    <% > ui/navBar %>
     <div ng-view class="swContainer"></div>
 </div>
 

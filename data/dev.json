@@ -38,6 +38,7 @@
         "core/core.module",
         "core/core.routes",
         "core/controllers/CoreController",
+        "core/services/ConfigService",
 
         "media/media.module",
         "media/media.routes",
@@ -70,7 +71,7 @@
         "utility/utility.module",
         "utility/directives/LoadingDirective",
         "utility/filters/UtilityFilters",
-        "utility/services/HelperService",
+        "utility/services/UtilityService",
         "utility/services/PersistenceService",
 
         "vendors/vendors.module",

@@ -1,4 +1,5 @@
-app.media.directive('subscriptionNavigationItem', function($rootScope, $filter) {
+app.media.directive('subscriptionNavigationItem', ['$rootScope', '$filter',
+    function($rootScope, $filter) {
 
       return {
         restrict : 'E',
@@ -21,7 +22,7 @@ app.media.directive('subscriptionNavigationItem', function($rootScope, $filter) 
 
         },
 
-          templateUrl: 'src/libs/media/templates/subscriptions/navigation.html'
+          templateUrl: 'src/libs/media/templates/subscriptions/navigation-item.html'
       };
-});
+}]);
 

@@ -4,11 +4,11 @@ app.media.config(['$routeProvider',
         $routeProvider
             .when('/episodes', {
                 controller : 'EpisodeController',
-                templateUrl : 'src/libs/libs/media/templates/episodes/page.html'
+                templateUrl : 'src/libs/media/templates/episodes/page.html'
             })
             .when('/subscriptions', {
                 controller : 'SubscriptionController',
-                templateUrl : 'src/libs/media/templates/subscriptions/subscriptions.html'
+                templateUrl : 'src/libs/media/templates/subscriptions/page.html'
             })
 
             .when('/add', {

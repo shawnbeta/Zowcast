@@ -1,7 +1,21 @@
 <header class="viewHeader clearfix">
     <h1>Subscriptions</h1>
+    <div class="headerMenu">
+        <button class="viewSwitch" ng-click="setEpisodeStyle('list')">
+            <i class="fa fa-th-list" ng-class="{'selected' : episodeStyle == 'list'}"></i>
+        </button>
+        <button class="viewSwitch" ng-click="setEpisodeStyle('grid')">
+            <i class="fa fa-th" ng-class="{'selected' : episodeStyle == 'grid'}"></i>
+        </button>
+    </div>
 </header>
 
-<ul>
-    <subscriptionItem ng-repeat="s in subscriptions|orderByTitle"></subscriptionItem>
+<subscription-details></subscription-details>
+
+<ul ng-if="subscriptions">
+    <subscription-item ng-repeat="s in subscriptions|orderByTitle"></subscription-item>
 </ul>
+
+<span ng-if="!subscriptions">
+    You have no subscriptions.
+</span>

@@ -1,6 +1,6 @@
 <ul>
     <li>
-        <a ng-class="{\selected\: activeSubscription == 0}" ng-click="listAllEpisodes()">All Episodes</a>
+        <a ng-class="{'selected': activeSubscription == 0}" ng-click="listAllEpisodes()">All Episodes</a>
     </li>
-    <subscription-navigation-item></subscription-navigation-item>
+    <subscription-navigation-item ng-repeat="s in subscriptions| orderByTitle"></subscription-navigation-item>
 </ul>

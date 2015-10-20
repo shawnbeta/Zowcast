@@ -13,10 +13,15 @@
     </div>
 </header>
 
+
+<episode-details></episode-details>
+
 <subscription-navigation></subscription-navigation>
 
-<episodeDetails></episodeDetails>
-
-<ul>
-    <episodeItem ng-repeat="e in episodes|orderByPubDate"></episodeItem>
+<ul ng-if="episodes">
+    <episode-item ng-repeat="e in episodes|orderByPubDate"></episode-item>
 </ul>
+
+<span ng-if="!episodes">
+    You have no episodes.
+</span>

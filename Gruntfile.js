@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 
         clean: {
             core: 'build/core/**',
-            dev: ['build/sandbox/*', '!build/sandbox/_server/**'],
+            dev: ['build/sandbox/*', '!build/sandbox/rest/**'],
             staging: 'build/testing/**'
         },
 
@@ -73,17 +73,17 @@ module.exports = function (grunt) {
                 },
                 files: {
                     //'build/sandbox/assets/css/bootstrap.css': 'bower_components/bootstrap/less/bootstrap.less',
-                    'build/sandbox/assets/css/contrib/bootstrap-lite.css': 'less/contrib/bootstrap-lite.less',
-                    'build/sandbox/assets/css/libs/media/main.css': 'less/media/main.less',
-                    'build/sandbox/assets/css/libs/media/grid.css': 'less/media/grid.less',
-                    'build/sandbox/assets/css/libs/media/list.css': 'less/media/list.less',
-                    'build/sandbox/assets/css/libs/footer.css': 'less/footer.less',
-                    'build/sandbox/assets/css/libs/overlay.css': 'less/overlay.less',
-                    'build/sandbox/assets/css/libs/globals.css': 'less/globals.less',
-                    'build/sandbox/assets/css/libs/main.css': 'less/main.less',
-                    'build/sandbox/assets/css/libs/navBar.css': 'less/navBar.less',
-                    'build/sandbox/assets/css/libs/player.css': 'less/player.less',
-                    'build/sandbox/assets/css/libs/variables.css': 'less/variables.less'
+                    'build/sandbox/css/contrib/bootstrap-lite.css': 'less/contrib/bootstrap-lite.less',
+                    'build/sandbox/css/libs/media/main.css': 'less/media/main.less',
+                    'build/sandbox/css/libs/media/grid.css': 'less/media/grid.less',
+                    'build/sandbox/css/libs/media/list.css': 'less/media/list.less',
+                    'build/sandbox/css/libs/footer.css': 'less/footer.less',
+                    'build/sandbox/css/libs/overlay.css': 'less/overlay.less',
+                    'build/sandbox/css/libs/globals.css': 'less/globals.less',
+                    'build/sandbox/css/libs/main.css': 'less/main.less',
+                    'build/sandbox/css/libs/navBar.css': 'less/navBar.less',
+                    'build/sandbox/css/libs/player.css': 'less/player.less',
+                    'build/sandbox/css/libs/variables.css': 'less/variables.less'
                 }
             },
             staging: {
