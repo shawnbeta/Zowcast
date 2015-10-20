@@ -7,31 +7,31 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
 
-
         clean: {
-            dev: [ 'build/sandbox'
-            ]
+            core: 'build/core/**',
+            dev: ['build/sandbox/*', '!build/sandbox/_server/**'],
+            staging: 'build/testing/**'
         },
 
         mustache_render: {
 
-            core: {
-                options: {
-                    directory: 'mustache_templates'
-                },
-                files: [
-                    {
-                        data: 'data/dev.json',
-                        template: 'mustache_templates/app/settings.mustache',
-                        dest: 'app/src/templates/settings.html'
-                    },
-                    {
-                        data: 'data/dev.json',
-                        template: 'mustache_templates/app/about.mustache',
-                        dest: 'app/src/templates/about.html'
-                    }
-                ]
-            },
+            //core: {
+            //    options: {
+            //        directory: 'mustache_templates'
+            //    },
+            //    files: [
+            //        {
+            //            data: 'data/dev.json',
+            //            template: 'mustache_templates/app/settings.mustache',
+            //            dest: 'app/src/templates/settings.html'
+            //        },
+            //        {
+            //            data: 'data/dev.json',
+            //            template: 'mustache_templates/app/about.mustache',
+            //            dest: 'app/src/templates/about.html'
+            //        }
+            //    ]
+            //},
 
             dev: {
                 options: {
@@ -41,7 +41,17 @@ module.exports = function (grunt) {
                     {
                         data: 'data/dev.json',
                         template: 'mustache_templates/app/main.mustache',
-                        dest: 'app/index.html'
+                        dest: 'build/sandbox/index.html'
+                    },
+                    {
+                        data: 'data/dev.json',
+                        template: 'mustache_templates/app/settings.mustache',
+                        dest: 'build/sandbox/settings.html'
+                    },
+                    {
+                        data: 'data/dev.json',
+                        template: 'mustache_templates/app/about.mustache',
+                        dest: 'build/sandbox/about.html'
                     }
                 ]
             },
@@ -101,14 +111,7 @@ module.exports = function (grunt) {
                         flatten: false,
                         cwd: 'src',
                         src: '**',
-                        dest: 'app/src/libs/'
-                    },
-                    {
-                        expand: true,
-                        flatten: false,
-                        cwd: 'angular_templates',
-                        src: '**',
-                        dest: 'app/src/templates/'
+                        dest: 'build/sandbox/src/libs/'
                     },
                     {
                         expand: true,

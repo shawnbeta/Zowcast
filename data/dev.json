@@ -45,14 +45,29 @@
         "media/services/EpisodeService",
         "media/services/SubscriptionService",
 
+        "player/player.module",
+        "player/controllers/PlayerController",
+        "player/directives/NowPlayingDirective",
+        "player/VolumeActionDirective",
+        "player/services/PlayerService",
+
+        "ui/ui.module",
+        "ui/controller/NavController",
+        "ui/directives/ActionBarDirective",
+        "ui/directives/NavDirectives",
+        "ui/services/OverlayService",
+
+        "utility/utility.module",
+        "utility/directives/LoadingDirective",
+        "utility/filters/UtilityFilters",
+        "utility/services/HelperService",
+        "utility/StorageService",
         "utility/utilities.module",
         "utility/services/HelperService",
         "utility/services/StorageService",
 
         "vendors/vendors.module",
         "vendors/services/UnderscoreService"
-
-
       ],
       "remote": [
         "http://fonts.googleapis.com/css?family=Quicksand:300,400,700"

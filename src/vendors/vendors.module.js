@@ -1,4 +1,1 @@
-(function() {
-    'use strict';
-    angular.module('app.vendors', []);
-})();
+app.vendors = angular.module('app.vendors', []);
