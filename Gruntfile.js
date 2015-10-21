@@ -155,6 +155,15 @@ module.exports = function (grunt) {
                         flatten: true,
                         src: 'bower_components/underscore/underscore.js',
                         dest: 'build/sandbox/src/contrib/'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: [
+                            'bower_components/angularUtils/src/directives/pagination/dirPagination.js',
+                            'bower_components/angularUtils/src/directives/pagination/dirPagination.tpl.html'
+                        ],
+                        dest: 'build/sandbox/src/contrib/'
                     }
                 ]
             },

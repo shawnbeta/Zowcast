@@ -30,7 +30,8 @@
         "angular-touch",
         "truncate",
         "jquery",
-        "underscore"
+        "underscore",
+        "dirPagination"
       ],
       "libs": [
         "app.module",
