@@ -50,25 +50,30 @@ class EpisodeService extends MediaService
 		return $episodeCollection;
 	}
 
-	public function updateEpisode($episodeRepository, $field, $id, $newValue)
+	public function updateEpisode($em, $episode, $field, $newValue)
 	{
-		$episode = $episodeRepository->find($id);
-		if($field == 'watched')
-			return $this->updateWatched($episode, $newValue);
-		return $this->updateBookmark($episode, $newValue);
+		if($field == 0)
+			return $this->updateWatched($em, $episode, $newValue);
+		return $this->updateBookmark($em, $episode, $newValue);
 	}
 
-	private function updateWatched($episode, $newValue)
+	private function updateWatched($em, $episode, $newValue)
 	{
+		print $newValue;
+		print $episode->getId();
 		$ogEpisode = $episode;
 		$episode->setWatched($newValue);
+		$em->persist($episode);
+		$em->flush();
 		return $episode->getWatched() === $ogEpisode->getWatched();
 	}
 
-	private function updateBookmark($episode, $newValue)
+	private function updateBookmark($em, $episode, $newValue)
 	{
 		$ogEpisode = $episode;
 		$episode->setBookmark($newValue);
+		$em->persist($episode);
+		$em->flush();
 		return $episode->getBookmark() === $ogEpisode->getBookmark();
 	}
 

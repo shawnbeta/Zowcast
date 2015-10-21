@@ -13,11 +13,20 @@ use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use HC\Bundle\UtilityBundle\Services\UtilityService;
 
 class MediaService
 {
     protected $configService;
     protected $serializer;
+    private $utilityService;
+
+    public function getUtilityService()
+    {
+        if(isset($this->utilityService))
+            return $this->utilityService;
+        return $this->utilityService = new UtilityService();
+    }
 
     public function getConfigService()
     {
