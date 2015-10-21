@@ -36,7 +36,7 @@
 
 # Composer PHAR
 /composer.phar
-/src/HC/Bundle/AppBundle/Services/ConfigService.php
+/src/HC/Bundle/CoreBundle/Services/ConfigService.php
 
 # Created by .ignore support plugin (hsz.mobi)
 

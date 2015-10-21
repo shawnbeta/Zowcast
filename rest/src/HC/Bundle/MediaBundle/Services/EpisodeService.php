@@ -3,19 +3,10 @@ namespace HC\Bundle\MediaBundle\Services;
 use HC\Bundle\MediaBundle\Entity\Episode;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Serializer\Serializer;
 
-class EpisodeService
+
+class EpisodeService extends MediaService
 {
-
-	private $serializer;
-
-	public function getSerializer()
-	{
-		if(isset($this->serializer))
-			return $this->serializer;
-		return $this->serializer = new Serializer();
-	}
 
 	public function createEpisodeEntity($data, $subscription)
 	{
@@ -25,25 +16,34 @@ class EpisodeService
 		$Episode->setSrc($data['src']);
 		$Episode->setImg($data['img']);
 		$Episode->setPubDate($data['pubDate']);
-		$Episode->setWatched($data['watched']);
-		$Episode->setBookmark($data['bookmark']);
+		$Episode->setWatched(false);
+		$Episode->setBookmark(0.0);
 		$Episode->setSubscription($subscription);
+		// Use the current date/time for create and modified dates
+		$dateAgo = new \DateTime;
+		$currTimeInt = (strtotime($dateAgo->format('Y-m-d H:i:s'))) * 1000;
+		$Episode->setCreateDate($currTimeInt);
+		$Episode->setModifiedDate($currTimeInt);
+		// Set public if working on DEV server
+		// If adding subscription on PROD result will be false
+		$configService = $this->getConfigService();
+		$Episode->setPublic($_SERVER['SERVER_NAME'] === $configService::DEV_SERVER_PATH);
 		return $Episode;
 	}
 
-	public function buildBulkEpisodes($em, $data, $subscription)
+	public function buildBulkEpisodes($em, $episodes, $subscription)
 	{
 		$batchSize = 20;
 		$episodeCollection = array();
-		$count = count($data);
-		for ($i=0; $i <= $count; $i++) {
-			$Episode = $this->createEpisodeEntity($data, $subscription);
+		$count = count($episodes);
+		for ($i=0; $i < $count; $i++) {
+			$Episode = $this->createEpisodeEntity($episodes[$i], $subscription);
 			$em->persist($Episode);
 			if(($i % $batchSize) === 0) {
 				$em->flush();
-				$em->clear(); // Detaches all objects from Doctrine!
+				//$em->clear(); // Detaches all objects from Doctrine!
 			}
-			array_push($episodeCollection, $this->serializer->serialize($Episode));
+			array_push($episodeCollection, $this->getSerializer()->serialize($Episode, 'json'));
 		}
 		$em->flush(); //Persist objects that did not make up an entire batch
 		$em->clear();
