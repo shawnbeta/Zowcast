@@ -6,10 +6,15 @@ use Symfony\Component\HttpFoundation\Response;
 use HC\Bundle\MediaBundle\Services\Parsers\SimplePieService;
 use HC\Bundle\MediaBundle\Services\Parsers\ZetaXMLService;
 use HC\Bundle\UtilityBundle\Services\UtilityService;
-
+use DateTime;
 class EpisodeService extends MediaService
 {
 
+	/**
+	 * Move episode data from array into an Episode entity
+	 * @param array of data from feed parser
+	 * @return Episode entity
+	 */
 	public function createEpisodeEntity($data, $subscription)
 	{
 		$Episode = new Episode();
@@ -34,6 +39,12 @@ class EpisodeService extends MediaService
 		return $Episode;
 	}
 
+	/**
+	 * Iterates through each episode array in the collection
+	 * @param doctrine entity manager, array of episode array data,
+	 * Subscription entity
+	 * @return Episode entity
+	 */
 	public function buildBulkEpisodes($em, $episodes, $subscription)
 	{
 		$batchSize = 20;
@@ -105,41 +116,51 @@ class EpisodeService extends MediaService
 		return $em->deleteOldEpisodes('pub_date', $dateToCompare, '<');
 	}
 
+	/**
+	 * Iterates through each subscription gathering new episodes since last update array in the collection
+	 * @param doctrine entity manager, array of episode array data,
+	 * Subscription entity
+	 * @return Episode entity
+	 */
 	public function gatherNewEpisodes($sr, $em)
 	{
 
 		// Collect all public subscriptions
 		$subscriptions = $sr->findByPublic(true);
 		$configService = $this->getConfigService();
+		$fp = fopen($configService::FILES . 'last-update.txt', 'w+');
+		$lastUpdateInt = (int)fgets($fp);
+		fclose($fp);
+
+		//print $lastUpdateInt;
+
+		$subscriptionService = new SubscriptionService();
 
 		$count = count($subscriptions);
-		for($i=0;$i<$count;$i++){
+		for ($i = 0; $i < $count; $i++) {
 			// Get data with SimplePie first
 			$simplepie = new SimplePieService($subscriptions[$i]->getSrc());
-			$episodes = $simplepie->getEpisodeCollection($configService::EPISODE_DAY_MAX);
+			$episodes = $simplepie->getEpisodeCollection($lastUpdateInt);
+
+			//Check for empty fields
+			// If the subscription array has any empty values try the ZetaService
+			// Then fold the missing values together
+			if (in_array("", $episodes)) {
+				$rsp = $subscriptionService->checkForEmptyFields(new ZetaXMLService(), null, $episodes, $lastUpdateInt);
+				$episodes = $rsp['episodes'];
+			}
+
+			$rsp = $this->buildBulkEpisodes($em, $episodes, $subscriptions[$i]);
+			print count($rsp);
 		}
-
-
-		//Check for empty fields
-		// If the subscription array has any empty values try the ZetaService
-		// Then fold the missing values together
-		if(in_array("", $episodes)){
-			$configService = $this->getConfigService();
-			$dateAgo = $this->getUtilityService()->getDateAgo($configService::EPISODE_DAY_MAX);
-			$subscriptionService = new SubscriptionService();
-			$rsp = $subscriptionService->checkForEmptyFields( new ZetaXMLService(), null, $episodes, $dateAgo);
-			$subscription = $rsp['subscription'];
-			$episodes = $rsp['episodes'];
-		}
-
-		$subscription = $this->createSubscriptionEntity(new Subscription(), $subscription, $src, $episodes[0]['src']);
-		$em->persist($subscription);
-		$em->flush($subscription);
-
-		$episodeService = new EpisodeService();
-		$episodes = $episodeService->buildBulkEpisodes($em, $episodes, $subscription);
-		$rsp = array('subscription' => $this->getSubscriptionArray($subscription), 'episodes' => $episodes);
-
+		$currentDate = new \DateTime;
+		//var_dump(new DateTime('now'));
+		$newLastUpdate = (strtotime($currentDate->format('Y-m-d H:i:s'))) * 1000;
+		//print $newLastUpdate;
+		$fp = fopen($configService::FILES . 'last-update.txt', 'w+');
+		fwrite($fp, $newLastUpdate);
+		fclose($fp);
+		return array("success" => true);
 	}
 
 }
