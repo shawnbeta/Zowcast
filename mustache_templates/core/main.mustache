@@ -24,6 +24,9 @@
 <div id="stage">
 
     <% > ui/navBar %>
+    <div ng-class="{'error' : message.error === true}" ng-if="message">
+        {{message.error}}{{message.success}}
+    </div>
     <div ng-view class="swContainer"></div>
 </div>
 

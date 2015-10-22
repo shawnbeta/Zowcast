@@ -1,5 +1,4 @@
-    <div class="srcForm" ng-if="addView == 0">
-        <!--<label>Feed URL or Youtube Channel ID</label>-->
-        <input type="text" ng-model="addForm.src" placeholder="Feed URL or Youtube Channel ID">
-        <a ng-click="add()"><i class="fa fa-plus"></i></a>
-    </div>
+    <form ng-submit="add()" class="srcForm">
+        <input type="text" ng-model="formData.src" placeholder="Feed URL or Youtube Channel ID">
+        <button class="standardButton"><i class="fa fa-plus"></i></button>
+    </form>
