@@ -58,9 +58,9 @@
         "media/services/SubscriptionService",
 
         "player/player.module",
-        "player/controllers/PlayerController",
-        "player/directives/NowPlayingDirective",
-        "player/directives/VolumeActionDirective",
+        "player/directives/AudioPlayerDirective",
+        "player/directives/VideoPlayerDirective",
+        "player/directives/PlaybackControlDirective",
         "player/services/PlayerService",
 
         "ui/ui.module",

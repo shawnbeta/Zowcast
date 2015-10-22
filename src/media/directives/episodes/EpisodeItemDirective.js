@@ -1,4 +1,4 @@
-app.media.directive('episodeItem',['EpisodeService', '$rootScope', function(EpisodeService,$rootScope) {
+app.media.directive('episodeItem',['EpisodeService', 'PlayerService', function(EpisodeService, PlayerService) {
 
     return  {
 
@@ -13,7 +13,7 @@ app.media.directive('episodeItem',['EpisodeService', '$rootScope', function(Epis
             //};
 
             scope.togglePlaybackIcon = function(episode){
-                PlayerService.toggleIcon(episode);
+                return PlayerService.toggleIcon(episode);
             };
 
             scope.togglePlayback = function(episode){

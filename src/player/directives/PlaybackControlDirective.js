@@ -1,5 +1,5 @@
 
-app.media.directive('playbackControls',['EpisodeService', '$rootScope', function() {
+app.media.directive('playbackControls',['PlayerService', '$rootScope', function(PlayerService, $rootScope) {
 
     return  {
 
@@ -16,6 +16,34 @@ app.media.directive('playbackControls',['EpisodeService', '$rootScope', function
 
             scope.togglePlayback = function(episode){
                 PlayerService.togglePlayback(episode);
+            };
+
+            scope.rewind = function(){
+                PlayerService.rewind();
+            };
+
+            scope.forward = function(){
+                PlayerService.forward();
+            };
+
+            scope.jumpBack = function(){
+                PlayerService.jumpBack();
+            };
+
+            scope.jumpAhead = function(){
+                PlayerService.jumpAhead();
+            };
+
+            scope.volumeUp = function(){
+                PlayerService.volumeUp();
+            };
+
+            scope.volumeDown = function(){
+                PlayerService.volumeDown();
+            };
+
+            scope.setVolumeTo = function(){
+                PlayerService.setVolumeTo();
             };
 
         },
