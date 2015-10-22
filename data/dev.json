@@ -46,7 +46,7 @@
         "media/controllers/EpisodeController",
         "media/controllers/SubscriptionController",
         "media/directives/episodes/EpisodeDetails",
-        "media/directives/episodes/EpisodeItem",
+        "media/directives/episodes/EpisodeItemDirective",
         "media/directives/subscriptions/SubscriptionItemDirective",
         "media/directives/subscriptions/SubscriptionNavigationDirective",
         "media/directives/subscriptions/SubscriptionNavigationItemDirective",
@@ -119,8 +119,8 @@
         "title": "flush local storage"
       },
       {
-        "action" : "fetchBulk",
-        "title": "fetch bulk"
+        "action" : "sync",
+        "title": "sync"
       },
       {
         "action" : "purgeRemote",

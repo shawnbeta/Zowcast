@@ -1,4 +1,4 @@
-app.media.directive('episodeItem',['EpisodeService', function(EpisodeService) {
+app.media.directive('episodeItem',['EpisodeService', '$rootScope', function(EpisodeService,$rootScope) {
 
     return  {
 
@@ -7,6 +7,27 @@ app.media.directive('episodeItem',['EpisodeService', function(EpisodeService) {
         scope: '=',
 
         link: function(scope){
+
+            //scope.isPlaying = function(episode){
+            //    return $rootScope.playerObject.loadedEpisode == episode && $rootScope.playerObject.status == 'playing';
+            //};
+
+            scope.togglePlaybackIcon = function(episode){
+                PlayerService.toggleIcon(episode);
+            };
+
+            scope.togglePlayback = function(episode){
+                PlayerService.togglePlayback(episode);
+            };
+
+
+
+
+            // New above
+
+
+
+
             scope.isWatched = function(model){
                 return model.watched == 0 ? 'mark watched'  : 'mark unwatched';
             };
@@ -32,6 +53,8 @@ app.media.directive('episodeItem',['EpisodeService', function(EpisodeService) {
                 scope.episodeDetailer = {};
                 scope.showDetails = false;
             };
+
+
         },
 
         templateUrl: 'src/libs/media/templates/episodes/item.html'

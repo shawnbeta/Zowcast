@@ -2,7 +2,7 @@ app.core.factory('ConfigService', [
     function() {
         return {
 
-            serverPath: 'rest/'
+            serverPath: 'rest/web/app_dev.php/'
 
         }
     }

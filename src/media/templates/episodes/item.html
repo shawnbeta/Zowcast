@@ -24,11 +24,10 @@
         <span>{{e.id}}</span> 
         <span>{{e.duration}}</span> 
         <span><img src="{{e.img}}"></span>
-        <span ng-controller="PlayerController"> 
-            <button ng-click="playPause(e)">{{isPlaying(e)}}</button> 
-            <button ng-click="updateWatched(e)">{{isWatched(e)}}</button> 
-            <button ng-click="playPause(e)">download</button> 
-            <button ng-click="toggleDetails(e)">details</button> 
-            <button ng-click="copyToServer(e)">copy</button> 
-            </span> 
+        <span>
+            <button ng-click="togglePlayback(e)"><i class="fa fa-{{togglePlaybackIcon(e)}}"></i></button>
+            <button ng-click="updateWatched(e)"><i class="fa fa-check"></i></button>
+            <button ng-click="playPause(e)"><i class="fa fa-download"></i></button>
+            <button ng-click="toggleDetails(e)"><i class="fa fa-info"></i></button>
+        </span>
         </li> 

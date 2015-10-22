@@ -77,4 +77,22 @@ class EpisodeService extends MediaService
 		return $episode->getBookmark() === $ogEpisode->getBookmark();
 	}
 
+
+	public function getEpisodeArray($episode)
+	{
+		return array(
+			'id' => $episode->getId(),
+			'title' => $episode->getTitle(),
+			'description' => $episode->getDescription(),
+			'src' => $episode->getSrc(),
+			'img' => $episode->getImg(),
+			'createDate' => $episode->getCreateDate(),
+			'modifiedDate' => $episode->getModifiedDate(),
+			'public' => $episode->getPublic(),
+			'pubDate' => $episode->getPubDate(),
+			'watched' => $episode->getWatched(),
+			'bookmark' => $episode->getBookmark()
+		);
+	}
+
 }
