@@ -21,7 +21,7 @@ class EpisodeService extends MediaService
 		$Episode->setTitle($data['title']);
 		$Episode->setDescription($data['description']);
 		$Episode->setSrc($data['src']);
-		$Episode->setImg($data['img']);
+		$Episode->setImg($subscription->getImg());
 		$Episode->setPubDate($data['pubDate']);
 		$Episode->setWatched(false);
 		$Episode->setBookmark(0.0);

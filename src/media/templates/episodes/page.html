@@ -18,7 +18,7 @@
 
 <subscription-navigation></subscription-navigation>
 
-<ul ng-if="episodes">
+<ul class="grid" ng-if="episodes">
     <episode-item ng-repeat="e in episodes | orderByPubDate"></episode-item>
     <episode-item dir-paginate="e in episodes | orderByPubDate : itemsPerPage:20"></episode-item>
 </ul>

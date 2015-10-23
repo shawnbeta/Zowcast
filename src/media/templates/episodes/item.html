@@ -18,12 +18,12 @@
 <!--</li>-->
 
 
-    <li class="episodeItem">
+    <li class="swItem">
         <span>{{e.title}}</span> 
         <span>{{e.pub_date | date:"medium"}}</span> 
         <span>{{e.id}}</span> 
         <span>{{e.duration}}</span> 
-        <span><img src="{{e.img}}"></span>
+        <div class="swImg"><img src="{{e.img}}"></div>
         <span>
             <button ng-click="togglePlayback(e)"><i class="fa fa-{{togglePlaybackIcon(e)}}"></i></button>
             <button ng-click="updateWatched(e)"><i class="fa fa-check"></i></button>
