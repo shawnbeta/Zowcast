@@ -145,10 +145,10 @@ class EpisodeService extends MediaService
 			//Check for empty fields
 			// If the subscription array has any empty values try the ZetaService
 			// Then fold the missing values together
-			if (in_array("", $episodes)) {
-				$rsp = $subscriptionService->checkForEmptyFields(new ZetaXMLService(), null, $episodes, $lastUpdateInt);
-				$episodes = $rsp['episodes'];
-			}
+//			if (in_array("", $episodes)) {
+//				$rsp = $subscriptionService->checkForEmptyFields(new ZetaXMLService(), null, $episodes, $lastUpdateInt);
+//				$episodes = $rsp['episodes'];
+//			}
 
 			$rsp = $this->buildBulkEpisodes($em, $episodes, $subscriptions[$i]);
 			print count($rsp);

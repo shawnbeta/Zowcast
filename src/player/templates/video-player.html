@@ -1,2 +1,2 @@
-<video src="{{player.loadedEpisode.src}}"></video>
+<video ng-if="playerObject.loadedEpisode.style == 'video'" src="{{playerObject.loadedEpisode.location}}"></video>
 <playback-controls></playback-controls>
