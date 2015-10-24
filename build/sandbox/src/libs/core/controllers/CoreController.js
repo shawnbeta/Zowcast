@@ -1,11 +1,7 @@
 app.core.controller('CoreController', [ '$rootScope', '$scope', '$interval', 'PersistenceService', '_',
     'SubscriptionService', 'EpisodeService', 'PlayerService', 'UtilityService',
  	function($rootScope, $scope, $interval, PersistenceService, _,
-             SubscriptionService, EpisodeService, PlayerService, UtilityService){
-
-        //$rootScope.subscription = [Subscription.devSubscription(21), Subscription.devSubscription(58),
-        //    Subscription.devSubscription(192)];
-        //$rootScope.episodes = [Episode.devEpisode(21), Episode.devEpisode(58), Episode.devEpisode(192)];
+             SubscriptionService, EpisodeService, PlayerService){
 
         // Initialize Player
         $rootScope.playerObject = PlayerService.initializePlayerObject();
@@ -26,64 +22,10 @@ app.core.controller('CoreController', [ '$rootScope', '$scope', '$interval', 'Pe
         };
 
 
-
         SubscriptionService.loadSubscriptionsFromLocalStorage($rootScope);
         EpisodeService.loadEpisodesFromLocalStorage($rootScope);
 
         console.log($rootScope.subscriptions);
-
-        // New code above
-
-
-
-        //// Collect episodes
-        //var oldEpisodes = EpisodeService.gatherOld(ec);
-        //
-        //if(oldEpisodes){
-        //
-        //    // Remove episode ID from episodeCollection
-        //    EpisodeService.removeFromEpisodeCollection(ec, oldEpisodes);
-        //    // Reload the collection
-        //    ec = PersistenceService.loadData('EpisodeCollection');
-        //    // Remove each episode
-        //    EpisodeService.removeFromLocalStorage(oldEpisodes);
-        //    // Remove episode ID from sec
-        //    EpisodeService.removeFromSEC(oldEpisodes); // working
-        //}
-
-    //
-    //    $scope.fetchBulk = function(){
-    //    localStorage.clear();
-    //    // var h = new HelperService();
-    //    // Get the json response
-    //    var f = SubscriptionService.fetchAll();
-    //
-    //    // returns subscription collection
-    //    f.then(function(rsp) {
-    //
-    //       var subscriptionObjCollection =
-    //           SubscriptionService.executeBulkRetrieval(rsp.data.subscriptions);
-    //           $rootScope.subscriptions = subscriptionObjCollection;
-    //        $rootScope.episodes =
-    //         EpisodeService.executeBulkRetrieval(
-    //             subscriptionObjCollection, rsp.data.episodes);
-    //    });
-    //
-    //};
-
-		// Use Services to load all subscriptions & Episodes
-		// from localStorage to application memory.
-		//$rootScope.subscriptions = SubscriptionService.load(sc);
-		//$rootScope.episodes = EpisodeService.load(ec);
-
-        //$rootScope.OverlayManager = {};
-        //$rootScope.toggleOverlay = function(){
-        //
-        //    //jQuery('#overlayWrapper').css({
-        //    //    'z-index': 5
-        //    //});
-        //    OverlayService.toggleOverlay(updateOverlayManager);
-        //};
 
         updateOverlayManager = function(om){
             $rootScope.OverlayManager = om;

@@ -105,69 +105,7 @@
 78
 79
 80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139</td><td class="line-coverage"><span class="cline-any cline-yes">2</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+81</td><td class="line-coverage"><span class="cline-any cline-yes">2</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -191,64 +129,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -304,11 +188,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">app.core.controller('CoreController', [ '$rootScope', '$scope', '$interval', 'PersistenceService', '_',
     'SubscriptionService', 'EpisodeService', 'PlayerService', 'UtilityService',
 <span class="fstat-no" title="function not covered" > 	function($rootScope, $scope, $interval, PersistenceService, _,</span>
-             SubscriptionService, EpisodeService, PlayerService, UtilityService){
-&nbsp;
-        //$rootScope.subscription = [Subscription.devSubscription(21), Subscription.devSubscription(58),
-        //    Subscription.devSubscription(192)];
-        //$rootScope.episodes = [Episode.devEpisode(21), Episode.devEpisode(58), Episode.devEpisode(192)];
+             SubscriptionService, EpisodeService, PlayerService){
 &nbsp;
         // Initialize Player
 <span class="cstat-no" title="statement not covered" >        $rootScope.playerObject = PlayerService.initializePlayerObject();</span>
@@ -329,64 +209,10 @@
         };
 &nbsp;
 &nbsp;
-&nbsp;
 <span class="cstat-no" title="statement not covered" >        SubscriptionService.loadSubscriptionsFromLocalStorage($rootScope);</span>
 <span class="cstat-no" title="statement not covered" >        EpisodeService.loadEpisodesFromLocalStorage($rootScope);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        console.log($rootScope.subscriptions);</span>
-&nbsp;
-        // New code above
-&nbsp;
-&nbsp;
-&nbsp;
-        //// Collect episodes
-        //var oldEpisodes = EpisodeService.gatherOld(ec);
-        //
-        //if(oldEpisodes){
-        //
-        //    // Remove episode ID from episodeCollection
-        //    EpisodeService.removeFromEpisodeCollection(ec, oldEpisodes);
-        //    // Reload the collection
-        //    ec = PersistenceService.loadData('EpisodeCollection');
-        //    // Remove each episode
-        //    EpisodeService.removeFromLocalStorage(oldEpisodes);
-        //    // Remove episode ID from sec
-        //    EpisodeService.removeFromSEC(oldEpisodes); // working
-        //}
-&nbsp;
-    //
-    //    $scope.fetchBulk = function(){
-    //    localStorage.clear();
-    //    // var h = new HelperService();
-    //    // Get the json response
-    //    var f = SubscriptionService.fetchAll();
-    //
-    //    // returns subscription collection
-    //    f.then(function(rsp) {
-    //
-    //       var subscriptionObjCollection =
-    //           SubscriptionService.executeBulkRetrieval(rsp.data.subscriptions);
-    //           $rootScope.subscriptions = subscriptionObjCollection;
-    //        $rootScope.episodes =
-    //         EpisodeService.executeBulkRetrieval(
-    //             subscriptionObjCollection, rsp.data.episodes);
-    //    });
-    //
-    //};
-&nbsp;
-		// Use Services to load all subscriptions &amp; Episodes
-		// from localStorage to application memory.
-		//$rootScope.subscriptions = SubscriptionService.load(sc);
-		//$rootScope.episodes = EpisodeService.load(ec);
-&nbsp;
-        //$rootScope.OverlayManager = {};
-        //$rootScope.toggleOverlay = function(){
-        //
-        //    //jQuery('#overlayWrapper').css({
-        //    //    'z-index': 5
-        //    //});
-        //    OverlayService.toggleOverlay(updateOverlayManager);
-        //};
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        updateOverlayManager = <span class="fstat-no" title="function not covered" >function(om){</span></span>
 <span class="cstat-no" title="statement not covered" >            $rootScope.OverlayManager = om;</span>
@@ -444,7 +270,7 @@
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Oct 23 2015 22:58:04 GMT-0700 (MST)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Oct 24 2015 12:21:33 GMT-0700 (MST)</div>
 </div>
 <script src="../../../prettify.js"></script>
 <script>

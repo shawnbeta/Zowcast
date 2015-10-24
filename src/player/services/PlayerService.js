@@ -25,7 +25,6 @@ app.player.factory('PlayerService',
 
         loadMedia: function(playerObject, episode){
             var mediaType = episode.mediaType == 0 ? 'audio' : 'video';
-
             playerObject.loadedEpisode = episode;
             playerObject.element = document.getElementsByTagName(mediaType)[0];
             // Added for testing.
@@ -127,13 +126,10 @@ app.player.factory('PlayerService',
 
 
         togglePlayback: function(episode, playerObject){
-            console.log(playerObject);
             if(episode.id !== playerObject.loadedEpisode.id){
                 playerObject = this.loadMedia(playerObject, episode);
             }
-            console.log( playerObject);
             playerObject.status = playerObject.status == 'playing' ? 'paused' : 'playing';
-            console.log( playerObject.status);
              playerObject.status == 'playing' ? this.playAction(playerObject) : this.pauseAction(playerObject);
             return playerObject;
         }
