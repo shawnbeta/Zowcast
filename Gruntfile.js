@@ -301,7 +301,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', ['clean:main', 'less', 'copy:main']);
     grunt.registerTask('test', ['clean:dev', 'copy:dev', 'karma']);
-    grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'less:dev',  'copy:dev']);
+    grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'less:dev',  'copy:dev', 'karma']);
     grunt.registerTask('staging', ['clean:staging', 'mustache_render:staging', 'less:staging',
     'concat:staging', 'copy:staging', 'uglify:staging', 'cssmin:staging', 'clean:temp']);
 

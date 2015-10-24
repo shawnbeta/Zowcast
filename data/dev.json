@@ -24,7 +24,6 @@
     "js" : {
       "contrib" : [
         "angular",
-        "angular-mocks",
         "angular-route",
         "angular-sanitize",
         "angular-touch",
