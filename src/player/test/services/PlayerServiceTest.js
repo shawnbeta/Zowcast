@@ -61,15 +61,15 @@ describe('PlayerService', function() {
     it('will return the correct toggle text', function(){
 
         var episode = 3;
-        var firstRun = PlayerService.toggleIcon(_initPlayerObject, episode);
+        var firstRun = PlayerService.togglePlaybackIcon(_initPlayerObject, episode);
         expect(firstRun).toEqual('play');
         // Update the playerObj status
         _initPlayerObject.status = 'playing';
-        var secondRun = PlayerService.toggleIcon(_initPlayerObject, episode);
+        var secondRun = PlayerService.togglePlaybackIcon(_initPlayerObject, episode);
         expect(secondRun).toEqual('play'); // Since both conditions are not met
         _initPlayerObject.loadedEpisode = 3;
         _initPlayerObject.status = 'paused';
-        var thirdRun = PlayerService.toggleIcon(_initPlayerObject, episode);
+        var thirdRun = PlayerService.togglePlaybackIcon(_initPlayerObject, episode);
         expect(thirdRun).toEqual('pause'); // All both conditions are met
 
     });
