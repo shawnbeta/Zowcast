@@ -1,0 +1,183 @@
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after,
+.pager:before,
+.pager:after {
+  content: " ";
+  display: table;
+}
+.container:after,
+.container-fluid:after,
+.row:after,
+.pager:after {
+  clear: both;
+}
+@media (max-width: 767px) {
+  .list {
+    line-height: 90%;
+  }
+}
+@media (min-width: 768px) {
+  .list {
+    line-height: 30px;
+  }
+}
+.list .itemWrapper {
+  width: 100%;
+}
+.list .swItem {
+  position: relative;
+  background: #ffffff;
+  margin-bottom: 20px;
+  width: 100%;
+  display: block;
+}
+@media (min-width: 768px) {
+  .list .swItem {
+    height: 100px;
+  }
+}
+.list .swItem .teaser {
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .list .swItem .teaser {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+}
+.list .swItem .teaser .toggleDescription {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  z-index: 3;
+}
+.list .swItem .swDate {
+  display: inline-block;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .list .swItem .swDate {
+    padding-top: 5px;
+  }
+}
+.list .swItem .swImg {
+  position: relative;
+  z-index: 3;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 10px;
+}
+.list .swItem .swImg img {
+  max-width: 100%;
+  display: block;
+}
+.list .swItem .swImg .imgPlayback {
+  opacity: .8;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  z-index: 2;
+  font-size: 80px;
+  color: #ffffff;
+  border: 0;
+}
+.list .swItem .swImg .imgPlayback:hover {
+  color: #f1c604;
+}
+@media (min-width: 768px) {
+  .list .swTitle,
+  .list .swDescription {
+    padding-right: 100px;
+  }
+}
+.list .swTitle {
+  font-weight: 600;
+  padding-top: 5px;
+}
+@media (min-width: 768px) {
+  .list .swTitle {
+    display: inline-block;
+  }
+}
+.list .swDescription {
+  height: 50px;
+  overflow: hidden;
+}
+.list .swDescription:after {
+  content: '';
+  z-index: 2;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+50&amp;0+0,1+50 */
+  background: -moz-linear-gradient(top, rgba(30, 87, 153, 0) 0%, #ffffff 50%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 0)), color-stop(50%, #ffffff));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(30, 87, 153, 0) 0%, #ffffff 50%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(30, 87, 153, 0) 0%, #ffffff 50%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(30, 87, 153, 0) 0%, #ffffff 50%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(30, 87, 153, 0) 0%, #ffffff 50%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001e5799', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
+}
+@media (max-width: 767px) {
+  .list .swDescription:after {
+    bottom: 0px;
+    height: 28px;
+  }
+}
+@media (min-width: 768px) {
+  .list .swDescription:after {
+    bottom: 0;
+    height: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .list .swDescription {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.list .actionbar {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .list .actionbar {
+    background: #bfbfbf;
+  }
+}
+@media (min-width: 768px) {
+  .list .actionbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    z-index: 3;
+  }
+}
+@media (min-width: 768px) {
+  .list .actionbar button {
+    margin-top: 5px;
+  }
+  .list .actionbar button:first-child {
+    display: none;
+  }
+}

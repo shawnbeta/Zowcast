@@ -1,0 +1,4 @@
+services:
+    config_service:
+        class: HC\Bundle\CoreBundle\Services\ConfigService
+        arguments: [args]

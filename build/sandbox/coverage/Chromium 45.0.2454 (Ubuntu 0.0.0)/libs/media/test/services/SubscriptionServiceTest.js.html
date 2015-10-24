@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for libs/media/test/services/SubscriptionServiceTest.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">libs/media/test/services/SubscriptionServiceTest.js</span></h1>
+    <h2>
+        Statements: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">libs/media/test/services/</a> &#187; SubscriptionServiceTest.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//describe('SubscriptionService', function() {
+//
+//    var httpBackend, mockery;
+//
+//    module('app');
+//    module('app.media');
+//    module('app.utility');
+//    module('app.vendor');
+//
+//    beforeEach(inject(function(_SubscriptionService_, $httpBackend, _Subscription_) {
+//        Subscription = _Subscription_;
+//        SubscriptionService = _SubscriptionService_;
+//        httpBackend = $httpBackend;
+//    }));
+//
+//    afterEach(function() {
+//        httpBackend.verifyNoOutstandingExpectation();
+//        httpBackend.verifyNoOutstandingRequest();
+//    });
+//
+//    // add()
+//    it('should add new subscription', function() {
+//        var src, subscriptionType = 'test';
+//        var success = {
+//            success : true
+//        };
+//        httpBackend.expectGET('api/?entity=subscription&amp;action=add&amp;src=' + src + '&amp;subscriptionType=' + subscriptionType).respond(success);
+//        var returnedPromise = SubscriptionService.add(src, subscriptionType);
+//        var result;
+//        returnedPromise.then(function(response) {
+//            result = response;
+//        });
+//        httpBackend.flush();
+//        expect(result.data.success).toBe(true);
+//    });
+//
+//    // TESTING: insertNewMedia()
+//    it('should add new models to existing array', function() {
+//
+//        var rsSubscriptions = [{
+//            id : 1,
+//            img : '222'
+//        }, {
+//            id : 2,
+//            img : '222'
+//        }, {
+//            id : 3,
+//            img : '222'
+//        }];
+//        var rsEpisodes = [{
+//            id : 1,
+//            img : '222'
+//        }, {
+//            id : 2,
+//            img : '222'
+//        }, {
+//            id : 3,
+//            img : '222'
+//        }];
+//
+//        var responseSubscription = {
+//            id : 1,
+//            img : '222'
+//        };
+//        var responseEpisodes = [{
+//            id : 1,
+//            img : '222',
+//            pub_date : '1414946800000'
+//        }, {
+//            id : 2,
+//            img : '222',
+//            pub_date : '1414923800000'
+//        }, {
+//            id : 3,
+//            img : '222',
+//            pub_date : '1414918800000'
+//        }];
+//
+//        var edpc = [
+//            {"9306":1414918800000},
+//            {"9307":1414923800000},
+//            {"9308":1414946800000},
+//        ];
+//
+//
+//        localStorage.setItem('EPISODE_PUB_DATE_COLLECTION', JSON.stringify(edpc));
+//
+//        var data = [];
+//        data['episodes'] = responseEpisodes;
+//        data['subscription'] = responseSubscription;
+//
+//        var rsp = SubscriptionService.insertNewMedia(rsSubscriptions, rsEpisodes, data);
+//
+//        expect(_.size(rsp.subscriptions)).toEqual(3);
+//        expect(_.size(rsp.episodes)).toEqual(4);
+//
+//    });
+//
+//    // load()
+//    it('will load subscriptions from localStorage', function() {
+//
+//        // Mock models
+//        var s1 = {
+//            id : 1,
+//            title : 'Shawn on Star Trek'
+//        };
+//        var s2 = {
+//            id : 2,
+//            title : 'Forcecast'
+//        };
+//
+//        // Set items in localStorage
+//        localStorage.setItem('s1', JSON.stringify(s1));
+//        localStorage.setItem('s2', JSON.stringify(s2));
+//
+//        var subscriptionCollection = [1, 2];
+//
+//        var rsp = SubscriptionService.load(subscriptionCollection);
+//
+//        expect(_.size(rsp)).toBe(2);
+//        expect(_.pluck(rsp, 'title')).toContain('Shawn on Star Trek');
+//        expect(_.pluck(rsp, 'title')).toContain('Forcecast');
+//    });
+//
+//    // makeSubscription()
+//    it('returns a subscription with valid fields', function() {
+//
+//        var subscription = {
+//            id : 1,
+//            title : 'MockTitle',
+//            description : 'Mock description is where the text goes'
+//        };
+//
+//        var subscription = SubscriptionService.makeSubscription(subscription);
+//        // this makes sure a subscription obj was returned
+//        // by checking the _id prefix against the string.
+//        expect(subscription.title).toEqual('MockTitle');
+//        expect(subscription.description).toEqual('Mock description is where the text goes');
+//    });
+//
+//    // executeBulkRetrieval()
+//    it('should return subscription model objects', function() {
+//
+//        var s1 = {
+//            id : 1
+//        };
+//        var s2 = {
+//            id : 2
+//        };
+//
+//        var subscriptions = [s1, s2];
+//
+//        var rsp = SubscriptionService.executeBulkRetrieval(subscriptions);
+//        expect(_.size(rsp)).toEqual(2);
+//
+//    });
+//
+//    // testing: assembleBulkModels()
+//    it('should return three subscription model objects', function() {
+//        var s1 = {id: 1};
+//        var s2 = {id: 2};
+//        var s3 = {id: 3};
+//
+//        var sc = [s1, s2, s3];
+//
+//        var subscriptionCollection = SubscriptionService.assembleBulkModels(sc);
+//        expect(_.size(subscriptionCollection)).toBe(3);
+//    });
+//
+//    // removeSubscription()
+//    it('should completely remove subscription object', function(){
+//
+//       // Subscription object
+//       var subscription = {id: 1};
+//
+//       var rsSubscriptions = [];
+//
+//       rsSubscriptions[1] = {id: 1};
+//       rsSubscriptions[2] = {id: 2};
+//       rsSubscriptions[3] = {id: 3};
+//
+//       var sec = [1, 3];
+//
+//       var rsEpisodes = [];
+//
+//       rsEpisodes[1] = {id: 1, subscription_id: 1};
+//       rsEpisodes[2] = {id: 2, subscription_id: 2};
+//       rsEpisodes[3] = {id: 3, subscription_id: 1};
+//
+//       // Persist the model to localStorage
+//       localStorage.setItem('sec1', JSON.stringify(sec));
+//       localStorage.setItem('s1', JSON.stringify(subscription));
+//       localStorage.setItem('e1', JSON.stringify(rsEpisodes[0]));
+//       localStorage.setItem('e2', JSON.stringify(rsEpisodes[1]));
+//       localStorage.setItem('e3', JSON.stringify(rsEpisodes[2]));
+//
+//       var rsp = SubscriptionService.removeSubscription(
+//                    subscription, rsSubscriptions, rsEpisodes);
+//
+//       expect(_.size(rsp.subscriptions)).toEqual(2);
+//       expect(_.size(rsp.episodes)).toEqual(1);
+//    });
+//
+//    // removeFromMemory()
+//    it('should remove the subscription from rootScope', function(){
+//
+//       var rsSubscriptions = [];
+//       rsSubscriptions[1] = {id: 1};
+//       rsSubscriptions[2] = {id: 2};
+//       rsSubscriptions[3] = {id: 3};
+//       rsSubscriptions[4] = {id: 4};
+//       rsSubscriptions[5] = {id: 5};
+//
+//       var subscription = {id:1};
+//       var rsp = SubscriptionService.removeFromMemory(subscription, rsSubscriptions);
+//       expect(_.size(rsp)).toEqual(4);
+//    });
+//
+//    //removeRemote()
+//    it('should remove subscription from server', function() {
+//        var model = {
+//            id : 10
+//        };
+//        var success = {success:true};
+//        var url = 'api/?entity=subscription&amp;action=delete&amp;id=' + model.id;
+//        httpBackend.expectGET(url).respond(success);
+//        var returnedPromise = SubscriptionService.removeRemote(model);
+//        var result;
+//        returnedPromise.then(function(response) {
+//            result = response;
+//        });
+//        httpBackend.flush();
+//        expect(result.data.success).toBe(true);
+//    });
+//
+//    // updateLocal()
+//    it('will persist the update to localStorage', function(){
+//       var subscription = {id: 1, auto_download: 0};
+//       expect(subscription.auto_download).toEqual(0);
+//       subscription.auto_download = 1;
+//       SubscriptionService.updateLocal(subscription);
+//       expect(subscription.auto_download).toEqual(1);
+//    });
+//
+//    //updateDownloadRemote()
+//    it('will update subscription auto download option', function() {
+//        var success = {success: true};
+//        var model = {
+//            id : 10,
+//            auto_download : 1
+//        };
+//        var url = 'api/?entity=subscription&amp;action=update&amp;val=' +
+//            model.auto_download + '&amp;id=' + model.id;
+//        httpBackend.expectGET(url).respond(success);
+//        var returnedPromise = SubscriptionService.updateDownloadRemote(model);
+//        var result;
+//        returnedPromise.then(function(response) {
+//            result = response;
+//        });
+//        httpBackend.flush();
+//        expect(result.data.success).toBe(true);
+//    });
+//
+//    // testing: persistBulkModels()
+//    it('should save in localStorage', function() {
+//        var subscriptions = [];
+//        subscriptions[1] = {id:1};
+//        subscriptions[2] = {id:2};
+//        subscriptions[3] = {id:3};
+//        subscriptions[4] = {id:4};
+//
+//        SubscriptionService.persistBulkModels(subscriptions);
+//
+//        var s1 = localStorage.getItem('s1');
+//        var s2 = localStorage.getItem('s2');
+//        var s3 = localStorage.getItem('s3');
+//        var s4 = localStorage.getItem('s4');
+//
+//        expect(s1).not.toBeNull();
+//        expect(s2).not.toBeNull();
+//        expect(s3).not.toBeNull();
+//        expect(s4).not.toBeNull();
+//    });
+//
+//    // persistCollection()
+//    it('should save the subscription collection to localStorage', function(){
+//       var subscriptionCollection = [];
+//       subscriptionCollection[1] = {id: 1};
+//       subscriptionCollection[2] = {id: 2};
+//       subscriptionCollection[3] = {id: 3};
+//       SubscriptionService.persistCollection(subscriptionCollection);
+//       var rsp = JSON.parse(localStorage.getItem('SubscriptionCollection'));
+//       expect(_.size(rsp)).toEqual(3);
+//    });
+//
+//
+//
+//});
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Oct 23 2015 22:58:04 GMT-0700 (MST)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

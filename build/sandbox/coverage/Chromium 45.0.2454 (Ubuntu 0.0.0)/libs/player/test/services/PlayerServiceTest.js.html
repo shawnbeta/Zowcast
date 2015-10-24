@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for libs/player/test/services/PlayerServiceTest.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">libs/player/test/services/PlayerServiceTest.js</span></h1>
+    <h2>
+        Statements: <span class="metric">84.62% <small>(44 / 52)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(9 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">84.62% <small>(44 / 52)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">libs/player/test/services/</a> &#187; PlayerServiceTest.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">describe('PlayerService', function() {
+    var PlayerService, _initPlayerObject;
+&nbsp;
+    beforeEach(function(){
+        module('app');
+        module('app.media');
+        module('app.player');
+        module('app.utility');
+        module('app.vendors');
+        module('ngSanitize');
+    });
+&nbsp;
+    beforeEach(inject(function (_$sce_, _PlayerService_) {
+        PlayerService = _PlayerService_;
+        _initPlayerObject = PlayerService.initializePlayerObject();
+        $sce = _$sce_;
+&nbsp;
+    }));
+&nbsp;
+    it('will initialize player', function(){
+&nbsp;
+        //var playerObj =
+        var comparativeObject = {
+            status: null, // Player playback status
+            elementWrapper: null,
+            element: null, // jQuery to get the video or audio element
+            loadedEpisode:{id: null}, // the episode in the player
+            style: null // audio or video
+        };
+&nbsp;
+        var newPlayerObject = PlayerService.initializePlayerObject();
+&nbsp;
+        expect(newPlayerObject).toEqual(comparativeObject);
+&nbsp;
+    });
+&nbsp;
+    //
+    it('will load player with correct values', function(){
+&nbsp;
+        // Create the element.
+        //document.createElement("audio");
+&nbsp;
+        var episode = {
+            id: 4,
+            mediaType: 0,
+            src: 'http://localhost/zowcast/audioSample.mp3'
+        };
+&nbsp;
+        var newPlayerObject = PlayerService.loadMedia(_initPlayerObject, episode);
+&nbsp;
+        var comparativeObject = _initPlayerObject;
+&nbsp;
+        comparativeObject.loadedEpisoded = episode;
+        comparativeObject.element = document.getElementsByTagName('audio')[0];
+        comparativeObject.elementWrapper =  jQuery('#audioWrapper');
+        comparativeObject.loadedEpisode.location = $sce.trustAsResourceUrl(episode.src);
+&nbsp;
+        expect(newPlayerObject).toEqual(comparativeObject);
+    });
+&nbsp;
+    it('will return the correct toggle text', function(){
+&nbsp;
+        var episode = 3;
+        var firstRun = PlayerService.toggleIcon(_initPlayerObject, episode);
+<span class="cstat-no" title="statement not covered" >        expect(firstRun).toEqual('play');</span>
+        // Update the playerObj status
+<span class="cstat-no" title="statement not covered" >        _initPlayerObject.status = 'playing';</span>
+<span class="cstat-no" title="statement not covered" >        var secondRun = PlayerService.toggleIcon(_initPlayerObject, episode);</span>
+<span class="cstat-no" title="statement not covered" >        expect(secondRun).toEqual('play'); </span>// Since both conditions are not met
+<span class="cstat-no" title="statement not covered" >        _initPlayerObject.loadedEpisode = 3;</span>
+<span class="cstat-no" title="statement not covered" >        _initPlayerObject.status = 'paused';</span>
+<span class="cstat-no" title="statement not covered" >        var thirdRun = PlayerService.toggleIcon(_initPlayerObject, episode);</span>
+<span class="cstat-no" title="statement not covered" >        expect(thirdRun).toEqual('pause'); </span>// All both conditions are met
+&nbsp;
+    });
+&nbsp;
+    it('will start playback', function(){
+&nbsp;
+&nbsp;
+        _initPlayerObject.element = document.createElement("audio");
+&nbsp;
+        var updatedPlayerObject = PlayerService.playAction(_initPlayerObject);
+        expect(updatedPlayerObject.element.paused).toBe(false);
+&nbsp;
+&nbsp;
+    });
+&nbsp;
+    it('will pause playback', function(){
+&nbsp;
+&nbsp;
+        _initPlayerObject.element = document.createElement("audio");
+        _initPlayerObject.element.play();
+&nbsp;
+        //console.log(PlayerService.startCounter());
+&nbsp;
+&nbsp;
+&nbsp;
+        var updatedPlayerObject = PlayerService.pauseAction(_initPlayerObject);
+&nbsp;
+        expect(updatedPlayerObject.element.paused).toBe(true);
+&nbsp;
+&nbsp;
+    });
+&nbsp;
+&nbsp;
+&nbsp;
+    //Load and play audio
+    it('will load and play audio', function(){
+        var episode = {
+            id: 4,
+            mediaType: 0,
+            src: 'http://localhost/zowcast/videoSample.mp4'
+        };
+&nbsp;
+&nbsp;
+        var updatedPlayerObject = PlayerService.togglePlayback(episode, _initPlayerObject);
+&nbsp;
+        expect(updatedPlayerObject.element.paused).toBe(false);
+&nbsp;
+        var updatedPlayerObjectA = PlayerService.togglePlayback(episode, updatedPlayerObject);
+&nbsp;
+        expect(updatedPlayerObjectA.element.paused).toBe(true);
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+    });
+&nbsp;
+    //// Pause playback
+    //it('will pause media', function(){
+    //
+    //    var audioElement = document.createElement("audio");
+    //
+    //});
+    //
+    //// Resume playback
+    //it('will resume playback media', function(){
+    //
+    //    var audioElement = document.createElement("audio");
+    //
+    //});
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+    // loadPlayer()
+    //it('will load the player with Correct data', function(){
+    //    // Make an audio element
+    //    var audioElement = document.createElement("audio");
+    //    // Add a media file for the player to engage.
+    //    //audioElement.setAttribute('src', 'http://www.noiseaddicts.com/samples_1w72b820/274.mp3');
+    //    var data = {
+    //        element:  audioElement
+    //    };
+    //    var playerObj = PlayerService.createPlayerObj(data, 'audio');
+    //
+    //    var episode = {
+    //        id: 999,
+    //        src: 'http://www.noiseaddicts.com/samples_1w72b820/274.mp3'
+    //    };
+    //
+    //
+    //    //expect(PlayerService.loadPlayer(episode, playerObj)).toEqual(1);
+    //    //expect(playerObj.toggleText).toBe('pause');
+    //
+    //
+    //});
+&nbsp;
+    // playAction()
+    //it('will set play action on player', function(){
+    //   // Make an audio element
+    //    var audioElement = document.createElement("audio");
+    //    // Add a media file for the player to engage.
+    //    audioElement.setAttribute('src', 'http://www.noiseaddicts.com/samples_1w72b820/274.mp3');
+    //    var data = {
+    //        element:  audioElement
+    //    };
+    //    var playerObj = PlayerService.createPlayerObj(data, 'audio');
+    //
+    //    PlayerService.playAction(playerObj);
+    //
+    //    expect(playerObj.status).toEqual(1);
+    //    expect(playerObj.toggleText).toBe('pause');
+    //});
+&nbsp;
+    // defaultPlayer()
+    //it('will return a player object with props in place', function(){
+    //
+    //    var audioElement = document.createElement("audio");
+    //    var player = PlayerService.defaultPlayer(audioElement, 'audio');
+    //
+    //    expect(player.element).toEqual(audioElement);
+    //    expect(player.type).toEqual('audio');
+    //});
+&nbsp;
+    //// updateBookmark()
+    //it('episode bookmark should be set at 420', function() {
+    //    var episode = {id: 1, bookmark: 0};
+    //    PlayerService.updateBookmark(episode, 420);
+    //    var rsp = JSON.parse(localStorage.getItem('e1'));
+    //    expect(rsp.bookmark).toEqual(420);
+    //});
+    //
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+});</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Oct 23 2015 22:58:04 GMT-0700 (MST)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>
