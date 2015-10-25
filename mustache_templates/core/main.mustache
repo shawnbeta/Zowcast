@@ -22,8 +22,11 @@
 
 <div id="stage">
 
-    <i ng-click="toggleMenu()" class="fa fa-bars menuToggler"></i>
-    <div ng-if="overlay" class="mask"></div>
+    <span ng-controller="NavigationController">
+            <i ng-click="toggleMenu()" class="fa fa-bars menuToggler"></i>
+    </span>
+
+    <div ng-if="overlay" class="overlay"></div>
 
     <overlay></overlay>
 

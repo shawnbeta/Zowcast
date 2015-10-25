@@ -17,8 +17,11 @@
 
 <div id="stage">
 
-    <i ng-click="toggleMenu()" class="fa fa-bars menuToggler"></i>
-    <div ng-if="overlay" class="mask"></div>
+    <span ng-controller="NavigationController">
+            <i ng-click="toggleMenu()" class="fa fa-bars menuToggler"></i>
+    </span>
+
+    <div ng-if="overlay" class="overlay"></div>
 
     <overlay></overlay>
 
@@ -31,7 +34,9 @@
     </div>
 
 <!-- Generated Code: mustache_templates/ui/navBar.mustache -->
-    <div class="swNavBar">
+
+
+    <div class="swNavBar" ng-controller="NavigationController">
 
     <div class="swContainer clearfix">
 
@@ -46,40 +51,44 @@
 
         <div class="actionWrapper">
         <button ng-click="go('episodes')" title="episodes" class="actionButton linkItems"
-                ng-class="{'selected' : currentPage == 'episodes'}">
+                ng-class="{'selected' : currentPath == '/episodes'}">
                 <div>episodes</div>
                 
             </button>
+
         </div>
 
 
 
         <div class="actionWrapper">
         <button ng-click="go('subscriptions')" title="subscriptions" class="actionButton linkItems"
-                ng-class="{'selected' : currentPage == 'subscriptions'}">
+                ng-class="{'selected' : currentPath == '/subscriptions'}">
                 <div>subscriptions</div>
                 
             </button>
+
         </div>
 
 
 
         <div class="actionWrapper">
         <button ng-click="go('add')" title="add" class="actionButton linkItems"
-                ng-class="{'selected' : currentPage == 'add'}">
+                ng-class="{'selected' : currentPath == '/add'}">
                 
                 <i class="fa fa-plus"></i>
             </button>
+
         </div>
 
 
 
         <div class="actionWrapper">
         <button ng-click="go('settings')" title="settings" class="actionButton linkItems"
-                ng-class="{'selected' : currentPage == 'settings'}">
+                ng-class="{'selected' : currentPath == '/settings'}">
                 
                 <i class="fa fa-cog"></i>
             </button>
+
         </div>
 
 
@@ -127,6 +136,7 @@
 <script src="src/libs/player/directives/PlayerDirective.js"></script>
 <script src="src/libs/player/services/PlayerService.js"></script>
 <script src="src/libs/ui/ui.module.js"></script>
+<script src="src/libs/ui/controllers/NavigationController.js"></script>
 <script src="src/libs/ui/directives/ToggleMenuDirective.js"></script>
 <script src="src/libs/ui/directives/OverlayDirective.js"></script>
 <script src="src/libs/ui/services/UIService.js"></script>

@@ -1,14 +1,17 @@
 app.media.controller('SubscriptionController', [
     '$scope', '$rootScope', '$routeParams', '$location', 'PersistenceService',
-    'SubscriptionService',
+    'SubscriptionService', 'UtilityService',
 	function($scope, $rootScope, $routeParams, $location, PersistenceService,
-	    SubscriptionService){
+	    SubscriptionService, UtilityService){
 
         $scope.add = function(){
           SubscriptionService.add($scope);
         };
 
-    //    $rootScope.submgr = $rootScope.submgr || {};
+        $rootScope.currentPath = UtilityService.getCurrentPath();
+
+
+        //    $rootScope.submgr = $rootScope.submgr || {};
     //
     //    $scope.addView = 0;
     //

@@ -1,15 +1,12 @@
 app.core.controller('CoreController', [ '$rootScope', '$scope', '$interval', 'PersistenceService', '_',
-    'SubscriptionService', 'EpisodeService', 'PlayerService', 'MessageService', 'UIService',
+    'SubscriptionService', 'EpisodeService', 'PlayerService', 'MessageService', 'UtilityService',
  	function($rootScope, $scope, $interval, PersistenceService, _,
-             SubscriptionService, EpisodeService, PlayerService, MessageService, UIService){
+             SubscriptionService, EpisodeService, PlayerService, MessageService, UtilityService){
 
         // Initialize Player
         $rootScope.playerObject = PlayerService.initializePlayerObject();
 
-
-        $rootScope.toggleMenu  = function(){
-            UIService.toggleMenu();
-        };
+        $rootScope.currentPath = UtilityService.getCurrentPath();
 
         $rootScope.closeMessage = function(){
             $rootScope.message = undefined;

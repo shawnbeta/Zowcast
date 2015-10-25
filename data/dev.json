@@ -62,6 +62,7 @@
         "player/services/PlayerService",
 
         "ui/ui.module",
+        "ui/controllers/NavigationController",
         "ui/directives/ToggleMenuDirective",
         "ui/directives/OverlayDirective",
         "ui/services/UIService",
@@ -120,14 +121,6 @@
       {
         "action" : "sync",
         "title": "sync"
-      },
-      {
-        "action" : "purgeRemote",
-        "title": "purge remote data"
-      },
-      {
-        "action" : "fetchNew",
-        "title": "fetch new"
       }
     ]
   }
