@@ -15,12 +15,11 @@ app.ui.factory('MessageService',
 
                 closeMessageTimer: function(){
                     if(angular.isDefined(mTimer)) return;
-                    var self = this;
                     mTimer = $interval(function(){
                         $interval.cancel(mTimer);
                         mTimer = undefined;
-                        UIService.fadeAnimate('.swMessage', 0, function(){
-                            $rootScope.message = undefined;
+                        $rootScope.message = UIService.fadeAnimate('.swMessage', 0, function(){
+                            return null;
                         });
                     }, 4000);
 

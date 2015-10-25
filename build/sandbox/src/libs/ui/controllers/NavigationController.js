@@ -9,6 +9,4 @@ app.ui.controller('NavigationController', ['$scope', '$location', 'UIService',
             UIService.toggleMenu();
         };
 
-
-
     }]);
