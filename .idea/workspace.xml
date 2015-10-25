@@ -2,129 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb391c54-7d72-46fe-83fd-3b6554985204" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/css/libs/navBar.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/less/navBar.less" afterPath="$PROJECT_DIR$/less/nav.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/directives/ActionBarDirective.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/directives/ActionBarDirective.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/AudioPlayerDirective.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/AudioPlayerDirective.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/services/ConfigService.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/services/ConfigService.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/controllers/CoreController.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/controllers/CoreController.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/Episode.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/Episode.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/EpisodeController.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/EpisodeController.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/controllers/EpisodeController.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/controllers/EpisodeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/controllers/EpisodeController.js" afterPath="$PROJECT_DIR$/src/media/controllers/EpisodeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/episodes/EpisodeDetails.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/episodes/EpisodeDetails.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/filters/EpisodeFilters.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/filters/EpisodeFilters.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/filters/EpisodeFilters.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/filters/EpisodeFilters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/filters/EpisodeFilters.js" afterPath="$PROJECT_DIR$/src/media/filters/EpisodeFilters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/episodes/EpisodeItemDirective.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/episodes/EpisodeItemDirective.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/EpisodeService.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/EpisodeService.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/EpisodeServiceTest.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/EpisodeServiceTest.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/controllers/EpisodeTest.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/controllers/EpisodeTest.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/directives/LoadingDirective.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/directives/LoadingDirective.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/MediaService.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/MediaService.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/MediaTest.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/MediaTest.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/controller/NavController.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/controller/NavController.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/test/controllers/NavControllerTest.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/test/controllers/NavControllerTest.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/directives/NavDirectives.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/directives/NavDirectives.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/services/OverlayService.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/services/OverlayService.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/services/PersistenceService.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/services/PersistenceService.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/PlaybackControlDirective.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/PlaybackControlDirective.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/controllers/PlayerController.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/controllers/PlayerController.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/controllers/PlayerControllerTest.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/controllers/PlayerControllerTest.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/PlayerDirective.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/PlayerDirective.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/services/PlayerService.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/services/PlayerService.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/player/services/PlayerService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/player/services/PlayerService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/services/PlayerService.js" afterPath="$PROJECT_DIR$/src/player/services/PlayerService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/services/PlayerServiceTest.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/services/PlayerServiceTest.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/SearchController.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/SearchController.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/Subscription.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/Subscription.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/SubscriptionController.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/SubscriptionController.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/filters/SubscriptionFilters.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/filters/SubscriptionFilters.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/SubscriptionItemDirective.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/SubscriptionItemDirective.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/SubscriptionNavigationDirective.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/SubscriptionNavigationDirective.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/SubscriptionNavigationItemDirective.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/SubscriptionNavigationItemDirective.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/SubscriptionService.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/SubscriptionService.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/SubscriptionServiceTest.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/SubscriptionServiceTest.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/controllers/SubscriptionTest.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/controllers/SubscriptionTest.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/models/SubscriptionTest.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/models/SubscriptionTest.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/services/UnderscoreService.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/services/UnderscoreService.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/filters/UtilityFilters.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/filters/UtilityFilters.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/services/UtilityService.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/services/UtilityService.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/utility/services/UtilityService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/utility/services/UtilityService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utility/services/UtilityService.js" afterPath="$PROJECT_DIR$/src/utility/services/UtilityService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/VideoPlayerDirective.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/VideoPlayerDirective.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-mocks.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-mocks.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-route.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-route.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-sanitize.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-sanitize.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-touch.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-touch.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/app.module.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/app.module.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/core.module.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/core.module.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/core.routes.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/core.routes.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev.json" afterPath="$PROJECT_DIR$/data/dev.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/global-func.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/global-func.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/index.html" afterPath="$PROJECT_DIR$/build/sandbox/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/controllers/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/controllers/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/services/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/services/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/episodes/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/episodes/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/filters/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/filters/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/controllers/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/controllers/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/models/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/models/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/controllers/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/controllers/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/services/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/services/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/controllers/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/controllers/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/services/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/services/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/controller/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/controller/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/directives/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/directives/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/services/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/services/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/test/controllers/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/test/controllers/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/directives/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/directives/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/filters/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/filters/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/services/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/services/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/services/index.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/services/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/item.html" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/templates/episodes/item.html" afterPath="$PROJECT_DIR$/src/media/templates/episodes/item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/jquery.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/jquery.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/css/libs/media/list.css" afterPath="$PROJECT_DIR$/build/sandbox/css/libs/media/list.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/media/list.less" afterPath="$PROJECT_DIR$/less/media/list.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/css/libs/main.css" afterPath="$PROJECT_DIR$/build/sandbox/css/libs/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/main.less" afterPath="$PROJECT_DIR$/less/main.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/media.module.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/media.module.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/media.routes.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/media.routes.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/subscriptions/navigation-item.html" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/subscriptions/navigation-item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/templates/subscriptions/navigation-item.html" afterPath="$PROJECT_DIR$/src/media/templates/subscriptions/navigation-item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/subscriptions/navigation.html" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/subscriptions/navigation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/templates/subscriptions/navigation.html" afterPath="$PROJECT_DIR$/src/media/templates/subscriptions/navigation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/page.html" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/templates/episodes/page.html" afterPath="$PROJECT_DIR$/src/media/templates/episodes/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/css/libs/player.css" afterPath="$PROJECT_DIR$/build/sandbox/css/libs/player.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/player/templates/player.html" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/player/templates/player.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/templates/player.html" afterPath="$PROJECT_DIR$/src/player/templates/player.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/player.less" afterPath="$PROJECT_DIR$/less/player.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/player.module.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/player.module.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/styles.less" afterPath="$PROJECT_DIR$/less/styles.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/truncate.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/truncate.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/ui.module.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/ui.module.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/underscore.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/underscore.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/utility.module.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/utility.module.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/variables.less" afterPath="$PROJECT_DIR$/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/vendors.module.js.html" afterPath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/vendors.module.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/media/grid.less" afterPath="$PROJECT_DIR$/less/media/grid.less" />
     </list>
     <ignored path="ZOWcast.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -196,101 +74,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="navigation.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/media/templates/subscriptions/navigation.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EpisodeController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/media/controllers/EpisodeController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.714286">
-              <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nav.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/nav.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.125">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="player.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/player/templates/player.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.338983">
-              <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/player/services/PlayerService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="106" column="45" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dev.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/dev.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="37.5">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navBar.mustache" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mustache_templates/ui/navBar.mustache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="player.less" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/less/player.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24907748">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875">
-              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="list.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/media/list.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5">
-              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="85" selection-end-column="5" />
+            <state vertical-scroll-proportion="-11.25">
+              <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grid.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/less/media/grid.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5848709">
+              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/item.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.958334">
+              <caret line="33" column="83" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -304,7 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/rest/src/HC/Bundle/MediaBundle/Services/EpisodeService.php" />
         <option value="$PROJECT_DIR$/src/media/services/SubscriptionService.js" />
         <option value="$PROJECT_DIR$/build/sandbox/src/libs/ui/test/controllers/NavControllerTest.js" />
         <option value="$PROJECT_DIR$/build/sandbox/src/libs/player/test/services/PlayerServiceTest.js" />
@@ -355,6 +162,7 @@
         <option value="$PROJECT_DIR$/src/player/services/PlayerService.js" />
         <option value="$PROJECT_DIR$/src/player/templates/player.html" />
         <option value="$PROJECT_DIR$/less/player.less" />
+        <option value="$PROJECT_DIR$/less/media/grid.less" />
       </list>
     </option>
   </component>
@@ -372,8 +180,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="283" />
-    <option name="y" value="270" />
+    <option name="x" value="288" />
+    <option name="y" value="241" />
     <option name="width" value="1175" />
     <option name="height" value="695" />
   </component>
@@ -448,148 +256,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utility" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utility" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utility" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="filters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="player" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="player" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="player" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="media" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -613,10 +279,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="subscriptions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -643,116 +305,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="episodes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="filters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="episodes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZOWcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zowcast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -767,6 +319,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="less" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZOWcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zowcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="less" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -840,7 +410,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="283" y="270" width="1175" height="695" extended-state="0" />
+    <frame x="288" y="241" width="1175" height="695" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.24322446" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="1560" y="236" width="327" height="793" />
@@ -890,13 +460,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/media/test/controllers/SubscriptionTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/karma.conf.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5576208">
@@ -1190,50 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/item.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.958334">
-          <caret line="33" column="83" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/media/list.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="85" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/media/templates/subscriptions/navigation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
           <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/dev.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="37.5">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/nav.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1254,34 +777,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mustache_templates/ui/navBar.mustache">
+    <entry file="file://$PROJECT_DIR$/less/player.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.52583027">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/services/PlayerService.js">
+    <entry file="file://$PROJECT_DIR$/less/nav.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="45" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.5811808">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/player/templates/player.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.338983">
+        <state vertical-scroll-proportion="0.6213018">
           <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less/player.less">
+    <entry file="file://$PROJECT_DIR$/src/player/services/PlayerService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24907748">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.42402828">
+          <caret line="106" column="45" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dev.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6605166">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mustache_templates/ui/navBar.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44280443">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52583027">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.958334">
+          <caret line="33" column="83" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/media/list.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/media/grid.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5848709">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
           <folding />
         </state>
       </provider>
