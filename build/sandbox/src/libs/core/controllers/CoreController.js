@@ -1,15 +1,26 @@
 app.core.controller('CoreController', [ '$rootScope', '$scope', '$interval', 'PersistenceService', '_',
-    'SubscriptionService', 'EpisodeService', 'PlayerService', 'UtilityService',
+    'SubscriptionService', 'EpisodeService', 'PlayerService', 'MessageService', 'UIService',
  	function($rootScope, $scope, $interval, PersistenceService, _,
-             SubscriptionService, EpisodeService, PlayerService){
+             SubscriptionService, EpisodeService, PlayerService, MessageService, UIService){
 
         // Initialize Player
         $rootScope.playerObject = PlayerService.initializePlayerObject();
 
 
+        $rootScope.toggleMenu  = function(){
+            UIService.toggleMenu();
+        };
+
+        $rootScope.closeMessage = function(){
+            $rootScope.message = undefined;
+        };
+
         $rootScope.subscriptionFilterStatus = false;
 
         $rootScope.message = {};
+
+        MessageService.displayMessage('testing', 'swError', MessageService.closeMessageTimer());
+
 
         $scope.sync = function(){
             localStorage.clear();

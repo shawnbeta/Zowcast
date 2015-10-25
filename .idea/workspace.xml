@@ -2,7 +2,142 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb391c54-7d72-46fe-83fd-3b6554985204" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ui/services/MessageService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ui/directives/NavigationDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ui/directives/OverlayDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ui/directives/ToggleMenuDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ui/services/UIService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ui/templates/menu-toggler.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-mocks.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-route.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-sanitize.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular-touch.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/angular.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/jquery.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/truncate.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/contrib/underscore.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/app.module.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/controllers/CoreController.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/controllers/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/core.module.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/core.routes.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/services/ConfigService.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/core/services/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/global-func.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/EpisodeController.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/SearchController.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/SubscriptionController.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/controllers/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/episodes/EpisodeDetails.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/episodes/EpisodeItemDirective.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/episodes/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/SubscriptionItemDirective.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/SubscriptionNavigationDirective.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/SubscriptionNavigationItemDirective.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/directives/subscriptions/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/filters/EpisodeFilters.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/filters/SubscriptionFilters.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/filters/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/media.module.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/media.routes.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/Episode.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/EpisodeService.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/MediaService.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/Subscription.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/SubscriptionService.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/services/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/controllers/EpisodeTest.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/controllers/SubscriptionTest.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/controllers/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/models/SubscriptionTest.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/models/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/EpisodeServiceTest.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/MediaTest.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/SubscriptionServiceTest.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/media/test/services/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/controllers/PlayerController.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/controllers/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/AudioPlayerDirective.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/PlaybackControlDirective.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/PlayerDirective.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/VideoPlayerDirective.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/directives/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/player.module.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/services/PlayerService.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/services/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/controllers/PlayerControllerTest.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/controllers/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/services/PlayerServiceTest.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/player/test/services/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/controller/NavController.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/controller/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/directives/ActionBarDirective.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/directives/NavDirectives.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/directives/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/services/OverlayService.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/services/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/test/controllers/NavControllerTest.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/test/controllers/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/ui/ui.module.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/directives/LoadingDirective.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/directives/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/filters/UtilityFilters.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/filters/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/services/PersistenceService.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/services/UtilityService.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/services/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/utility/utility.module.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/services/UnderscoreService.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/services/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/libs/vendors/vendors.module.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/sort-arrow-sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/coverage/Chromium 45.0.2454 (Ubuntu 0.0.0)/sorter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/global-func.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/ui/controller/NavController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/ui/directives/ActionBarDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/ui/directives/NavDirectives.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ui/controller/NavController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ui/directives/ActionBarDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ui/directives/NavDirectives.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/global-func.js" afterPath="$PROJECT_DIR$/less/message.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/core/controllers/CoreController.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/core/controllers/CoreController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/controllers/CoreController.js" afterPath="$PROJECT_DIR$/src/core/controllers/CoreController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/controllers/EpisodeController.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/controllers/EpisodeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/controllers/EpisodeController.js" afterPath="$PROJECT_DIR$/src/media/controllers/EpisodeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/directives/episodes/EpisodeItemDirective.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/directives/episodes/EpisodeItemDirective.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js" afterPath="$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/ui/services/OverlayService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/ui/services/OverlayService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/services/OverlayService.js" afterPath="$PROJECT_DIR$/src/ui/services/OverlayService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev.json" afterPath="$PROJECT_DIR$/data/dev.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/css/libs/media/grid.css" afterPath="$PROJECT_DIR$/build/sandbox/css/libs/media/grid.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/media/grid.less" afterPath="$PROJECT_DIR$/less/media/grid.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/index.html" afterPath="$PROJECT_DIR$/build/sandbox/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/item.html" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/item.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/templates/episodes/item.html" afterPath="$PROJECT_DIR$/src/media/templates/episodes/item.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/css/libs/main.css" afterPath="$PROJECT_DIR$/build/sandbox/css/libs/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/css/libs/media/main.css" afterPath="$PROJECT_DIR$/build/sandbox/css/libs/media/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/main.less" afterPath="$PROJECT_DIR$/less/main.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/media/main.less" afterPath="$PROJECT_DIR$/less/media/main.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mustache_templates/core/main.mustache" afterPath="$PROJECT_DIR$/mustache_templates/core/main.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/css/libs/nav.css" afterPath="$PROJECT_DIR$/build/sandbox/css/libs/nav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/nav.less" afterPath="$PROJECT_DIR$/less/nav.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mustache_templates/ui/navBar.mustache" afterPath="$PROJECT_DIR$/mustache_templates/ui/navBar.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/page.html" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/templates/episodes/page.html" afterPath="$PROJECT_DIR$/src/media/templates/episodes/page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ZOWcast.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,6 +158,26 @@
       <content type="file-editors">
         <state>
           <leaf>
+            <file leaf-file-name="UIService.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/ui/services/UIService.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.27314112">
+                    <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="MessageService.js" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/ui/services/MessageService.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.0">
+                    <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
             <file leaf-file-name="EpisodeFilters.js" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/media/filters/EpisodeFilters.js">
                 <provider selected="true" editor-type-id="text-editor">
@@ -43,10 +198,10 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="UtilityService.js" pinned="false" current-in-tab="true">
+            <file leaf-file-name="UtilityService.js" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/utility/services/UtilityService.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.20485584">
+                  <state vertical-scroll-proportion="0.0">
                     <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                     <folding />
                   </state>
@@ -74,31 +229,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="list.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/media/list.less">
+      <file leaf-file-name="CoreController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/controllers/CoreController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25">
-              <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="grid.less" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/less/media/grid.less">
+      <file leaf-file-name="nav.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/nav.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5848709">
-              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+            <state vertical-scroll-proportion="-4.375">
+              <caret line="142" column="31" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/item.html">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.958334">
-              <caret line="33" column="83" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="297" column="18" selection-start-line="297" selection-start-column="18" selection-end-line="297" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EpisodeController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/media/controllers/EpisodeController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.760223">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.875">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavigationDirective.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/directives/NavigationDirective.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navBar.mustache" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mustache_templates/ui/navBar.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.958333">
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/media/main.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="4" column="10" selection-start-line="3" selection-start-column="12" selection-end-line="4" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dev.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/dev.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.125">
+              <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.mustache" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mustache_templates/core/main.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.5">
+              <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -112,21 +337,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/media/services/SubscriptionService.js" />
-        <option value="$PROJECT_DIR$/build/sandbox/src/libs/ui/test/controllers/NavControllerTest.js" />
-        <option value="$PROJECT_DIR$/build/sandbox/src/libs/player/test/services/PlayerServiceTest.js" />
-        <option value="$PROJECT_DIR$/src/ui/test/controllers/NavControllerTest.js" />
-        <option value="$PROJECT_DIR$/src/player/test/controllers/PlayerControllerTest.js" />
-        <option value="$PROJECT_DIR$/src/media/test/controllers/EpisodeTest.js" />
-        <option value="$PROJECT_DIR$/src/media/test/controllers/SubscriptionTest.js" />
-        <option value="$PROJECT_DIR$/src/media/test/models/SubscriptionTest.js" />
-        <option value="$PROJECT_DIR$/src/media/test/services/EpisodeServiceTest.js" />
-        <option value="$PROJECT_DIR$/src/media/test/services/MediaTest.js" />
-        <option value="$PROJECT_DIR$/src/media/test/services/SubscriptionServiceTest.js" />
-        <option value="$PROJECT_DIR$/karma.conf.js" />
-        <option value="$PROJECT_DIR$/src/media/templates/subscriptions/item.html" />
-        <option value="$PROJECT_DIR$/src/media/templates/subscriptions/page.html" />
-        <option value="$PROJECT_DIR$/less/globals.less" />
         <option value="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionItemDirective.js" />
         <option value="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionNavigationItemDirective.js" />
         <option value="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionNavigationDirective.js" />
@@ -135,10 +345,7 @@
         <option value="$PROJECT_DIR$/src/player/directives/VideoPlayerDirective.js" />
         <option value="$PROJECT_DIR$/src/player/templates/audio-player.html" />
         <option value="$PROJECT_DIR$/src/global-func.js" />
-        <option value="$PROJECT_DIR$/mustache_templates/core/main.mustache" />
         <option value="$PROJECT_DIR$/src/player/test/services/PlayerServiceTest.js" />
-        <option value="$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js" />
-        <option value="$PROJECT_DIR$/src/core/controllers/CoreController.js" />
         <option value="$PROJECT_DIR$/src/player/counter-func.js" />
         <option value="$PROJECT_DIR$/src/player/directives/PlaybackControlDirective.js" />
         <option value="$PROJECT_DIR$/src/player/directives/PlayerDirective.js" />
@@ -146,23 +353,41 @@
         <option value="$PROJECT_DIR$/src/media/services/EpisodeService.js" />
         <option value="$PROJECT_DIR$/less/navBar.less" />
         <option value="$PROJECT_DIR$/less/variables.less" />
-        <option value="$PROJECT_DIR$/data/dev.json" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/src/media/templates/subscriptions/navigation-item.html" />
         <option value="$PROJECT_DIR$/less/contrib/bootstrap-lite.less" />
-        <option value="$PROJECT_DIR$/less/main.less" />
         <option value="$PROJECT_DIR$/src/media/filters/EpisodeFilters.js" />
-        <option value="$PROJECT_DIR$/src/media/controllers/EpisodeController.js" />
-        <option value="$PROJECT_DIR$/src/media/templates/episodes/page.html" />
-        <option value="$PROJECT_DIR$/src/media/templates/episodes/item.html" />
         <option value="$PROJECT_DIR$/src/utility/services/UtilityService.js" />
         <option value="$PROJECT_DIR$/less/media/list.less" />
         <option value="$PROJECT_DIR$/src/media/templates/subscriptions/navigation.html" />
-        <option value="$PROJECT_DIR$/less/nav.less" />
         <option value="$PROJECT_DIR$/src/player/services/PlayerService.js" />
         <option value="$PROJECT_DIR$/src/player/templates/player.html" />
         <option value="$PROJECT_DIR$/less/player.less" />
         <option value="$PROJECT_DIR$/less/media/grid.less" />
+        <option value="$PROJECT_DIR$/src/media/templates/episodes/item.html" />
+        <option value="$PROJECT_DIR$/src/ui/services/OverlayService.js" />
+        <option value="$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js" />
+        <option value="$PROJECT_DIR$/src/ui/directives/MessageDirective.js" />
+        <option value="$PROJECT_DIR$/src/ui/templates/overlay.html" />
+        <option value="$PROJECT_DIR$/less/main.less" />
+        <option value="$PROJECT_DIR$/src/ui/controller/NavController.js" />
+        <option value="$PROJECT_DIR$/mustache_templates/ui/navBar.mustache" />
+        <option value="$PROJECT_DIR$/less/message.less" />
+        <option value="$PROJECT_DIR$/src/ui/services/MessageService.js" />
+        <option value="$PROJECT_DIR$/src/ui/controller/UIController.js" />
+        <option value="$PROJECT_DIR$/src/ui/templates/menu-toggle.html" />
+        <option value="$PROJECT_DIR$/data/dev.json" />
+        <option value="$PROJECT_DIR$/src/ui/directives/ToggleMenuDirective.js" />
+        <option value="$PROJECT_DIR$/src/ui/directives/OverlayDirective.js" />
+        <option value="$PROJECT_DIR$/src/ui/templates/menu-toggler.html" />
+        <option value="$PROJECT_DIR$/mustache_templates/core/main.mustache" />
+        <option value="$PROJECT_DIR$/src/core/controllers/CoreController.js" />
+        <option value="$PROJECT_DIR$/less/nav.less" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/less/media/main.less" />
+        <option value="$PROJECT_DIR$/src/media/templates/episodes/page.html" />
+        <option value="$PROJECT_DIR$/src/media/controllers/EpisodeController.js" />
+        <option value="$PROJECT_DIR$/src/ui/services/UIService.js" />
+        <option value="$PROJECT_DIR$/src/ui/directives/NavigationDirective.js" />
       </list>
     </option>
   </component>
@@ -180,9 +405,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="288" />
+    <option name="x" value="287" />
     <option name="y" value="241" />
-    <option name="width" value="1175" />
+    <option name="width" value="1176" />
     <option name="height" value="695" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -256,7 +481,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
+              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -274,7 +499,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
+              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -296,15 +521,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="episodes" />
+              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,7 +535,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -332,11 +557,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
+              <option name="myItemId" value="mustache_templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZOWcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zowcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustache_templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZOWcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zowcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZOWcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zowcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZOWcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zowcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -354,11 +639,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ui/directives" />
       <recent name="$PROJECT_DIR$/rest" />
       <recent name="$PROJECT_DIR$/src/player/templates" />
       <recent name="$PROJECT_DIR$/rest/src/HC/Bundle/MediaBundle/Services" />
       <recent name="$PROJECT_DIR$/src/media/templates/subscriptions" />
-      <recent name="$PROJECT_DIR$/src/media/directives/subscriptions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/rest/src/HC/Bundle/VendorBundle/Services/Mail" />
@@ -410,7 +695,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="288" y="241" width="1175" height="695" extended-state="0" />
+    <frame x="287" y="241" width="1176" height="695" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.24322446" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="1560" y="236" width="327" height="793" />
@@ -421,6 +706,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32605043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -429,7 +715,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -460,78 +745,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5576208">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/test/controllers/EpisodeTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/test/controllers/PlayerControllerTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0795053">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/test/models/SubscriptionTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37102473">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/test/services/EpisodeServiceTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4575971">
-          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/test/services/MediaTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60954064">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/test/services/SubscriptionServiceTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58303887">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/services/SubscriptionService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/templates/subscriptions/item.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/globals.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/media/templates/subscriptions/page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
@@ -601,14 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/global-func.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/media/controllers/SubscriptionController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -629,14 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/controllers/CoreController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18551236">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -697,14 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="123" column="37" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/less/contrib/bootstrap-lite.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.125">
@@ -713,34 +902,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less/main.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/media/filters/EpisodeFilters.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mustache_templates/core/main.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -761,34 +926,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utility/services/UtilityService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20485584">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/controllers/EpisodeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.714286">
-          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/less/player.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52583027">
           <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/nav.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5811808">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -809,42 +950,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/dev.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6605166">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mustache_templates/ui/navBar.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44280443">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52583027">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/item.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.958334">
-          <caret line="33" column="83" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/media/list.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25">
-          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+        <state vertical-scroll-proportion="-3.5833333">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -852,7 +961,193 @@
     <entry file="file://$PROJECT_DIR$/less/media/grid.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5848709">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/media/list.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49815497">
+          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/services/OverlayService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4770318">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utility/services/UtilityService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/templates/overlay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/services/MessageService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/message.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/directives/episodes/EpisodeDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26501766">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/directives/OverlayDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29151943">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dev.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/directives/ToggleMenuDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34452298">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/templates/menu-toggler.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/nav.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="142" column="31" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="297" column="18" selection-start-line="297" selection-start-column="18" selection-end-line="297" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/media/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="10" selection-start-line="3" selection-start-column="12" selection-end-line="4" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mustache_templates/core/main.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.5">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/services/UIService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27314112">
+          <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mustache_templates/ui/navBar.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.958333">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/directives/NavigationDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/controllers/CoreController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/controllers/EpisodeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.760223">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

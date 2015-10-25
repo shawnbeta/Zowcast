@@ -1,7 +1,7 @@
 <header class="viewHeader clearfix">
     <h1>Episodes</h1>
     <div class="headerMenu">
-        <button class="subscriptionMenuToggle swButton" ng-click="toggleSubscriptionMenu()">
+        <button class="subscriptionMenuToggle swButton" ng-click="toggleBrowseBySubscription()">
             Browse By Subscription
         </button>
         <button class="viewSwitch" ng-click="setEpisodeStyle('list')">
@@ -11,6 +11,7 @@
             <i class="fa fa-th" ng-class="{'selected' : episodeStyle == 'grid'}"></i>
         </button>
     </div>
+    <div class="subscriptionBrowserWrapper"></div>
 </header>
 
 <episode-details></episode-details>

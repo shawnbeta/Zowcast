@@ -1,7 +1,26 @@
 @import (reference) "styles.less";
 
+.menuToggler {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  height: 42px;
+  width: 42px;
+  background: red;
+  color: @white1;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 900;
+  z-index: 3;
+  padding: 10px;
+  text-align:center;
+}
+
 .swNavBar {
+  position: relative;
+  z-index: 4;
   background: @base-color;
+  width: 100%;
   @media(min-width: @screen-sm-min){
     text-align: right;
     height: 45px;
@@ -122,6 +141,7 @@
 }
 
 .episodeBySubscriptionBrowser {
+  display: none;
   .allEpisodes a {
     background: @base-color;
     color: @white1;

@@ -1,0 +1,30 @@
+@import (reference) 'styles.less';
+
+.swMessage{
+  position: absolute;
+  top: 100px;
+  z-index: 6;
+  left: 10px;
+  right: 10px;
+  .swClose {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    font-size: 30px;
+  }
+  .swText {
+    position: relative;
+    padding: 25px 15px;
+    margin: 0 auto;
+    max-width: 650px;
+  }
+
+  .swError {
+    background: red;
+    color: @white1;
+  }
+  .swSuccess {
+    background: green;
+  }
+
+}

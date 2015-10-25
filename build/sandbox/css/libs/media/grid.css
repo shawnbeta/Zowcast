@@ -42,6 +42,16 @@
     border: 5px #d9d9d9 solid;
   }
 }
+.grid .swItem .itemHeader {
+  height: 55px;
+  display: table;
+  table-layout: fixed;
+  text-align: left;
+}
+.grid .swItem .itemHeader span {
+  vertical-align: middle;
+  display: table-cell;
+}
 .grid .swItem .swDate,
 .grid .swItem .swImg,
 .grid .swItem .swTitle {

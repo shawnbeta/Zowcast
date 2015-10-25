@@ -22,11 +22,23 @@
 
 <div id="stage">
 
-    <% > ui/navBar %>
-    <div ng-class="{'error' : message.error === true}" ng-if="message">
-        {{message.error}}{{message.success}}
+    <i ng-click="toggleMenu()" class="fa fa-bars menuToggler"></i>
+    <div ng-if="overlay" class="mask"></div>
+
+    <overlay></overlay>
+
+    <div ng-if="message" class="swMessage">
+
+        <div class="swText {{message.msgType}}">
+            <i ng-click="closeMessage()" class="fa fa-close swClose"></i>
+            {{message.text}}
+        </div>
     </div>
+
+    <% > ui/navBar %>
+
     <div ng-view class="swContainer"></div>
+
 </div>
 
 <%# assets %>

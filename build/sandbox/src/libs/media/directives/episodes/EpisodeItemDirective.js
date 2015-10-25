@@ -1,4 +1,5 @@
-app.media.directive('episodeItem',['$rootScope', 'EpisodeService', 'PlayerService', function($rootScope, EpisodeService, PlayerService) {
+app.media.directive('episodeItem',['$rootScope', 'EpisodeService', 'PlayerService', 'OverlayService',
+    function($rootScope, EpisodeService, PlayerService, OverlayService) {
 
     return  {
 
@@ -16,7 +17,9 @@ app.media.directive('episodeItem',['$rootScope', 'EpisodeService', 'PlayerServic
                 PlayerService.togglePlayback(episode);
             };
 
-
+            scope.showEpisodeDetails = function(episode){
+                $rootScope.overlay = episode;
+            };
 
 
             // New above
@@ -34,11 +37,7 @@ app.media.directive('episodeItem',['$rootScope', 'EpisodeService', 'PlayerServic
                 EpisodeService.updateRemote(model, 'watched', model.watched);
             };
 
-            scope.toggleDetails = function(model){
-                if(scope.showDetails && scope.episodeDetailer == model)
-                    return scope.hideDescription();
-                scope.setDetailer(model);
-            };
+
 
             scope.setDetailer = function(model){
                 scope.episodeDetailer = model;

@@ -20,7 +20,7 @@
 
     <li class="swItem">
         <header class="itemHeader">
-            <span>{{e.title}}</span>
+            <span>{{e.title | htmlToPlaintext}}</span>
             <p class="swDescription">{{e.description | htmlToPlaintext}}</p>
         </header>
         <div class="swImg"><img src="{{e.img}}"></div>
@@ -31,6 +31,6 @@
             </button>
             <button ng-click="updateWatched(e)"><i class="fa fa-check"></i></button>
             <button ng-click="playPause(e)"><i class="fa fa-download"></i></button>
-            <button ng-click="toggleDetails(e)"><i class="fa fa-info"></i></button>
+            <button ng-click="showEpisodeDetails(e)"><i class="fa fa-info"></i></button>
         </div>
         </li> 

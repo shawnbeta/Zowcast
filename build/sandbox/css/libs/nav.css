@@ -15,8 +15,26 @@
 .pager:after {
   clear: both;
 }
+.menuToggler {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  height: 42px;
+  width: 42px;
+  background: red;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 900;
+  z-index: 3;
+  padding: 10px;
+  text-align: center;
+}
 .swNavBar {
+  position: relative;
+  z-index: 4;
   background: #d73e33;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .swNavBar {
@@ -134,6 +152,9 @@
 }
 .subscriptionMenuToggle {
   font-size: 14px;
+}
+.episodeBySubscriptionBrowser {
+  display: none;
 }
 .episodeBySubscriptionBrowser .allEpisodes a {
   background: #d73e33;

@@ -14,6 +14,7 @@
         "media/list",
         "footer",
         "overlay",
+        "message",
         "globals",
         "main",
         "nav",
@@ -61,9 +62,10 @@
         "player/services/PlayerService",
 
         "ui/ui.module",
-        "ui/controller/NavController",
-        "ui/directives/ActionBarDirective",
-        "ui/directives/NavDirectives",
+        "ui/directives/ToggleMenuDirective",
+        "ui/directives/OverlayDirective",
+        "ui/services/UIService",
+        "ui/services/MessageService",
         "ui/services/OverlayService",
 
         "utility/utility.module",

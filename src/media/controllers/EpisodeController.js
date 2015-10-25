@@ -1,9 +1,13 @@
 app.media.controller('EpisodeController', [ '$scope', '$rootScope', '$sce', '$filter',
-	'EpisodeService', 'OverlayService',
-	function($scope, $rootScope, $sce, $filter, EpisodeService, OverlayService){
+	'EpisodeService', 'OverlayService', 'UIService',
+	function($scope, $rootScope, $sce, $filter, EpisodeService, OverlayService, UIService){
 
 		$scope.setEpisodeStyle = function(newStyle){
 			$scope.episodeStyle = newStyle;
+		};
+
+		$scope.toggleBrowseBySubscription = function(){
+			UIService.toggleBrowseBySubscription();
 		};
 
 		$scope.episodeStyle = 'grid';

@@ -78,6 +78,7 @@ module.exports = function (grunt) {
                     'build/sandbox/css/libs/media/grid.css': 'less/media/grid.less',
                     'build/sandbox/css/libs/media/list.css': 'less/media/list.less',
                     'build/sandbox/css/libs/footer.css': 'less/footer.less',
+                    'build/sandbox/css/libs/message.css': 'less/message.less',
                     'build/sandbox/css/libs/overlay.css': 'less/overlay.less',
                     'build/sandbox/css/libs/globals.css': 'less/globals.less',
                     'build/sandbox/css/libs/main.css': 'less/main.less',
@@ -301,7 +302,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', ['clean:main', 'less', 'copy:main']);
     grunt.registerTask('test', ['clean:dev', 'copy:dev', 'karma']);
-    grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'less:dev',  'copy:dev', 'karma']);
+    grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'less:dev',  'copy:dev']);
     grunt.registerTask('staging', ['clean:staging', 'mustache_render:staging', 'less:staging',
     'concat:staging', 'copy:staging', 'uglify:staging', 'cssmin:staging', 'clean:temp']);
 
