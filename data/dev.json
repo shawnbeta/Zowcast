@@ -57,7 +57,6 @@
         "media/services/SubscriptionService",
 
         "player/player.module",
-        "player/counter-func",
         "player/directives/PlayerDirective",
         "player/services/PlayerService",
 

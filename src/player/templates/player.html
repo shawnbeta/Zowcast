@@ -25,7 +25,11 @@
         {{playerObject.loadedEpisode.pubDate}}
     </span>
 <!--<div id="zowSlider" ng-click="setPlaybackPosition(event)">123456</div>-->
-<div class="progressTracker">789</div>
+<div class="progressTracker">
+    {{playerObject.counter.hours}}:{{playerObject.counter.minutes}}:{{playerObject.counter.seconds}}
+    {{playerObject.element.duration}}
+</div>
 
 {{playerObject.counter}}
 {{counter}}
+

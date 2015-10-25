@@ -18,8 +18,6 @@ app.player.factory('PlayerService',
         },
 
         togglePlayback: function(episode){
-            console.log(episode.mediaType);
-
             if(episode.id !== $rootScope.playerObject.loadedEpisode.id){
                 $rootScope.playerObject = this.loadMedia(episode);
                 firstRun = true;
@@ -91,11 +89,8 @@ app.player.factory('PlayerService',
             $rootScope.playerObject.status = 'playing';
             $rootScope.episodePlaying = $rootScope.playerObject.loadedEpisode.id;
             if(firstRun){
-                console.log('first ryn');
-
                 $rootScope.playerObject.element.oncanplay = function(){
                     $rootScope.playerObject.element.play();
-                    console.log('can play');
                 };
             }else{
                 $rootScope.playerObject.element.play();
