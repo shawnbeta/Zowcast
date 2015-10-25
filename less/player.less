@@ -1,12 +1,60 @@
 @import (reference) "styles.less";
 
-
+.progressTrackerWrapper{
+  background: yellow;
+  position: relative;
+  .counter {
+    float: left;
+  }
+  .duration {
+    float: right;
+  }
 .progressTracker{
   background: green;
   border: red;
+  position: absolute;
+
+}
+}
+.playerWrapper {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  background: @primary-color;
+  .swMedia {
+    max-width: 100%;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  .controls {
+    text-align: center;
+    button{
+      width: 18%;
+      background: @base-color;
+      font-weight: bold;
+    }
+  }
 }
 
-#zowSlider {
-  background: yellow;
-  border: blue;
+.playerToggle {
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  @media(max-width: @screen-sm-max){
+    left: 0;
+  }
+  @media(min-width: @screen-sm-min){
+    right: 0;
+  }
 }
+
+
+
+//#zowSlider {
+//  background: yellow;
+//  border: blue;
+//}

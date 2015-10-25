@@ -1,6 +1,8 @@
-<ul>
-    <li>
-        <a ng-class="{selected: activeSubscription == 0, standard: activeSubscription != 0}" ng-click="listAllEpisodes()">All Episodes</a>
+<ul class="episodeBySubscriptionBrowser clearfix">
+    <li class="allEpisodes">
+        <a ng-class="{selected: activeSubscription == 0, standard: activeSubscription != 0}" ng-click="listAllEpisodes()">
+            <div class="swTitle"><span>All Episodes</span></div>
+        </a>
     </li>
     <subscription-navigation-item ng-repeat="s in subscriptions | orderByTitle">
 

@@ -1,35 +1,46 @@
-<div class="audioPlayerWrapper" ng-show="playerObject.loadedEpisode.mediaType == 0">
-    <img src="{{playerObject.loadedEpisode.img}}" class="swMedia">
-    <audio ng-src="{{playerObject.loadedEpisode.location}}"></audio>
+<div class="playerWrapper">
+    <div class="group clearfix">
+        <div class="audioPlayerWrapper col-xs-4" ng-show="playerObject.loadedEpisode.mediaType == 0">
+            <img src="{{playerObject.loadedEpisode.img}}" class="swMedia">
+            <audio ng-src="{{playerObject.loadedEpisode.location}}"></audio>
+        </div>
+
+        <div class="videoPlayerWrapper col-xs-4" ng-show="playerObject.loadedEpisode.mediaType == 1">
+            <video class="swMedia" src="{{playerObject.loadedEpisode.location}}"></video>
+        </div>
+
+        <div class="episodeTitle col-xs-8 ">
+
+            <button ng-click="toggleNowPlayingDetails()">{{playerObject.loadedEpisode.title}}</button>
+        </div>
+    </div>
+
+    <div class="controls clearfix">
+        <button ng-click="jumpBack()"><i class="fa fa-angle-double-left"></i></button>
+        <button ng-click="rewind()"><i class="fa fa-angle-left"></i></button>
+        <button ng-click="togglePlayback(playerObject.loadedEpisode)">
+            <i class="fa fa-pause" ng-if="episodePlaying"></i>
+            <i class="fa fa-play" ng-if="!episodePlaying"></i>
+        </button>
+        <button ng-click="forward()"><i class="fa fa-angle-right"></i></button>
+        <button ng-click="jumpAhead()"><i class="fa fa-angle-double-right"></i></button>
+    </div>
+
+    <!--<div id="zowSlider" ng-click="setPlaybackPosition(event)">123456</div>-->
+    <div class="progressTrackerWrapper clearfix">
+        <div class="progressTracker"></div>
+        <div class="counter">
+            {{playerObject.counter.hours}}:{{playerObject.counter.minutes}}:{{playerObject.counter.seconds}}
+        </div>
+        <div class="duration">
+            {{playerObject.runtime.hours}}:{{playerObject.runtime.minutes}}:{{playerObject.runtime.seconds}}
+        </div>
+    </div>
+
 </div>
 
-<div class="videoPlayerWrapper" ng-show="playerObject.loadedEpisode.mediaType == 1">
-    <video class="swMedia" src="{{playerObject.loadedEpisode.location}}"></video>
-</div>
-
-<div>Time:{{playerObject.counter.hours}}:{{playerObject.counter.minutes}}:{{playerObject.counter.seconds}}</div>
-<button ng-click="togglePlayback(playerObject.loadedEpisode)">
-    <i class="fa fa-pause" ng-if="episodePlaying"></i>
-    <i class="fa fa-play" ng-if="!episodePlaying"></i>
-</button>
-
-
-
-<button ng-click="jumpBack()">Jump Back</button>
-<button ng-click="rewind()">RR</button>
-<button ng-click="forward()">FF</button>
-<button ng-click="jumpAhead()">Jump Ahead</button>
-<button ng-click="toggleNowPlayingDetails()">description</button>
-<span ng-if="playerObject.loadedEpisode.showDetails">
-        {{playerObject.loadedEpisode.description}}
-        {{playerObject.loadedEpisode.pubDate}}
-    </span>
-<!--<div id="zowSlider" ng-click="setPlaybackPosition(event)">123456</div>-->
-<div class="progressTracker">
-    {{playerObject.counter.hours}}:{{playerObject.counter.minutes}}:{{playerObject.counter.seconds}}
-    {{playerObject.element.duration}}
-</div>
-
-{{playerObject.counter}}
-{{counter}}
+<!--<span ng-if="playerObject.loadedEpisode.showDetails">-->
+        <!--{{playerObject.loadedEpisode.description}}-->
+        <!--{{playerObject.loadedEpisode.pubDate}}-->
+    <!--</span>-->
 

@@ -48,6 +48,7 @@ app.player.factory('PlayerService',
                 $rootScope.playerObject.elementWrapper =  jQuery('#' + mediaType + 'Player');
 
             $rootScope.playerObject.loadedEpisode.location = $sce.trustAsResourceUrl(episode.src);
+
             return $rootScope.playerObject;
         },
 
@@ -79,18 +80,33 @@ app.player.factory('PlayerService',
             playerObj.counter = counter;
         },
 
+        getDuration: function(duration){
+            console.log(duration);
+            pad = function(val){
+                return val > 9 ? val : "0" + val;
+            };
+            sec = Math.floor(duration);
+            var counter = {};
+            counter.seconds = pad(++sec % 60);
+            counter.minutes = pad(pad(parseInt(sec / 60, 10) % 60));
+            counter.hours = pad(parseInt(sec / 3600, 10));
+            return counter;
+        },
+
         togglePlaybackIcon: function( episode){
             return $rootScope.playerObject.loadedEpisode == episode
             && $rootScope.playerObject.status == 'paused' ? 'pause' : 'play'
         },
 
         playAction: function(firstRun){
+            var self = this;
             this.startCounter();
             $rootScope.playerObject.status = 'playing';
             $rootScope.episodePlaying = $rootScope.playerObject.loadedEpisode.id;
             if(firstRun){
                 $rootScope.playerObject.element.oncanplay = function(){
                     $rootScope.playerObject.element.play();
+                    $rootScope.playerObject.runtime = self.getDuration($rootScope.playerObject.element.duration);
                 };
             }else{
                 $rootScope.playerObject.element.play();

@@ -15,11 +15,55 @@
 .pager:after {
   clear: both;
 }
-.progressTracker {
+.progressTrackerWrapper {
+  background: yellow;
+  position: relative;
+}
+.progressTrackerWrapper .counter {
+  float: left;
+}
+.progressTrackerWrapper .duration {
+  float: right;
+}
+.progressTrackerWrapper .progressTracker {
   background: green;
   border: red;
+  position: absolute;
 }
-#zowSlider {
-  background: yellow;
-  border: blue;
+.playerWrapper {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  background: #4486f8;
+}
+.playerWrapper .swMedia {
+  max-width: 100%;
+}
+.playerWrapper .swMedia img {
+  max-width: 100%;
+  display: block;
+}
+.playerWrapper .controls {
+  text-align: center;
+}
+.playerWrapper .controls button {
+  width: 18%;
+  background: #d73e33;
+  font-weight: bold;
+}
+.playerToggle {
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+}
+@media (max-width: 991px) {
+  .playerToggle {
+    left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .playerToggle {
+    right: 0;
+  }
 }

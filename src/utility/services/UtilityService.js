@@ -9,7 +9,6 @@ app.utility.factory('UtilityService', [
                     h: Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
                 }
             }
-
         }
 
     }]);

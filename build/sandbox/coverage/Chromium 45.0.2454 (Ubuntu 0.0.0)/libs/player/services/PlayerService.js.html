@@ -15,10 +15,10 @@
 <div class="header low">
     <h1>Code coverage report for <span class="entity">libs/player/services/PlayerService.js</span></h1>
     <h2>
-        Statements: <span class="metric">24.24% <small>(16 / 66)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Branches: <span class="metric">18.18% <small>(4 / 22)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Functions: <span class="metric">36.36% <small>(8 / 22)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Lines: <span class="metric">24.62% <small>(16 / 65)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">22.08% <small>(17 / 77)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">16.67% <small>(4 / 24)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">33.33% <small>(8 / 24)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">22.37% <small>(17 / 76)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
     <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">libs/player/services/</a> &#187; PlayerService.js</div>
@@ -231,7 +231,23 @@
 204
 205
 206
-207</td><td class="line-coverage"><span class="cline-any cline-yes">2</span>
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223</td><td class="line-coverage"><span class="cline-any cline-yes">2</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -281,6 +297,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -313,6 +330,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -320,6 +350,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -487,6 +519,7 @@
 <span class="cstat-no" title="statement not covered" >                $rootScope.playerObject.elementWrapper =  jQuery('#' + mediaType + 'Player');</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >            $rootScope.playerObject.loadedEpisode.location = $sce.trustAsResourceUrl(episode.src);</span>
+&nbsp;
 <span class="cstat-no" title="statement not covered" >            return $rootScope.playerObject;</span>
         },
 &nbsp;
@@ -518,18 +551,33 @@
 <span class="cstat-no" title="statement not covered" >            playerObj.counter = counter;</span>
         },
 &nbsp;
+        getDuration: <span class="fstat-no" title="function not covered" >function(duration){</span>
+<span class="cstat-no" title="statement not covered" >            console.log(duration);</span>
+<span class="cstat-no" title="statement not covered" >            pad = <span class="fstat-no" title="function not covered" >function(val){</span></span>
+<span class="cstat-no" title="statement not covered" >                return val &gt; 9 ? val : "0" + val;</span>
+            };
+<span class="cstat-no" title="statement not covered" >            sec = Math.floor(duration);</span>
+<span class="cstat-no" title="statement not covered" >            var counter = {};</span>
+<span class="cstat-no" title="statement not covered" >            counter.seconds = pad(++sec % 60);</span>
+<span class="cstat-no" title="statement not covered" >            counter.minutes = pad(pad(parseInt(sec / 60, 10) % 60));</span>
+<span class="cstat-no" title="statement not covered" >            counter.hours = pad(parseInt(sec / 3600, 10));</span>
+<span class="cstat-no" title="statement not covered" >            return counter;</span>
+        },
+&nbsp;
         togglePlaybackIcon: function( episode){
             return $rootScope.playerObject.loadedEpisode == episode
             &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >$rootScope.playerObject.status == 'paused' </span>? 'pause' : 'play'
         },
 &nbsp;
         playAction: function(firstRun){
+            var self = this;
             this.startCounter();
             $rootScope.playerObject.status = 'playing';
 <span class="cstat-no" title="statement not covered" >            $rootScope.episodePlaying = $rootScope.playerObject.loadedEpisode.id;</span>
 <span class="cstat-no" title="statement not covered" >            if(firstRun){</span>
 <span class="cstat-no" title="statement not covered" >                $rootScope.playerObject.element.oncanplay = <span class="fstat-no" title="function not covered" >function(){</span></span>
 <span class="cstat-no" title="statement not covered" >                    $rootScope.playerObject.element.play();</span>
+<span class="cstat-no" title="statement not covered" >                    $rootScope.playerObject.runtime = self.getDuration($rootScope.playerObject.element.duration);</span>
                 };
             }else{
 <span class="cstat-no" title="statement not covered" >                $rootScope.playerObject.element.play();</span>
@@ -648,7 +696,7 @@
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Oct 24 2015 20:41:45 GMT-0700 (MST)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Oct 25 2015 00:39:08 GMT-0700 (MST)</div>
 </div>
 <script src="../../../prettify.js"></script>
 <script>

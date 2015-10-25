@@ -19,12 +19,12 @@
 
 
     <li class="swItem">
-        <span>{{e.title}}</span> 
-        <span>{{e.pub_date | date:"medium"}}</span> 
-        <span>{{e.id}}</span> 
-        <span>{{e.duration}}</span> 
+        <header class="itemHeader">
+            <span>{{e.title}}</span>
+            <p class="swDescription">{{e.description | htmlToPlaintext}}</p>
+        </header>
         <div class="swImg"><img src="{{e.img}}"></div>
-        <span>
+        <div class="actionbar">
             <button ng-click="togglePlayback(e)">
                 <i class="fa fa-pause" ng-if="episodePlaying == e.id"></i>
                 <i class="fa fa-play" ng-if="episodePlaying != e.id"></i>
@@ -32,5 +32,5 @@
             <button ng-click="updateWatched(e)"><i class="fa fa-check"></i></button>
             <button ng-click="playPause(e)"><i class="fa fa-download"></i></button>
             <button ng-click="toggleDetails(e)"><i class="fa fa-info"></i></button>
-        </span>
+        </div>
         </li> 

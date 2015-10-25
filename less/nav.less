@@ -14,8 +14,8 @@
   }
   .actionWrapper{
     @media(max-width: @screen-xs-max) {
-      float: left;
-      width: 16.66666667%;
+     display: inline;
+      width: 18.66666667%;
       padding-left: 5px;
       padding-right: 5px;
     }
@@ -46,9 +46,7 @@
     }
 
 
-  .playerToggle{
-    display: inline-block;
-  }
+
   .linkItems {
     color: @white1;
     background: @base-dark;
@@ -67,7 +65,12 @@
 }
 
 .logoWrapper {
-  float: left;
+  @media(max-width: @screen-xs-max) {
+    display: inline;
+  }
+  @media(min-width: @screen-sm-min) {
+    float: left;
+  }
   .swLogo {
     font-family: @lato;
     font-weight: 900;
@@ -118,29 +121,72 @@
   font-size: 14px;
 }
 
-.subscriptionNavbar {
-  width: 320px;
-  background: @primary-color;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: -320px;
-  z-index: 5;
-  a {
+.episodeBySubscriptionBrowser {
+  .allEpisodes a {
+    background: @base-color;
     color: @white1;
+    text-shadow: @standard-shadow;
+    display: block;
   }
-}
+  .swItem {
+    float:left;
+    position: relative;
+    overflow: hidden;
 
-//.swLogo:first-letter{
-//  .swEclipse;
-//  display: block;
-//  font-family: @mono;
-//  border: @white1 5px solid;
-//  color: @white1;
-//  padding: 10px;
-//  a{
-//    color: @white1;
-//  }
-//}
+    @media(max-width: @screen-xs-max) {
+      font-size: 10px;
+      ///padding: 10px ;
+      width: 33%;
+      //padding: 1%;
+      //height: 100px;
+    }
+    @media(min-width: @screen-sm-min) {
+      font-size: 16px;
+      //padding: 10px ;
+      width: 16.667%;
+    }
+
+    .swImg {
+      width: 100%;
+      display: block;
+      position: relative;
+      z-index: 1;
+
+    }
+    .swTitle {
+      @media(max-width: @screen-xs-max) {
+        padding: 5px;
+      }
+      @media(min-width: @screen-sm-min) {
+        padding: 10px ;
+      }
+
+      padding: 0 5px;
+      height: 40px;
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      color: @white1;
+      text-shadow: @standard-shadow;
+      &::after{
+        z-index: 1;
+        content: '';
+        background: #000;
+        opacity: 0.7;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      span {
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+
+}
 
 

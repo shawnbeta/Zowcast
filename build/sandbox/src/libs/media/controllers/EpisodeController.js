@@ -2,6 +2,12 @@ app.media.controller('EpisodeController', [ '$scope', '$rootScope', '$sce', '$fi
 	'EpisodeService', 'OverlayService',
 	function($scope, $rootScope, $sce, $filter, EpisodeService, OverlayService){
 
+		$scope.setEpisodeStyle = function(newStyle){
+			$scope.episodeStyle = newStyle;
+		};
+
+		$scope.episodeStyle = 'grid';
+
         //
         //
 		//$scope.toggleDetails = function(model){

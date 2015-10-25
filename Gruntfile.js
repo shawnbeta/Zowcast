@@ -81,7 +81,7 @@ module.exports = function (grunt) {
                     'build/sandbox/css/libs/overlay.css': 'less/overlay.less',
                     'build/sandbox/css/libs/globals.css': 'less/globals.less',
                     'build/sandbox/css/libs/main.css': 'less/main.less',
-                    'build/sandbox/css/libs/navBar.css': 'less/navBar.less',
+                    'build/sandbox/css/libs/nav.css': 'less/nav.less',
                     'build/sandbox/css/libs/player.css': 'less/player.less',
                     'build/sandbox/css/libs/variables.css': 'less/variables.less'
                 }
