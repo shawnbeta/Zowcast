@@ -1,0 +1,43 @@
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after,
+.pager:before,
+.pager:after {
+  content: " ";
+  display: table;
+}
+.container:after,
+.container-fluid:after,
+.row:after,
+.pager:after {
+  clear: both;
+}
+.swMessage {
+  position: absolute;
+  top: 100px;
+  z-index: 6;
+  left: 10px;
+  right: 10px;
+}
+.swMessage .swClose {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  font-size: 30px;
+}
+.swMessage .swText {
+  position: relative;
+  padding: 25px 15px;
+  margin: 0 auto;
+  max-width: 650px;
+}
+.swMessage .swError {
+  background: red;
+  color: #ffffff;
+}
+.swMessage .swSuccess {
+  background: green;
+}
