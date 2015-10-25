@@ -4,12 +4,21 @@
   position: fixed;
   top: 10px;
   left: 10px;
-  height: 42px;
-  width: 42px;
+  @media(min-width: @screen-sm-min){
+    top: 3px;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+  }
+  @media(max-width: @screen-xs-max){
+    top: 10px;
+    height: 42px;
+    width: 42px;
+    font-size: 25px;
+  }
   background: red;
   color: @white1;
   border-radius: 50%;
-  font-size: 25px;
   font-weight: 900;
   z-index: 3;
   padding: 10px;

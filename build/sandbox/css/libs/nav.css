@@ -19,16 +19,29 @@
   position: fixed;
   top: 10px;
   left: 10px;
-  height: 42px;
-  width: 42px;
   background: red;
   color: #ffffff;
   border-radius: 50%;
-  font-size: 25px;
   font-weight: 900;
   z-index: 3;
   padding: 10px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .menuToggler {
+    top: 3px;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .menuToggler {
+    top: 10px;
+    height: 42px;
+    width: 42px;
+    font-size: 25px;
+  }
 }
 .swNavBar {
   position: relative;
