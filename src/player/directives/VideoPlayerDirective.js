@@ -1,4 +1,5 @@
-app.player.directive('videoPlayer', [ function() {
+app.player.directive('videoPlayer', ['PlayerService',
+    function(PlayerService) {
 
 
 
@@ -10,9 +11,9 @@ app.player.directive('videoPlayer', [ function() {
         scope: '=',
 
         link: function(scope){
-            scope.setBookmark = function(){
-
-            }
+            //scope.updateCounter = function(){
+            //    PlayerService.updateCounter();
+            //};
         }
 
     };

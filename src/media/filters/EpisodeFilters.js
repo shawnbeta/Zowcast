@@ -6,8 +6,6 @@ app.media.filter('orderByPubDate', ['_', function(_) {
 
 app.media.filter('filterBySubscription', function() {
     return function(episodes, activeSubscription, subscriptionFilterStatus) {
-        console.log(subscriptionFilterStatus);
-        console.log(activeSubscription);
         if(subscriptionFilterStatus){
             return _.filter(episodes, function(episode){
                 return episode.subscription == activeSubscription;

@@ -1,100 +1,175 @@
 app.player.factory('PlayerService',
-    ['$rootScope', '$interval', '$sce', 'EpisodeService', 'UtilityService', '$rootScope',
-    function($rootScope, $interval, $sce, EpisodeService, UtilityService, $rootScope){
-        
-        // This needs to be global so it's accessable from everywhere.
+    ['$rootScope', '$interval', '$sce', 'EpisodeService', 'UtilityService',
+    function($rootScope, $interval, $sce, EpisodeService, UtilityService){
+
+        var firstRun = true;
         var ticker;
-        var rtime;
-        var timeout = false;
-        var delta = 200;
-    
     return {
 
-
-
-        // New Code
         initializePlayerObject: function(){
+
             return  {
                 status: null, // Player playback status
                 elementWrapper: null,
                 element: null, // jQuery to get the video or audio element
                 loadedEpisode:{id: null}, // the episode in the player
-                style: null // audio or video
+                counter: null
             }
         },
 
-        loadMedia: function(playerObject, episode){
+        togglePlayback: function(episode){
+            console.log(episode.mediaType);
+
+            if(episode.id !== $rootScope.playerObject.loadedEpisode.id){
+                $rootScope.playerObject = this.loadMedia(episode);
+                firstRun = true;
+                console.log('fsdfasd');
+            }else{
+                firstRun = false;
+            }
+            $rootScope.playerObject.status != 'playing' ? this.playAction(firstRun) : this.pauseAction();
+        },
+
+        loadMedia: function(episode){
             var mediaType = episode.mediaType == 0 ? 'audio' : 'video';
-            playerObject.loadedEpisode = episode;
-            playerObject.element = document.getElementsByTagName(mediaType)[0];
+            $rootScope.playerObject.loadedEpisode = episode;
+            $rootScope.playerObject.element = document.getElementsByTagName(mediaType)[0];
+
             // Added for testing.
             if(!document.getElementsByTagName(mediaType)[0])
-                playerObject.element = document.createElement("audio");
-            playerObject.elementWrapper =  jQuery('#' + mediaType + 'Wrapper');
-            playerObject.loadedEpisode.location = $sce.trustAsResourceUrl(episode.src);
-            return playerObject;
-        },
+                $rootScope.playerObject.element = document.createElement(mediaType);
 
-        togglePlaybackIcon: function(playerObject, episode){
-            return playerObject.loadedEpisode == episode
-            && playerObject.status == 'paused' ? 'pause' : 'play'
-        },
 
-        playAction: function(playerObject){
-            playerObject.element.play();
-            playerObject.element.oncanplay = function(){
-                playerObject.element.play();
+            $rootScope.playerObject.element.ontimeupdate = function(){
+
             };
-            $rootScope.episodePlaying = playerObject.loadedEpisode.id;
-            return playerObject;
+
+            //$rootScope.playerObject.element.addEventListener("seeking", self.updateCounter());
+            // Skip this in testing.
+            if(document.getElementsByTagName(mediaType)[0])
+                $rootScope.playerObject.elementWrapper =  jQuery('#' + mediaType + 'Player');
+
+            $rootScope.playerObject.loadedEpisode.location = $sce.trustAsResourceUrl(episode.src);
+            return $rootScope.playerObject;
         },
 
-        pauseAction: function(playerObject){
-            playerObject.element.pause();
-            playerObject.status = 'paused';
+        startCounter: function(){
+            if(angular.isDefined(ticker)) return;
+            var self = this;
+            ticker = $interval(function(){
+                self.updateCounter($rootScope.playerObject);
+            }, 1000);
+        },
+
+        pauseCounter: function(){
+            if(angular.isDefined(ticker)){
+                $interval.cancel(ticker);
+                ticker = undefined;
+            }
+        },
+
+        updateCounter: function(playerObj){
+            var time = playerObj.element.currentTime;
+            pad = function(val){
+                return val > 9 ? val : "0" + val;
+            };
+            sec = Math.floor(time);
+            var counter = {};
+            counter.seconds = pad(++sec % 60);
+            counter.minutes = pad(pad(parseInt(sec / 60, 10) % 60));
+            counter.hours = pad(parseInt(sec / 3600, 10));
+            playerObj.counter = counter;
+        },
+
+        togglePlaybackIcon: function( episode){
+            return $rootScope.playerObject.loadedEpisode == episode
+            && $rootScope.playerObject.status == 'paused' ? 'pause' : 'play'
+        },
+
+        playAction: function(firstRun){
+            this.startCounter();
+            $rootScope.playerObject.status = 'playing';
+            $rootScope.episodePlaying = $rootScope.playerObject.loadedEpisode.id;
+            if(firstRun){
+                console.log('first ryn');
+
+                $rootScope.playerObject.element.oncanplay = function(){
+                    $rootScope.playerObject.element.play();
+                    console.log('can play');
+                };
+            }else{
+                $rootScope.playerObject.element.play();
+            }
+        },
+
+        pauseAction: function(){
+            this.pauseCounter();
+            $rootScope.playerObject.element.pause();
+            $rootScope.playerObject.status = 'paused';
             $rootScope.episodePlaying = null;
-            return playerObject;
+        },
+
+        //updateCounter: function(){
+        //    var time = $rootScope.playerObject.element.currentTime;
+        //    pad = function(val){
+        //        return val > 9 ? val : "0" + val;
+        //    };
+        //    var sec = Math.floor(time);
+        //    counter.seconds = pad(++sec % 60);
+        //    counter.minutes = pad(pad(parseInt(sec / 60, 10) % 60));
+        //    counter.hours = pad(parseInt(sec / 3600, 10));
+        //
+        //    $rootScope.playerObject.counter = counter;
+        //    // Fills out the slide
+        //    var percentageOfEpisode =
+        //        ($rootScope.playerObject.element.currentTime/$rootScope.playerObject.element.duration);
+        //    var percentageOfSlider = document.getElementById('zowSlider').offsetWidth * percentageOfEpisode;
+        //    jQuery('.progressTracker').width(Math.round(percentageOfSlider) + "px");
+        //},
+
+
+
+
+        setLocation: function(percentage){
+            console.log(percentage);
+            console.log($rootScope.playerObject.element.currentTime);
+            $rootScope.playerObject.element.currentTime = $rootScope.playerObject.element.duration * percentage;
         },
 
 
-        rewind: function(playerObject){
-            var currentTime = parseInt.playerObject.element.currentTime;
-            playerObject.element.currentTime = currentTime - 20;
-            return playerObject;
+        rewind: function(){
+            var currentTime = parseInt($rootScope.playerObject.element.currentTime);
+            $rootScope.playerObject.element.currentTime = currentTime - 20;
+            return $rootScope.playerObject;
         },
 
-        forward: function(playerObject){
-            var currentTime = parseInt(playerObject.element.currentTime);
-            playerObject.element.currentTime = currentTime + 20;
-            return playerObject;
+        forward: function(){
+            var currentTime = parseInt($rootScope.playerObject.element.currentTime);
+            $rootScope.playerObject.element.currentTime = currentTime + 20;
+            return $rootScope.playerObject;
         },
 
-        jumpBack: function(playerObject){
+        jumpBack: function(){
             var currentTime = parseInt($rootScope.playerObject.element.currentTime);
             $rootScope.playerObject.element.currentTime = currentTime - 300;
-            return playerObject;
         },
 
-        jumpAhead: function(playerObject){
+        jumpAhead: function(){
             var currentTime = parseInt($rootScope.playerObject.element.currentTime);
             $rootScope.playerObject.element.currentTime = currentTime + 300;
-            return playerObject;
         },
 
-        volumeDown: function(playerObject){
-            playerObject.element.volume-=0.1;
-            return playerObject;
+        volumeDown: function(){
+            $rootScope.playerObject.element.volume-=0.1;
         },
 
-        volumeUp: function(playerObject){
+        volumeUp: function(){
             $rootScope.playerObject.element.volume+=0.1;
-            return playerObject;
         },
 
-        setVolumeTo: function(playerObject){
+        setVolumeTo: function(){
             $rootScope.playerObject.element.volume=val;
-            return playerObject;
-        },
+        }
 
         //startCounter: function(){
         //    if(angular.isDefined(ticker)) return;
@@ -125,14 +200,7 @@ app.player.factory('PlayerService',
         //},
 
 
-        togglePlayback: function(episode, playerObject){
-            if(episode.id !== playerObject.loadedEpisode.id){
-                playerObject = this.loadMedia(playerObject, episode);
-            }
-            playerObject.status = playerObject.status == 'playing' ? 'paused' : 'playing';
-             playerObject.status == 'playing' ? this.playAction(playerObject) : this.pauseAction(playerObject);
-            return playerObject;
-        }
+
         
     };
 }]); 

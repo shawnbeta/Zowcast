@@ -15,28 +15,11 @@
 .pager:after {
   clear: both;
 }
-#audioPlayer {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  background: #4486f8;
-  color: #ffffff;
+.progressTracker {
+  background: green;
+  border: red;
 }
-#toggleAudio {
-  content: '\f144';
-  font-family: 'FontAwesome';
-}
-#actionWrapper {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 6;
-}
-#playbackActionButton {
-  font-size: 80px;
-  color: #ffffff;
-}
-#playbackActionButton:hover {
-  color: #f1c604;
+#zowSlider {
+  background: yellow;
+  border: blue;
 }

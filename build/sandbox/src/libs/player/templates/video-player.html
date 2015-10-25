@@ -1,2 +1,4 @@
-<video ng-if="playerObject.loadedEpisode.style == 'video'" src="{{playerObject.loadedEpisode.location}}"></video>
-<playback-controls></playback-controls>
+<div class="videoPlayerWrapper" ng-show="playerObject.loadedEpisode.mediaType == 1">
+    <video ng-if="playerObject.loadedEpisode.mediaType == 1" src="{{playerObject.loadedEpisode.location}}"></video>
+    <playback-controls></playback-controls>
+</div>

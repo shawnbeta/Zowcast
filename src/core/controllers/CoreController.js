@@ -6,6 +6,7 @@ app.core.controller('CoreController', [ '$rootScope', '$scope', '$interval', 'Pe
         // Initialize Player
         $rootScope.playerObject = PlayerService.initializePlayerObject();
 
+
         $rootScope.subscriptionFilterStatus = false;
 
         $rootScope.message = {};

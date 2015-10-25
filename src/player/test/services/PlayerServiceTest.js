@@ -25,7 +25,8 @@ describe('PlayerService', function() {
             elementWrapper: null,
             element: null, // jQuery to get the video or audio element
             loadedEpisode:{id: null}, // the episode in the player
-            style: null // audio or video
+            counter: null
+
         };
 
         var newPlayerObject = PlayerService.initializePlayerObject();
@@ -105,28 +106,33 @@ describe('PlayerService', function() {
 
 
     //Load and play audio
-    it('will load and play audio', function(){
-        var episode = {
-            id: 4,
-            mediaType: 0,
-            src: 'http://localhost/zowcast/videoSample.mp4'
-        };
-
-
-        var updatedPlayerObject = PlayerService.togglePlayback(episode, _initPlayerObject);
-
-        expect(updatedPlayerObject.element.paused).toBe(false);
-
-        var updatedPlayerObjectA = PlayerService.togglePlayback(episode, updatedPlayerObject);
-
-        expect(updatedPlayerObjectA.element.paused).toBe(true);
-
-
-
-
-
-
-    });
+    //it('will load and play audio', function(){
+    //    var episode = {
+    //        id: 4,
+    //        mediaType: 0,
+    //        src: 'http://localhost/zowcast/videoSample.mp4'
+    //    };
+    //
+    //    //console.log(_initPlayerObject);
+    //    //console.log(episode);
+    //
+    //    console.log('will load and play')
+    //
+    //    var updatedPlayerObject = PlayerService.togglePlayback(_initPlayerObject, episode);
+    //    console.log(updatedPlayerObject);
+    //
+    //    expect(updatedPlayerObject.element.paused).toBe(false);
+    //
+    //    var updatedPlayerObjectA = PlayerService.togglePlayback(updatedPlayerObject, episode);
+    //
+    //    expect(updatedPlayerObjectA.element.paused).toBe(true);
+    //
+    //
+    //
+    //
+    //
+    //
+    //});
 
     //// Pause playback
     //it('will pause media', function(){

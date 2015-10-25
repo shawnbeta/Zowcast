@@ -57,9 +57,8 @@
         "media/services/SubscriptionService",
 
         "player/player.module",
-        "player/directives/AudioPlayerDirective",
-        "player/directives/VideoPlayerDirective",
-        "player/directives/PlaybackControlDirective",
+        "player/counter-func",
+        "player/directives/PlayerDirective",
         "player/services/PlayerService",
 
         "ui/ui.module",

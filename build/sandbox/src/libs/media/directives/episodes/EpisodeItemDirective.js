@@ -8,16 +8,12 @@ app.media.directive('episodeItem',['$rootScope', 'EpisodeService', 'PlayerServic
 
         link: function(scope){
 
-            //scope.isPlaying = function(episode){
-            //    return $rootScope.playerObject.loadedEpisode == episode && $rootScope.playerObject.status == 'playing';
-            //};
-
             scope.togglePlaybackIcon = function(episode){
-                return PlayerService.togglePlaybackIcon($rootScope.playerObject, episode);
+                return PlayerService.togglePlaybackIcon(episode);
             };
 
             scope.togglePlayback = function(episode){
-                PlayerService.togglePlayback(episode, $rootScope.playerObject);
+                PlayerService.togglePlayback(episode);
             };
 
 

@@ -12,13 +12,13 @@
     </style>
 </head>
 <body>
-<div class="header low">
+<div class="header high">
     <h1>Code coverage report for <span class="entity">libs/player/directives/PlaybackControlDirective.js</span></h1>
     <h2>
-        Statements: <span class="metric">5% <small>(1 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Functions: <span class="metric">0% <small>(0 / 11)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Lines: <span class="metric">5% <small>(1 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
     <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">libs/player/directives/</a> &#187; PlaybackControlDirective.js</div>
@@ -78,52 +78,19 @@
 51
 52
 53
-54</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -131,65 +98,134 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
-app.media.directive('playbackControls',['PlayerService', '$rootScope', <span class="fstat-no" title="function not covered" >function(PlayerService, $rootScope) {</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >    return  {</span>
-&nbsp;
-        restrict: 'E',
-&nbsp;
-        scope: '=',
-&nbsp;
-        link: <span class="fstat-no" title="function not covered" >function(scope){</span>
-&nbsp;
-&nbsp;
-<span class="cstat-no" title="statement not covered" >            scope.togglePlaybackIcon = <span class="fstat-no" title="function not covered" >function(episode){</span></span>
-<span class="cstat-no" title="statement not covered" >                PlayerService.togglePlaybackIcon(episode);</span>
-            };
-&nbsp;
-<span class="cstat-no" title="statement not covered" >            scope.togglePlayback = <span class="fstat-no" title="function not covered" >function(episode){</span></span>
-<span class="cstat-no" title="statement not covered" >                PlayerService.togglePlayback(episode);</span>
-            };
-&nbsp;
-<span class="cstat-no" title="statement not covered" >            scope.rewind = <span class="fstat-no" title="function not covered" >function(){</span></span>
-<span class="cstat-no" title="statement not covered" >                PlayerService.rewind();</span>
-            };
-&nbsp;
-<span class="cstat-no" title="statement not covered" >            scope.forward = <span class="fstat-no" title="function not covered" >function(){</span></span>
-<span class="cstat-no" title="statement not covered" >                PlayerService.forward();</span>
-            };
-&nbsp;
-<span class="cstat-no" title="statement not covered" >            scope.jumpBack = <span class="fstat-no" title="function not covered" >function(){</span></span>
-<span class="cstat-no" title="statement not covered" >                PlayerService.jumpBack();</span>
-            };
-&nbsp;
-<span class="cstat-no" title="statement not covered" >            scope.jumpAhead = <span class="fstat-no" title="function not covered" >function(){</span></span>
-<span class="cstat-no" title="statement not covered" >                PlayerService.jumpAhead();</span>
-            };
-&nbsp;
-<span class="cstat-no" title="statement not covered" >            scope.volumeUp = <span class="fstat-no" title="function not covered" >function(){</span></span>
-<span class="cstat-no" title="statement not covered" >                PlayerService.volumeUp();</span>
-            };
-&nbsp;
-<span class="cstat-no" title="statement not covered" >            scope.volumeDown = <span class="fstat-no" title="function not covered" >function(){</span></span>
-<span class="cstat-no" title="statement not covered" >                PlayerService.volumeDown();</span>
-            };
-&nbsp;
-<span class="cstat-no" title="statement not covered" >            scope.setVolumeTo = <span class="fstat-no" title="function not covered" >function(){</span></span>
-<span class="cstat-no" title="statement not covered" >                PlayerService.setVolumeTo();</span>
-            };
-&nbsp;
-        },
-&nbsp;
-        templateUrl: 'src/libs/player/templates/playback-controls.html'
-    }
-&nbsp;
-}]);</pre></td></tr>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//
+//app.media.directive('playbackControls',['PlayerService', '$rootScope', function(PlayerService, $rootScope) {
+//
+//    return  {
+//
+//        restrict: 'E',
+//
+//        scope: '=',
+//
+//        link: function(scope){
+//
+//             scope.setPlaybackPosition = function(obj,e){
+//                 console.log('setplayback position')
+//                 console.log(obj);
+//                //Gets the offset from the left so it gets the exact location.
+//                var songSliderWidth = obj.offsetWidth;
+//                var evtobj=window.event? event : e;
+//                clickLocation = evtobj.layerX - obj.offsetLeft;
+//
+//                var percentage = (clickLocation/songSliderWidth);
+//                //Sets the song location with the percentage.
+//                PlayerService.setLocation(percentage);
+//            };
+//
+//
+//            scope.togglePlaybackIcon = function(episode){
+//                PlayerService.togglePlaybackIcon(episode);
+//            };
+//            scope.togglePlayback = function(episode, playerObject){
+//                PlayerService.togglePlayback(episode, playerObject);
+//            };
+//
+//            scope.rewind = function(){
+//                PlayerService.rewind();
+//            };
+//
+//            scope.forward = function(){
+//                PlayerService.forward();
+//            };
+//
+//            scope.jumpBack = function(){
+//                PlayerService.jumpBack();
+//            };
+//
+//            scope.jumpAhead = function(){
+//                PlayerService.jumpAhead();
+//            };
+//
+//            scope.volumeUp = function(){
+//                PlayerService.volumeUp();
+//            };
+//
+//            scope.volumeDown = function(){
+//                PlayerService.volumeDown();
+//            };
+//
+//            scope.setVolumeTo = function(){
+//                PlayerService.setVolumeTo();
+//            };
+//
+//        },
+//
+//        templateUrl: 'src/libs/player/templates/playback-controls.html'
+//    }
+//
+//}]);</pre></td></tr>
 </table></pre>
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Oct 24 2015 12:21:33 GMT-0700 (MST)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Oct 24 2015 19:58:04 GMT-0700 (MST)</div>
 </div>
 <script src="../../../prettify.js"></script>
 <script>

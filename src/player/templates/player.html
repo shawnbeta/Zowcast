@@ -1,0 +1,31 @@
+<div class="audioPlayerWrapper" ng-show="playerObject.loadedEpisode.mediaType == 0">
+    <img src="{{playerObject.loadedEpisode.img}}" class="swMedia">
+    <audio ng-src="{{playerObject.loadedEpisode.location}}"></audio>
+</div>
+
+<div class="videoPlayerWrapper" ng-show="playerObject.loadedEpisode.mediaType == 1">
+    <video class="swMedia" src="{{playerObject.loadedEpisode.location}}"></video>
+</div>
+
+<div>Time:{{playerObject.counter.hours}}:{{playerObject.counter.minutes}}:{{playerObject.counter.seconds}}</div>
+<button ng-click="togglePlayback(playerObject.loadedEpisode)">
+    <i class="fa fa-pause" ng-if="episodePlaying"></i>
+    <i class="fa fa-play" ng-if="!episodePlaying"></i>
+</button>
+
+
+
+<button ng-click="jumpBack()">Jump Back</button>
+<button ng-click="rewind()">RR</button>
+<button ng-click="forward()">FF</button>
+<button ng-click="jumpAhead()">Jump Ahead</button>
+<button ng-click="toggleNowPlayingDetails()">description</button>
+<span ng-if="playerObject.loadedEpisode.showDetails">
+        {{playerObject.loadedEpisode.description}}
+        {{playerObject.loadedEpisode.pubDate}}
+    </span>
+<!--<div id="zowSlider" ng-click="setPlaybackPosition(event)">123456</div>-->
+<div class="progressTracker">789</div>
+
+{{playerObject.counter}}
+{{counter}}

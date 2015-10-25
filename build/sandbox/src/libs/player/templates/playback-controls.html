@@ -1,6 +1,8 @@
-<div>Time:{{counter.hours}}:{{counter.minutes}}:{{counter.seconds}}</div>
+<div>Time:{{playerObject.counter.hours}}:{{playerObject.counter.minutes}}:{{playerObject.counter.seconds}}</div>
 <button ng-click="togglePlayback(playerObject.loadedEpisode, playerObject)">
-    {{togglePlaybackIcon(playerObject, playerObject.loadedEpisode)}}</button>
+    <i class="fa fa-pause" ng-if="!episodePlaying"></i>
+    <i class="fa fa-play" ng-if="episodePlaying"></i>
+</button>
 <button ng-click="jumpBack()">Jump Back</button>
 <button ng-click="rewind()">RR</button>
 <button ng-click="forward()">FF</button>
@@ -10,6 +12,8 @@
         {{playerObject.loadedEpisode.description}}
         {{playerObject.loadedEpisode.pubDate}}
     </span>
-<div slider class="slider" min="0" max="9001" step="100">
-    <span></span>
-</div>
+<div id="zowSlider" ng-click="setPlaybackPosition(this, event)">123456</div>
+<div class="progressTracker">789</div>
+
+{{playerObject.counter}}
+{{counter}}
