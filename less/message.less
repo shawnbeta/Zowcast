@@ -6,25 +6,34 @@
   z-index: 6;
   left: 10px;
   right: 10px;
-  .swClose {
-    position: absolute;
-    right: -10px;
-    top: -10px;
-    font-size: 30px;
+  &.fixed {
+    position: fixed;
   }
+  &.swError {
+    .swText {
+      background: @error3;
+      border-color:  @error2;
+      .swCloseIcon {
+        color: @error2;
+      }
+    }
+  }
+
+  &.swSuccess {
+    background: @status1;
+    border-color: @status2;
+    .swCloseIcon {
+      color: @status2;
+    }
+  }
+
   .swText {
+    border: 1px solid;
     position: relative;
     padding: 25px 15px;
     margin: 0 auto;
     max-width: 650px;
   }
 
-  .swError {
-    background: red;
-    color: @white1;
-  }
-  .swSuccess {
-    background: green;
-  }
 
 }

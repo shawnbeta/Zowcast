@@ -1,26 +1,6 @@
-<!--<li class="episodeItem">-->
-    <!--<div class="teaser">-->
-        <!--<div class="swDate">{{e.pub_date | date:"MMMM d, yyyy"}}</div>-->
-        <!--&lt;!&ndash;<span>{{e.id}}</span>&ndash;&gt;-->
-        <!--<div class="swImg">-->
-            <!--<button ng-click="togglePlayback(e)" class="imgPlayback largeOnly">-->
-                <!--<i class="fa fa-{{isPlaying(e)}}"></i>-->
-            <!--</button>-->
-            <!--<span><img src="{{e.img}}"></span>-->
-            <!--&lt;!&ndash;<img src="assets/img/turtle.png">&ndash;&gt;-->
-        <!--</div>-->
-
-        <!--<div class="swTitle">-->
-            <!--<span>{{e.title}}</span>-->
-        <!--</div>-->
-        <!--<p class="swDescription">{{e.description}}</p>-->
-    <!--</div>-->
-<!--</li>-->
-
-
     <li class="swItem">
         <header class="itemHeader">
-            <span>{{e.title | htmlToPlaintext}}</span>
+            <div class="swTitle">{{e.title | htmlToPlaintext}}</div>
             <p class="swDescription">{{e.description | htmlToPlaintext}}</p>
         </header>
         <div class="swImg"><img src="{{e.img}}"></div>
@@ -29,8 +9,10 @@
                 <i class="fa fa-pause" ng-if="episodePlaying == e.id"></i>
                 <i class="fa fa-play" ng-if="episodePlaying != e.id"></i>
             </button>
-            <button ng-click="updateWatched(e)"><i class="fa fa-check"></i></button>
-            <button ng-click="playPause(e)"><i class="fa fa-download"></i></button>
+
+            <!--<button ng-click="updateWatched(e)"><i class="fa fa-check"></i></button>-->
+            <button ng-click="updateWatched()"><i class="fa fa-check"></i></button>
+            <a ng-href="e.src"><i class="fa fa-download"></i></a>
             <button ng-click="showEpisodeDetails(e)"><i class="fa fa-info"></i></button>
         </div>
-        </li> 
+        </li>

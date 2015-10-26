@@ -30,13 +30,12 @@ app.ui.factory('UIService',
                 },
 
                 fadeAnimate: function(element, opacity, _callBack){
-                    jQuery(element).animate({
-                       opacity: opacity
+                    jQuery('.swMessage').animate({
+                       opacity: 0
                     }, 500, function(){
                         if(_callBack)
-                            _callBack();
+                           _callBack();
                     });
-
                 },
 
                 toggleMenu: function(){

@@ -56,25 +56,6 @@
     height: 100px;
   }
 }
-.list .swItem .teaser {
-  max-height: 100px;
-  overflow: hidden;
-  position: relative;
-}
-@media (max-width: 767px) {
-  .list .swItem .teaser {
-    font-size: 12px;
-    margin-right: 10px;
-  }
-}
-.list .swItem .teaser .toggleDescription {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 30px;
-  z-index: 3;
-}
 .list .swItem .swDate {
   display: inline-block;
   font-weight: 600;
@@ -111,6 +92,8 @@
 }
 .list .swTitle {
   font-weight: 600;
+  max-height: 18px;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .list .swTitle {
@@ -121,6 +104,8 @@
   height: 100px;
   overflow: hidden;
   padding-left: 110px;
+  padding-top: 10px;
+  padding-right: 10px;
 }
 @media (max-width: 767px) {
   .list .itemHeader {
@@ -132,6 +117,19 @@
     font-size: 16px;
     line-height: 22px;
     padding-right: 100px;
+  }
+}
+.list .itemHeader .swDescription {
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .list .itemHeader .swDescription {
+    max-height: 65px;
+  }
+}
+@media (min-width: 768px) {
+  .list .itemHeader .swDescription {
+    max-height: 45px;
   }
 }
 .list .actionbar {
@@ -152,10 +150,8 @@
   }
 }
 @media (min-width: 768px) {
-  .list .actionbar button {
+  .list .actionbar button,
+  .list .actionbar a {
     margin-top: 5px;
-  }
-  .list .actionbar button:first-child {
-    display: none;
   }
 }

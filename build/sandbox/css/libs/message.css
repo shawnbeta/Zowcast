@@ -22,22 +22,27 @@
   left: 10px;
   right: 10px;
 }
-.swMessage .swClose {
-  position: absolute;
-  right: -10px;
-  top: -10px;
-  font-size: 30px;
+.swMessage.fixed {
+  position: fixed;
+}
+.swMessage.swError .swText {
+  background: #fef5f1;
+  border-color: #8c2e0b;
+}
+.swMessage.swError .swText .swCloseIcon {
+  color: #8c2e0b;
+}
+.swMessage.swSuccess {
+  background: #bbee77;
+  border-color: #234600;
+}
+.swMessage.swSuccess .swCloseIcon {
+  color: #234600;
 }
 .swMessage .swText {
+  border: 1px solid;
   position: relative;
   padding: 25px 15px;
   margin: 0 auto;
   max-width: 650px;
-}
-.swMessage .swError {
-  background: red;
-  color: #ffffff;
-}
-.swMessage .swSuccess {
-  background: green;
 }

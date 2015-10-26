@@ -7,6 +7,7 @@ app.ui.factory('MessageService',
             return {
 
                 displayMessage: function(text, msgType, _closeMessageTimer){
+                    console.log('workign')
                     $rootScope.message.text = text;
                     $rootScope.message.msgType = msgType;
                     if(_closeMessageTimer)
@@ -18,11 +19,13 @@ app.ui.factory('MessageService',
                     mTimer = $interval(function(){
                         $interval.cancel(mTimer);
                         mTimer = undefined;
-                        $rootScope.message = UIService.fadeAnimate('.swMessage', 0, function(){
-                            return null;
-                        });
+                        $rootScope.message.text = null;
                     }, 4000);
 
+                },
+
+                clearMessage: function(){
+                    $rootScope.message.text = null;
                 }
 
             }

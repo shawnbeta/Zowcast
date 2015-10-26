@@ -16,8 +16,10 @@
   clear: both;
 }
 .progressTrackerWrapper {
-  background: yellow;
+  background: #f1c604;
   position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .progressTrackerWrapper .counter {
   float: left;
@@ -35,22 +37,21 @@
   position: fixed;
   bottom: 0;
   z-index: 3;
-  background: #4486f8;
 }
-.playerWrapper .swMedia {
-  max-width: 100%;
-}
-.playerWrapper .swMedia img {
-  max-width: 100%;
-  display: block;
+.playerWrapper .group {
+  background: #d73e33;
+  color: #ffffff;
 }
 .playerWrapper .controls {
   text-align: center;
+  background: #bfbfbf;
 }
 .playerWrapper .controls button {
-  width: 18%;
-  background: #d73e33;
-  font-weight: bold;
+  color: #ffffff;
+  font-size: 24px;
+  width: 60px;
+  padding: 5px;
+  background: #4486f8;
 }
 .playerToggle {
   z-index: 2;
@@ -66,4 +67,32 @@
   .playerToggle {
     right: 0;
   }
+}
+.episodeTitle {
+  float: left;
+}
+.episodeTitle {
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.playerEpisodeInfo {
+  font-size: 25px;
+  padding-right: 10px;
+  float: right;
+}
+.videoPlayerWrapper {
+  text-align: center;
+  position: relative;
+}
+.videoPlayerWrapper .swMedia {
+  width: 320px;
+  margin: 10px auto 0;
+  position: relative;
+}
+.videoPlayerWrapper .fullScreenToggler {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
 }

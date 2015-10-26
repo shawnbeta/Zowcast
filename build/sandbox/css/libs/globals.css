@@ -54,6 +54,12 @@ a,
 a:hover {
   text-decoration: none;
 }
+.swCloseIcon {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  font-size: 30px;
+}
 @media (min-width: 768px) {
   .largeOnly {
     display: block !important;

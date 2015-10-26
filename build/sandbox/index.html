@@ -21,17 +21,9 @@
             <i ng-click="toggleMenu()" class="fa fa-bars menuToggler"></i>
     </span>
 
-    <div ng-if="overlay" class="overlay"></div>
-
     <overlay></overlay>
 
-    <div ng-if="message" class="swMessage">
-
-        <div class="swText {{message.msgType}}">
-            <i ng-click="closeMessage()" class="fa fa-close swClose"></i>
-            {{message.text}}
-        </div>
-    </div>
+    <message></message>
 
 <!-- Generated Code: mustache_templates/ui/navBar.mustache -->
 
@@ -137,6 +129,7 @@
 <script src="src/libs/player/services/PlayerService.js"></script>
 <script src="src/libs/ui/ui.module.js"></script>
 <script src="src/libs/ui/controllers/NavigationController.js"></script>
+<script src="src/libs/ui/directives/MessageDirective.js"></script>
 <script src="src/libs/ui/directives/ToggleMenuDirective.js"></script>
 <script src="src/libs/ui/directives/OverlayDirective.js"></script>
 <script src="src/libs/ui/services/UIService.js"></script>

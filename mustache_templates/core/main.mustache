@@ -26,17 +26,9 @@
             <i ng-click="toggleMenu()" class="fa fa-bars menuToggler"></i>
     </span>
 
-    <div ng-if="overlay" class="overlay"></div>
-
     <overlay></overlay>
 
-    <div ng-if="message" class="swMessage">
-
-        <div class="swText {{message.msgType}}">
-            <i ng-click="closeMessage()" class="fa fa-close swClose"></i>
-            {{message.text}}
-        </div>
-    </div>
+    <message></message>
 
     <% > ui/navBar %>
 

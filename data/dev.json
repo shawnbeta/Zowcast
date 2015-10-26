@@ -63,6 +63,7 @@
 
         "ui/ui.module",
         "ui/controllers/NavigationController",
+        "ui/directives/MessageDirective",
         "ui/directives/ToggleMenuDirective",
         "ui/directives/OverlayDirective",
         "ui/services/UIService",

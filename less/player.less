@@ -1,8 +1,10 @@
 @import (reference) "styles.less";
 
 .progressTrackerWrapper{
-  background: yellow;
+  background: @secondary-color;
   position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
   .counter {
     float: left;
   }
@@ -21,21 +23,22 @@
   position: fixed;
   bottom: 0;
   z-index: 3;
-  background: @primary-color;
-  .swMedia {
-    max-width: 100%;
-    img {
-      max-width: 100%;
-      display: block;
-    }
+
+
+  .group {
+    background: @base-color;
+    color: @white1;
   }
 
   .controls {
     text-align: center;
+    background: @dark4;
     button{
-      width: 18%;
-      background: @base-color;
-      font-weight: bold;
+      color: @white1;
+      font-size: 24px;
+      width: 60px;
+      padding: 5px;
+      background: @primary-color;
     }
   }
 }
@@ -53,8 +56,34 @@
 }
 
 
+.episodeTitle{
+  float: left;
+}
 
-//#zowSlider {
-//  background: yellow;
-//  border: blue;
-//}
+.episodeTitle {
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.playerEpisodeInfo {
+  font-size: 25px;
+  padding-right: 10px;
+  float: right;
+}
+
+.videoPlayerWrapper {
+  text-align: center;
+  position: relative;
+  .swMedia {
+    width: 320px;
+    margin: 10px auto 0;
+    position: relative;
+  }
+  .fullScreenToggler {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 2;
+  }
+}

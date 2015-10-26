@@ -1,4 +1,5 @@
-app.player.directive('player', ['$rootScope', 'PlayerService', function($rootScope, PlayerService) {
+app.player.directive('player', ['$rootScope', 'PlayerService', 'OverlayService',
+    function($rootScope, PlayerService, OverlayService) {
 
 
 
@@ -11,6 +12,21 @@ app.player.directive('player', ['$rootScope', 'PlayerService', function($rootSco
         scope: '=',
 
         link: function(scope){
+
+            scope.goFullScreen = function(){
+                var video = $rootScope.playerObject.element;
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.mozRequestFullScreen) {
+                    video.mozRequestFullScreen(); // Firefox
+                } else if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen(); // Chrome and Safari
+                }
+            };
+
+            scope.showEpisodeDetails = function(episode){
+                OverlayService.setOverlay(episode);
+            };
 
 
             scope.togglePlaybackIcon = function(episode){

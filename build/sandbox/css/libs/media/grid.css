@@ -42,16 +42,6 @@
     border: 5px #d9d9d9 solid;
   }
 }
-.grid .swItem .itemHeader {
-  height: 55px;
-  display: table;
-  table-layout: fixed;
-  text-align: left;
-}
-.grid .swItem .itemHeader span {
-  vertical-align: middle;
-  display: table-cell;
-}
 .grid .swItem .swDate,
 .grid .swItem .swImg,
 .grid .swItem .swTitle {
@@ -62,14 +52,8 @@
   display: block;
 }
 .grid .swItem .swTitle {
-  display: table;
-  table-layout: fixed;
-  height: 55px;
-  width: 100%;
-}
-.grid .swItem .swTitle span {
-  display: table-cell;
-  vertical-align: middle;
+  height: 30px;
+  overflow: hidden;
 }
 .grid .swItem .swDescription {
   display: none;

@@ -8,15 +8,19 @@ app.core.controller('CoreController', [ '$rootScope', '$scope', '$interval', 'Pe
 
         $rootScope.currentPath = UtilityService.getCurrentPath();
 
+        $rootScope.closeOverlay = function(){
+            $rootScope.overlay = undefined;
+        };
+
         $rootScope.closeMessage = function(){
-            $rootScope.message = undefined;
+            $rootScope.message.text = undefined;
         };
 
         $rootScope.subscriptionFilterStatus = false;
 
-        $rootScope.message = {};
+        $rootScope.message = {text: undefined};
 
-        MessageService.displayMessage('testing', 'swError', MessageService.closeMessageTimer());
+
 
 
         $scope.sync = function(){
@@ -34,15 +38,11 @@ app.core.controller('CoreController', [ '$rootScope', '$scope', '$interval', 'Pe
         SubscriptionService.loadSubscriptionsFromLocalStorage($rootScope);
         EpisodeService.loadEpisodesFromLocalStorage($rootScope);
 
-        console.log($rootScope.subscriptions);
 
-        updateOverlayManager = function(om){
-            $rootScope.OverlayManager = om;
-        };
-
-        $rootScope.notifyDisabled = function() {
-            alert('This feature has been disabled.');
-        };
+        //
+        //$rootScope.notifyDisabled = function() {
+        //    MessageService.displayMessage('This feature has been disabled.', 'swSuccess', MessageService.closeMessageTimer());
+        //};
 
 
         $scope.flushLocalStorage = function(){

@@ -26,6 +26,7 @@ html {
 body {
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
+  padding-bottom: 100px;
 }
 #stage {
   width: 100%;
@@ -34,13 +35,4 @@ body {
   position: relative;
   z-index: 2;
   margin-bottom: 25px;
-}
-.mask {
-  position: absolute;
-  z-index: 5;
-  background: #000;
-  opacity: .6;
-  top: 0;
-  left: 0;
-  right: 0;
 }

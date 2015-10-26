@@ -38,9 +38,9 @@ app.player.factory('PlayerService',
                 $rootScope.playerObject.element = document.createElement(mediaType);
 
 
-            $rootScope.playerObject.element.ontimeupdate = function(){
-
-            };
+            //$rootScope.playerObject.element.ontimeupdate = function(){
+            //
+            //};
 
             //$rootScope.playerObject.element.addEventListener("seeking", self.updateCounter());
             // Skip this in testing.
@@ -53,10 +53,9 @@ app.player.factory('PlayerService',
         },
 
         startCounter: function(){
-            if(angular.isDefined(ticker)) return;
             var self = this;
             ticker = $interval(function(){
-                self.updateCounter($rootScope.playerObject);
+                self.updateCounter();
             }, 1000);
         },
 
@@ -67,8 +66,8 @@ app.player.factory('PlayerService',
             }
         },
 
-        updateCounter: function(playerObj){
-            var time = playerObj.element.currentTime;
+        updateCounter: function(){
+            var time = $rootScope.playerObject.element.currentTime;
             pad = function(val){
                 return val > 9 ? val : "0" + val;
             };
@@ -77,7 +76,7 @@ app.player.factory('PlayerService',
             counter.seconds = pad(++sec % 60);
             counter.minutes = pad(pad(parseInt(sec / 60, 10) % 60));
             counter.hours = pad(parseInt(sec / 3600, 10));
-            playerObj.counter = counter;
+            $rootScope.playerObject.counter = counter;
         },
 
         getDuration: function(duration){
