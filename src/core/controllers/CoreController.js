@@ -1,12 +1,15 @@
-app.core.controller('CoreController', [ '$rootScope', '$scope', '$interval', 'PersistenceService', '_',
-    'SubscriptionService', 'EpisodeService', 'PlayerService', 'MessageService', 'UtilityService',
- 	function($rootScope, $scope, $interval, PersistenceService, _,
-             SubscriptionService, EpisodeService, PlayerService, MessageService, UtilityService){
+app.core.controller('CoreController', [
+    '$rootScope', '$scope', '_', 'SubscriptionService', 'EpisodeService', 'PlayerService', 'UtilityService',
+    'MessageService',
+ 	function($rootScope, $scope, _,  SubscriptionService, EpisodeService, PlayerService, UtilityService,
+             MessageService){
 
-        // Initialize Player
+        // Initialize Player to prevent errors.
         $rootScope.playerObject = PlayerService.initializePlayerObject();
 
+        // Check the current path for navigation selected.
         $rootScope.currentPath = UtilityService.getCurrentPath();
+
 
         $rootScope.closeOverlay = function(){
             $rootScope.overlay = undefined;
@@ -21,69 +24,33 @@ app.core.controller('CoreController', [ '$rootScope', '$scope', '$interval', 'Pe
         $rootScope.message = {text: undefined};
 
 
-
-
+        // Download all current episodes and subscriptions from the server.
         $scope.sync = function(){
             localStorage.clear();
+            $rootScope.loading = true;
             var rsp = SubscriptionService.sync($rootScope);
             var rspA = rsp.then(function(response){
                 SubscriptionService.setMediaAdditions($rootScope, response);
             });
-            rspA.then(function(response){
+            var rspB = rspA.then(function(){
                 SubscriptionService.setSyncedSubscriptions();
-            })
+            });
+            rspB.then(function(){
+                $rootScope.loading = false;
+                MessageService.displayMessage(
+                    'Subscriptions Synced.', 'swSuccess', MessageService.closeMessageTimer());
+            });
         };
 
 
         SubscriptionService.loadSubscriptionsFromLocalStorage($rootScope);
         EpisodeService.loadEpisodesFromLocalStorage($rootScope);
 
-
-        //
-        //$rootScope.notifyDisabled = function() {
-        //    MessageService.displayMessage('This feature has been disabled.', 'swSuccess', MessageService.closeMessageTimer());
-        //};
-
-
         $scope.flushLocalStorage = function(){
+            $rootScope.loading = true;
             localStorage.clear();
             location.reload();
+            $rootScope.loading = false;
         };
-        //
-        //$scope.sync = function(){
-        //    localStorage.clear();
-        //    var syncRsp = SubscriptionService.sync($rootScope);
-        //
-        //    syncRsp.then(function(response) {
-        //
-        //
-        //
-        //
-        //        //var subscriptionObjCollection =
-        //        //    SubscriptionService.executeBulkRetrieval(rsp.data.subscriptions);
-        //        //$rootScope.subscriptions = subscriptionObjCollection;
-        //        //$rootScope.episodes =
-        //        //    EpisodeService.executeBulkRetrieval(
-        //        //        subscriptionObjCollection, rsp.data.episodes);
-        //    });
-        //
-        //};
-        //$rootScope.currentPage = 'settings';
-
-
-
-        //$scope.fetchNew = function(){
-        //    var lu = localStorage.getItem('last_update') || 0;
-        //    var newLu = new Date();
-        //    localStorage.setItem('last_update', Math.floor(newLu));
-        //    MediaService.fetchNew(lu);
-        //};
-
-
-
 
         }]);
-
-//
-//document.getElementById("overlayWrapper").style.zIndex = "5";
-//document.getElementById("mask").style.zIndex = "4";

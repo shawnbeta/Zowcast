@@ -20,7 +20,6 @@
 
 <ul class="{{episodeStyle}}" ng-if="episodes">
     <episode-item ng-repeat="e in episodes | orderByPubDate | filterBySubscription:activeSubscription:subscriptionFilterStatus "></episode-item>
-    <!--<episode-item dir-paginate="e in episodes | orderByPubDate : itemsPerPage:20"></episode-item>-->
 </ul>
 
 <span ng-if="!episodes">

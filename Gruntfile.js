@@ -15,24 +15,6 @@ module.exports = function (grunt) {
 
         mustache_render: {
 
-            //core: {
-            //    options: {
-            //        directory: 'mustache_templates'
-            //    },
-            //    files: [
-            //        {
-            //            data: 'data/dev.json',
-            //            template: 'mustache_templates/app/settings.mustache',
-            //            dest: 'app/src/templates/settings.html'
-            //        },
-            //        {
-            //            data: 'data/dev.json',
-            //            template: 'mustache_templates/app/about.mustache',
-            //            dest: 'app/src/templates/about.html'
-            //        }
-            //    ]
-            //},
-
             dev: {
                 options: {
                     directory: 'mustache_templates'
@@ -40,7 +22,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         data: 'data/dev.json',
-                        template: 'mustache_templates/core/main.mustache',
+                        template: 'mustache_templates/main.mustache',
                         dest: 'build/sandbox/index.html'
                     },
                     {

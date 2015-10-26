@@ -1,5 +1,5 @@
 app.media.filter('orderByPubDate', ['_', function(_) {
-    return function(models, order) {
+    return function(models) {
         return _.sortBy(models, 'pubDate', true).reverse();
     };
 }]);

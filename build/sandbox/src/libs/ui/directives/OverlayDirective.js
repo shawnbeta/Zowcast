@@ -4,7 +4,6 @@ app.ui.directive('overlay', ['OverlayService', function(OverlayService) {
         scope: '=',
         links: function(scope){
             scope.closeOverlayA = function(){
-                alert('working');
                OverlayService.closeOverlayA();
             };
         },

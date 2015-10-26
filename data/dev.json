@@ -45,7 +45,6 @@
         "media/media.routes",
         "media/controllers/EpisodeController",
         "media/controllers/SubscriptionController",
-        "media/directives/episodes/EpisodeDetails",
         "media/directives/episodes/EpisodeItemDirective",
         "media/directives/subscriptions/SubscriptionItemDirective",
         "media/directives/subscriptions/SubscriptionNavigationDirective",
@@ -64,7 +63,6 @@
         "ui/ui.module",
         "ui/controllers/NavigationController",
         "ui/directives/MessageDirective",
-        "ui/directives/ToggleMenuDirective",
         "ui/directives/OverlayDirective",
         "ui/services/UIService",
         "ui/services/MessageService",
@@ -74,7 +72,6 @@
         "utility/directives/LoadingDirective",
         "utility/filters/UtilityFilters",
         "utility/services/UtilityService",
-        "utility/services/PersistenceService",
 
         "vendors/vendors.module",
         "vendors/services/UnderscoreService"

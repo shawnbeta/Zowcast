@@ -1,5 +1,5 @@
-app.media.directive('episodeItem',['$rootScope', 'EpisodeService', 'PlayerService', 'MessageService', 'OverlayService',
-    function($rootScope, EpisodeService, PlayerService, MessageService, OverlayService) {
+app.media.directive('episodeItem',['PlayerService', 'MessageService', 'OverlayService',
+    function(PlayerService, MessageService, OverlayService) {
 
     return  {
 
@@ -22,39 +22,9 @@ app.media.directive('episodeItem',['$rootScope', 'EpisodeService', 'PlayerServic
             };
 
             scope.updateWatched = function(){
-                //alert('work')
                 MessageService.displayMessage(
                     'This feature has been disabled.', 'swSuccess fixed', MessageService.closeMessageTimer());
             };
-
-
-            // New above
-
-
-            //
-            //
-            //scope.isWatched = function(model){
-            //    return model.watched == 0 ? 'mark watched'  : 'mark unwatched';
-            //};
-            //
-            //scope.updateWatched = function(model){
-            //    model.watched = model.watched == 0 ? 1 : 0;
-            //    EpisodeService.updateLocal(model);
-            //    EpisodeService.updateRemote(model, 'watched', model.watched);
-            //};
-            //
-            //
-            //
-            //scope.setDetailer = function(model){
-            //    scope.episodeDetailer = model;
-            //    scope.showDetails = true;
-            //};
-            //
-            //scope.hideDescription = function(){
-            //    scope.episodeDetailer = {};
-            //    scope.showDetails = false;
-            //};
-
 
         },
 

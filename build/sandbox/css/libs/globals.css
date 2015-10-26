@@ -116,6 +116,11 @@ a:hover {
 .swButton i {
   padding-right: 10px;
 }
+.loading {
+  text-align: center;
+  margin-top: 25px;
+  color: #4486f8;
+}
 .loading:before {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
@@ -123,6 +128,7 @@ a:hover {
   animation: fa-spin 1s infinite steps(8);
   content: '\f110';
   font-family: 'FontAwesome';
+  font-size: 100px;
 }
 .showPlayIcon:before {
   content: '\f04b';

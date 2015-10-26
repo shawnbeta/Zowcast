@@ -151,11 +151,15 @@
 
 .episodeBySubscriptionBrowser {
   display: none;
-  .allEpisodes a {
+  .allEpisodes button {
     background: @base-color;
     color: @white1;
     text-shadow: @standard-shadow;
-    display: block;
+    padding: 10px;
+    margin: 10px auto;
+    &:hover {
+      background: @primary-color;
+    }
   }
   .swItem {
     float:left;

@@ -1,7 +1,4 @@
-app.ui.factory('UIService',
-    [
-        function() {
-
+app.ui.factory('UIService', [ function() {
 
             return {
 
@@ -39,13 +36,10 @@ app.ui.factory('UIService',
                 },
 
                 toggleMenu: function(){
-                    console.log('works');
                     var navBar = jQuery('.swNavBar');
                     if(jQuery(navBar).css('position') != 'fixed'){
-                        console.log(-jQuery(navBar).innerHeight());
                         jQuery(navBar).css({
                             top: -jQuery(navBar).innerHeight(),
-                            //left: 0,
                             position: 'fixed'
                         });
                         jQuery('body').css({

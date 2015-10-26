@@ -21,7 +21,6 @@ app.player.factory('PlayerService',
             if(episode.id !== $rootScope.playerObject.loadedEpisode.id){
                 $rootScope.playerObject = this.loadMedia(episode);
                 firstRun = true;
-                console.log('fsdfasd');
             }else{
                 firstRun = false;
             }
@@ -38,11 +37,6 @@ app.player.factory('PlayerService',
                 $rootScope.playerObject.element = document.createElement(mediaType);
 
 
-            //$rootScope.playerObject.element.ontimeupdate = function(){
-            //
-            //};
-
-            //$rootScope.playerObject.element.addEventListener("seeking", self.updateCounter());
             // Skip this in testing.
             if(document.getElementsByTagName(mediaType)[0])
                 $rootScope.playerObject.elementWrapper =  jQuery('#' + mediaType + 'Player');
@@ -80,7 +74,6 @@ app.player.factory('PlayerService',
         },
 
         getDuration: function(duration){
-            console.log(duration);
             pad = function(val){
                 return val > 9 ? val : "0" + val;
             };
@@ -119,30 +112,7 @@ app.player.factory('PlayerService',
             $rootScope.episodePlaying = null;
         },
 
-        //updateCounter: function(){
-        //    var time = $rootScope.playerObject.element.currentTime;
-        //    pad = function(val){
-        //        return val > 9 ? val : "0" + val;
-        //    };
-        //    var sec = Math.floor(time);
-        //    counter.seconds = pad(++sec % 60);
-        //    counter.minutes = pad(pad(parseInt(sec / 60, 10) % 60));
-        //    counter.hours = pad(parseInt(sec / 3600, 10));
-        //
-        //    $rootScope.playerObject.counter = counter;
-        //    // Fills out the slide
-        //    var percentageOfEpisode =
-        //        ($rootScope.playerObject.element.currentTime/$rootScope.playerObject.element.duration);
-        //    var percentageOfSlider = document.getElementById('zowSlider').offsetWidth * percentageOfEpisode;
-        //    jQuery('.progressTracker').width(Math.round(percentageOfSlider) + "px");
-        //},
-
-
-
-
         setLocation: function(percentage){
-            console.log(percentage);
-            console.log($rootScope.playerObject.element.currentTime);
             $rootScope.playerObject.element.currentTime = $rootScope.playerObject.element.duration * percentage;
         },
 
@@ -180,37 +150,6 @@ app.player.factory('PlayerService',
         setVolumeTo: function(){
             $rootScope.playerObject.element.volume=val;
         }
-
-        //startCounter: function(){
-        //    if(angular.isDefined(ticker)) return;
-        //    var self = this;
-        //    ticker = $interval(function(){
-        //        self.updateCounter(self.playerObj);
-        //    }, 1000);
-        //},
-        //
-        //stopCounter: function(){
-        //    if(angular.isDefined(ticker)){
-        //        $interval.cancel(ticker);
-        //        ticker = undefined;
-        //    }
-        //},
-        //
-        //updateCounter: function(){
-        //    var time = $rootScope.playerObject.element.currentTime;
-        //    pad = function(val){
-        //        return val > 9 ? val : "0" + val;
-        //    };
-        //    sec = Math.floor(time);
-        //    var counter = {};
-        //    counter.seconds = pad(++sec % 60);
-        //    counter.minutes = pad(pad(parseInt(sec / 60, 10) % 60));
-        //    counter.hours = pad(parseInt(sec / 3600, 10));
-        //    $rootScope.playerObject.counter = counter;
-        //},
-
-
-
         
     };
 }]); 

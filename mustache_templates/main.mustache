@@ -32,7 +32,9 @@
 
     <% > ui/navBar %>
 
-    <div ng-view class="swContainer"></div>
+    <loading></loading>
+
+    <div ng-show="!loading" ng-view class="swContainer"></div>
 
 </div>
 

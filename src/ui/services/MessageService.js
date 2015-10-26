@@ -1,13 +1,11 @@
-app.ui.factory('MessageService',
-    ['$rootScope', '$interval', 'UIService',
-        function($rootScope, $interval, UIService) {
+app.ui.factory('MessageService', ['$rootScope', '$interval',
+        function($rootScope, $interval) {
 
             var mTimer;
 
             return {
 
                 displayMessage: function(text, msgType, _closeMessageTimer){
-                    console.log('workign')
                     $rootScope.message.text = text;
                     $rootScope.message.msgType = msgType;
                     if(_closeMessageTimer)
