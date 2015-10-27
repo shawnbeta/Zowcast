@@ -5,9 +5,9 @@
 		.module('app.media')
 		.controller('EpisodeController', EpisodeController);
 
-	EpisodeController.$inject = ['$scope', '$rootScope', 'UIService', 'UtilityService', '$filter'];
+	EpisodeController.$inject = ['$scope', '$rootScope', 'UIService', 'UtilityService'];
 
-	function EpisodeController( $scope, $rootScope, UIService, UtilityService, $filter ){
+	function EpisodeController( $scope, $rootScope, UIService, UtilityService ){
 		$scope.setEpisodeStyle = function(newStyle){
 			$scope.episodeStyle = newStyle;
 		};

@@ -13,16 +13,20 @@
 
         restrict: 'E',
 
-        scope: '=',
+        scope: true,
 
-        link: function(scope){
+        link: function(scope, e, attrs){
 
-            scope.togglePlaybackIcon = function(episode){
-                return PlayerService.togglePlaybackIcon(episode);
+            //attrs.$observe('playerObject', function(playerObject){
+            //    scope.playerObject = playerObject;
+            //});
+
+            scope.togglePlayback = function( playerObject, episode ){
+                PlayerService.togglePlayback( playerObject, episode );
             };
 
-            scope.togglePlayback = function(episode){
-                PlayerService.togglePlayback(episode);
+            scope.togglePlaybackIcon = function( playerObject, episode ){
+                return PlayerService.togglePlaybackIcon( playerObject, episode );
             };
 
             scope.showEpisodeDetails = function(episode){

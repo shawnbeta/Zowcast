@@ -2,69 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb391c54-7d72-46fe-83fd-3b6554985204" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/media/filters/FilterBySubscription.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/media/filters/OrderByPubDate.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/filters/EpisodeFilters.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/media/filters/EpisodeFilters.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/core/services/ConfigService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/core/services/ConfigService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/services/ConfigService.js" afterPath="$PROJECT_DIR$/src/core/services/ConfigService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/core/controllers/CoreController.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/core/controllers/CoreController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/controllers/CoreController.js" afterPath="$PROJECT_DIR$/src/core/controllers/CoreController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/services/Episode.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/services/Episode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/services/Episode.js" afterPath="$PROJECT_DIR$/src/media/services/Episode.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/controllers/EpisodeController.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/controllers/EpisodeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/controllers/EpisodeController.js" afterPath="$PROJECT_DIR$/src/media/controllers/EpisodeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/directives/episodes/EpisodeItemDirective.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/directives/episodes/EpisodeItemDirective.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js" afterPath="$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/services/EpisodeService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/services/EpisodeService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/services/EpisodeService.js" afterPath="$PROJECT_DIR$/src/media/services/EpisodeService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/utility/directives/LoadingDirective.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/utility/directives/LoadingDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utility/directives/LoadingDirective.js" afterPath="$PROJECT_DIR$/src/utility/directives/LoadingDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/ui/directives/MessageDirective.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/ui/directives/MessageDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/directives/MessageDirective.js" afterPath="$PROJECT_DIR$/src/ui/directives/MessageDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/ui/services/MessageService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/ui/services/MessageService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/services/MessageService.js" afterPath="$PROJECT_DIR$/src/ui/services/MessageService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/ui/controllers/NavigationController.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/ui/controllers/NavigationController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/controllers/NavigationController.js" afterPath="$PROJECT_DIR$/src/ui/controllers/NavigationController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/ui/directives/OverlayDirective.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/ui/directives/OverlayDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/directives/OverlayDirective.js" afterPath="$PROJECT_DIR$/src/ui/directives/OverlayDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/ui/services/OverlayService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/ui/services/OverlayService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/services/OverlayService.js" afterPath="$PROJECT_DIR$/src/ui/services/OverlayService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/player/directives/PlayerDirective.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/player/directives/PlayerDirective.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/directives/PlayerDirective.js" afterPath="$PROJECT_DIR$/src/player/directives/PlayerDirective.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/player/services/PlayerService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/player/services/PlayerService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/services/PlayerService.js" afterPath="$PROJECT_DIR$/src/player/services/PlayerService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/services/Subscription.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/services/Subscription.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/services/Subscription.js" afterPath="$PROJECT_DIR$/src/media/services/Subscription.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/controllers/SubscriptionController.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/controllers/SubscriptionController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/controllers/SubscriptionController.js" afterPath="$PROJECT_DIR$/src/media/controllers/SubscriptionController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/filters/SubscriptionFilters.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/filters/SubscriptionFilters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/filters/SubscriptionFilters.js" afterPath="$PROJECT_DIR$/src/media/filters/SubscriptionFilters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/directives/subscriptions/SubscriptionItemDirective.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/directives/subscriptions/SubscriptionItemDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionItemDirective.js" afterPath="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionItemDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/directives/subscriptions/SubscriptionNavigationDirective.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/directives/subscriptions/SubscriptionNavigationDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionNavigationDirective.js" afterPath="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionNavigationDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/directives/subscriptions/SubscriptionNavigationItemDirective.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/directives/subscriptions/SubscriptionNavigationItemDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionNavigationItemDirective.js" afterPath="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionNavigationItemDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/services/SubscriptionService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/services/SubscriptionService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/services/SubscriptionService.js" afterPath="$PROJECT_DIR$/src/media/services/SubscriptionService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/ui/services/UIService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/ui/services/UIService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/services/UIService.js" afterPath="$PROJECT_DIR$/src/ui/services/UIService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/vendors/services/UnderscoreService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/vendors/services/UnderscoreService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vendors/services/UnderscoreService.js" afterPath="$PROJECT_DIR$/src/vendors/services/UnderscoreService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/utility/filters/UtilityFilters.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/utility/filters/UtilityFilters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utility/filters/UtilityFilters.js" afterPath="$PROJECT_DIR$/src/utility/filters/UtilityFilters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/utility/services/UtilityService.js" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/utility/services/UtilityService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utility/services/UtilityService.js" afterPath="$PROJECT_DIR$/src/utility/services/UtilityService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ZOWcast.iml" afterPath="$PROJECT_DIR$/.idea/ZOWcast.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/dev.json" afterPath="$PROJECT_DIR$/data/dev.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/index.html" afterPath="$PROJECT_DIR$/build/sandbox/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/item.html" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/item.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/templates/episodes/item.html" afterPath="$PROJECT_DIR$/src/media/templates/episodes/item.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/page.html" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/episodes/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/subscriptions/page.html" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/media/templates/subscriptions/page.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/templates/episodes/page.html" afterPath="$PROJECT_DIR$/src/media/templates/episodes/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/templates/subscriptions/page.html" afterPath="$PROJECT_DIR$/src/media/templates/subscriptions/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/styles.less" afterPath="$PROJECT_DIR$/less/styles.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/sandbox/src/libs/player/templates/player.html" afterPath="$PROJECT_DIR$/build/sandbox/src/libs/player/templates/player.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/templates/player.html" afterPath="$PROJECT_DIR$/src/player/templates/player.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ZOWcast.iws" />
@@ -82,14 +33,38 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="PlayerService.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/player/services/PlayerService.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.7531306">
+                    <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+                    <folding>
+                      <element signature="e#1309#1455#0" expanded="false" />
+                      <element signature="e#2303#2481#0" expanded="false" />
+                      <element signature="e#2520#2724#0" expanded="false" />
+                      <element signature="e#2778#3281#0" expanded="false" />
+                      <element signature="e#3329#3759#0" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
     <window id="2">
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="dev.json" pinned="false" current-in-tab="true">
+            <file leaf-file-name="dev.json" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/data/dev.json">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.6609712">
+                  <state vertical-scroll-proportion="-30.625">
                     <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
                     <folding />
                   </state>
@@ -106,6 +81,16 @@
                 </provider>
               </entry>
             </file>
+            <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.11883803">
+                    <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
           </leaf>
         </state>
       </content>
@@ -117,41 +102,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MessageService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/services/MessageService.js">
+      <file leaf-file-name="PlayerDirective.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/player/directives/PlayerDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.857142">
+              <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoreController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/core/controllers/CoreController.js">
+      <file leaf-file-name="item.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/item.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.4473684">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FilterBySubscription.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/media/filters/FilterBySubscription.js">
+      <file leaf-file-name="player.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/player/templates/player.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EpisodeController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/media/controllers/EpisodeController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.440678">
+              <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -161,17 +136,17 @@
         <entry file="file://$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <file leaf-file-name="page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.530303">
-              <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+            <state vertical-scroll-proportion="-14.375">
+              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -192,7 +167,6 @@
         <option value="$PROJECT_DIR$/mustache_templates/core/main.mustache" />
         <option value="$PROJECT_DIR$/src/ui/templates/message.html" />
         <option value="$PROJECT_DIR$/less/main.less" />
-        <option value="$PROJECT_DIR$/src/player/templates/player.html" />
         <option value="$PROJECT_DIR$/less/player.less" />
         <option value="$PROJECT_DIR$/less/nav.less" />
         <option value="$PROJECT_DIR$/src/core/templates/about.html" />
@@ -200,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/media/templates/subscriptions/navigation.html" />
         <option value="$PROJECT_DIR$/src/media/filters/EpisodeFilters.js" />
         <option value="$PROJECT_DIR$/mustache_templates/main.mustache" />
-        <option value="$PROJECT_DIR$/src/media/templates/episodes/item.html" />
         <option value="$PROJECT_DIR$/src/media/templates/subscriptions/item.html" />
         <option value="$PROJECT_DIR$/less/globals.less" />
         <option value="$PROJECT_DIR$/src/utility/templates/loading.html" />
@@ -215,18 +188,14 @@
         <option value="$PROJECT_DIR$/src/ui/services/UIService.js" />
         <option value="$PROJECT_DIR$/src/ui/directives/MessageDirective.js" />
         <option value="$PROJECT_DIR$/src/media/filters/SubscriptionFilters.js" />
-        <option value="$PROJECT_DIR$/src/media/templates/episodes/page.html" />
         <option value="$PROJECT_DIR$/src/media/templates/subscriptions/page.html" />
         <option value="$PROJECT_DIR$/src/core/services/ConfigService.js" />
-        <option value="$PROJECT_DIR$/src/player/services/PlayerService.js" />
         <option value="$PROJECT_DIR$/src/media/controllers/SubscriptionController.js" />
         <option value="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionNavigationDirective.js" />
         <option value="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionNavigationItemDirective.js" />
         <option value="$PROJECT_DIR$/src/media/directives/subscriptions/SubscriptionItemDirective.js" />
-        <option value="$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js" />
         <option value="$PROJECT_DIR$/src/media/filters/OrderByPubDate.js" />
         <option value="$PROJECT_DIR$/src/media/services/SubscriptionService.js" />
-        <option value="$PROJECT_DIR$/src/player/directives/PlayerDirective.js" />
         <option value="$PROJECT_DIR$/src/ui/directives/OverlayDirective.js" />
         <option value="$PROJECT_DIR$/src/ui/controllers/NavigationController.js" />
         <option value="$PROJECT_DIR$/src/utility/services/UtilityService.js" />
@@ -234,8 +203,14 @@
         <option value="$PROJECT_DIR$/src/ui/services/OverlayService.js" />
         <option value="$PROJECT_DIR$/src/ui/services/MessageService.js" />
         <option value="$PROJECT_DIR$/src/core/controllers/CoreController.js" />
-        <option value="$PROJECT_DIR$/src/media/controllers/EpisodeController.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/src/media/controllers/EpisodeController.js" />
+        <option value="$PROJECT_DIR$/src/player/templates/player.html" />
+        <option value="$PROJECT_DIR$/src/media/templates/episodes/page.html" />
+        <option value="$PROJECT_DIR$/src/player/directives/PlayerDirective.js" />
+        <option value="$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js" />
+        <option value="$PROJECT_DIR$/src/player/services/PlayerService.js" />
+        <option value="$PROJECT_DIR$/src/media/templates/episodes/item.html" />
       </list>
     </option>
   </component>
@@ -253,9 +228,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="512" />
-    <option name="y" value="196" />
-    <option name="width" value="933" />
+    <option name="x" value="65" />
+    <option name="y" value="132" />
+    <option name="width" value="908" />
     <option name="height" value="695" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -329,7 +304,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
+              <option name="myItemId" value="player" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -347,11 +322,55 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
+              <option name="myItemId" value="player" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="filters" />
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZOWcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zowcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="player" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZOWcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zowcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="player" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -425,10 +444,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="512" y="196" width="933" height="695" extended-state="0" />
+    <frame x="65" y="132" width="908" height="695" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.24322446" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="1560" y="287" width="327" height="793" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.24322446" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="1582" y="62" width="327" height="996" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -566,20 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/item.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/media/templates/subscriptions/item.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.75">
@@ -591,13 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/templates/player.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49815497">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -626,13 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3180212">
           <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/controllers/SubscriptionController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6360424">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -699,13 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/directives/PlayerDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6625442">
-          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/directives/OverlayDirective.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18551236">
@@ -724,13 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18551236">
           <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/player/services/PlayerService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45053002">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -800,22 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/controllers/EpisodeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/staging.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -824,9 +785,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/controllers/SubscriptionController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/controllers/EpisodeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25252524">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/dev.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6609712">
+        <state vertical-scroll-proportion="-30.625">
           <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
           <folding />
         </state>
@@ -834,8 +811,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.530303">
-          <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.11883803">
+          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/directives/episodes/EpisodeItemDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/templates/player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.440678">
+          <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/directives/PlayerDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.857142">
+          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player/services/PlayerService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7531306">
+          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+          <folding>
+            <element signature="e#1309#1455#0" expanded="false" />
+            <element signature="e#2303#2481#0" expanded="false" />
+            <element signature="e#2520#2724#0" expanded="false" />
+            <element signature="e#2778#3281#0" expanded="false" />
+            <element signature="e#3329#3759#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/templates/episodes/item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4473684">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

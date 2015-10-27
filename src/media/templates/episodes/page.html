@@ -18,10 +18,10 @@
 
 <subscription-navigation></subscription-navigation>
 
-<ul class="{{episodeStyle}}" ng-if="episodes">
+<div class="{{episodeStyle}}" ng-if="episodes">
     <episode-item ng-repeat="e in episodes | orderByPubDate | filterBySubscription : activeSubscription :
     subscriptionFilterStatus "></episode-item>
-</ul>
+</div>
 
 <span ng-if="!episodes">
     You have no episodes.

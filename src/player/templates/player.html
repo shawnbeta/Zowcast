@@ -5,13 +5,13 @@
         </div>
 
         <div class="episodeTitle">
-            <button ng-click="showEpisodeDetails(playerObject.loadedEpisode)">
+            <button ng-click="showEpisodeDetails( playerObject.loadedEpisode )">
                 {{playerObject.loadedEpisode.title}}</button>
         </div>
 
 
         <div class="videoPlayerWrapper " ng-show="playerObject.loadedEpisode.mediaType == 1">
-            <button class="fullScreenToggler" ng-click="goFullScreen()">
+            <button class="fullScreenToggler" ng-click="goFullScreen( playerObject )">
                 <i class="fa fa-tv"></i>
             </button>
             <video class="swMedia" src="{{playerObject.loadedEpisode.location}}"></video>
@@ -36,22 +36,18 @@
     </div>
 
     <div class="controls clearfix">
-        <button ng-click="jumpBack()"><i class="fa fa-angle-double-left"></i></button>
-        <button ng-click="rewind()"><i class="fa fa-angle-left"></i></button>
-        <button ng-click="togglePlayback(playerObject.loadedEpisode)">
-            <i class="fa fa-pause" ng-if="episodePlaying"></i>
-            <i class="fa fa-play" ng-if="!episodePlaying"></i>
+        <button ng-click="jumpBack( playerObject )"><i class="fa fa-angle-double-left"></i></button>
+        <button ng-click="rewind( playerObject )"><i class="fa fa-angle-left"></i></button>
+        <button ng-click="togglePlayback( playerObject, playerObject.loadedEpisode )">
+            <i class="fa fa-pause" ng-if="playerObject.episodePlaying"></i>
+            <i class="fa fa-play" ng-if="!playerObject.episodePlaying"></i>
         </button>
-        <button ng-click="forward()"><i class="fa fa-angle-right"></i></button>
-        <button ng-click="jumpAhead()"><i class="fa fa-angle-double-right"></i></button>
+        <button ng-click="forward( playerObject )"><i class="fa fa-angle-right"></i></button>
+        <button ng-click="jumpAhead( playerObject )"><i class="fa fa-angle-double-right"></i></button>
     </div>
 
 
 
 </div>
 
-<!--<span ng-if="playerObject.loadedEpisode.showDetails">-->
-        <!--{{playerObject.loadedEpisode.description}}-->
-        <!--{{playerObject.loadedEpisode.pubDate}}-->
-    <!--</span>-->
 

@@ -1,17 +1,17 @@
-    <li class="swItem">
+    <div class="swItem">
         <header class="itemHeader">
             <div class="swTitle">{{e.title | htmlToPlaintext}}</div>
             <p class="swDescription">{{e.description | htmlToPlaintext}}</p>
         </header>
         <div class="swImg"><img src="{{e.img}}"></div>
         <div class="actionbar">
-            <button ng-click="togglePlayback(e)">
-                <i class="fa fa-pause" ng-if="episodePlaying == e.id"></i>
-                <i class="fa fa-play" ng-if="episodePlaying != e.id"></i>
+            <button ng-click="togglePlayback( playerObject, e )">
+                <i class="fa fa-pause" ng-if="playerObject.episodePlaying == e.id"></i>
+                <i class="fa fa-play" ng-if="playerObject.episodePlaying != e.id"></i>
             </button>
 
             <button ng-click="updateWatched()"><i class="fa fa-check"></i></button>
             <a ng-href="{{e.src}}"><i class="fa fa-download"></i></a>
             <button ng-click="showEpisodeDetails(e)"><i class="fa fa-info"></i></button>
         </div>
-        </li>
+        </div>

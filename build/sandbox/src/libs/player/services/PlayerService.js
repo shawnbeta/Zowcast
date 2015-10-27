@@ -5,13 +5,14 @@
         .module('app.player')
         .factory('PlayerService', PlayerService);
 
-    PlayerService.$inject = ['$rootScope', '$interval', '$sce'];
+    PlayerService.$inject = ['$interval', '$sce'];
 
-    function PlayerService($rootScope, $interval, $sce){
+    function PlayerService($interval, $sce){
 
-        var firstRun = true;
         var ticker;
         return {
+
+            firstRun: true,
 
             initializePlayerObject: function(){
 
@@ -24,52 +25,59 @@
                 }
             },
 
-            togglePlayback: function(episode){
-                if(episode.id !== $rootScope.playerObject.loadedEpisode.id){
-                    $rootScope.playerObject = this.loadMedia(episode);
-                    firstRun = true;
+            togglePlayback: function( playerObject, episode ){
+                if(episode.id !== playerObject.loadedEpisode.id){
+                    playerObject = this.loadMedia( playerObject, episode );
+                    this.firstRun = true;
                 }else{
-                    firstRun = false;
+                    this.firstRun = false;
                 }
-                $rootScope.playerObject.status != 'playing' ? this.playAction(firstRun) : this.pauseAction();
+                playerObject.status != 'playing' || playerObject.status == 'playing' && this.firstRun ?
+                    this.playAction( playerObject, this.firstRun ) : this.pauseAction( playerObject );
             },
 
-            loadMedia: function(episode){
+            togglePlaybackIcon: function( playerObject, episode ){
+                return playerObject.loadedEpisode == episode
+                && playerObject.status == 'paused' ? 'pause' : 'play'
+            },
+
+            loadMedia: function( playerObject, episode ){
                 var mediaType = episode.mediaType == 0 ? 'audio' : 'video';
-                $rootScope.playerObject.loadedEpisode = episode;
-                $rootScope.playerObject.element = document.getElementsByTagName(mediaType)[0];
+                playerObject.loadedEpisode = episode;
+                playerObject.element = document.getElementsByTagName(mediaType)[0];
 
                 // Added for testing.
                 if(!document.getElementsByTagName(mediaType)[0])
-                    $rootScope.playerObject.element = document.createElement(mediaType);
+                    playerObject.element = document.createElement(mediaType);
 
 
                 // Skip this in testing.
                 if(document.getElementsByTagName(mediaType)[0])
-                    $rootScope.playerObject.elementWrapper =  jQuery('#' + mediaType + 'Player');
+                    playerObject.elementWrapper =  jQuery('#' + mediaType + 'Player');
 
-                $rootScope.playerObject.loadedEpisode.location = $sce.trustAsResourceUrl(episode.src);
+                playerObject.loadedEpisode.location = $sce.trustAsResourceUrl(episode.src);
 
-                return $rootScope.playerObject;
+                return playerObject;
             },
 
-            startCounter: function(){
+            startCounter: function( playerObject ){
                 var self = this;
-                ticker = $interval(function(){
-                    self.updateCounter();
+                ticker = $interval(function( ){
+                    self.updateCounter( playerObject );
                 }, 1000);
             },
 
             pauseCounter: function(){
+                console.log('paused')
                 if(angular.isDefined(ticker)){
                     $interval.cancel(ticker);
                     ticker = undefined;
                 }
             },
 
-            updateCounter: function(){
-                var time = $rootScope.playerObject.element.currentTime;
-                pad = function(val){
+            updateCounter: function( playerObject ){
+                var time = playerObject.element.currentTime;
+                var pad = function(val){
                     return val > 9 ? val : "0" + val;
                 };
                 var sec = Math.floor(time);
@@ -77,11 +85,11 @@
                 counter.seconds = pad(++sec % 60);
                 counter.minutes = pad(pad(parseInt(sec / 60, 10) % 60));
                 counter.hours = pad(parseInt(sec / 3600, 10));
-                $rootScope.playerObject.counter = counter;
+                playerObject.counter = counter;
             },
 
-            getDuration: function(duration){
-                pad = function(val){
+            getDuration: function( duration ){
+                var pad = function(val){
                     return val > 9 ? val : "0" + val;
                 };
                 var sec = Math.floor(duration);
@@ -92,70 +100,73 @@
                 return counter;
             },
 
-            togglePlaybackIcon: function( episode){
-                return $rootScope.playerObject.loadedEpisode == episode
-                && $rootScope.playerObject.status == 'paused' ? 'pause' : 'play'
-            },
-
-            playAction: function(firstRun){
+            playAction: function( playerObject, firstRun ){
+                console.log(firstRun);
                 var self = this;
-                this.startCounter();
-                $rootScope.playerObject.status = 'playing';
-                $rootScope.episodePlaying = $rootScope.playerObject.loadedEpisode.id;
+                this.startCounter( playerObject );
+                playerObject.status = 'playing';
+                playerObject.episodePlaying = playerObject.loadedEpisode.id;
                 if(firstRun){
-                    $rootScope.playerObject.element.oncanplay = function(){
-                        $rootScope.playerObject.element.play();
-                        $rootScope.playerObject.runtime = self.getDuration($rootScope.playerObject.element.duration);
+                    playerObject.element.oncanplay = function(){
+                        playerObject.element.play();
+                        playerObject.runtime = self.getDuration(playerObject.element.duration);
                     };
                 }else{
-                    $rootScope.playerObject.element.play();
+                    playerObject.element.play();
                 }
+                //return playerObject;
             },
 
-            pauseAction: function(){
+            pauseAction: function( playerObject ){
                 this.pauseCounter();
-                $rootScope.playerObject.element.pause();
-                $rootScope.playerObject.status = 'paused';
-                $rootScope.episodePlaying = null;
+                playerObject.element.pause();
+                playerObject.status = 'paused';
+                playerObject.episodePlaying = false;
+                return playerObject;
             },
 
-            setLocation: function(percentage){
-                $rootScope.playerObject.element.currentTime = $rootScope.playerObject.element.duration * percentage;
+            //setLocation: function( percentage, playerObject ){
+            //    playerObject.element.currentTime = playerObject.element.duration * percentage;
+            //},
+            //
+
+            rewind: function( playerObject ){
+                var currentTime = parseInt(playerObject.element.currentTime);
+                playerObject.element.currentTime = currentTime - 20;
+                return playerObject;
             },
 
-
-            rewind: function(){
-                var currentTime = parseInt($rootScope.playerObject.element.currentTime);
-                $rootScope.playerObject.element.currentTime = currentTime - 20;
-                return $rootScope.playerObject;
+            forward: function( playerObject ){
+                var currentTime = parseInt(playerObject.element.currentTime);
+                playerObject.element.currentTime = currentTime + 20;
+                return playerObject;
             },
 
-            forward: function(){
-                var currentTime = parseInt($rootScope.playerObject.element.currentTime);
-                $rootScope.playerObject.element.currentTime = currentTime + 20;
-                return $rootScope.playerObject;
+            jumpBack: function( playerObject ){
+                var currentTime = parseInt(playerObject.element.currentTime);
+                playerObject.element.currentTime = currentTime - 300;
+                return playerObject;
             },
 
-            jumpBack: function(){
-                var currentTime = parseInt($rootScope.playerObject.element.currentTime);
-                $rootScope.playerObject.element.currentTime = currentTime - 300;
+            jumpAhead: function( playerObject ){
+                var currentTime = parseInt(playerObject.element.currentTime);
+                playerObject.element.currentTime = currentTime + 300;
+                return playerObject;
             },
 
-            jumpAhead: function(){
-                var currentTime = parseInt($rootScope.playerObject.element.currentTime);
-                $rootScope.playerObject.element.currentTime = currentTime + 300;
+            volumeDown: function( playerObject ){
+                playerObject.element.volume-=0.1;
+                return playerObject;
             },
 
-            volumeDown: function(){
-                $rootScope.playerObject.element.volume-=0.1;
+            volumeUp: function( playerObject ){
+                playerObject.element.volume+=0.1;
+                return playerObject;
             },
 
-            volumeUp: function(){
-                $rootScope.playerObject.element.volume+=0.1;
-            },
-
-            setVolumeTo: function(){
-                $rootScope.playerObject.element.volume=val;
+            setVolumeTo: function( playerObject ){
+                playerObject.element.volume=val;
+                return playerObject;
             }
 
         };
