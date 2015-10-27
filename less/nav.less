@@ -16,7 +16,7 @@
     width: 42px;
     font-size: 25px;
   }
-  background: red;
+  background: @base-color;
   color: @white1;
   border-radius: 50%;
   font-weight: 900;
@@ -113,8 +113,10 @@
       color: @white1;
       float: left;
       font-size: 22px;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding: 5px;
+      @media(min-width: @screen-sm-min) {
+        height: 45px;
+      }
       &:hover {
         color: @secondary-color;
       }

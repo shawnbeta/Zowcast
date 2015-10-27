@@ -4,22 +4,25 @@
             <audio ng-src="{{playerObject.loadedEpisode.location}}"></audio>
         </div>
 
-        <div class="episodeTitle">
+        <div class="episodeTitle"  ng-class="{'videoTitle' : playerObject.loadedEpisode.mediaType == 1}"
+             ng-class=" videoTitle :  >
             <button ng-click="showEpisodeDetails( playerObject.loadedEpisode )">
                 {{playerObject.loadedEpisode.title}}</button>
         </div>
 
 
         <div class="videoPlayerWrapper " ng-show="playerObject.loadedEpisode.mediaType == 1">
+
+            <video class="swMedia" src="{{playerObject.loadedEpisode.location}}"></video>
             <button class="fullScreenToggler" ng-click="goFullScreen( playerObject )">
                 <i class="fa fa-tv"></i>
             </button>
-            <video class="swMedia" src="{{playerObject.loadedEpisode.location}}"></video>
+
+
         </div>
 
-
-        <button class="playerEpisodeInfo" ng-click="showEpisodeDetails(playerObject.loadedEpisode)">
-            <i class="fa fa-info"></i></button>
+    <button class="playerEpisodeInfo" ng-click="showEpisodeDetails(playerObject.loadedEpisode)">
+        <i class="fa fa-info"></i></button>
 
     </div>
 
