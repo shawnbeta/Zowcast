@@ -1,6 +1,6 @@
 <!--Generated Code: mustache_templates/app/main.mustache -->
 <!doctype html>
-<html lang="en" ng-app="app" ng-controller="CoreController as app">
+<html lang="en" ng-app="app" ng-controller="CoreController as core">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -14,16 +14,16 @@
 <body >
 
 <player></player>
+<overlay></overlay>
 
+<message></message>
 <div id="stage">
 
     <span ng-controller="NavigationController">
             <i ng-click="toggleMenu()" class="fa fa-bars menuToggler"></i>
     </span>
 
-    <overlay></overlay>
 
-    <message></message>
 
 <!-- Generated Code: mustache_templates/ui/navBar.mustache -->
 
@@ -33,7 +33,8 @@
     <div class="swContainer clearfix">
 
         <div class="logoWrapper actionWrapper">
-                <button ng-click="go('about')" class="actionButton swLogo" href="/" title="Episodes">
+                <button ng-click="go('about')" ng-class="{'selected' : currentPath == '/about'}"
+                        class="actionButton swLogo" href="/" title="About the App">
 
 
 
@@ -93,7 +94,8 @@
 
     <loading></loading>
 
-    <div ng-show="!loading" ng-view class="swContainer"></div>
+
+    <div ng-show="!loadingObject" ng-view class="swContainer"></div>
 
 </div>
 

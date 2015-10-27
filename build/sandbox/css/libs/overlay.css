@@ -15,7 +15,10 @@
 .pager:after {
   clear: both;
 }
-.mask,
+.mask {
+  position: fixed;
+  width: 100%;
+}
 .overlayWrapper {
   position: absolute;
   width: 100%;

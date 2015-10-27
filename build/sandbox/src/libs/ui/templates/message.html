@@ -1,7 +1,7 @@
-<div ng-if="message.text" class="swMessage {{message.msgType}}">
+<div ng-if="messageObject.text" class="swMessage {{messageObject.style}}">
 
     <div class="swText ">
         <i ng-click="closeMessage()" class="fa fa-close swCloseIcon"></i>
-        {{message.text}}
+        {{messageObject.text}}
     </div>
 </div>

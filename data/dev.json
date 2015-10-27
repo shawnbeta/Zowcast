@@ -113,8 +113,8 @@
   "settings": {
     "links": [
       {
-        "action" : "flushLocalStorage",
-        "title": "flush local storage"
+        "action" : "clearLocalData",
+        "title": "clear local data"
       },
       {
         "action" : "sync",

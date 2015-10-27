@@ -11,7 +11,6 @@
 
             toggleBrowseBySubscription: function(){
                 var bebs =  jQuery('.episodeBySubscriptionBrowser');
-                var subNav = jQuery('subscription-navigation');
                 if(bebs.css('display') == 'none'){
                     var height = jQuery(bebs).innerHeight();
                     jQuery('.subscriptionBrowserWrapper')

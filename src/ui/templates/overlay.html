@@ -1,13 +1,13 @@
-<div ng-if="overlay" ng-click="closeOverlay()" class="mask"></div>
-<div ng-show="overlay" class="overlayWrapper">
+<div ng-if="overlayObject.style" ng-click="closeOverlay()" class="mask"></div>
+<div ng-show="overlayObject.style" class="overlayWrapper">
 
   <div class="overlay {{overlay.style}}">
       <i ng-click="closeOverlay()" class="fa fa-close swCloseIcon"></i>
       <header class="clearfix">
-          <div class="swTitle" ng-if="overlay.title">{{overlay.title}}</div>
-          <div class="swDate" ng-if="overlay.pubDate">Published: {{overlay.pubDate | date: 'MMMM d, yyyy'}}</div>
+          <div class="swTitle" ng-if="overlayObject.title">{{overlayObject.title}}</div>
+          <div class="swDate" ng-if="overlayObject.pubDate">Published: {{overlayObject.pubDate | date: 'MMMM d, yyyy'}}</div>
       </header>
-      <div class="swDescription" ng-if="overlay.description" ng-bind-html="overlay.description"></div>
+      <div class="swDescription" ng-if="overlayObject.description" ng-bind-html="overlayObject.description"></div>
   </div>
 
 <div>

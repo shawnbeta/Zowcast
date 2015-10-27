@@ -5,59 +5,68 @@
         .module('app.core')
         .controller('CoreController', CoreController);
 
-    CoreController.$inject = ['$rootScope', '$scope', 'SubscriptionService', 'EpisodeService', 'PlayerService',
-        'UtilityService', 'MessageService'];
+    CoreController.$inject = ['$scope', 'SubscriptionService', 'EpisodeService', 'PlayerService',
+        'UtilityService', 'MessageService', 'OverlayService'];
 
-    function CoreController($rootScope, $scope, SubscriptionService, EpisodeService, PlayerService, UtilityService,
-                            MessageService){
+    function CoreController($scope, SubscriptionService, EpisodeService, PlayerService, UtilityService,
+                            MessageService, OverlayService){
+
 
         // Initialize Player to prevent errors.
         $scope.playerObject = PlayerService.initializePlayerObject();
 
+        $scope.overlayObject = OverlayService.initializeOverlayObject();
+
+        $scope.messageObject = {text: undefined};
+
+
+
         // Check the current path for navigation selected.
-        $scope.currentPath = UtilityService.getCurrentPath();
+        $scope.$on('$routeChangeSuccess', function(){
+            $scope.currentPath = UtilityService.getCurrentPath();
+        });
 
         $scope.closeOverlay = function(){
-            $rootScope.overlay = undefined;
+            $scope.overlayObject = OverlayService.closeOverlay( $scope.overlayObject );
         };
 
         $scope.closeMessage = function(){
-            $rootScope.message.text = undefined;
+            $scope.messageObject = MessageService.closeMessage( $scope.messageObject );
         };
-
-        $scope.subscriptionFilterStatus = false;
-
-        $scope.message = {text: undefined};
-
 
         // Download all current episodes and subscriptions from the server.
         $scope.sync = function(){
             localStorage.clear();
-            $rootScope.loading = true;
+            $scope.loadingObject = true;
             var rsp = SubscriptionService.sync();
             var rspA = rsp.then(function(response){
-                SubscriptionService.setMediaAdditions($rootScope, response);
+                SubscriptionService.setMediaAdditions($scope, response);
             });
             var rspB = rspA.then(function(){
-                SubscriptionService.setSyncedSubscriptions($rootScope);
+                SubscriptionService.setSyncedSubscriptions($scope);
             });
             rspB.then(function(){
-                $rootScope.loading = false;
-                MessageService.displayMessage(
+                $scope.loadingObject = false;
+                MessageService.displayMessage( $scope.messageObject,
                     'Subscriptions Synced.', 'swSuccess', MessageService.closeMessageTimer());
             });
         };
 
 
-        SubscriptionService.loadSubscriptionsFromLocalStorage($rootScope);
-        EpisodeService.loadEpisodesFromLocalStorage($rootScope);
+        $scope.subscriptions = SubscriptionService.loadSubscriptionsFromLocalStorage();
+        $scope.episodes = EpisodeService.loadEpisodesFromLocalStorage( $scope );
 
-        $scope.flushLocalStorage = function(){
-            $rootScope.loading = true;
-            localStorage.clear();
+        $scope.clearLocalData = function(){
+            $scope.loadingObject = true;
+            $scope.subscriptions = [];
+            $scope.episodes = [];
+            $scope.syncedSubscriptions = [];
+            localStorage.setItem('subscriptions', JSON.stringify([]));
+            localStorage.setItem('episodes', JSON.stringify([]));
             location.reload();
-            $rootScope.loading = false;
+            $scope.loadingObject = false;
         };
+
 
     }
 })();

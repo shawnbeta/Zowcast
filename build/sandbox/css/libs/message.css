@@ -32,11 +32,11 @@
 .swMessage.swError .swText .swCloseIcon {
   color: #8c2e0b;
 }
-.swMessage.swSuccess {
+.swMessage.swSuccess .swText {
   background: #bbee77;
   border-color: #234600;
 }
-.swMessage.swSuccess .swCloseIcon {
+.swMessage.swSuccess .swText .swCloseIcon {
   color: #234600;
 }
 .swMessage .swText {

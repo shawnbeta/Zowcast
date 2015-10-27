@@ -15,11 +15,7 @@
 
         scope: true,
 
-        link: function(scope, e, attrs){
-
-            //attrs.$observe('playerObject', function(playerObject){
-            //    scope.playerObject = playerObject;
-            //});
+        link: function(scope){
 
             scope.togglePlayback = function( playerObject, episode ){
                 PlayerService.togglePlayback( playerObject, episode );
@@ -29,15 +25,14 @@
                 return PlayerService.togglePlaybackIcon( playerObject, episode );
             };
 
-            scope.showEpisodeDetails = function(episode){
-               OverlayService.setOverlay(episode);
+            scope.showEpisodeDetails = function( episode ){
+                OverlayService.setOverlay( scope.overlayObject, episode );
             };
 
             scope.updateWatched = function(){
-                MessageService.displayMessage(
+                MessageService.displayMessage( scope.messageObject,
                     'This feature has been disabled.', 'swSuccess fixed', MessageService.closeMessageTimer());
             };
-
         },
 
         templateUrl: 'src/libs/media/templates/episodes/item.html'

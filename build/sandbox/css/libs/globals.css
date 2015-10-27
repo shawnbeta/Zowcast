@@ -41,7 +41,7 @@ h1 {
 }
 .selected {
   background: #f1c604 !important;
-  color: #000000;
+  color: #ffffff !important;
 }
 .standard {
   backgorund: none;

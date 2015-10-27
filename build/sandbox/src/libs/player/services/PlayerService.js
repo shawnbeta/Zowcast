@@ -29,8 +29,6 @@
                 if(episode.id !== playerObject.loadedEpisode.id){
                     playerObject = this.loadMedia( playerObject, episode );
                     this.firstRun = true;
-                }else{
-                    this.firstRun = false;
                 }
                 playerObject.status != 'playing' || playerObject.status == 'playing' && this.firstRun ?
                     this.playAction( playerObject, this.firstRun ) : this.pauseAction( playerObject );
@@ -101,12 +99,12 @@
             },
 
             playAction: function( playerObject, firstRun ){
-                console.log(firstRun);
                 var self = this;
                 this.startCounter( playerObject );
                 playerObject.status = 'playing';
                 playerObject.episodePlaying = playerObject.loadedEpisode.id;
                 if(firstRun){
+                    this.firstRun = false;
                     playerObject.element.oncanplay = function(){
                         playerObject.element.play();
                         playerObject.runtime = self.getDuration(playerObject.element.duration);
@@ -114,7 +112,6 @@
                 }else{
                     playerObject.element.play();
                 }
-                //return playerObject;
             },
 
             pauseAction: function( playerObject ){
@@ -124,11 +121,6 @@
                 playerObject.episodePlaying = false;
                 return playerObject;
             },
-
-            //setLocation: function( percentage, playerObject ){
-            //    playerObject.element.currentTime = playerObject.element.duration * percentage;
-            //},
-            //
 
             rewind: function( playerObject ){
                 var currentTime = parseInt(playerObject.element.currentTime);

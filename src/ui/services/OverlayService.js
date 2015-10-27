@@ -5,16 +5,33 @@
         .module('app.ui')
         .factory('OverlayService', OverlayService);
 
-    OverlayService.$inject = ['$rootScope'];
 
-    function OverlayService($rootScope){
+    function OverlayService(){
 
         return {
 
-            setOverlay: function(data){
+            initializeOverlayObject: function(){
+              return {
+                  style: undefined
+              }
+            },
+
+            loadOverlay: function(overlayObject, data){
+                overlayObject.title = data.title;
+                overlayObject.pubDate = data.pubDate;
+                overlayObject.description = data.description;
+                overlayObject.style = 'style_' + data.mediaType;
+            },
+
+            setOverlay: function( overlayObject, data ){
+                this.loadOverlay( overlayObject, data);
                 var topPosition = jQuery('body').scrollTop();
                 jQuery('.overlayWrapper').css({ 'top': topPosition});
-                $rootScope.overlay = data;
+                return overlayObject;
+            },
+
+            closeOverlay: function( ){
+                return { style: undefined};
             }
 
         };

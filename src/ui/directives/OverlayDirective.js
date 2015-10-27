@@ -7,14 +7,18 @@
 
     overlay.$inject = ['OverlayService'];
 
-    function overlay(){
+    function overlay(OverlayService){
 
         return {
             restrict : 'E',
+
             scope: '=',
+
             links: function(scope){
-                scope.closeOverlayA = function(){
-                    OverlayService.closeOverlayA();
+
+                scope.closeOverlay = function( overlayObject ){
+                    console.log('clearOverlay')
+                    OverlayService.clearOverlay( overlayObject );
                 };
             },
 

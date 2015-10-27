@@ -8,7 +8,8 @@
     <div class="swContainer clearfix">
 
         <div class="logoWrapper actionWrapper">
-                <button ng-click="go('about')" class="actionButton swLogo" href="/" title="Episodes">
+                <button ng-click="go('about')" ng-class="{'selected' : currentPath == '/about'}"
+                        class="actionButton swLogo" href="/" title="About the App">
 
 
 

@@ -9,6 +9,7 @@ use HC\Bundle\UtilityBundle\Services\UtilityService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use HC\Bundle\CoreBundle\Services\ConfigService;
+use Symfony\Component\Security\Acl\Exception\Exception;
 
 class SubscriptionService extends MediaService
 {
@@ -100,12 +101,16 @@ class SubscriptionService extends MediaService
 		$Subscription->setImg($data['img']);
 		// Instead of relying on user input check one of the episode files for the media type
 		// Start with an array of all audio extensions
-		$audioExtensions = array("mp3", "ogg", "wav");
-		$fileExtension = pathinfo($singleEpisode)['extension'];
-		if(in_array($fileExtension, $audioExtensions)){
-			$Subscription->setMediaType(0);
-		}else{
+		$videoExtensions = array("mp4", "m4v", "MOV");
+		try{
+			$fileExtension = pathinfo($singleEpisode)['extension'];
+		}catch (Exception $e){
+			// Do some logging later.
+		}
+		if(in_array( $fileExtension, $videoExtensions )){
 			$Subscription->setMediaType(1);
+		}else{
+			$Subscription->setMediaType(0);
 		}
 		$Subscription->setHomePage($data['homePage']);
 		$Subscription->setMachineName($this->getUtilityService()->machinify($Subscription->getTitle()));

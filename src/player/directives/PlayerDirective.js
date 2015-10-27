@@ -17,11 +17,7 @@
 
             scope: true,
 
-            link: function(scope, e, attrs){
-
-                //attrs.$observe('playerObject', function(playerObject){
-                //    scope.playerObject = playerObject;
-                //});
+            link: function(scope){
 
                 scope.goFullScreen = function(playerObject){
                     var video = playerObject.element;
@@ -34,17 +30,16 @@
                     }
                 };
 
-                scope.showEpisodeDetails = function(episode){
-                    OverlayService.setOverlay(episode);
+                scope.togglePlayback = function( playerObject, episode ){
+                    PlayerService.togglePlayback( playerObject, episode );
                 };
-
 
                 scope.togglePlaybackIcon = function( playerObject, episode ){
                     return PlayerService.togglePlaybackIcon( playerObject, episode );
                 };
 
-                scope.togglePlayback = function( playerObject, episode ){
-                    PlayerService.togglePlayback( playerObject, episode );
+                scope.showEpisodeDetails = function( episode ){
+                    OverlayService.setOverlay( scope.overlayObject, episode );
                 };
 
                 scope.rewind = function( playerObject ){

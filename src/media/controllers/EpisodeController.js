@@ -5,14 +5,15 @@
 		.module('app.media')
 		.controller('EpisodeController', EpisodeController);
 
-	EpisodeController.$inject = ['$scope', '$rootScope', 'UIService', 'UtilityService'];
+	EpisodeController.$inject = ['$scope', 'UIService'];
 
-	function EpisodeController( $scope, $rootScope, UIService, UtilityService ){
+	function EpisodeController( $scope, UIService ){
+
+		$scope.subscriptionFilterStatus = false;
+
 		$scope.setEpisodeStyle = function(newStyle){
 			$scope.episodeStyle = newStyle;
 		};
-
-		$rootScope.currentPath = UtilityService.getCurrentPath();
 
 		$scope.toggleBrowseBySubscription = function(){
 			UIService.toggleBrowseBySubscription();

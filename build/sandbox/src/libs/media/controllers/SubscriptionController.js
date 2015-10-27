@@ -5,20 +5,17 @@
         .module('app.media')
         .controller('SubscriptionController', SubscriptionController);
 
-    SubscriptionController.$inject = ['$scope', '$rootScope', 'SubscriptionService', 'UtilityService'];
+    SubscriptionController.$inject = ['$scope', 'SubscriptionService'];
 
-    function SubscriptionController($scope, $rootScope, SubscriptionService, UtilityService){
+    function SubscriptionController($scope, SubscriptionService){
 
         $scope.setSubscriptionStyle = function(newStyle){
             $scope.subscriptionStyle = newStyle;
         };
 
-        $scope.add = function(){
-          SubscriptionService.add($rootScope, $scope);
+        $scope.add = function(rsEpisodes){
+          SubscriptionService.add($scope, rsEpisodes);
         };
-
-        $rootScope.currentPath = UtilityService.getCurrentPath();
-
 
     }
     })();

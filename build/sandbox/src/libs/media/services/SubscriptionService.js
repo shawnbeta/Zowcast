@@ -10,8 +10,9 @@
     function SubscriptionService($http, Subscription, ConfigService, MessageService){
         return {
 
-            loadSubscriptionsFromLocalStorage: function(rs){
-                rs.subscriptions = localStorage.getItem('subscriptions') ?
+
+            loadSubscriptionsFromLocalStorage: function(){
+                return localStorage.getItem('subscriptions') ?
                     JSON.parse(localStorage.getItem('subscriptions')) : {};
             },
 
@@ -53,8 +54,8 @@
                 localStorage.setItem('syncedSubscriptions', JSON.stringify(syncedSubscriptions));
             },
 
-            add: function(rs, $scope){
-                rs.loading = true;
+            add: function($scope){
+                $scope.loading = true;
                 var addRsp = $http({
                     method: 'POST',
                     url: ConfigService.serverPath + 'add',
@@ -70,19 +71,19 @@
 
                 addRsp.then(function(response){
                     if(response.data.subscription){
-                        rs.subscriptions.push(response.data.subscription);
-                        Array.prototype.push.apply(rs.episodes, response.data.episodes);
-                        localStorage.setItem('subscriptions', JSON.stringify(rs.subscriptions));
-                        localStorage.setItem('episodes', JSON.stringify(rs.episodes));
-                        rs.loading = false;
-                        MessageService.displayMessage(
+                        $scope.subscriptions.push(response.data.subscription);
+                        Array.prototype.push.apply($scope.episodes, response.data.episodes);
+                        localStorage.setItem('subscriptions', JSON.stringify($scope.subscriptions));
+                        localStorage.setItem('episodes', JSON.stringify($scope.episodes));
+                        $scope.loading = false;
+                        MessageService.displayMessage( $scope.messageObject,
                             'New Subscription Added.', 'swSuccess', MessageService.closeMessageTimer());
-                        rs.message.success = 'New Subscription Added';
+                        $scope.messageObject.success = 'New Subscription Added';
                     }else{
-                        rs.loading = false;
-                        MessageService.displayMessage(
+                        $scope.loading = false;
+                        MessageService.displayMessage( $scope.messageObject,
                             'New Subscription Added.', 'swSuccess', MessageService.closeMessageTimer());
-                        rs.message.success = 'Something went wrong';
+                        $scope.messageObject.success = 'Something went wrong';
                     }
                 });
 
