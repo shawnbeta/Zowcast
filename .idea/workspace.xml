@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb391c54-7d72-46fe-83fd-3b6554985204" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/services/UIService.js" afterPath="$PROJECT_DIR$/src/ui/services/UIService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/templates/about.html" afterPath="$PROJECT_DIR$/src/core/templates/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/globals.less" afterPath="$PROJECT_DIR$/less/globals.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/main.less" afterPath="$PROJECT_DIR$/less/main.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/nav.less" afterPath="$PROJECT_DIR$/less/nav.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player/templates/player.html" afterPath="$PROJECT_DIR$/src/player/templates/player.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/player.less" afterPath="$PROJECT_DIR$/less/player.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/styles.less" afterPath="$PROJECT_DIR$/less/styles.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/variables.less" afterPath="$PROJECT_DIR$/less/variables.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ZOWcast.iws" />
@@ -136,8 +127,8 @@
       <file leaf-file-name="UIService.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ui/services/UIService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49373883">
-              <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.3864043">
+              <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -1155,8 +1146,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/services/UIService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49373883">
-          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.3864043">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
           <folding />
         </state>
       </provider>
