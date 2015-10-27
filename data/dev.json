@@ -30,8 +30,7 @@
         "angular-touch",
         "truncate",
         "jquery",
-        "underscore",
-        "dirPagination"
+        "underscore"
       ],
       "libs": [
         "app.module",
@@ -49,7 +48,8 @@
         "media/directives/subscriptions/SubscriptionItemDirective",
         "media/directives/subscriptions/SubscriptionNavigationDirective",
         "media/directives/subscriptions/SubscriptionNavigationItemDirective",
-        "media/filters/EpisodeFilters",
+        "media/filters/FilterBySubscription",
+        "media/filters/OrderByPubDate",
         "media/filters/SubscriptionFilters",
         "media/services/Episode",
         "media/services/EpisodeService",

@@ -1,12 +1,18 @@
-app.media.factory('EpisodeService', [ function() {
+(function() {
+    'use strict';
 
-    return {
+    angular
+        .module('app.media')
+        .factory('EpisodeService', EpisodeService);
 
-        loadEpisodesFromLocalStorage: function($rootScope){
-            var episodes = localStorage.getItem('episodes');
-            $rootScope.episodes = JSON.parse(episodes);
-        }
+    function EpisodeService(){
 
-    };
+        return {
+            loadEpisodesFromLocalStorage: function($rootScope){
+                var episodes = localStorage.getItem('episodes');
+                $rootScope.episodes = JSON.parse(episodes);
+            }
+        };
 
-}]);
+    }
+})();

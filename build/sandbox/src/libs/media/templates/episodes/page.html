@@ -19,7 +19,8 @@
 <subscription-navigation></subscription-navigation>
 
 <ul class="{{episodeStyle}}" ng-if="episodes">
-    <episode-item ng-repeat="e in episodes | orderByPubDate | filterBySubscription:activeSubscription:subscriptionFilterStatus "></episode-item>
+    <episode-item ng-repeat="e in episodes | orderByPubDate | filterBySubscription : activeSubscription :
+    subscriptionFilterStatus "></episode-item>
 </ul>
 
 <span ng-if="!episodes">

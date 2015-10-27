@@ -1,5 +1,13 @@
-app.utility.factory('UtilityService', ['$location',
-    function($location) {
+(function() {
+    'use strict';
+
+    angular
+        .module('app.utility')
+        .factory('UtilityService', UtilityService);
+
+    UtilityService.$inject = ['$location'];
+
+    function UtilityService($location){
 
         return {
 
@@ -16,8 +24,6 @@ app.utility.factory('UtilityService', ['$location',
 
         }
 
-    }]);
 
-
-
-
+    }
+})();

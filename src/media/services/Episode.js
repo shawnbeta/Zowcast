@@ -1,5 +1,11 @@
-app.media.factory('Episode', [
-    function() {
+(function() {
+    'use strict';
+
+    angular
+        .module('app.media')
+        .factory('Episode', Episode);
+
+    function Episode(){
 
         return {
 
@@ -34,5 +40,6 @@ app.media.factory('Episode', [
                 return episode;
             }
         }
+
     }
-]);
+})();

@@ -10,11 +10,23 @@ module.exports = function (grunt) {
         clean: {
             core: 'build/core/**',
             dev: ['build/sandbox/*', '!build/sandbox/rest/**'],
-            staging: 'build/testing/**'
+            staging: ['build/testing/*', '!build/testing/rest/**'],
+            temp: 'build/temp'
         },
 
         mustache_render: {
-
+            core: {
+                options: {
+                    directory: 'mustache_templates'
+                },
+                files: [
+                    {
+                        data: 'data/dev.json',
+                        template: 'mustache_templates/core/settings.mustache',
+                        dest: 'src/core/templates/settings.html'
+                    }
+                ]
+            },
             dev: {
                 options: {
                     directory: 'mustache_templates'
@@ -39,8 +51,8 @@ module.exports = function (grunt) {
                 files: [
                     {
                         data: 'data/staging.json',
-                        template: 'mustache_templates/app/main.mustache',
-                        dest: 'app/index.html'
+                        template: 'mustache_templates/main.mustache',
+                        dest: 'build/testing/index.html'
                     }
                 ]
             }
@@ -54,12 +66,10 @@ module.exports = function (grunt) {
                     outputSourceFiles: true
                 },
                 files: {
-                    //'build/sandbox/assets/css/bootstrap.css': 'bower_components/bootstrap/less/bootstrap.less',
                     'build/sandbox/css/contrib/bootstrap-lite.css': 'less/contrib/bootstrap-lite.less',
                     'build/sandbox/css/libs/media/main.css': 'less/media/main.less',
                     'build/sandbox/css/libs/media/grid.css': 'less/media/grid.less',
                     'build/sandbox/css/libs/media/list.css': 'less/media/list.less',
-                    'build/sandbox/css/libs/footer.css': 'less/footer.less',
                     'build/sandbox/css/libs/message.css': 'less/message.less',
                     'build/sandbox/css/libs/overlay.css': 'less/overlay.less',
                     'build/sandbox/css/libs/globals.css': 'less/globals.less',
@@ -150,21 +160,15 @@ module.exports = function (grunt) {
                     }
                 ]
             },
+
             staging: {
                 files : [
                     {
-
                         expand: true,
                         flatten: false,
-                        dot: true,
-                        src: 'api/**',
-                        dest: 'build/testing/'
-                    },
-                    {
-                        expand: true,
-                        flatten: false,
-                        src: 'assets/**',
-                        dest: 'build/testing/'
+                        cwd: 'src',
+                        src: '**/templates/**/*',
+                        dest: 'build/testing/src/libs/'
                     }
                 ]
             }
@@ -180,7 +184,6 @@ module.exports = function (grunt) {
             staging: {
                 src: [
                     'bower_components/angular/angular.js',
-                    'bower_components/angular-mocks/angular-mocks.js',
                     'bower_components/angular-route/angular-route.js',
                     'bower_components/angular-sanitize/angular-sanitize.js',
                     'bower_components/angular-touch/angular-touch.js',
@@ -189,48 +192,48 @@ module.exports = function (grunt) {
                     'bower_components/underscore/underscore.js',
 
                     // libs
-                    "scripts/modules/app.js",
-                    "build/temp/routes.js",
-                    "scripts/modules/app/controllers/AppController.js",
-                    "scripts/modules/app/controllers/SettingsController.js",
-                    "scripts/modules/app/directives/SettingsActionsDirective.js",
+                    "src/app.module.js",
 
-                    "scripts/modules/media/controllers/EpisodeController.js",
-                    "scripts/modules/media/controllers/SearchController.js",
-                    "scripts/modules/media/controllers/SubscriptionController.js",
-                    "scripts/modules/media/directives/EpisodeViewDirective.js",
-                    "scripts/modules/media/directives/SearchDirective.js",
-                    //"scripts/modules/media/directives/SubscriptionAddDirective.js",
-                    //"scripts/modules/media/directives/SubscriptionNavDirective.js",
-                    //"scripts/modules/media/directives/SubscriptionViewDirective.js",
-                    "scripts/modules/media/filters/EpisodeFilters.js",
-                    "scripts/modules/media/filters/SubscriptionFilters.js",
+                    "src/core/core.module.js",
+                    "src/core/core.routes.js",
+                    "src/core/controllers/CoreController.js",
+                    "src/core/services/ConfigService.js",
 
-                    "scripts/modules/media/models/Episode.js",
-                    "scripts/modules/media/models/Subscription.js",
+                    "src/media/media.module.js",
+                    "src/media/media.routes.js",
+                    "src/media/controllers/EpisodeController.js",
+                    "src/media/controllers/SubscriptionController.js",
+                    "src/media/directives/episodes/EpisodeItemDirective.js",
+                    "src/media/directives/subscriptions/SubscriptionItemDirective.js",
+                    "src/media/directives/subscriptions/SubscriptionNavigationDirective.js",
+                    "src/media/directives/subscriptions/SubscriptionNavigationItemDirective.js",
+                    "src/media/filters/FilterBySubscription.js",
+                    "src/media/filters/OrderByPubDate.js",
+                    "src/media/filters/SubscriptionFilters.js",
+                    "src/media/services/Episode.js",
+                    "src/media/services/EpisodeService.js",
+                    "src/media/services/Subscription.js",
+                    "src/media/services/SubscriptionService.js",
 
-                    "scripts/modules/media/services/EpisodeService.js",
-                    "scripts/modules/media/services/SubscriptionService.js",
-                    "scripts/modules/media/services/SearchService.js",
-                    "scripts/modules/media/services/MediaService.js",
+                    "src/player/player.module.js",
+                    "src/player/directives/PlayerDirective.js",
+                    "src/player/services/PlayerService.js",
 
-                    "scripts/modules/player/controllers/PlayerController.js",
-                    "scripts/modules/player/directives/NowPlayingDirective.js",
-                    "scripts/modules/player/services/PlayerService.js",
+                    "src/ui/ui.module.js",
+                    "src/ui/controllers/NavigationController.js",
+                    "src/ui/directives/MessageDirective.js",
+                    "src/ui/directives/OverlayDirective.js",
+                    "src/ui/services/UIService.js",
+                    "src/ui/services/MessageService.js",
+                    "src/ui/services/OverlayService.js",
 
-                    "scripts/modules/ui/controller/NavController.js",
-                    "scripts/modules/ui/directives/ActionBarDirective.js",
-                    "scripts/modules/ui/directives/NavDirectives.js",
-                    "scripts/modules/ui/services/OverlayService.js",
+                    "src/utility/utility.module.js",
+                    "src/utility/directives/LoadingDirective.js",
+                    "src/utility/filters/UtilityFilters.js",
+                    "src/utility/services/UtilityService.js",
 
-                    "scripts/modules/utility/directives/LoadingDirective.js",
-                    "scripts/modules/utility/models/Departures.js",
-                    "scripts/modules/utility/services/DepartureService.js",
-                    "scripts/modules/utility/services/HelperService.js",
-                    "scripts/modules/utility/services/PersistenceService.js",
-                    "scripts/modules/utility/filters/UtilityFilters.js",
-
-                    "scripts/modules/vendors/services/UnderscoreService.js"
+                    "src/vendors/vendors.module.js",
+                    "src/vendors/services/UnderscoreService.js"
 
 
                 ],
@@ -241,7 +244,7 @@ module.exports = function (grunt) {
         uglify: {
             staging: {
                 files: {
-                    'build/testing/assets/main.min.js': ['build/temp/main.js']
+                    'build/testing/src/main.min.js': 'build/temp/main.js'
                 }
             }
         },
@@ -254,7 +257,7 @@ module.exports = function (grunt) {
             },
             staging: {
                 files: {
-                    'build/testing/assets/styles.min.css': ['build/temp/styles.css']
+                    'build/testing/css/styles.min.css': 'build/temp/styles.css'
                 }
             }
         },
@@ -284,9 +287,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', ['clean:main', 'less', 'copy:main']);
     grunt.registerTask('test', ['clean:dev', 'copy:dev', 'karma']);
-    grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'less:dev',  'copy:dev']);
-    grunt.registerTask('staging', ['clean:staging', 'mustache_render:staging', 'less:staging',
-    'concat:staging', 'copy:staging', 'uglify:staging', 'cssmin:staging', 'clean:temp']);
+    grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'mustache_render:core', 'less:dev',  'copy:dev']);
+    grunt.registerTask('staging', ['clean:staging', 'mustache_render:staging', 'mustache_render:core', 'less:staging',
+        'concat:staging', 'copy:staging', 'uglify:staging', 'cssmin:staging', 'clean:temp']);
 
 
 };

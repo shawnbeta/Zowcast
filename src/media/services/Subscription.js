@@ -1,5 +1,12 @@
-app.media.factory('Subscription', [
-    function() {
+(function() {
+    'use strict';
+
+    angular
+        .module('app.media')
+        .factory('Subscription', Subscription);
+
+
+    function Subscription(){
 
         return {
 
@@ -26,5 +33,7 @@ app.media.factory('Subscription', [
                 return subscription;
             }
         }
+
+
     }
-]);
+})();

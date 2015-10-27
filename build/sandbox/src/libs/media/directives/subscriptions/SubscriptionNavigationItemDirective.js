@@ -1,22 +1,31 @@
-app.media.directive('subscriptionNavigationItem', ['$rootScope',
-    function($rootScope) {
+(function() {
+    'use strict';
 
-      return {
-        restrict : 'E',
-          scope: '=',
+    angular
+        .module('app.media')
+        .directive('subscriptionNavigationItem', subscriptionNavigationItem);
 
-        link: function(scope){
-            scope.episodesBySubscription = function(subscription){
-                $rootScope.activeSubscription = subscription.id;
-                $rootScope.subscriptionFilterStatus = true;
-            };
-            scope.listAllEpisodes = function(){
-                $rootScope.activeSubscription = 0;
-                $rootScope.subscriptionFilterStatus = false;
-            };
-        },
+    subscriptionNavigationItem.$inject = ['$rootScope'];
 
-          templateUrl: 'src/libs/media/templates/subscriptions/navigation-item.html'
-      };
-}]);
+    function subscriptionNavigationItem($rootScope){
 
+        return {
+            restrict : 'E',
+            scope: '=',
+
+            link: function(scope){
+                scope.episodesBySubscription = function(subscription){
+                    $rootScope.activeSubscription = subscription.id;
+                    $rootScope.subscriptionFilterStatus = true;
+                };
+                scope.listAllEpisodes = function(){
+                    $rootScope.activeSubscription = 0;
+                    $rootScope.subscriptionFilterStatus = false;
+                };
+            },
+
+            templateUrl: 'src/libs/media/templates/subscriptions/navigation-item.html'
+        };
+
+    }
+})();

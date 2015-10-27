@@ -1,13 +1,18 @@
-app.utility.directive('loading',[ function() {
-    
+(function() {
+    'use strict';
 
-  return {
+    angular
+        .module('app.utility')
+        .directive('loading', loading);
 
-  	restrict : 'E',
+    function loading(){
 
-      templateUrl: 'src/libs/utility/templates/loading.html'
+        return {
 
+            restrict : 'E',
 
-  }
+            templateUrl: 'src/libs/utility/templates/loading.html'
 
-}]);
+        }
+    }
+})();

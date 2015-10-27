@@ -1,21 +1,26 @@
-app.ui.factory('OverlayService', [ '$rootScope',
+(function() {
+    'use strict';
 
-    function($rootScope){
+    angular
+        .module('app.ui')
+        .factory('OverlayService', OverlayService);
 
-    return {
+    OverlayService.$inject = ['$rootScope'];
 
-        closeOverlayA: function(){
-            $rootScope.overlay = undefined;
-        },
+    function OverlayService($rootScope){
 
-        setOverlay: function(data){
-            var topPosition = jQuery('body').scrollTop();
-            jQuery('.overlayWrapper').css({ 'top': topPosition});
-            $rootScope.overlay = data;
-        }
+        return {
 
-    };
-}]); 
+            setOverlay: function(data){
+                var topPosition = jQuery('body').scrollTop();
+                jQuery('.overlayWrapper').css({ 'top': topPosition});
+                $rootScope.overlay = data;
+            }
+
+        };
+
+    }
+})();
 
   
 

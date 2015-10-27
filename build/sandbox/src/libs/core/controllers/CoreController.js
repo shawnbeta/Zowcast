@@ -1,39 +1,45 @@
-app.core.controller('CoreController', [
-    '$rootScope', '$scope', '_', 'SubscriptionService', 'EpisodeService', 'PlayerService', 'UtilityService',
-    'MessageService',
- 	function($rootScope, $scope, _,  SubscriptionService, EpisodeService, PlayerService, UtilityService,
-             MessageService){
+(function() {
+    'use strict';
+
+    angular
+        .module('app.core')
+        .controller('CoreController', CoreController);
+
+    CoreController.$inject = ['$rootScope', '$scope', 'SubscriptionService', 'EpisodeService', 'PlayerService',
+        'UtilityService', 'MessageService'];
+
+    function CoreController($rootScope, $scope, SubscriptionService, EpisodeService, PlayerService, UtilityService,
+                            MessageService){
 
         // Initialize Player to prevent errors.
-        $rootScope.playerObject = PlayerService.initializePlayerObject();
+        $scope.playerObject = PlayerService.initializePlayerObject();
 
         // Check the current path for navigation selected.
-        $rootScope.currentPath = UtilityService.getCurrentPath();
+        $scope.currentPath = UtilityService.getCurrentPath();
 
-
-        $rootScope.closeOverlay = function(){
+        $scope.closeOverlay = function(){
             $rootScope.overlay = undefined;
         };
 
-        $rootScope.closeMessage = function(){
+        $scope.closeMessage = function(){
             $rootScope.message.text = undefined;
         };
 
-        $rootScope.subscriptionFilterStatus = false;
+        $scope.subscriptionFilterStatus = false;
 
-        $rootScope.message = {text: undefined};
+        $scope.message = {text: undefined};
 
 
         // Download all current episodes and subscriptions from the server.
         $scope.sync = function(){
             localStorage.clear();
             $rootScope.loading = true;
-            var rsp = SubscriptionService.sync($rootScope);
+            var rsp = SubscriptionService.sync();
             var rspA = rsp.then(function(response){
                 SubscriptionService.setMediaAdditions($rootScope, response);
             });
             var rspB = rspA.then(function(){
-                SubscriptionService.setSyncedSubscriptions();
+                SubscriptionService.setSyncedSubscriptions($rootScope);
             });
             rspB.then(function(){
                 $rootScope.loading = false;
@@ -53,4 +59,5 @@ app.core.controller('CoreController', [
             $rootScope.loading = false;
         };
 
-        }]);
+    }
+})();

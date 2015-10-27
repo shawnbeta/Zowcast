@@ -1,13 +1,25 @@
-app.ui.directive('overlay', ['OverlayService', function(OverlayService) {
-    return {
-        restrict : 'E',
-        scope: '=',
-        links: function(scope){
-            scope.closeOverlayA = function(){
-               OverlayService.closeOverlayA();
-            };
-        },
+(function() {
+    'use strict';
 
-        templateUrl: 'src/libs/ui/templates/overlay.html'
-    };
-}]);
+    angular
+        .module('app.ui')
+        .directive('overlay', overlay);
+
+    overlay.$inject = ['OverlayService'];
+
+    function overlay(){
+
+        return {
+            restrict : 'E',
+            scope: '=',
+            links: function(scope){
+                scope.closeOverlayA = function(){
+                    OverlayService.closeOverlayA();
+                };
+            },
+
+            templateUrl: 'src/libs/ui/templates/overlay.html'
+        };
+
+    }
+})();

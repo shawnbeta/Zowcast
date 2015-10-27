@@ -1,69 +1,79 @@
-app.player.directive('player', ['$rootScope', 'PlayerService', 'OverlayService',
-    function($rootScope, PlayerService, OverlayService) {
+(function() {
+    'use strict';
+
+    angular
+        .module('app.player')
+        .directive('player', player);
+
+    player.$inject = [ '$rootScope', 'PlayerService', 'OverlayService' ];
+
+    function player( $rootScope, PlayerService, OverlayService ){
+
+        return {
+
+            restrict : 'E',
+
+            templateUrl: 'src/libs/player/templates/player.html',
+
+            scope: '=',
+
+            link: function(scope){
+
+                scope.goFullScreen = function(){
+                    var video = $rootScope.playerObject.element;
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen();
+                    } else if (video.mozRequestFullScreen) {
+                        video.mozRequestFullScreen(); // Firefox
+                    } else if (video.webkitRequestFullscreen) {
+                        video.webkitRequestFullscreen(); // Chrome and Safari
+                    }
+                };
+
+                scope.showEpisodeDetails = function(episode){
+                    OverlayService.setOverlay(episode);
+                };
 
 
+                scope.togglePlaybackIcon = function(episode){
+                    return PlayerService.togglePlaybackIcon(episode);
+                };
 
-    return {
+                scope.togglePlayback = function(episode){
+                    PlayerService.togglePlayback(episode);
+                };
 
-        restrict : 'E',
+                scope.rewind = function(){
+                    PlayerService.rewind();
+                };
 
-        templateUrl: 'src/libs/player/templates/player.html',
+                scope.forward = function(){
+                    PlayerService.forward();
+                };
 
-        scope: '=',
+                scope.jumpBack = function(){
+                    PlayerService.jumpBack();
+                };
 
-        link: function(scope){
+                scope.jumpAhead = function(){
+                    PlayerService.jumpAhead();
+                };
 
-            scope.goFullScreen = function(){
-                var video = $rootScope.playerObject.element;
-                if (video.requestFullscreen) {
-                    video.requestFullscreen();
-                } else if (video.mozRequestFullScreen) {
-                    video.mozRequestFullScreen(); // Firefox
-                } else if (video.webkitRequestFullscreen) {
-                    video.webkitRequestFullscreen(); // Chrome and Safari
-                }
-            };
+                scope.volumeUp = function(){
+                    PlayerService.volumeUp();
+                };
 
-            scope.showEpisodeDetails = function(episode){
-                OverlayService.setOverlay(episode);
-            };
+                scope.volumeDown = function(){
+                    PlayerService.volumeDown();
+                };
+
+                scope.setVolumeTo = function(){
+                    PlayerService.setVolumeTo();
+                };
+            }
+        };
 
 
-            scope.togglePlaybackIcon = function(episode){
-                return PlayerService.togglePlaybackIcon(episode);
-            };
+    }
+})();
 
-            scope.togglePlayback = function(episode){
-                PlayerService.togglePlayback(episode);
-            };
-
-            scope.rewind = function(){
-                PlayerService.rewind();
-            };
-
-            scope.forward = function(){
-                PlayerService.forward();
-            };
-
-            scope.jumpBack = function(){
-                PlayerService.jumpBack();
-            };
-
-            scope.jumpAhead = function(){
-                PlayerService.jumpAhead();
-            };
-
-            scope.volumeUp = function(){
-                PlayerService.volumeUp();
-            };
-
-            scope.volumeDown = function(){
-                PlayerService.volumeDown();
-            };
-
-            scope.setVolumeTo = function(){
-                PlayerService.setVolumeTo();
-            };
-        }
-    };
-}]);

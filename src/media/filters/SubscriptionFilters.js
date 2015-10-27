@@ -1,5 +1,16 @@
-app.media.filter('orderByTitle', ['_', function(_) {
-	return function(models) {
-		return _.sortBy(models, 'title');
-	};
-}]); 
+(function() {
+	'use strict';
+
+	angular
+		.module('app.media')
+		.filter('orderByTitle', orderByTitle);
+
+	function orderByTitle(){
+
+		return function(subscription) {
+			return _.sortBy(subscription, 'title');
+		};
+
+
+	}
+})();

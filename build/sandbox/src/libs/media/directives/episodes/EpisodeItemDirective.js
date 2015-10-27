@@ -1,5 +1,13 @@
-app.media.directive('episodeItem',['PlayerService', 'MessageService', 'OverlayService',
-    function(PlayerService, MessageService, OverlayService) {
+(function() {
+    'use strict';
+
+    angular
+        .module('app.media')
+        .directive('episodeItem', episodeItem);
+
+    episodeItem.$inject = ['PlayerService', 'MessageService', 'OverlayService'];
+
+    function episodeItem(PlayerService, MessageService, OverlayService){
 
     return  {
 
@@ -31,4 +39,5 @@ app.media.directive('episodeItem',['PlayerService', 'MessageService', 'OverlaySe
         templateUrl: 'src/libs/media/templates/episodes/item.html'
     }
 
-}]);
+    }
+})();
