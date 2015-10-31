@@ -5,9 +5,7 @@
         .module('app.media')
         .directive('subscriptionNavigation', subscriptionNavigation);
 
-    subscriptionNavigation.$inject = ['$rootScope'];
-
-    function subscriptionNavigation($rootScope){
+    function subscriptionNavigation(){
 
         return {
             restrict : 'E',
@@ -15,12 +13,12 @@
 
             link: function(scope){
                 scope.episodesBySubscription = function(subscription){
-                    $rootScope.activeSubscription = subscription.id;
-                    $rootScope.subscriptionFilterStatus = true;
+                    scope.activeSubscription = subscription.id;
+                    scope.subscriptionFilterStatus = true;
                 };
                 scope.listAllEpisodes = function(){
-                    $rootScope.activeSubscription = 0;
-                    $rootScope.subscriptionFilterStatus = false;
+                    scope.activeSubscription = 0;
+                    scope.subscriptionFilterStatus = false;
                 };
             },
 

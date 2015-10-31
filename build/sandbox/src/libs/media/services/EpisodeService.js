@@ -8,9 +8,11 @@
     function EpisodeService(){
 
         return {
-            loadEpisodesFromLocalStorage: function( ){
 
-                return localStorage.getItem('episodes') ?
+            episodes: [],
+
+            loadEpisodesFromLocalStorage: function(){
+                return this.episodes = localStorage.getItem('episodes') ?
                     JSON.parse(localStorage.getItem('episodes')) : {};
             }
         };

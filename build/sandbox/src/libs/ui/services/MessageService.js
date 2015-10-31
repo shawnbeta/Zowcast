@@ -5,17 +5,17 @@
         .module('app.ui')
         .factory('MessageService', MessageService);
 
-    MessageService.$inject = [ '$interval' ];
+    MessageService.$inject = [ '$rootScope', '$interval' ];
 
-    function MessageService($interval){
+    function MessageService( $rootScope, $interval ){
 
         var mTimer;
 
         return {
 
-            displayMessage: function( messageObject, text, msgType, _closeMessageTimer ){
-                messageObject.text = text;
-                messageObject.style = msgType;
+            displayMessage: function( text, msgType, _closeMessageTimer ){
+                $rootScope.messageObject.text = text;
+                $rootScope.messageObject.style = msgType;
                 if(_closeMessageTimer)
                     _closeMessageTimer( );
             },

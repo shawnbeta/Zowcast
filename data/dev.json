@@ -64,12 +64,13 @@
         "ui/controllers/NavigationController",
         "ui/directives/MessageDirective",
         "ui/directives/OverlayDirective",
+        "ui/directives/LoadingDirective",
         "ui/services/UIService",
         "ui/services/MessageService",
         "ui/services/OverlayService",
+        "ui/services/LoadingService",
 
         "utility/utility.module",
-        "utility/directives/LoadingDirective",
         "utility/filters/UtilityFilters",
         "utility/services/UtilityService",
 

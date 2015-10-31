@@ -23,6 +23,11 @@
     subscriptionFilterStatus "></episode-item>
 </div>
 
-<span ng-if="!episodes">
-    You have no episodes.
+<span ng-if="episodes.length < 1">
+        <p>You have no episodes. First you'll need to add a subscription.<br/>
+            Select sync to add subscriptions from the server or select add to enter a URL.</p>
+    <p>
+        <button class="swButton" ng-click="sync()" title="sync">sync</button>
+        <button class="swButton" ng-click="go( 'add' )" title="add">add</button>
+    </p>
 </span>

@@ -70,11 +70,13 @@
 }
 .episodeTitle {
   float: left;
-}
-.episodeTitle {
   padding-top: 5px;
   padding-left: 10px;
   font-size: 16px;
+}
+.episodeTitle.videoTitle {
+  text-align: center;
+  float: none;
 }
 .playerEpisodeInfo {
   font-size: 25px;
@@ -84,15 +86,16 @@
 .videoPlayerWrapper {
   text-align: center;
   position: relative;
+  width: 320px;
+  margin: 10px auto 0;
 }
 .videoPlayerWrapper .swMedia {
   width: 320px;
-  margin: 10px auto 0;
   position: relative;
 }
 .videoPlayerWrapper .fullScreenToggler {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  bottom: 5px;
+  left: 5px;
   z-index: 2;
 }

@@ -1,0 +1,24 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+#services:
+#    subscription_service:
+#        class:  HC\Bundle\MediaBundle\Services\SubscriptionService
+#        arguments:  [value]
+#    episode_service:
+#        class:  HC\Bundle\MediaBundle\Services\EpisodeService
+#        arguments:  [value]
+#    feed_service:
+#        class:  HC\Bundle\MediaBundle\Services\FeedService
+#        arguments:  [value]
+#    config_service:
+#        class: HC\Bundle\CoreBundle\Services\ConfigService
+#        arguments: [args]
+#    file_service:
+#        class: HC\Bundle\UtilityBundle\Services\FileService
+#        arguments: [args]
+#    utility_service:
+#        class: HC\Bundle\UtilityBundle\Services\UtilityService
+#        arguments: [args]

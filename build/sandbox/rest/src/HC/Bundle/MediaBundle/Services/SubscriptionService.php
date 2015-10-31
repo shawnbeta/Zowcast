@@ -102,10 +102,10 @@ class SubscriptionService extends MediaService
 		// Instead of relying on user input check one of the episode files for the media type
 		// Start with an array of all audio extensions
 		$videoExtensions = array("mp4", "m4v", "MOV");
-		try{
+		if(isset(pathinfo($singleEpisode)['extension'])){
 			$fileExtension = pathinfo($singleEpisode)['extension'];
-		}catch (Exception $e){
-			// Do some logging later.
+		}else{
+			$fileExtension = 'mp3';
 		}
 		if(in_array( $fileExtension, $videoExtensions )){
 			$Subscription->setMediaType(1);

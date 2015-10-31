@@ -7,20 +7,21 @@
 
     subscriptionNavigationItem.$inject = ['$rootScope'];
 
+
     function subscriptionNavigationItem($rootScope){
 
         return {
             restrict : 'E',
-            scope: '=',
+            scope: true,
 
-            link: function(scope){
+            link: function( scope ){
                 scope.episodesBySubscription = function(subscription){
                     $rootScope.activeSubscription = subscription.id;
                     $rootScope.subscriptionFilterStatus = true;
                 };
                 scope.listAllEpisodes = function(){
-                    $rootScope.activeSubscription = 0;
-                    $rootScope.subscriptionFilterStatus = false;
+                    scope.activeSubscription = 0;
+                    scope.subscriptionFilterStatus = false;
                 };
             },
 

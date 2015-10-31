@@ -18,9 +18,10 @@
             link: function(scope){
 
                 scope.autoDownloadSubscription = function(){
-                    MessageService.displayMessage( scope.messageObject,
+                    MessageService.displayMessage(
                         'The auto download feature has been disabled for this demo.',
-                        'swSuccess fixed', MessageService.closeMessageTimer());
+                        'swSuccess fixed', MessageService.closeMessageTimer()
+                    );
                 };
 
                 scope.showSubscriptionDetails = function(subscription){
@@ -28,9 +29,10 @@
                 };
 
                 scope.removeSubscription = function(){
-                    MessageService.displayMessage( scope.messageObject,
+                    MessageService.displayMessage(
                         'The delete subscription feature has been disabled for this demo.',
-                        'swSuccess fixed', MessageService.closeMessageTimer());
+                        'swSuccess fixed', MessageService.closeMessageTimer()
+                    );
                 };
 
             },

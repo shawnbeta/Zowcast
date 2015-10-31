@@ -5,66 +5,80 @@
         .module('app.core')
         .controller('CoreController', CoreController);
 
-    CoreController.$inject = ['$scope', 'SubscriptionService', 'EpisodeService', 'PlayerService',
-        'UtilityService', 'MessageService', 'OverlayService'];
+    CoreController.$inject = ['$rootScope', '$scope', 'SubscriptionService', 'EpisodeService', 'PlayerService',
+        'UtilityService', 'MessageService', 'OverlayService', '$location'];
 
-    function CoreController($scope, SubscriptionService, EpisodeService, PlayerService, UtilityService,
-                            MessageService, OverlayService){
+    function CoreController($rootScope, $scope, SubscriptionService, EpisodeService, PlayerService, UtilityService,
+                            MessageService, OverlayService, $location){
 
+
+        //$rootScope.activeSubscription = null;
+        //
+        //$rootScope.subscriptionFilterStatus = false;
 
         // Initialize Player to prevent errors.
-        $scope.playerObject = PlayerService.initializePlayerObject();
+        $rootScope.playerObject = PlayerService.initializePlayerObject();
 
-        $scope.overlayObject = OverlayService.initializeOverlayObject();
+        $rootScope.overlayObject = OverlayService.initializeOverlayObject();
 
-        $scope.messageObject = {text: undefined};
+        $rootScope.messageObject = { text: undefined};
 
-
+        $rootScope.loadingObject = false;
 
         // Check the current path for navigation selected.
         $scope.$on('$routeChangeSuccess', function(){
             $scope.currentPath = UtilityService.getCurrentPath();
         });
 
-        $scope.closeOverlay = function(){
-            $scope.overlayObject = OverlayService.closeOverlay( $scope.overlayObject );
+        $rootScope.closeOverlay = function(){
+            $rootScope.overlayObject = OverlayService.closeOverlay( $rootScope.overlayObject );
         };
 
-        $scope.closeMessage = function(){
-            $scope.messageObject = MessageService.closeMessage( $scope.messageObject );
+        $rootScope.closeMessage = function(){
+            $rootScope.messageObject = MessageService.closeMessage( );
         };
 
         // Download all current episodes and subscriptions from the server.
         $scope.sync = function(){
             localStorage.clear();
-            $scope.loadingObject = true;
+            $rootScope.loadingObject = true;
             var rsp = SubscriptionService.sync();
             var rspA = rsp.then(function(response){
                 SubscriptionService.setMediaAdditions($scope, response);
             });
-            var rspB = rspA.then(function(){
+            rspA.then(function(){
                 SubscriptionService.setSyncedSubscriptions($scope);
+                $rootScope.loadingObject = false;
+                $rootScope.messageObject = {
+                    text: 'Subscriptions Synced.',
+                    style: 'swSuccess'
+                };
+                MessageService.closeMessageTimer();
             });
-            rspB.then(function(){
-                $scope.loadingObject = false;
-                MessageService.displayMessage( $scope.messageObject,
-                    'Subscriptions Synced.', 'swSuccess', MessageService.closeMessageTimer());
-            });
+
         };
 
+        $rootScope.go = function(path){
+            $location.path(path);
+        };
 
-        $scope.subscriptions = SubscriptionService.loadSubscriptionsFromLocalStorage();
-        $scope.episodes = EpisodeService.loadEpisodesFromLocalStorage( $scope );
+        $rootScope.subscriptions = SubscriptionService.loadSubscriptionsFromLocalStorage();
+        $rootScope.episodes = EpisodeService.loadEpisodesFromLocalStorage( $scope );
+
 
         $scope.clearLocalData = function(){
-            $scope.loadingObject = true;
-            $scope.subscriptions = [];
-            $scope.episodes = [];
-            $scope.syncedSubscriptions = [];
+            $rootScope.loadingObject = true;
+            $rootScope.subscriptions = [];
+            $rootScope.episodes = [];
             localStorage.setItem('subscriptions', JSON.stringify([]));
             localStorage.setItem('episodes', JSON.stringify([]));
-            location.reload();
-            $scope.loadingObject = false;
+            localStorage.setItem('syncedSubscriptions', JSON.stringify([]));
+            $rootScope.loadingObject = false;
+            $rootScope.messageObject = {
+                text: 'Local Data Cleared.',
+                style: 'swSuccess'
+            };
+            MessageService.closeMessageTimer();
         };
 
 

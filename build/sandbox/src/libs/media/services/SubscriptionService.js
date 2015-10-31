@@ -5,14 +5,15 @@
         .module('app.media')
         .factory('SubscriptionService', SubscriptionService);
 
-    SubscriptionService.$inject = ['$http', 'Subscription', 'ConfigService', 'MessageService'];
+    SubscriptionService.$inject = ['$rootScope', '$http', 'Subscription', 'ConfigService', 'MessageService'];
 
-    function SubscriptionService($http, Subscription, ConfigService, MessageService){
+    function SubscriptionService($rootScope, $http, Subscription, ConfigService, MessageService){
         return {
 
+            subscriptions: [],
 
             loadSubscriptionsFromLocalStorage: function(){
-                return localStorage.getItem('subscriptions') ?
+                return this.subscriptions = localStorage.getItem('subscriptions') ?
                     JSON.parse(localStorage.getItem('subscriptions')) : {};
             },
 
@@ -36,26 +37,30 @@
 
             },
 
-            setMediaAdditions: function(rs, response){
-                rs.subscriptions = response.data.subscriptions;
+            setMediaAdditions: function(scope, response){
+
+                $rootScope.subscriptions =  response.data.subscriptions;
+                $rootScope.episodes =  response.data.episodes;
+
                 // Subscriptions to local storage overwriting existing values
-                localStorage.setItem('subscriptions', JSON.stringify(rs.subscriptions));
-                rs.episodes = response.data.episodes;
+                localStorage.setItem('subscriptions', JSON.stringify(response.data.subscriptions));
+
                 // Subscriptions to local storage overwriting existing values
-                localStorage.setItem('episodes', JSON.stringify(rs.episodes));
+                localStorage.setItem('episodes', JSON.stringify(response.data.subscriptions));
+
             },
 
-            setSyncedSubscriptions: function(rs){
-                var count = rs.subscriptions.length;
+            setSyncedSubscriptions: function(){
+                var count = $rootScope.subscriptions.length;
                 var syncedSubscriptions = [];
                 for(var i=0;i<count;i++){
-                    syncedSubscriptions.push(rs.subscriptions[i]['id'])
+                    syncedSubscriptions.push($rootScope.subscriptions[i]['id'])
                 }
                 localStorage.setItem('syncedSubscriptions', JSON.stringify(syncedSubscriptions));
             },
 
-            add: function($scope){
-                $scope.loading = true;
+            add: function( $scope ){
+                $rootScope.loadingObject = true;
                 var addRsp = $http({
                     method: 'POST',
                     url: ConfigService.serverPath + 'add',
@@ -71,21 +76,31 @@
 
                 addRsp.then(function(response){
                     if(response.data.subscription){
-                        $scope.subscriptions.push(response.data.subscription);
-                        Array.prototype.push.apply($scope.episodes, response.data.episodes);
-                        localStorage.setItem('subscriptions', JSON.stringify($scope.subscriptions));
-                        localStorage.setItem('episodes', JSON.stringify($scope.episodes));
-                        $scope.loading = false;
-                        MessageService.displayMessage( $scope.messageObject,
-                            'New Subscription Added.', 'swSuccess', MessageService.closeMessageTimer());
-                        $scope.messageObject.success = 'New Subscription Added';
+                        $rootScope.subscriptions.push(response.data.subscription);
+                        Array.prototype.push.apply($rootScope.episodes, response.data.episodes);
+                        localStorage.setItem('subscriptions', JSON.stringify($rootScope.subscriptions));
+                        localStorage.setItem('episodes', JSON.stringify($rootScope.episodes));
+                        $rootScope.loadingObject = false;
+                        MessageService.displayMessage(
+                            'New Subscription Added.', 'swSuccess', MessageService.closeMessageTimer()
+                        );
                     }else{
-                        $scope.loading = false;
-                        MessageService.displayMessage( $scope.messageObject,
-                            'New Subscription Added.', 'swSuccess', MessageService.closeMessageTimer());
-                        $scope.messageObject.success = 'Something went wrong';
+                        $rootScope.loadingObject = false;
+                        MessageService.displayMessage(
+                            'Subscription Addition Failed. Please try another URL.', 'swError',
+                            MessageService.closeMessageTimer()
+                        );
                     }
-                });
+                },
+                    function(){
+                        $rootScope.loadingObject = false;
+                        MessageService.displayMessage(
+                            'Adding the Requested URL resuled in failure', 'swError',
+                            MessageService.closeMessageTimer()
+                        );
+                    }
+
+                );
 
             }
         };

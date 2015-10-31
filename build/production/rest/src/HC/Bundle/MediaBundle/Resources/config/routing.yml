@@ -1,0 +1,26 @@
+#Subscriptions
+add_subscription:
+    pattern:     /add
+    defaults: { _controller: HCMediaBundle:Subscription:add}
+
+sync:
+    pattern:     /sync
+    defaults: { _controller: HCMediaBundle:Subscription:sync}
+
+refresh:
+    pattern:     /refresh/{key}
+    defaults: { _controller: HCMediaBundle:Subscription:refresh}
+
+
+#update:
+#    pattern:     /subscription/update/{id}
+#    defaults: { _controller: HCMediaBundle:Subscription:update}
+
+#delete:
+#    pattern:     /subscription/delete/{id}
+#    defaults: { _controller: HCMediaBundle:Subscription:delete}
+
+#Episodes
+update:
+    pattern:     /episodes/update
+    defaults: { _controller: HCMediaBundle:Episode:update}

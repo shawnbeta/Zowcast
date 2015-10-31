@@ -5,11 +5,12 @@
 		.module('app.media')
 		.controller('EpisodeController', EpisodeController);
 
-	EpisodeController.$inject = ['$scope', 'UIService'];
+	EpisodeController.$inject = [ '$rootScope', '$scope', 'UIService'];
 
-	function EpisodeController( $scope, UIService ){
+	function EpisodeController( $rootScope, $scope, UIService ){
 
-		$scope.subscriptionFilterStatus = false;
+		$rootScope.subscriptionFilterStatus = false;
+		$rootScope.activeSubscription = 0;
 
 		$scope.setEpisodeStyle = function(newStyle){
 			$scope.episodeStyle = newStyle;

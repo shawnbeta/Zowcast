@@ -16,6 +16,11 @@
     <subscription-item ng-repeat="s in subscriptions | orderByTitle">1</subscription-item>
 </ul>
 
-<span ng-if="!subscriptions">
-    You have no subscriptions.
+<span ng-if="subscriptions.length < 1">
+    <p>You have no subscriptions. <br/>
+        Select sync to download subscriptions from the server or select add to enter a URL.</p>
+    <p>
+    <button class="swButton" ng-click="sync()" title="sync">sync</button>
+    <button class="swButton" ng-click="go( 'add' )" title="add">add</button>
+    </p>
 </span>

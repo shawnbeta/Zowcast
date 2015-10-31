@@ -30,8 +30,9 @@
             };
 
             scope.updateWatched = function(){
-                MessageService.displayMessage( scope.messageObject,
-                    'This feature has been disabled.', 'swSuccess fixed', MessageService.closeMessageTimer());
+                MessageService.displayMessage(
+                    'This feature has been disabled.', 'swSuccess fixed', MessageService.closeMessageTimer()
+                );
             };
         },
 

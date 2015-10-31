@@ -9,12 +9,8 @@
 
     function SubscriptionController($scope, SubscriptionService){
 
-        $scope.setSubscriptionStyle = function(newStyle){
-            $scope.subscriptionStyle = newStyle;
-        };
-
-        $scope.add = function(rsEpisodes){
-          SubscriptionService.add($scope, rsEpisodes);
+        $scope.add = function( ){
+            SubscriptionService.add( $scope );
         };
 
     }

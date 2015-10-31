@@ -1,0 +1,107 @@
+<!--Generated Code: mustache_templates/app/main.mustache -->
+<!doctype html>
+<html lang="en" ng-app="app" ng-controller="CoreController as core">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Zowcast</title>
+            <link href="https:&#x2F;&#x2F;maxcdn.bootstrapcdn.com&#x2F;font-awesome&#x2F;4.4.0&#x2F;css&#x2F;font-awesome.min.css" rel='stylesheet' type='text/css'><link href="https:&#x2F;&#x2F;fonts.googleapis.com&#x2F;css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,700italic,900italic|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800|Open+Sans+Condensed:300,700,300italic" rel='stylesheet' type='text/css'>
+            
+    
+    <link href="css/styles.min.css" rel='stylesheet' type='text/css'> 
+</head>
+
+<body >
+
+<player></player>
+<overlay></overlay>
+
+<message></message>
+
+<div id="stage">
+
+    <span ng-controller="NavigationController">
+            <i ng-click="toggleMenu()" class="fa fa-bars menuToggler"></i>
+    </span>
+
+
+
+<!-- Generated Code: mustache_templates/ui/navBar.mustache -->
+
+
+    <div class="swNavBar" ng-controller="NavigationController">
+
+    <div class="swContainer clearfix">
+
+        <div class="logoWrapper actionWrapper">
+                <button ng-click="go('about')" ng-class="{'selected' : currentPath == '/about'}"
+                        class="actionButton swLogo" href="/" title="About the App">
+
+
+
+                <div>zowcast</div>
+            </button>
+        </div>
+
+        <div class="actionWrapper">
+        <button ng-click="go('episodes')" title="episodes" class="actionButton linkItems"
+                ng-class="{'selected' : currentPath == '/episodes'}">
+                <div>episodes</div>
+                
+            </button>
+
+        </div>
+
+
+
+        <div class="actionWrapper">
+        <button ng-click="go('subscriptions')" title="subscriptions" class="actionButton linkItems"
+                ng-class="{'selected' : currentPath == '/subscriptions'}">
+                <div>subscriptions</div>
+                
+            </button>
+
+        </div>
+
+
+
+        <div class="actionWrapper">
+        <button ng-click="go('add')" title="add" class="actionButton linkItems"
+                ng-class="{'selected' : currentPath == '/add'}">
+                
+                <i class="fa fa-plus"></i>
+            </button>
+
+        </div>
+
+
+
+        <div class="actionWrapper">
+        <button ng-click="go('settings')" title="settings" class="actionButton linkItems"
+                ng-class="{'selected' : currentPath == '/settings'}">
+                
+                <i class="fa fa-cog"></i>
+            </button>
+
+        </div>
+
+
+
+
+    </div>
+
+    </div>
+<!-- End Generated Code: mustache_templates/ui/navBar.mustache -->
+
+    <loading></loading>
+
+
+    <div ng-show="!loadingObject" ng-view class="swContainer"></div>
+
+</div>
+
+ <script src="src/main.min.js"></script> 
+</body>
+
+</html>
+<!-- End Generated Code: mustache_templates/app/main.mustache -->

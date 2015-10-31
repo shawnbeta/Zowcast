@@ -52,7 +52,7 @@
                         'padding-top': jQuery(navBar).innerHeight()
                     });
                     jQuery('.menuToggler').css({
-                        background: 'blue',
+                        background: '#4486f8',
                         'z-index': 5
                     });
                     jQuery(navBar).animate({

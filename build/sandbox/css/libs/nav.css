@@ -19,7 +19,7 @@
   position: fixed;
   top: 10px;
   left: 10px;
-  background: red;
+  background: #d73e33;
   color: #ffffff;
   border-radius: 50%;
   font-weight: 900;
@@ -139,11 +139,15 @@
     color: #ffffff;
     float: left;
     font-size: 22px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px;
   }
   .logoWrapper .swLogo:hover {
     color: #f1c604;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .logoWrapper .swLogo {
+    height: 45px;
   }
 }
 @media (min-width: 768px) {
@@ -172,7 +176,6 @@
 .episodeBySubscriptionBrowser .allEpisodes button {
   background: #d73e33;
   color: #ffffff;
-  text-shadow: 1px 1px #333333;
   padding: 10px;
   margin: 10px auto;
 }
