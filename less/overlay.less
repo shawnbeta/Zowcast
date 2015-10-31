@@ -1,44 +1,51 @@
 @import (reference) 'styles.less';
 
-#mask,
-#overlayWrapper {
+.mask{
   position: fixed;
   width: 100%;
-  z-index: 0;
 }
-#overlayWrapper {
+.overlayWrapper {
+  position: absolute;
+  width: 100%;
+}
+
+.overlayWrapper {
   height: 0;
   overflow: visible;
-  #overlayContent {
+  z-index: 7;
+  .overlay {
     width: 90%;
     margin: 20px auto;
     background: @white1;
     max-width: 600px;
-    padding: 8px 10px 20px;
     //overflow: scroll;
-    height: 500px;
+    min-height: 300px;
     position: relative;
+    .swCloseIcon {
+      color: @secondary-color;
+    }
+    header{
+      display: block;
+      margin-bottom: 20px;
+      background: @base-color;
+      color: @white1;
+      padding: 8px 20px;
+    }
     .swDescription{
-      overflow-y: scroll;
-      height: 300px;
-      background: @dark4;
-
+      padding: 8px 10px 20px;
+      //height: 300px;
     }
   }
 }
 
-#mask{
-  background: @dark1;
-  opacity: .8;
+.mask {
+  z-index: 5;
+  background: #000;
+  opacity: .6;
   top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
 }
 
-.swClose{
-  z-index: 2;
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  font-size: 30px;
-  color: @base-color;
-}
+

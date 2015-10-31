@@ -2,7 +2,7 @@
 
 
 .actionbar {
-  button {
+  button, a {
     background: @dark6;
     width: 40px;
     height: 40px;
@@ -10,10 +10,25 @@
       background: @dark5;
     }
   }
+  a {
+    padding: 8px;
+    display: inline-block;
+    vertical-align: top;
+    color: @dark2;
+  }
+}
+
+.episodeBySubscriptionBrowser {
+  display: none;
 }
 
 .srcForm{
   text-align: center;
+  .standardButton {
+    background: @primary-color;
+    color: @white1;
+    padding: 0 5px;
+  }
 }
 
 .addField {

@@ -1,0 +1,22 @@
+{
+  "name": "zowcast",
+  "version": "0.0.0",
+  "authors": [
+    "Shawn Williams <shawnbeta@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

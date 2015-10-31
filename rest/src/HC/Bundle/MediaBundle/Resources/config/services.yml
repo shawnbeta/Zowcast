@@ -1,0 +1,7 @@
+services:
+    subscription_service:
+        class:  HC\Bundle\MediaBundle\Services\SubscriptionService
+        arguments:  [value]
+    episode_service:
+        class:  HC\Bundle\MediaBundle\Services\EpisodeService
+        arguments:  [value]

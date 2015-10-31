@@ -1,21 +1,19 @@
-(function() {
-    'use strict';
-    angular.module('app.media')
-        .config('$routeProvider', $routeProvider);
+app.media.config(['$routeProvider',
 
-    function $routeProvider() {
+    function($routeProvider) {
         $routeProvider
             .when('/episodes', {
                 controller : 'EpisodeController',
-                templateUrl : 'src/templates/media/episodes/page.html'
+                templateUrl : 'src/libs/media/templates/episodes/page.html'
             })
             .when('/subscriptions', {
                 controller : 'SubscriptionController',
-                templateUrl : 'src/templates/media/subscriptions/page.html'
+                templateUrl : 'src/libs/media/templates/subscriptions/page.html'
             })
+
             .when('/add', {
                 controller : 'SubscriptionController',
-                templateUrl : 'src/templates/media/subscriptions/add.html'
+                templateUrl : 'src/libs/media/templates/subscriptions/add.html'
             })
-    }});
+    }]);
 

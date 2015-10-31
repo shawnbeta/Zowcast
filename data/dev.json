@@ -14,9 +14,10 @@
         "media/list",
         "footer",
         "overlay",
+        "message",
         "globals",
         "main",
-        "navBar",
+        "nav",
         "player",
         "variables"
       ]
@@ -24,7 +25,6 @@
     "js" : {
       "contrib" : [
         "angular",
-        "angular-mocks",
         "angular-route",
         "angular-sanitize",
         "angular-touch",
@@ -38,21 +38,44 @@
         "core/core.module",
         "core/core.routes",
         "core/controllers/CoreController",
+        "core/services/ConfigService",
 
         "media/media.module",
         "media/media.routes",
         "media/controllers/EpisodeController",
+        "media/controllers/SubscriptionController",
+        "media/directives/episodes/EpisodeItemDirective",
+        "media/directives/subscriptions/SubscriptionItemDirective",
+        "media/directives/subscriptions/SubscriptionNavigationDirective",
+        "media/directives/subscriptions/SubscriptionNavigationItemDirective",
+        "media/filters/FilterBySubscription",
+        "media/filters/OrderByPubDate",
+        "media/filters/SubscriptionFilters",
+        "media/services/Episode",
         "media/services/EpisodeService",
+        "media/services/Subscription",
         "media/services/SubscriptionService",
 
-        "utility/utilities.module",
-        "utility/services/HelperService",
-        "utility/services/StorageService",
+        "player/player.module",
+        "player/directives/PlayerDirective",
+        "player/services/PlayerService",
+
+        "ui/ui.module",
+        "ui/controllers/NavigationController",
+        "ui/directives/MessageDirective",
+        "ui/directives/OverlayDirective",
+        "ui/directives/LoadingDirective",
+        "ui/services/UIService",
+        "ui/services/MessageService",
+        "ui/services/OverlayService",
+        "ui/services/LoadingService",
+
+        "utility/utility.module",
+        "utility/filters/UtilityFilters",
+        "utility/services/UtilityService",
 
         "vendors/vendors.module",
         "vendors/services/UnderscoreService"
-
-
       ],
       "remote": [
         "http://fonts.googleapis.com/css?family=Quicksand:300,400,700"
@@ -91,20 +114,12 @@
   "settings": {
     "links": [
       {
-        "action" : "flushLocalStorage",
-        "title": "flush local storage"
+        "action" : "clearLocalData",
+        "title": "clear local data"
       },
       {
-        "action" : "fetchBulk",
-        "title": "fetch bulk"
-      },
-      {
-        "action" : "purgeRemote",
-        "title": "purge remote data"
-      },
-      {
-        "action" : "fetchNew",
-        "title": "fetch new"
+        "action" : "sync",
+        "title": "sync"
       }
     ]
   }

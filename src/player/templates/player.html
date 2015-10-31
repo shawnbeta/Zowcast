@@ -1,0 +1,56 @@
+<div class="playerWrapper" ng-show="playerObject.status == 'playing' || playerObject.status ==  'paused' ">
+    <div class="group clearfix">
+        <div class="audioPlayerWrapper" ng-show="playerObject.loadedEpisode.mediaType == 0">
+            <audio ng-src="{{playerObject.loadedEpisode.location}}"></audio>
+        </div>
+
+        <div class="episodeTitle"  ng-class="{'videoTitle' : playerObject.loadedEpisode.mediaType == 1}"
+             ng-class=" videoTitle :  >
+            <button ng-click="showEpisodeDetails( playerObject.loadedEpisode )">
+                {{playerObject.loadedEpisode.title}}</button>
+        </div>
+
+
+        <div class="videoPlayerWrapper " ng-show="playerObject.loadedEpisode.mediaType == 1">
+
+            <video class="swMedia" src="{{playerObject.loadedEpisode.location}}"></video>
+            <button class="fullScreenToggler" ng-click="goFullScreen( playerObject )">
+                <i class="fa fa-tv"></i>
+            </button>
+
+
+        </div>
+
+    <button class="playerEpisodeInfo" ng-click="showEpisodeDetails(playerObject.loadedEpisode)">
+        <i class="fa fa-info"></i></button>
+
+    </div>
+
+
+    <!--<div id="zowSlider" ng-click="setPlaybackPosition(event)">123456</div>-->
+    <div class="progressTrackerWrapper clearfix">
+        <div class="progressTracker"></div>
+        <div class="counter">
+            {{playerObject.counter.hours}}:{{playerObject.counter.minutes}}:{{playerObject.counter.seconds}}
+        </div>
+        <div class="duration">
+            {{playerObject.runtime.hours}}:{{playerObject.runtime.minutes}}:{{playerObject.runtime.seconds}}
+        </div>
+    </div>
+
+    <div class="controls clearfix">
+        <button ng-click="jumpBack( playerObject )"><i class="fa fa-angle-double-left"></i></button>
+        <button ng-click="rewind( playerObject )"><i class="fa fa-angle-left"></i></button>
+        <button ng-click="togglePlayback( playerObject, playerObject.loadedEpisode )">
+            <i class="fa fa-pause" ng-if="playerObject.episodePlaying"></i>
+            <i class="fa fa-play" ng-if="!playerObject.episodePlaying"></i>
+        </button>
+        <button ng-click="forward( playerObject )"><i class="fa fa-angle-right"></i></button>
+        <button ng-click="jumpAhead( playerObject )"><i class="fa fa-angle-double-right"></i></button>
+    </div>
+
+
+
+</div>
+
+

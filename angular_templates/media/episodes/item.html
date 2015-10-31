@@ -1,0 +1,18 @@
+<li class="swItem">
+    <div class="teaser">
+        <div class="swDate">{{e.pub_date | date:"MMMM d, yyyy"}}</div>
+        <!--<span>{{e.id}}</span>-->
+        <div class="swImg">
+            <button ng-click="togglePlayback(e)" class="imgPlayback largeOnly">
+                <i class="fa fa-{{isPlaying(e)}}"></i>
+            </button>
+            <span><img src="{{e.img}}"></span>
+            <!--<img src="assets/img/turtle.png">-->
+        </div>
+
+        <div class="swTitle">
+            <span>{{e.title}}</span>
+        </div>
+        <p class="swDescription">{{e.description}}</p>
+    </div>
+</li>

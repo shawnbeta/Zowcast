@@ -1,0 +1,41 @@
+@import (reference) 'styles.less';
+
+.swMessage{
+  position: absolute;
+  top: 100px;
+  z-index: 6;
+  left: 10px;
+  right: 10px;
+  &.fixed {
+    position: fixed;
+  }
+  &.swError {
+    .swText {
+      background: @error3;
+      border-color:  @error2;
+      .swCloseIcon {
+        color: @error2;
+      }
+    }
+  }
+
+  &.swSuccess {
+    .swText {
+      background: @status1;
+      border-color: @status2;
+      .swCloseIcon {
+        color: @status2;
+      }
+    }
+  }
+
+  .swText {
+    border: 1px solid;
+    position: relative;
+    padding: 25px 15px;
+    margin: 0 auto;
+    max-width: 650px;
+  }
+
+
+}

@@ -1,0 +1,7 @@
+services:
+    file_service:
+        class: HC\Bundle\UtilityBundle\Services\FileService
+        arguments: [args]
+    utility_service:
+        class: HC\Bundle\UtilityBundle\Services\UtilityService
+        arguments: [args]

@@ -29,7 +29,11 @@ h1 {
 
 .selected {
   background: @secondary-color !important;
-  color: @dark1;
+  color: @dark2  !important;
+}
+
+.standard {
+  backgorund: none;
 }
 
 button {
@@ -42,7 +46,12 @@ a:hover {
   text-decoration: none;
 }
 
-
+.swCloseIcon {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  font-size: 30px;
+}
 
 @media(min-width: @screen-sm-min) {
   .largeOnly {
@@ -111,11 +120,15 @@ a:hover {
 
 // icons
 .loading {
+  text-align: center;
+  margin-top: 25px;
+  color: @primary-color;
   &:before{
     .fa-spin;
     .fa-pulse;
     content: '\f110';
     font-family: @fa;
+    font-size: 100px;
   }
 }
 

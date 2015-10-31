@@ -1,32 +1,91 @@
 @import (reference) "styles.less";
 
-#audioPlayer {
-position: absolute;
-  top: 0;
+.progressTrackerWrapper{
+  background: @secondary-color;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  .counter {
+    float: left;
+  }
+  .duration {
+    float: right;
+  }
+.progressTracker{
+  background: green;
+  border: red;
+  position: absolute;
+
+}
+}
+.playerWrapper {
   width: 100%;
-  z-index: 1;
-  background: @primary-color;
-  color: @white1;
-}
-
-#toggleAudio {
-  content: '\f144';
-  font-family: @fa;
-}
-
-#actionWrapper {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 6;
-}
+  bottom: 0;
+  z-index: 3;
 
-#playbackActionButton {
-  font-size: 80px;
-  color: @white1;
-  &:hover {
-    color: @secondary-color;
+
+  .group {
+    background: @base-color;
+    color: @white1;
   }
 
+  .controls {
+    text-align: center;
+    background: @dark4;
+    button{
+      color: @white1;
+      font-size: 24px;
+      width: 60px;
+      padding: 5px;
+      background: @primary-color;
+    }
+  }
 }
 
+.playerToggle {
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  @media(max-width: @screen-sm-max){
+    left: 0;
+  }
+  @media(min-width: @screen-sm-min){
+    right: 0;
+  }
+}
+
+
+.episodeTitle{
+  float: left;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 16px;
+  &.videoTitle {
+    text-align: center;
+    float:none;
+  }
+}
+
+.playerEpisodeInfo {
+  font-size: 25px;
+  padding-right: 10px;
+  float: right;
+}
+
+.videoPlayerWrapper {
+  text-align: center;
+  position: relative;
+  width: 320px;
+  margin: 10px auto 0;
+  .swMedia {
+    width: 320px;
+    position: relative;
+  }
+  .fullScreenToggler {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    z-index: 2;
+  }
+}
