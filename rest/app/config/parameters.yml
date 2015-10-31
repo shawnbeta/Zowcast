@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: zowcast
+    database_user: zowcast
+    database_password: mEtruv5s
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 354e57d4cf548aa7af06ece70fa37c084aad81bd
