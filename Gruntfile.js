@@ -241,6 +241,57 @@ module.exports = function (grunt) {
             }
         },
 
+        jshint: {
+            beforeconcat: [
+                "src/app.module.js",
+
+                "src/core/core.module.js",
+                "src/core/core.routes.js",
+                "src/core/controllers/CoreController.js",
+                "src/core/services/ConfigService.js",
+
+                "src/media/media.module.js",
+                "src/media/media.routes.js",
+                "src/media/controllers/EpisodeController.js",
+                "src/media/controllers/SubscriptionController.js",
+                "src/media/directives/episodes/EpisodeItemDirective.js",
+                "src/media/directives/subscriptions/SubscriptionItemDirective.js",
+                "src/media/directives/subscriptions/SubscriptionNavigationDirective.js",
+                "src/media/directives/subscriptions/SubscriptionNavigationItemDirective.js",
+                "src/media/filters/FilterBySubscription.js",
+                "src/media/filters/OrderByPubDate.js",
+                "src/media/filters/SubscriptionFilters.js",
+                "src/media/services/Episode.js",
+                "src/media/services/EpisodeService.js",
+                "src/media/services/Subscription.js",
+                "src/media/services/SubscriptionService.js",
+
+                "src/player/player.module.js",
+                "src/player/directives/PlayerDirective.js",
+                "src/player/services/PlayerService.js",
+
+                "src/ui/ui.module.js",
+                "src/ui/controllers/NavigationController.js",
+                "src/ui/directives/MessageDirective.js",
+                "src/ui/directives/OverlayDirective.js",
+                "src/ui/services/UIService.js",
+                "src/ui/services/MessageService.js",
+                "src/ui/services/OverlayService.js",
+
+                "src/utility/utility.module.js",
+                "src/utility/directives/LoadingDirective.js",
+                "src/utility/filters/UtilityFilters.js",
+                "src/utility/services/UtilityService.js",
+
+                "src/vendors/vendors.module.js",
+                "src/vendors/services/UnderscoreService.js"
+
+
+
+            ],
+            afterconcat: ['dist/output.js']
+        },
+
         uglify: {
             staging: {
                 files: {
@@ -287,7 +338,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', ['clean:main', 'less', 'copy:main']);
     grunt.registerTask('test', ['clean:dev', 'copy:dev', 'karma']);
-    grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'mustache_render:core', 'less:dev',  'copy:dev']);
+    grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'mustache_render:core', 'less:dev',
+        'copy:dev', 'jshint:beforeconcat']);
     grunt.registerTask('staging', ['clean:staging', 'mustache_render:staging', 'mustache_render:core', 'less:staging',
         'concat:staging', 'copy:staging', 'uglify:staging', 'cssmin:staging', 'clean:temp']);
 

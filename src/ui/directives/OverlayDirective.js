@@ -17,7 +17,6 @@
             links: function(scope){
 
                 scope.closeOverlay = function( overlayObject ){
-                    console.log('clearOverlay')
                     OverlayService.clearOverlay( overlayObject );
                 };
             },

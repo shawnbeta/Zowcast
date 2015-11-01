@@ -3,8 +3,7 @@
   "version": "0.0.3",
   "description": "Web based podcast manager",
   "main": "Gruntfile.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt-bump": "~0.5.0",
     "grunt-contrib-copy": "~0.8.1",
@@ -23,7 +22,8 @@
     "jasmine-core": "~2.2.0",
     "karma-chrome-launcher": "~0.1.12",
     "karma-coverage": "~0.5.2",
-    "karma-ng-html2js-preprocessor": "~0.1.2"
+    "karma-ng-html2js-preprocessor": "~0.1.2",
+    "grunt-contrib-jshint": "~0.11.3"
   },
   "scripts": {
     "test": "karma start"

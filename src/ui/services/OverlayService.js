@@ -13,7 +13,7 @@
             initializeOverlayObject: function(){
               return {
                   style: undefined
-              }
+              };
             },
 
             loadOverlay: function(overlayObject, data){

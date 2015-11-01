@@ -22,7 +22,7 @@
                     element: null, // jQuery to get the video or audio element
                     loadedEpisode:{id: null}, // the episode in the player
                     counter: null
-                }
+                };
             },
 
             togglePlayback: function( playerObject, episode ){
@@ -30,17 +30,16 @@
                     playerObject = this.loadMedia( playerObject, episode );
                     this.firstRun = true;
                 }
-                playerObject.status != 'playing' || playerObject.status == 'playing' && this.firstRun ?
+                return playerObject.status != 'playing' || playerObject.status == 'playing' && this.firstRun ?
                     this.playAction( playerObject, this.firstRun ) : this.pauseAction( playerObject );
             },
 
             togglePlaybackIcon: function( playerObject, episode ){
-                return playerObject.loadedEpisode == episode
-                && playerObject.status == 'paused' ? 'pause' : 'play'
+                return playerObject.loadedEpisode == episode && playerObject.status == 'paused' ? 'pause' : 'play'
             },
 
             loadMedia: function( playerObject, episode ){
-                var mediaType = episode.mediaType == 0 ? 'audio' : 'video';
+                var mediaType = episode.mediaType === 0 ? 'audio' : 'video';
                 playerObject.loadedEpisode = episode;
                 playerObject.element = document.getElementsByTagName(mediaType)[0];
 

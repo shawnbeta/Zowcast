@@ -57,7 +57,7 @@
                     });
                     jQuery(navBar).animate({
                         top: 0
-                    }, 500)
+                    }, 500);
                 }else{
                     jQuery(navBar).animate({
                         top: -jQuery(navBar).innerHeight()
