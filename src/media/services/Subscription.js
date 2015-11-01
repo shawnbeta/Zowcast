@@ -22,7 +22,7 @@
                     auto_download: 0,
                     create_date: 1543,
                     modified_date: 661
-                }
+                };
             },
 
             buildSubscription: function(subscription){
@@ -32,7 +32,7 @@
                 subscription.modified_date = parseInt(subscription.modified_date);
                 return subscription;
             }
-        }
+        };
 
 
     }

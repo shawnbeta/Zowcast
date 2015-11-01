@@ -8,7 +8,6 @@
     function filterBySubscription(){
 
         return function(episodes, activeSubscription, subscriptionFilterStatus) {
-            console.log(activeSubscription, subscriptionFilterStatus)
             if(subscriptionFilterStatus){
                 return _.filter(episodes, function(episode){
                     return episode.subscription == activeSubscription;

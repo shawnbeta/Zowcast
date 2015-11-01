@@ -37,7 +37,7 @@
         },
 
         templateUrl: 'src/libs/media/templates/episodes/item.html'
-    }
+    };
 
     }
 })();

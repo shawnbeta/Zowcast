@@ -13,7 +13,7 @@
             subscriptions: [],
 
             loadSubscriptionsFromLocalStorage: function(){
-                return this.subscriptions = localStorage.getItem('subscriptions') ?
+                return  localStorage.getItem('subscriptions') ?
                     JSON.parse(localStorage.getItem('subscriptions')) : {};
             },
 
@@ -54,7 +54,7 @@
                 var count = $rootScope.subscriptions.length;
                 var syncedSubscriptions = [];
                 for(var i=0;i<count;i++){
-                    syncedSubscriptions.push($rootScope.subscriptions[i]['id'])
+                    syncedSubscriptions.push($rootScope.subscriptions[i]['id']);
                 }
                 localStorage.setItem('syncedSubscriptions', JSON.stringify(syncedSubscriptions));
             },

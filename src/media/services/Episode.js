@@ -21,7 +21,7 @@
                     create_date: 1543,
                     modified_date: 661,
                     subscription_id: 10
-                }
+                };
             },
 
             buildEpisode: function(episode, subscriptions){
@@ -39,7 +39,7 @@
 
                 return episode;
             }
-        }
+        };
 
     }
 })();

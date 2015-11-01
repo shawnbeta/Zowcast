@@ -35,7 +35,7 @@
             },
 
             togglePlaybackIcon: function( playerObject, episode ){
-                return playerObject.loadedEpisode == episode && playerObject.status == 'paused' ? 'pause' : 'play'
+                return playerObject.loadedEpisode == episode && playerObject.status == 'paused' ? 'pause' : 'play';
             },
 
             loadMedia: function( playerObject, episode ){
@@ -65,7 +65,6 @@
             },
 
             pauseCounter: function(){
-                console.log('paused')
                 if(angular.isDefined(ticker)){
                     $interval.cancel(ticker);
                     ticker = undefined;

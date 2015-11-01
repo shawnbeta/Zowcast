@@ -14,6 +14,6 @@ app.media.config(['$routeProvider',
             .when('/add', {
                 controller : 'SubscriptionController',
                 templateUrl : 'src/libs/media/templates/subscriptions/add.html'
-            })
+            });
     }]);
 

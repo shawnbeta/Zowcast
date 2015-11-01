@@ -12,7 +12,7 @@
             episodes: [],
 
             loadEpisodesFromLocalStorage: function(){
-                return this.episodes = localStorage.getItem('episodes') ?
+                return localStorage.getItem('episodes') ?
                     JSON.parse(localStorage.getItem('episodes')) : {};
             }
         };

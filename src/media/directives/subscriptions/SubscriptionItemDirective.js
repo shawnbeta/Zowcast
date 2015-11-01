@@ -38,7 +38,7 @@
             },
 
             templateUrl: 'src/libs/media/templates/subscriptions/item.html'
-        }
+        };
 
 
     }
