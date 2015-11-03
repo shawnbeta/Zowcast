@@ -35,7 +35,7 @@ module.exports = function(config) {
       //'src/libs/**/*.module.js',
       'src/libs/**/*.js',
       'src/libs/**/*.html',
-        'index.html'
+      'index.html'
     ],
 
 

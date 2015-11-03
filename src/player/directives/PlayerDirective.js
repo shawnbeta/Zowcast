@@ -31,6 +31,9 @@
                 };
 
                 scope.togglePlayback = function( playerObject, episode ){
+                    var mediaType = episode.mediaType === 0 ? 'audio' : 'video';
+                    playerObject.element = document.getElementsByTagName(mediaType)[0];
+                    playerObject.elementWrapper =  jQuery('#' + mediaType + 'Player');
                     PlayerService.togglePlayback( playerObject, episode );
                 };
 

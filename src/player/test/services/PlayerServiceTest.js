@@ -35,6 +35,19 @@ describe('PlayerService', function() {
 
     });
 
+    it('will toggle correctly', function(){
+        var episode = { id: 2, mediaType: 0 };
+
+        _initPlayerObject.element = document.createElement("audio");
+
+        var rsp = PlayerService.togglePlayback( _initPlayerObject, episode );
+        console.log(rsp.element);
+        console.log(rsp.element.paused)
+        expect(rsp.element.paused).toBe(false);
+
+
+    });
+
     //
     it('will load player with correct values', function(){
 
@@ -76,10 +89,7 @@ describe('PlayerService', function() {
     });
 
     it('will start playback', function(){
-
-
         _initPlayerObject.element = document.createElement("audio");
-
         var updatedPlayerObject = PlayerService.playAction(_initPlayerObject);
         expect(updatedPlayerObject.element.paused).toBe(false);
 
@@ -87,20 +97,10 @@ describe('PlayerService', function() {
     });
 
     it('will pause playback', function(){
-
-
         _initPlayerObject.element = document.createElement("audio");
         _initPlayerObject.element.play();
-
-        //console.log(PlayerService.startCounter());
-
-
-
         var updatedPlayerObject = PlayerService.pauseAction(_initPlayerObject);
-
         expect(updatedPlayerObject.element.paused).toBe(true);
-
-
     });
 
 

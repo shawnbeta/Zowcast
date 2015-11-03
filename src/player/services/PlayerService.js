@@ -27,11 +27,12 @@
 
             togglePlayback: function( playerObject, episode ){
                 if(episode.id !== playerObject.loadedEpisode.id){
-                    playerObject = this.loadMedia( playerObject, episode );
+                    playerObject = this.loadMedia( playerObject, episode);
                     this.firstRun = true;
                 }
-                return playerObject.status != 'playing' || playerObject.status == 'playing' && this.firstRun ?
-                    this.playAction( playerObject, this.firstRun ) : this.pauseAction( playerObject );
+                if(playerObject.status != 'playing' || playerObject.status == 'playing' && this.firstRun)
+                    return this.playAction( playerObject, this.firstRun );
+                return this.pauseAction( playerObject );
             },
 
             togglePlaybackIcon: function( playerObject, episode ){
@@ -39,23 +40,36 @@
             },
 
             loadMedia: function( playerObject, episode ){
-                var mediaType = episode.mediaType === 0 ? 'audio' : 'video';
                 playerObject.loadedEpisode = episode;
-                playerObject.element = document.getElementsByTagName(mediaType)[0];
-
-                // Added for testing.
-                if(!document.getElementsByTagName(mediaType)[0])
-                    playerObject.element = document.createElement(mediaType);
-
-
-                // Skip this in testing.
-                if(document.getElementsByTagName(mediaType)[0])
-                    playerObject.elementWrapper =  jQuery('#' + mediaType + 'Player');
-
                 playerObject.loadedEpisode.location = $sce.trustAsResourceUrl(episode.src);
-
                 return playerObject;
             },
+
+            playAction: function( playerObject, firstRun ){
+                var self = this;
+                this.startCounter( playerObject );
+                playerObject.status = 'playing';
+                playerObject.episodePlaying = playerObject.loadedEpisode.id;
+                if(firstRun){
+                    this.firstRun = false;
+                    playerObject.element.oncanplay = function(){
+                        playerObject.element.play();
+                        playerObject.runtime = self.getDuration(playerObject.element.duration);
+                    };
+                }else{
+                    playerObject.element.play();
+                }
+                return playerObject;
+            },
+
+            pauseAction: function( playerObject ){
+                this.pauseCounter();
+                playerObject.element.pause();
+                playerObject.status = 'paused';
+                playerObject.episodePlaying = false;
+                return playerObject;
+            },
+
 
             startCounter: function( playerObject ){
                 var self = this;
@@ -96,29 +110,7 @@
                 return counter;
             },
 
-            playAction: function( playerObject, firstRun ){
-                var self = this;
-                this.startCounter( playerObject );
-                playerObject.status = 'playing';
-                playerObject.episodePlaying = playerObject.loadedEpisode.id;
-                if(firstRun){
-                    this.firstRun = false;
-                    playerObject.element.oncanplay = function(){
-                        playerObject.element.play();
-                        playerObject.runtime = self.getDuration(playerObject.element.duration);
-                    };
-                }else{
-                    playerObject.element.play();
-                }
-            },
 
-            pauseAction: function( playerObject ){
-                this.pauseCounter();
-                playerObject.element.pause();
-                playerObject.status = 'paused';
-                playerObject.episodePlaying = false;
-                return playerObject;
-            },
 
             rewind: function( playerObject ){
                 var currentTime = parseInt(playerObject.element.currentTime);
