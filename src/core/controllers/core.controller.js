@@ -3,22 +3,38 @@
 
     angular
         .module('app.core')
-        .controller('Core', Core);
+        .controller('CoreController', CoreController);
 
-    Core.$inject = [ '$scope', 'SubscriptionService', 'EpisodeService', 'PlayerService',
+    CoreController.$inject = [ '$scope', 'SubscriptionService', 'EpisodeService', 'PlayerService',
         'UtilityService', 'MessageService', 'OverlayService', '$location' ];
 
     /* @ngInject */
-    function Core( $scope, SubscriptionService, EpisodeService, PlayerService, UtilityService,
+    function CoreController( $scope, SubscriptionService, EpisodeService, PlayerService, UtilityService,
                             MessageService, OverlayService, $location ){
 
         /* jshint validthis: true */
         var vm = this;
+        $scope.sync = sync;
 
-        // Initialize Player to prevent errors.
-        vm.playerObject = PlayerService.getPlayerObject();
+        function sync(){
+            vm.loadingObject = true;
+            var rsp = SubscriptionService.sync();
+        }
 
-        vm.loadingObject = true;
+        initialize();
+
+        function initialize(){
+
+            vm.loadingObject = true;
+
+            // Initialize Player to prevent errors.
+            vm.playerObject = PlayerService.getPlayerObject();
+
+            $scope.$on('$routeChangeSuccess', function(){
+                $scope.currentPath = UtilityService.getCurrentPath();
+            });
+
+        }
 
         //vm.overlayObject = OverlayService.initializeOverlayObject();
 

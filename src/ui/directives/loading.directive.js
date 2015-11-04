@@ -13,6 +13,6 @@
 
             templateUrl: 'src/libs/ui/templates/loading.html'
 
-        }
+        };
     }
 })();

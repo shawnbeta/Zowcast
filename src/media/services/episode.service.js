@@ -11,7 +11,7 @@
 
             episodes: [],
 
-            loadEpisodesFromLocalStorage: function(){
+            loadFromLocalStorage: function(){
                 return localStorage.getItem('episodes') ?
                     JSON.parse(localStorage.getItem('episodes')) : {};
             }

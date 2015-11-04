@@ -1,3 +1,4 @@
+
 (function(){
 
     'use strict';
@@ -19,12 +20,38 @@
                 url: '/',
                 config: {
                     templateUrl: 'src/libs/media/templates/episodes/page.html',
-                    controller: 'Episode',
+                    controller: 'EpisodeController',
                     controllerAs: 'vm',
                     title: 'episodes',
                     settings: {
+                        nav: 1,
+                        content: '<i class="fa fa-lock"></i> Episodes'
+                    }
+                }
+            },
+            {
+                url: '/about',
+                config: {
+                    templateUrl: 'src/libs/core/templates/about.html',
+                    controller: 'CoreController',
+                    controllerAs: 'vm',
+                    title: 'about',
+                    settings: {
                         nav: 2,
-                        content: '<i class="fa fa-lock"></i> Avengers'
+                        content: '<i class="fa fa-lock"></i> About'
+                    }
+                }
+            },
+            {
+                url: '/',
+                config: {
+                    templateUrl: 'src/libs/core/templates/settings.html',
+                    controller: 'CoreController',
+                    controllerAs: 'vm',
+                    title: 'settings',
+                    settings: {
+                        nav: 3,
+                        content: '<i class="fa fa-lock"></i> settings'
                     }
                 }
             }

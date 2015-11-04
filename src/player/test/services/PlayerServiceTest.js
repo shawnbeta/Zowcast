@@ -41,8 +41,6 @@ describe('PlayerService', function() {
         _initPlayerObject.element = document.createElement("audio");
 
         var rsp = PlayerService.togglePlayback( _initPlayerObject, episode );
-        console.log(rsp.element);
-        console.log(rsp.element.paused)
         expect(rsp.element.paused).toBe(false);
 
 

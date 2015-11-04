@@ -249,55 +249,56 @@ module.exports = function (grunt) {
 
         jshint: {
             beforeconcat: [
-                "src/app.module.js",
-
-                "src/core/core.module.js",
-                "src/core/core.routes.js",
-                "src/core/Core.js",
-                "src/core/services/ConfigService.js",
-
-                "src/media/media.module.js",
-                "src/media/media.routes.js",
-                "src/media/Episode.js",
-                "src/media/Subscription.js",
-                "src/media/directives/episodes/EpisodeItemDirective.js",
-                "src/media/directives/subscriptions/SubscriptionItemDirective.js",
-                "src/media/directives/subscriptions/SubscriptionNavigationDirective.js",
-                "src/media/directives/subscriptions/SubscriptionNavigationItemDirective.js",
-                "src/media/filters/FilterBySubscription.js",
-                "src/media/filters/OrderByPubDate.js",
-                "src/media/filters/SubscriptionFilters.js",
-                "src/media/services/Episode.js",
-                "src/media/services/EpisodeService.js",
-                "src/media/services/Subscription.js",
-                "src/media/services/SubscriptionService.js",
-
-                "src/player/player.module.js",
-                "src/player/directives/PlayerDirective.js",
-                "src/player/services/PlayerService.js",
-
-                "src/ui/ui.module.js",
-                "src/ui/controllers/NavigationController.js",
-                "src/ui/directives/MessageDirective.js",
-                "src/ui/directives/OverlayDirective.js",
-                "src/ui/services/UIService.js",
-                "src/ui/services/MessageService.js",
-                "src/ui/services/OverlayService.js",
-
-                "src/utility/utility.module.js",
-                "src/utility/directives/LoadingDirective.js",
-                "src/utility/filters/UtilityFilters.js",
-                "src/utility/services/UtilityService.js",
-
-                "src/vendors/vendor.module.js",
-                "src/vendors/exception.js",
-                "src/vendors/exception-handler.js",
-                "src/vendors/logger.js",
-                "src/vendors/routerhelper.js",
-                "src/vendors/underscore.js",
-
-                "src/vendors/vendors.module.js",
-                "src/vendors/services/UnderscoreService.js"
+                "src/**/*.js"
+                //"src/app.module.js",
+                //
+                //"src/core/core.module.js",
+                //"src/core/core.routes.js",
+                //"src/core/Core.js",
+                //"src/core/services/ConfigService.js",
+                //
+                //"src/media/media.module.js",
+                //"src/media/media.routes.js",
+                //"src/media/Episode.js",
+                //"src/media/Subscription.js",
+                //"src/media/directives/episodes/EpisodeItemDirective.js",
+                //"src/media/directives/subscriptions/SubscriptionItemDirective.js",
+                //"src/media/directives/subscriptions/SubscriptionNavigationDirective.js",
+                //"src/media/directives/subscriptions/SubscriptionNavigationItemDirective.js",
+                //"src/media/filters/FilterBySubscription.js",
+                //"src/media/filters/OrderByPubDate.js",
+                //"src/media/filters/SubscriptionFilters.js",
+                //"src/media/services/Episode.js",
+                //"src/media/services/EpisodeService.js",
+                //"src/media/services/Subscription.js",
+                //"src/media/services/SubscriptionService.js",
+                //
+                //"src/player/player.module.js",
+                //"src/player/directives/PlayerDirective.js",
+                //"src/player/services/PlayerService.js",
+                //
+                //"src/ui/ui.module.js",
+                //"src/ui/controllers/NavigationController.js",
+                //"src/ui/directives/MessageDirective.js",
+                //"src/ui/directives/OverlayDirective.js",
+                //"src/ui/services/UIService.js",
+                //"src/ui/services/MessageService.js",
+                //"src/ui/services/OverlayService.js",
+                //
+                //"src/utility/utility.module.js",
+                //"src/utility/directives/LoadingDirective.js",
+                //"src/utility/filters/UtilityFilters.js",
+                //"src/utility/services/UtilityService.js",
+                //
+                //"src/vendors/vendor.module.js",
+                //"src/vendors/exception.js",
+                //"src/vendors/exception-handler.js",
+                //"src/vendors/logger.js",
+                //"src/vendors/routerhelper.js",
+                //"src/vendors/underscore.js",
+                //
+                //"src/vendors/vendors.module.js",
+                //"src/vendors/services/UnderscoreService.js"
 
 
 

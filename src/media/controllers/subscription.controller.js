@@ -3,11 +3,11 @@
 
     angular
         .module('app.media')
-        .controller('Subscription', Subscription);
+        .controller('SubscriptionController', SubscriptionController);
 
-    Subscription.$inject = ['$scope', 'SubscriptionService'];
+    SubscriptionController.$inject = ['$scope', 'SubscriptionService'];
 
-    function Subscription($scope, SubscriptionService){
+    function SubscriptionController($scope, SubscriptionService){
 
         var vm = this;
 

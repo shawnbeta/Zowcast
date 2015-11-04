@@ -19,7 +19,7 @@
                 this.loadingObject = false;
             }
 
-        }
+        };
 
 
     }

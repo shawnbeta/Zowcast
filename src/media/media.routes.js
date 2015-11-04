@@ -37,7 +37,7 @@
                 url: '/episodes',
                 config: {
                     templateUrl: 'src/libs/media/templates/episodes/page.html',
-                    controller: 'Episode',
+                    controller: 'EpisodeController',
                     controllerAs: 'vm',
                     title: 'episodes',
                     settings: {
@@ -50,7 +50,7 @@
                 url: '/subscriptions',
                 config: {
                     templateUrl : 'src/libs/media/templates/subscriptions/page.html',
-                    controller: 'Subscription',
+                    controller: 'SubscriptionController',
                     controllerAs: 'vm',
                     title: 'subscriptions',
                     settings: {
@@ -63,7 +63,7 @@
                 url: '/add',
                 config: {
                     templateUrl : 'src/libs/media/templates/subscriptions/add.html',
-                    controller: 'Subscription',
+                    controller: 'SubscriptionController',
                     controllerAs: 'vm',
                     title: 'add subscription',
                     settings: {

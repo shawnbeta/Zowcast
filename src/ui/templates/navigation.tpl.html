@@ -1,0 +1,47 @@
+<div class="swNavBar">
+
+    <div class="swContainer clearfix">
+
+        <div class="logoWrapper actionWrapper">
+            <button ng-click="go('about')" ng-class="{'selected' : currentPath == '/about'}"
+                    class="actionButton swLogo" href="/" title="About the App">
+
+
+
+                <div>zowcast</div>
+            </button>
+
+
+            <button ng-click="alert('episodes')" title="episodes" class="actionButton linkItems"
+                    ng-class="{ 'selected' : currentPath == 'episodes' }">
+                episode
+                <!--<i class="fa fa-{{link.icon}}"></i>-->
+            </button>
+
+
+            <button ng-click="go('subscriptions')" title="subscriptions" class="actionButton linkItems"
+                    ng-class="{ 'selected' : currentPath == 'subscriptions' }">
+                subscriptions
+                <!--<i class="fa fa-{{link.icon}}"></i>-->
+            </button>
+
+            <button ng-click="go('add')" title="add subscription" class="actionButton linkItems"
+                    ng-class="{ 'selected' : currentPath == 'add' }">
+                <i class="fa fa-plus"></i>
+            </button>
+
+            <button ng-click="go('settings')" title="settings" class="actionButton linkItems"
+                    ng-class="{ 'selected' : currentPath == 'settings' }">
+                <i class="fa fa-cog"></i>
+            </button>
+
+
+
+
+
+    </div>
+
+</div>
+
+</div>
+{{vm.navigation}}

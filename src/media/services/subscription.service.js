@@ -12,7 +12,7 @@
 
             subscriptions: [],
 
-            loadSubscriptionsFromLocalStorage: function(){
+            loadFromLocalStorage: function(){
                 return  localStorage.getItem('subscriptions') ?
                     JSON.parse(localStorage.getItem('subscriptions')) : {};
             },
@@ -21,7 +21,7 @@
                 // Get the users(BROWSERS) current subscriptions from localStorage
                 var syncedSubscriptions = localStorage.getItem('syncedSubscriptions') ?
                     localStorage.getItem('syncedSubscriptions') : null;
-                return $http({
+                var rsp = $http({
                     method: 'POST',
                     url: ConfigService.serverPath + 'sync',
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -33,6 +33,21 @@
                     },
                     data: {syncedSubscriptions: syncedSubscriptions}
                 });
+
+                var rspA = rsp.then(function(response){
+                    SubscriptionService.setMediaAdditions($scope, response);
+                });
+                rspA.then(function(){
+                    SubscriptionService.setSyncedSubscriptions($scope);
+                    vm.loadingObject = false;
+                    vm.messageObject = {
+                        text: 'Subscriptions Synced.',
+                        style: 'swSuccess'
+                    };
+                    MessageService.closeMessageTimer();
+                });
+
+                return rspA;
 
 
             },

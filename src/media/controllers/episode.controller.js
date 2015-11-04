@@ -3,11 +3,11 @@
 
     angular
         .module('app.media')
-        .controller('Episode', Episode);
+        .controller('EpisodeController', EpisodeController);
 
-    Episode.$inject = [ 'EpisodeService', 'SubscriptionService', 'UIService'];
+    EpisodeController.$inject = [ 'EpisodeService', 'SubscriptionService', 'UIService'];
 
-    function Episode( EpisodeService, SubscriptionService, UIService ){
+    function EpisodeController( EpisodeService, SubscriptionService, UIService ){
 
         var vm = this;
 
@@ -31,10 +31,10 @@
 
         function loadMedia(){
             if( vm.episodes.length < 1 ){
-                vm.episodes = EpisodeService.getEpisodes();
+                vm.episodes = EpisodeService.loadFromLocalStorage();
             }
             if( vm.subscriptions.length < 1 ){
-                vm.subscriptions = SubscriptionService.getEpisodes();
+                vm.subscriptions = SubscriptionService.loadFromLocalStorage();
             }
         }
 
