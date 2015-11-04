@@ -12,7 +12,13 @@
         var ticker;
         return {
 
-            firstRun: true,
+            playerObject: null,
+
+            getPlayerObject: function(){
+                if( this.playerObject === null )
+                    return ( this.playerObject = this.initializePlayerObject() );
+                return this.playerObject;
+            },
 
             initializePlayerObject: function(){
 
@@ -26,12 +32,13 @@
             },
 
             togglePlayback: function( playerObject, episode ){
+                var firstRun;
                 if(episode.id !== playerObject.loadedEpisode.id){
                     playerObject = this.loadMedia( playerObject, episode);
-                    this.firstRun = true;
+                    firstRun = true;
                 }
                 if(playerObject.status != 'playing' || playerObject.status == 'playing' && this.firstRun)
-                    return this.playAction( playerObject, this.firstRun );
+                    return this.playAction( playerObject, firstRun );
                 return this.pauseAction( playerObject );
             },
 

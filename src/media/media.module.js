@@ -1,1 +1,4 @@
-app.media = angular.module('app.media', ['ngRoute']);
+(function() {
+    'use strict';
+    angular.module('app.media', ['ngRoute']);
+})();

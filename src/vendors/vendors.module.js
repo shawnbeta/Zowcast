@@ -1,1 +1,4 @@
-app.vendors = angular.module('app.vendors', []);
+(function() {
+    'use strict';
+    angular.module('app.vendors', [  ]);
+})();

@@ -1,1 +1,4 @@
-app.utility = angular.module('app.utility', []);
+(function() {
+    'use strict';
+    angular.module('app.utility', []);
+})();

@@ -152,6 +152,12 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         flatten: true,
+                        src: 'bower_components/toastr/toastr.js',
+                        dest: 'build/sandbox/src/contrib/'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
                         src: [
                             'bower_components/angularUtils/src/directives/pagination/dirPagination.js',
                             'bower_components/angularUtils/src/directives/pagination/dirPagination.tpl.html'
@@ -196,13 +202,13 @@ module.exports = function (grunt) {
 
                     "src/core/core.module.js",
                     "src/core/core.routes.js",
-                    "src/core/controllers/CoreController.js",
+                    "src/core/Core.js",
                     "src/core/services/ConfigService.js",
 
                     "src/media/media.module.js",
                     "src/media/media.routes.js",
-                    "src/media/controllers/EpisodeController.js",
-                    "src/media/controllers/SubscriptionController.js",
+                    "src/media/Episode.js",
+                    "src/media/Subscription.js",
                     "src/media/directives/episodes/EpisodeItemDirective.js",
                     "src/media/directives/subscriptions/SubscriptionItemDirective.js",
                     "src/media/directives/subscriptions/SubscriptionNavigationDirective.js",
@@ -247,13 +253,13 @@ module.exports = function (grunt) {
 
                 "src/core/core.module.js",
                 "src/core/core.routes.js",
-                "src/core/controllers/CoreController.js",
+                "src/core/Core.js",
                 "src/core/services/ConfigService.js",
 
                 "src/media/media.module.js",
                 "src/media/media.routes.js",
-                "src/media/controllers/EpisodeController.js",
-                "src/media/controllers/SubscriptionController.js",
+                "src/media/Episode.js",
+                "src/media/Subscription.js",
                 "src/media/directives/episodes/EpisodeItemDirective.js",
                 "src/media/directives/subscriptions/SubscriptionItemDirective.js",
                 "src/media/directives/subscriptions/SubscriptionNavigationDirective.js",
@@ -282,6 +288,13 @@ module.exports = function (grunt) {
                 "src/utility/directives/LoadingDirective.js",
                 "src/utility/filters/UtilityFilters.js",
                 "src/utility/services/UtilityService.js",
+
+                "src/vendors/vendor.module.js",
+                "src/vendors/exception.js",
+                "src/vendors/exception-handler.js",
+                "src/vendors/logger.js",
+                "src/vendors/routerhelper.js",
+                "src/vendors/underscore.js",
 
                 "src/vendors/vendors.module.js",
                 "src/vendors/services/UnderscoreService.js"
@@ -355,7 +368,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', ['clean:main', 'less', 'copy:main']);
     grunt.registerTask('test', ['clean:dev', 'copy:dev', 'karma']);
     grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'mustache_render:core', 'less:dev',
-        'copy:dev', 'jshint:beforeconcat', 'protractor', 'karma']);
+        'copy:dev', 'jshint:beforeconcat', /*'protractor',*/ 'karma']);
     grunt.registerTask('staging', ['clean:staging', 'mustache_render:staging', 'mustache_render:core', 'less:staging',
         'concat:staging', 'copy:staging', 'uglify:staging', 'cssmin:staging', 'clean:temp']);
 

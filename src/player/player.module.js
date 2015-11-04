@@ -1,1 +1,4 @@
-app.player = angular.module('app.player', []);
+(function() {
+    'use strict';
+    angular.module('app.player', []);
+})();

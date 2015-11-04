@@ -1,3 +1,8 @@
-app.core = angular.module('app.core', ['ngRoute']);
+(function() {
+    'use strict';
+    angular.module('app.core', [
+        'ngRoute',
+        'app.vendors'
 
-
+    ]);
+})();

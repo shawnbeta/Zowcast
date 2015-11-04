@@ -1,7 +1,7 @@
 {{=<% %>=}}
 <!--Generated Code: mustache_templates/app/main.mustache -->
 <!doctype html>
-<html lang="en" ng-app="app" ng-controller="CoreController as core">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -16,29 +16,9 @@
     <%/ assets %>
 </head>
 
-<body >
+<body>
 
-<player></player>
-<overlay></overlay>
-
-<message></message>
-
-<div id="stage">
-
-    <span ng-controller="NavigationController">
-            <i ng-click="toggleMenu()" class="fa fa-bars menuToggler"></i>
-    </span>
-
-
-
-    <% > ui/navBar %>
-
-    <loading></loading>
-
-
-    <div ng-show="!loadingObject" ng-view class="swContainer"></div>
-
-</div>
+    <div data-ng-include="'src/libs/core/templates/main.html'"></div>
 
 <%# assets %>
     <%# js %>

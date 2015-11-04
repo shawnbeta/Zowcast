@@ -1,7 +1,7 @@
 <div class="playerWrapper" ng-show="playerObject.status == 'playing' || playerObject.status ==  'paused' ">
     <div class="group clearfix">
         <div class="audioPlayerWrapper" ng-show="playerObject.loadedEpisode.mediaType == 0">
-            <audio ng-src="{{playerObject.loadedEpisode.location}}"></audio>
+            <audio id="audioPlayer" ng-src="{{playerObject.loadedEpisode.location}}"></audio>
         </div>
 
         <div class="episodeTitle"  ng-class="{'videoTitle' : playerObject.loadedEpisode.mediaType == 1}"
