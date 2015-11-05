@@ -5,17 +5,16 @@
         .module('app.media')
         .controller('EpisodeController', EpisodeController);
 
-    EpisodeController.$inject = [ 'EpisodeService', 'SubscriptionService', 'UIService'];
+    EpisodeController.$inject = [ '$scope', 'EpisodeService', 'SubscriptionService', 'UIService'];
 
-    function EpisodeController( EpisodeService, SubscriptionService, UIService ){
+    function EpisodeController( $scope, EpisodeService, SubscriptionService, UIService ){
 
         var vm = this;
 
         vm.title = "Episode";
         vm.episodeStyle = 'grid';
-        vm.episodes = [];
         vm.subscriptions = [];
-
+        vm.episodes = EpisodeService.episodeCollection;
         vm.subscriptionFilterStatus = false;
         vm.activeSubscription = 0;
 
@@ -27,16 +26,16 @@
             UIService.toggleBrowseBySubscription();
         };
 
-        loadMedia();
+        //initialize(EpisodeService);
 
-        function loadMedia(){
-            if( vm.episodes.length < 1 ){
-                vm.episodes = EpisodeService.loadFromLocalStorage();
-            }
-            if( vm.subscriptions.length < 1 ){
-                vm.subscriptions = SubscriptionService.loadFromLocalStorage();
-            }
-        }
+        //function initialize(EpisodeService){
+        //    vm.episodes = EpisodeService.episodeCollection;
+        //    EpisodeService.loadFromLocalStorage(EpisodeService);
+        //    console.log(vm.episodes);
+        //
+        //    //vm.episodes = EpisodeService.loadSampleEpisodes.episodeCollection;
+        //    //vm.subscriptions = SubscriptionService.getSampleSubscriptions();
+        //}
 
     }
 })();

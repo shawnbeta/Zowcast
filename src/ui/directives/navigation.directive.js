@@ -10,7 +10,7 @@
        return  {
             restrict : 'E',
             templateUrl: 'src/libs/ui/templates/navigation.tpl.html',
-            controller: 'NavigationController',
+            controller: 'ActionController',
             controllerAs: 'vm',
             bindToController: true
         };

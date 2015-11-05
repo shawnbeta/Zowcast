@@ -15,18 +15,6 @@ module.exports = function (grunt) {
         },
 
         mustache_render: {
-            core: {
-                options: {
-                    directory: 'mustache_templates'
-                },
-                files: [
-                    {
-                        data: 'data/dev.json',
-                        template: 'mustache_templates/core/settings.mustache',
-                        dest: 'src/core/templates/settings.html'
-                    }
-                ]
-            },
             dev: {
                 options: {
                     directory: 'mustache_templates'
@@ -36,11 +24,6 @@ module.exports = function (grunt) {
                         data: 'data/dev.json',
                         template: 'mustache_templates/main.mustache',
                         dest: 'build/sandbox/index.html'
-                    },
-                    {
-                        data: 'data/dev.json',
-                        template: 'mustache_templates/core/settings.mustache',
-                        dest: 'src/core/templates/settings.html'
                     }
                 ]
             },
@@ -216,9 +199,7 @@ module.exports = function (grunt) {
                     "src/media/filters/FilterBySubscription.js",
                     "src/media/filters/OrderByPubDate.js",
                     "src/media/filters/SubscriptionFilters.js",
-                    "src/media/services/Episode.js",
                     "src/media/services/EpisodeService.js",
-                    "src/media/services/Subscription.js",
                     "src/media/services/SubscriptionService.js",
 
                     "src/player/player.module.js",
@@ -368,7 +349,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', ['clean:main', 'less', 'copy:main']);
     grunt.registerTask('test', ['clean:dev', 'copy:dev', 'karma']);
-    grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'mustache_render:core', 'less:dev',
+    grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'less:dev',
         'copy:dev', 'jshint:beforeconcat', /*'protractor',*/ 'karma']);
     grunt.registerTask('staging', ['clean:staging', 'mustache_render:staging', 'mustache_render:core', 'less:staging',
         'concat:staging', 'copy:staging', 'uglify:staging', 'cssmin:staging', 'clean:temp']);

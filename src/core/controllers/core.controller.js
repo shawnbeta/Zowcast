@@ -14,12 +14,6 @@
 
         /* jshint validthis: true */
         var vm = this;
-        $scope.sync = sync;
-
-        function sync(){
-            vm.loadingObject = true;
-            var rsp = SubscriptionService.sync();
-        }
 
         initialize();
 
