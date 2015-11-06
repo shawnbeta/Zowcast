@@ -1,0 +1,56 @@
+<div class="playerWrapper" ng-show="mediaPlayer.status == 'playing' || mediaPlayer.status ==  'paused' ">
+    <div class="group clearfix">
+        <div class="audioPlayerWrapper" ng-show="mediaPlayer.loadedEpisode.mediaType == 0">
+            <audio id="audioPlayer" ng-src="{{mediaPlayer.loadedEpisode.location}}"></audio>
+        </div>
+
+        <div class="episodeTitle"  ng-class="{'videoTitle' : mediaPlayer.loadedEpisode.mediaType == 1}"
+             ng-class=" videoTitle :  >
+            <button ng-click="showEpisodeDetails( mediaPlayer.loadedEpisode )">
+                {{mediaPlayer.loadedEpisode.title}}</button>
+        </div>
+
+
+        <div class="videoPlayerWrapper " ng-show="mediaPlayer.loadedEpisode.mediaType == 1">
+
+            <video class="swMedia" src="{{mediaPlayer.loadedEpisode.location}}"></video>
+            <button class="fullScreenToggler" ng-click="goFullScreen( mediaPlayer )">
+                <i class="fa fa-tv"></i>
+            </button>
+
+
+        </div>
+
+    <button class="playerEpisodeInfo" ng-click="showEpisodeDetails(mediaPlayer.loadedEpisode)">
+        <i class="fa fa-info"></i></button>
+
+    </div>
+
+
+    <!--<div id="zowSlider" ng-click="setPlaybackPosition(event)">123456</div>-->
+    <div class="progressTrackerWrapper clearfix">
+        <div class="progressTracker"></div>
+        <div class="counter">
+            {{mediaPlayer.counter.hours}}:{{mediaPlayer.counter.minutes}}:{{mediaPlayer.counter.seconds}}
+        </div>
+        <div class="duration">
+            {{mediaPlayer.runtime.hours}}:{{mediaPlayer.runtime.minutes}}:{{mediaPlayer.runtime.seconds}}
+        </div>
+    </div>
+
+    <div class="controls clearfix">
+        <button ng-click="jumpBack( mediaPlayer )"><i class="fa fa-angle-double-left"></i></button>
+        <button ng-click="rewind( mediaPlayer )"><i class="fa fa-angle-left"></i></button>
+        <button ng-click="togglePlayback( mediaPlayer, mediaPlayer.loadedEpisode )">
+            <i class="fa fa-pause" ng-if="mediaPlayer.episodePlaying"></i>
+            <i class="fa fa-play" ng-if="!mediaPlayer.episodePlaying"></i>
+        </button>
+        <button ng-click="forward( mediaPlayer )"><i class="fa fa-angle-right"></i></button>
+        <button ng-click="jumpAhead( mediaPlayer )"><i class="fa fa-angle-double-right"></i></button>
+    </div>
+
+
+
+</div>
+
+

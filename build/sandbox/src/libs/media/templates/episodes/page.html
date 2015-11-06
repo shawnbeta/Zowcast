@@ -1,0 +1,31 @@
+<header class="viewHeader clearfix">
+    <h1>Episodes</h1>
+    <div class="headerMenu">
+        <button class="subscriptionMenuToggle swButton" ng-click="toggleBrowseBySubscription()">
+            Browse By Subscription
+        </button>
+        <button class="viewSwitch" ng-click="setViewStyle('list')">
+            <i class="fa fa-th-list" ng-class="{'selected' : vm.viewStyle == 'list'}"></i>
+        </button>
+        <button class="viewSwitch" ng-click="setViewStyle('grid')">
+            <i class="fa fa-th" ng-class="{'selected' : vm.viewStyle == 'grid'}"></i>
+        </button>
+    </div>
+    <div class="subscriptionBrowserWrapper"></div>
+</header>
+
+<episode-details></episode-details>
+
+<subscription-navigation></subscription-navigation>
+
+
+<div class="{{vm.viewStyle}}" ng-if="vm.episodes">
+    <episode-item ng-repeat="e in vm.episodes | orderByPubDate | filterBySubscription : activeSubscription :
+    subscriptionFilterStatus "></episode-item>
+</div>
+
+<span >
+        <p>You have no episodes. First you'll need to add a subscription.<br/>
+            Select sync to add subscriptions from the server or select add to enter a URL.</p>
+        <admin-bar></admin-bar>
+</span>

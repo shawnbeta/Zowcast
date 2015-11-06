@@ -1,0 +1,19 @@
+    <div class="swItem">
+        <header class="itemHeader">
+            <div class="swTitle">{{e.title | htmlToPlaintext}}</div>
+            <p class="swDescription">{{e.description | htmlToPlaintext}}</p>
+        </header>
+        <div class="swImg"><img src="{{e.img}}"></div>
+        <div class="actionbar">
+            <button ng-click="togglePlayback( e )">
+                <i class="fa fa-pause" ng-if="vm.mediaPlayer.loadedEpisode.id == e.id &&
+                vm.mediaPlayer.status != 'paused' "></i>
+                <i class="fa fa-play" ng-if="vm.mediaPlayer.loadedEpisode.id != e.id ||
+                    vm.mediaPlayer.status == 'paused' "></i>
+            </button>
+
+            <button ng-click="updateWatched()"><i class="fa fa-check"></i></button>
+            <a ng-href="{{e.src}}"><i class="fa fa-download"></i></a>
+            <button ng-click="showEpisodeDetails( e )"><i class="fa fa-info"></i></button>
+        </div>
+        </div>

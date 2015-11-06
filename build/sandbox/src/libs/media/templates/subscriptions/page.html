@@ -1,0 +1,15 @@
+<header class="viewHeader clearfix">
+    <h1>Subscriptions</h1>
+</header>
+
+<subscription-details></subscription-details>
+
+<ul class="grid" ng-if="vm.subscriptions">
+    <subscription-item ng-repeat="s in vm.subscriptions | orderByTitle">1</subscription-item>
+</ul>
+
+<span ng-if="vm.subscriptions.length < 1">
+        <p>You have no subscriptions.<br/>
+            Select sync to add subscriptions from the server or select add to enter a URL.</p>
+        <admin-bar></admin-bar>
+</span>
