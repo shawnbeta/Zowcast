@@ -105,6 +105,12 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         flatten: true,
+                        src: 'bower_components/angular-ui-router/release/angular-ui-router.js',
+                        dest: 'build/sandbox/src/contrib/'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
                         src: 'bower_components/angular-sanitize/angular-sanitize.js',
                         dest: 'build/sandbox/src/contrib/'
                     },

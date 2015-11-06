@@ -5,11 +5,11 @@
         .module('app.core')
         .controller('CoreController', CoreController);
 
-    CoreController.$inject = [ '$scope', 'SubscriptionService', 'EpisodeService', 'PlayerService',
+    CoreController.$inject = [ '$rootScope', '$scope', 'SubscriptionService', 'EpisodeService', 'PlayerService',
         'UtilityService', 'MessageService', 'OverlayService', '$location' ];
 
     /* @ngInject */
-    function CoreController( $scope, SubscriptionService, EpisodeService, PlayerService, UtilityService,
+    function CoreController( $rootScope, $scope, SubscriptionService, EpisodeService, PlayerService, UtilityService,
                             MessageService, OverlayService, $location ){
 
         /* jshint validthis: true */
@@ -21,8 +21,11 @@
 
             vm.loadingObject = true;
 
+            $rootScope.episodes = [];
+            $rootScope.subscriptions = [];
+
             // Initialize Player to prevent errors.
-            vm.playerObject = PlayerService.getPlayerObject();
+            $rootScope.playerObject = PlayerService.getPlayerObject();
 
             $scope.$on('$routeChangeSuccess', function(){
                 $scope.currentPath = UtilityService.getCurrentPath();

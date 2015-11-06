@@ -26,6 +26,7 @@
       "contrib" : [
         "angular",
         "angular-route",
+        "angular-ui-router",
         "angular-sanitize",
         "angular-touch",
         "truncate",
@@ -56,6 +57,7 @@
         "media/filters/episodes-from-subscription.filter",
         "media/filters/order-by-pub-date.filter",
         "media/filters/order-by-title.filter",
+        "media/services/media.service",
         "media/services/episode.service",
         "media/services/subscription.service",
 

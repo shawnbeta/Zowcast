@@ -19,14 +19,17 @@
 <subscription-navigation></subscription-navigation>
 
 
+{{vm.episodes2}}
 
-<div class="{{vm.episodes.style}}">
-    <!--<div class="{{vm.episodes.style}}" ng-if="vm.episodes">-->
-    <episode-item ng-repeat="e in vm.episodes | orderByPubDate | filterBySubscription : activeSubscription :
+<!-- <div class="{{episodes.style}}">
+ -->    <div class="{{episodes.style}}" ng-if="episodes">
+    <episode-item ng-repeat="e in episodes | orderByPubDate | filterBySubscription : activeSubscription :
     subscriptionFilterStatus "></episode-item>
+ <!--    <episode-item ng-repeat="e in vm.episodes2 | orderByPubDate | filterBySubscription : activeSubscription :
+    subscriptionFilterStatus "></episode-item> -->
 </div>
 
-<span ng-if="vm.episodes.length < 1">
+<span ng-if="episodes.length < 1">
         <p>You have no episodes. First you'll need to add a subscription.<br/>
             Select sync to add subscriptions from the server or select add to enter a URL.</p>
         <admin-bar></admin-bar>

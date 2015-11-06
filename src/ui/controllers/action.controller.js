@@ -5,21 +5,21 @@
         .module('app.ui')
         .controller('ActionController', ActionController);
 
-    ActionController.$inject = [ '$scope', '$location', 'EpisodeService', 'DataService'];
+    ActionController.$inject = [ '$rootScope', '$scope', '$location', 'EpisodeService', 'SubscriptionService',
+     'DataService'];
 
-    function ActionController( $scope, $location, EpisodeService, DataService ){
+    function ActionController( $rootScope, $scope, $location, EpisodeService, SubscriptionService, DataService ){
 
         var vm = this;
         vm.navigation = DataService.nav();
-
-
 
         $scope.go = go;
 
         $scope.sync = sync;
 
         $scope.loadSampleEpisodes = function(){
-            EpisodeService.loadSampleEpisodes(EpisodeService);
+            $rootScope.episodes = EpisodeService.loadSampleEpisodes();
+            $rootScope.sbuscriptions = SubscriptionService.loadSampleEpisodes();
         };
 
         $scope.clearLocalStorage = clearLocalStorage;

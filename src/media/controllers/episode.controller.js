@@ -5,16 +5,17 @@
         .module('app.media')
         .controller('EpisodeController', EpisodeController);
 
-    EpisodeController.$inject = [ '$scope', 'EpisodeService', 'SubscriptionService', 'UIService'];
+    EpisodeController.$inject = [ '$rootScope', '$scope', 'MediaService', 'EpisodeService', 'SubscriptionService', 'UIService'];
 
-    function EpisodeController( $scope, EpisodeService, SubscriptionService, UIService ){
+    function EpisodeController( $rootScope, $scope, MediaService, EpisodeService, SubscriptionService, UIService ){
 
         var vm = this;
 
         vm.title = "Episode";
         vm.episodeStyle = 'grid';
-        vm.subscriptions = [];
-        vm.episodes = EpisodeService.episodeCollection;
+        vm.episodes2 = MediaService.episodes;
+        //vm.subscriptons2 = MediaDataService.subscriptions;
+
         vm.subscriptionFilterStatus = false;
         vm.activeSubscription = 0;
 
@@ -26,16 +27,24 @@
             UIService.toggleBrowseBySubscription();
         };
 
-        //initialize(EpisodeService);
+        initialize();
 
-        //function initialize(EpisodeService){
-        //    vm.episodes = EpisodeService.episodeCollection;
-        //    EpisodeService.loadFromLocalStorage(EpisodeService);
-        //    console.log(vm.episodes);
-        //
-        //    //vm.episodes = EpisodeService.loadSampleEpisodes.episodeCollection;
-        //    //vm.subscriptions = SubscriptionService.getSampleSubscriptions();
-        //}
+        function initialize(){
+            console.log('working');
+            if( $rootScope.episodes.length === 0 ){
+                $rootScope.episodes = EpisodeService.loadFromLocalStorage();
+                EpisodeService.loadFromLocalStorage();
+            }
+            if( $rootScope.subscriptions.length === 0){
+                $rootScope.subscriptions = SubscriptionService.loadFromLocalStorage;
+                console.log($rootScope.episodes);
+                //vm.subscriptons2 = SubscriptionService.loadFromLocalStorage();
+
+            }
+
+            //vm.episodes = EpisodeService.loadSampleEpisodes.episodeCollection;
+            //vm.subscriptions = SubscriptionService.getSampleSubscriptions();
+        }
 
     }
 })();

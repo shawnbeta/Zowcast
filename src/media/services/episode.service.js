@@ -5,31 +5,36 @@
         .module('app.media')
         .factory('EpisodeService', EpisodeService);
 
-    function EpisodeService() {
+    EpisodeService.$inject = [ 'MediaService' ];
 
-        var self = this;
+    function EpisodeService( MediaService ) {
 
-        var service = {
-            buildEpisode: buildEpisode,
-            getSampleEpisodes: getSampleEpisodes,
+        //var episodeCollection = [];
+
+
+        var episodeService = {
+            loadFromLocalStorage: loadFromLocalStorage,
+            loadSampleEpisodes: loadSampleEpisodes,
+           buildEpisode: buildEpisode,
+           getSampleEpisodes: getSampleEpisodes,
         };
 
-        service.episodeCollection = [];
-        service.loadFromLocalStorage = function(service){
-            loadFromLocalStorage(service);
-        };
-        service.loadSampleEpisodes = function(service){
-            service.episodeCollection = getSampleEpisodes();
-            localStorage.setItem('episodes', JSON.stringify( service.episodeCollection ));
-            return service.episodeCollection;
-        };
 
-        return service;
+        return episodeService;
 
-        function loadFromLocalStorage(service) {
-            service.episodeCollection = localStorage.getItem('episodes') ?
+        function loadFromLocalStorage() {
+            var episodeCollection = localStorage.getItem('episodes') ?
                 JSON.parse(localStorage.getItem('episodes')) : [];
-            return service.episodeCollection;
+                MediaService.setEpisodes( episodeCollection );
+            return episodeCollection;  
+        }
+
+        function loadSampleEpisodes(){
+            var episodeCollection = getSampleEpisodes();
+            localStorage.setItem('episodes', JSON.stringify( episodeCollection ));
+            MediaDataService.episodes = episodeCollection;
+
+            return episodeCollection;
         }
 
         //function loadSampleEpisodes(service) {

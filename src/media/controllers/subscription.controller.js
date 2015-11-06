@@ -13,9 +13,7 @@
 
         vm.title = "Subscription";
 
-        console.log($scope.subscriptions);
-
-        vm.add = function( ){
+        $scope.add = function( ){
             SubscriptionService.add( $scope );
         };
 

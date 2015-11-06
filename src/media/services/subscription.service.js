@@ -13,9 +13,9 @@
         var service = {
             // An array to hold all of our subscription objects
             subscriptionCollection: [],
-            loadFromLocalStorage: loadFromLocalStorage(this),
+            loadFromLocalStorage: loadFromLocalStorage,
+            loadSampleSubscriptions: loadSampleSubscriptions,
             buildSubscription: buildSubscription,
-            getSampleSubscriptions: getSampleSubscriptions,
             getSubscriptions: getSubscriptions(this)
 
         };
@@ -26,10 +26,10 @@
             return service.subscriptionCollection;
         }
 
-        function loadFromLocalStorage(service){
-            service.subscriptionCollection = localStorage.getItem('subscriptions') ?
+        function loadFromLocalStorage(){
+            var subscriptionCollection = localStorage.getItem('subscriptions') ?
                 JSON.parse(localStorage.getItem('subscriptions')) : [];
-            return service;
+            return subscriptionCollection;
         }
 
         //function addNewMedia(){
@@ -87,7 +87,7 @@
         }
 
 
-        function getSampleSubscriptions() {
+        function loadSampleSubscriptions() {
             return [{
                 "id": 3,
                 "title": "What The Tech",
