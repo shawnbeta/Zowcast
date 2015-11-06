@@ -17,7 +17,8 @@
 
         $scope.sync = sync;
 
-        $scope.loadSampleEpisodes = function(){
+        $scope.loadSamples = function(){
+            //clearLocalStorage();
             EpisodeService.loadSampleEpisodes();
             SubscriptionService.loadSampleSubscriptions();
         };

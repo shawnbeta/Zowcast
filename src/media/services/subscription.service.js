@@ -39,17 +39,6 @@
             MediaService.setSubscriptions( subscriptionCollection );
         }
 
-        //function addNewMedia(){
-        //    $rootScope.subscriptions =  response.data.subscriptions;
-        //    $rootScope.episodes =  response.data.episodes;
-        //
-        //    // Subscriptions to local storage overwriting existing values
-        //    localStorage.setItem('subscriptions', JSON.stringify(response.data.subscriptions));
-        //
-        //    // Subscriptions to local storage overwriting existing values
-        //    localStorage.setItem('episodes', JSON.stringify(response.data.subscriptions));
-        //}
-
         function buildSubscription( subscription ){
             subscription.id =  parseInt(subscription.id);
             subscription.auto_download = parseInt(subscription.auto_download);

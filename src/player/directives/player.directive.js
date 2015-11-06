@@ -7,15 +7,19 @@
 
     player.$inject = ['PlayerService', 'OverlayService' ];
 
-    function player( PlayerService, OverlayService ){
+    function player(){
 
-        return {
+        return  {
 
-            restrict : 'E',
-
-            templateUrl: 'src/libs/player/templates/player.html',
+            restrict: 'E',
 
             scope: true,
+
+            controller: 'PlayerController',
+            controllerAs: 'vm',
+            bindToController: true,
+
+            templateUrl: 'src/libs/player/templates/player.html',
 
             link: function(scope){
 
@@ -31,10 +35,10 @@
                 };
 
                 scope.togglePlayback = function( playerObject, episode ){
-                    var mediaType = episode.mediaType === 0 ? 'audio' : 'video';
-                    playerObject.element = document.getElementsByTagName(mediaType)[0];
-                    playerObject.elementWrapper =  jQuery('#' + mediaType + 'Player');
-                    PlayerService.togglePlayback( playerObject, episode );
+                    //var mediaType = episode.mediaType === 0 ? 'audio' : 'video';
+                    //playerObject.element = document.getElementsByTagName(mediaType)[0];
+                    //playerObject.elementWrapper =  jQuery('#' + mediaType + 'Player');
+                    PlayerService.togglePlayback( episode );
                 };
 
                 scope.togglePlaybackIcon = function( playerObject, episode ){
@@ -75,7 +79,5 @@
             }
         };
 
-
     }
 })();
-

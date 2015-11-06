@@ -5,25 +5,26 @@
         .module('app.media')
         .controller('EpisodeController', EpisodeController);
 
-    EpisodeController.$inject = [ '$rootScope', '$scope', 'MediaService', 'EpisodeService', 'SubscriptionService', 'UIService'];
+    EpisodeController.$inject = [ '$scope', 'MediaService', 'EpisodeService', 'SubscriptionService', 'UIService' ];
 
-    function EpisodeController( $rootScope, $scope, MediaService, EpisodeService, SubscriptionService, UIService ){
+    function EpisodeController( $scope, MediaService, EpisodeService, SubscriptionService, UIService ){
 
         var vm = this;
 
         vm.title = "Episode";
-        vm.episodeStyle = 'grid';
+        vm.viewStyle = 'grid';
         vm.episodes = MediaService.episodes;
         vm.subscriptions = MediaService.subscriptions;
+        vm.mediaPlayer = MediaService.mediaPlayer;
 
         vm.subscriptionFilterStatus = false;
         vm.activeSubscription = 0;
 
-        vm.setEpisodeStyle = function(newStyle){
-            vm.episodeStyle = newStyle;
+        $scope.setViewStyle = function(newStyle){
+            vm.viewStyle = newStyle;
         };
 
-        vm.toggleBrowseBySubscription = function(){
+        $scope.toggleBrowseBySubscription = function(){
             UIService.toggleBrowseBySubscription();
         };
 

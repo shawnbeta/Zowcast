@@ -62,6 +62,7 @@
         "media/services/subscription.service",
 
         "player/player.module",
+        "player/controllers/player.controller",
         "player/directives/player.directive",
         "player/services/player.service",
 

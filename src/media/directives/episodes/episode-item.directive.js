@@ -17,12 +17,12 @@
 
         link: function(scope){
 
-            scope.togglePlayback = function( playerObject, episode ){
-                PlayerService.togglePlayback( playerObject, episode );
+            scope.togglePlayback = function( episode ){
+                PlayerService.togglePlayback( episode );
             };
 
-            scope.togglePlaybackIcon = function( playerObject, episode ){
-                return PlayerService.togglePlaybackIcon( playerObject, episode );
+            scope.togglePlaybackIcon = function( episode ){
+                return PlayerService.togglePlaybackIcon( episode );
             };
 
             scope.showEpisodeDetails = function( episode ){
