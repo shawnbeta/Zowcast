@@ -9,16 +9,12 @@
 
     function EpisodeService( MediaService ) {
 
-        //var episodeCollection = [];
-
-
         var episodeService = {
             loadFromLocalStorage: loadFromLocalStorage,
             loadSampleEpisodes: loadSampleEpisodes,
-           buildEpisode: buildEpisode,
-           getSampleEpisodes: getSampleEpisodes,
+               buildEpisode: buildEpisode,
+               getSampleEpisodes: getSampleEpisodes,
         };
-
 
         return episodeService;
 
@@ -26,15 +22,12 @@
             var episodeCollection = localStorage.getItem('episodes') ?
                 JSON.parse(localStorage.getItem('episodes')) : [];
                 MediaService.setEpisodes( episodeCollection );
-            return episodeCollection;  
         }
 
         function loadSampleEpisodes(){
             var episodeCollection = getSampleEpisodes();
             localStorage.setItem('episodes', JSON.stringify( episodeCollection ));
-            MediaDataService.episodes = episodeCollection;
-
-            return episodeCollection;
+            MediaService.setEpisodes( episodeCollection );
         }
 
         //function loadSampleEpisodes(service) {

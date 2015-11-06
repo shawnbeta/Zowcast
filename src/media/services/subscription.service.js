@@ -4,9 +4,10 @@
     angular
         .module('app.media')
         .factory('SubscriptionService', SubscriptionService);
+    
+    SubscriptionService.$inject = [ 'MediaService' ];
 
-
-    function SubscriptionService(){
+    function SubscriptionService( MediaService ){
 
 
 
@@ -26,10 +27,16 @@
             return service.subscriptionCollection;
         }
 
-        function loadFromLocalStorage(){
+        function loadFromLocalStorage() {
             var subscriptionCollection = localStorage.getItem('subscriptions') ?
-                JSON.parse(localStorage.getItem('subscriptions')) : [];
-            return subscriptionCollection;
+            JSON.parse(localStorage.getItem('subscriptions')) : [];
+            MediaService.setSubscriptions( subscriptionCollection );
+        }
+
+        function loadSampleSubscriptions(){
+            var subscriptionCollection = getSampleSubscriptions();
+            localStorage.setItem('subscriptions', JSON.stringify( subscriptionCollection ));
+            MediaService.setSubscriptions( subscriptionCollection );
         }
 
         //function addNewMedia(){
@@ -87,7 +94,7 @@
         }
 
 
-        function loadSampleSubscriptions() {
+        function getSampleSubscriptions() {
             return [{
                 "id": 3,
                 "title": "What The Tech",

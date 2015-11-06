@@ -5,10 +5,10 @@
         .module('app.ui')
         .controller('ActionController', ActionController);
 
-    ActionController.$inject = [ '$rootScope', '$scope', '$location', 'EpisodeService', 'SubscriptionService',
+    ActionController.$inject = [  '$scope', '$location', 'MediaService', 'EpisodeService', 'SubscriptionService',
      'DataService'];
 
-    function ActionController( $rootScope, $scope, $location, EpisodeService, SubscriptionService, DataService ){
+    function ActionController(  $scope, $location, MediaService, EpisodeService, SubscriptionService, DataService ){
 
         var vm = this;
         vm.navigation = DataService.nav();
@@ -18,8 +18,8 @@
         $scope.sync = sync;
 
         $scope.loadSampleEpisodes = function(){
-            $rootScope.episodes = EpisodeService.loadSampleEpisodes();
-            $rootScope.sbuscriptions = SubscriptionService.loadSampleEpisodes();
+            EpisodeService.loadSampleEpisodes();
+            SubscriptionService.loadSampleSubscriptions();
         };
 
         $scope.clearLocalStorage = clearLocalStorage;
@@ -32,6 +32,7 @@
         function clearLocalStorage(){
             localStorage.removeItem('subscriptions');
             localStorage.removeItem('episodes');
+            MediaService.purgeAll();
         }
 
         //function loadSampleEpisodes(EpisodeService){

@@ -21,8 +21,8 @@
 
             vm.loadingObject = true;
 
-            $rootScope.episodes = [];
-            $rootScope.subscriptions = [];
+            // $rootScope.episodes = [];
+            // $rootScope.subscriptions = [];
 
             // Initialize Player to prevent errors.
             $rootScope.playerObject = PlayerService.getPlayerObject();
