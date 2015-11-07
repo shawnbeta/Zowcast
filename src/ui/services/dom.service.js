@@ -14,9 +14,13 @@
                 jQuery('.overlayWrapper').css({ 'top': topPosition});
             },
 
+            getHTML: function( element ){
+                return jQuery(element).html();
+            },
+
             toggleBrowseBySubscription: function(){
-                var bebs =  jQuery('.episodeBySubscriptionBrowser');
-                if(bebs.css('display') == 'none'){
+                var ebsContainer =  jQuery('.ebsContainer');
+                if(ebsItem.css('display') == 'none'){
                     var height = jQuery(bebs).innerHeight();
                     jQuery('.subscriptionBrowserWrapper')
                         .height(height)

@@ -13,6 +13,8 @@
         var mediaService = {
             episodes: [],
             subscriptions: [],
+            ebsIsActive: false,
+            activeSubscription: {},
             mediaPlayer: {
                 loadedEpisode: {
                     id: null
@@ -23,7 +25,9 @@
             getEpisodes: getEpisodes,
             setSubscriptions: setSubscriptions,
             getSubscriptions: getSubscriptions,
-            purgeAll: purgeAll
+            purgeAll: purgeAll,
+            setEBS: setEBS,
+            setActiveSubscription: setActiveSubscription
         };
 
         return mediaService;
@@ -52,6 +56,15 @@
         function purgeAll(){
             mediaService.subscriptions = [];
             mediaService.episodes = [];
+        }
+
+        function setEBS( val ){
+            mediaService.ebsIsActive = val;
+        }
+
+        function setActiveSubscription( subscription ){
+            mediaService.activeSubscription.id = subscription.id;
+            mediaService.activeSubscription.title = subscription.title;
         }
 
 

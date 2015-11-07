@@ -1,13 +1,18 @@
 <header class="viewHeader clearfix">
-    <h1>Episodes</h1>
+    <h1>
+        <span ng-if="!vm.activeSubscription.id">Episodes</span>
+        <span ng-if="vm.activeSubscription.id">{{vm.activeSubscription.title}}</span></h1>
     <div class="headerMenu">
-        <button class="subscriptionMenuToggle swButton" ng-click="toggleBrowseBySubscription()">
-            Browse By Subscription
+        <button class="ebsShowAll swButton" ng-click="ebsShowAll()">
+            All Episodes
         </button>
-        <button class="viewSwitch" ng-click="setViewStyle('list')">
+        <button class="ebsToggler swButton" ng-click="toggleEBS()">
+            By Subscription
+        </button>
+        <button class="viewSwitch" ng-click="switchViewStyle('list')">
             <i class="fa fa-th-list" ng-class="{'selected' : vm.viewStyle == 'list'}"></i>
         </button>
-        <button class="viewSwitch" ng-click="setViewStyle('grid')">
+        <button class="viewSwitch" ng-click="switchViewStyle('grid')">
             <i class="fa fa-th" ng-class="{'selected' : vm.viewStyle == 'grid'}"></i>
         </button>
     </div>
@@ -16,12 +21,11 @@
 
 <episode-details></episode-details>
 
-<subscription-navigation></subscription-navigation>
+<ebs></ebs>
 
 
 <div class="{{vm.viewStyle}}" ng-if="vm.episodes">
-    <episode-item ng-repeat="e in vm.episodes | orderByPubDate | filterBySubscription : activeSubscription :
-    subscriptionFilterStatus "></episode-item>
+    <episode-item ng-repeat="e in vm.episodes | orderByPubDate | ebs"></episode-item>
 </div>
 
 <span >

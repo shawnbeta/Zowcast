@@ -170,42 +170,45 @@
 .subscriptionMenuToggle {
   font-size: 14px;
 }
-.episodeBySubscriptionBrowser {
+.overlay .ebs {
+  display: block;
+}
+.ebs {
   display: none;
 }
-.episodeBySubscriptionBrowser .allEpisodes button {
+.ebs .allEpisodes button {
   background: #d73e33;
   color: #ffffff;
   padding: 10px;
   margin: 10px auto;
 }
-.episodeBySubscriptionBrowser .allEpisodes button:hover {
+.ebs .allEpisodes button:hover {
   background: #4486f8;
 }
-.episodeBySubscriptionBrowser .swItem {
+.ebs .swItem {
   float: left;
   position: relative;
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  .episodeBySubscriptionBrowser .swItem {
+  .ebs .swItem {
     font-size: 10px;
     width: 33%;
   }
 }
 @media (min-width: 768px) {
-  .episodeBySubscriptionBrowser .swItem {
+  .ebs .swItem {
     font-size: 16px;
     width: 16.667%;
   }
 }
-.episodeBySubscriptionBrowser .swItem .swImg {
+.ebs .swItem .swImg {
   width: 100%;
   display: block;
   position: relative;
   z-index: 1;
 }
-.episodeBySubscriptionBrowser .swItem .swTitle {
+.ebs .swItem .swTitle {
   padding: 0 5px;
   height: 40px;
   width: 100%;
@@ -216,16 +219,16 @@
   text-shadow: 1px 1px #333333;
 }
 @media (max-width: 767px) {
-  .episodeBySubscriptionBrowser .swItem .swTitle {
+  .ebs .swItem .swTitle {
     padding: 5px;
   }
 }
 @media (min-width: 768px) {
-  .episodeBySubscriptionBrowser .swItem .swTitle {
+  .ebs .swItem .swTitle {
     padding: 10px ;
   }
 }
-.episodeBySubscriptionBrowser .swItem .swTitle::after {
+.ebs .swItem .swTitle::after {
   z-index: 1;
   content: '';
   background: #000;
@@ -236,7 +239,7 @@
   left: 0;
   right: 0;
 }
-.episodeBySubscriptionBrowser .swItem .swTitle span {
+.ebs .swItem .swTitle span {
   position: relative;
   z-index: 2;
 }

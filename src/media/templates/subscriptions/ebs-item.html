@@ -1,6 +1,6 @@
 <li class="swItem">
-    <a ng-class="{selected: activeSubscription == s.id, standard: activeSubscription != s.id}"
-       ng-click="episodesBySubscription(s)">
+    <a ng-class="{selected: vm.activeSubscription == s.id, standard: vm.activeSubscription != s.id}"
+       ng-click="setEBS(s)">
         <img class="swImg" src="{{s.img}}">
         <!--<div class="swTitle"><span>{{s.title}}</span></div>-->
     </a>
