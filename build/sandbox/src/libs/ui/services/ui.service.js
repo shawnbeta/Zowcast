@@ -41,6 +41,10 @@
                 });
             },
 
+            scrollToTop: function(){
+                jQuery('body').scrollTop(0);
+            },
+
             toggleMenu: function(){
                 var navBar = jQuery('.swNavBar');
                 if(jQuery(navBar).css('position') != 'fixed'){

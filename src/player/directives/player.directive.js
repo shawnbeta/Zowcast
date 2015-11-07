@@ -5,9 +5,9 @@
         .module('app.player')
         .directive('player', player);
 
-    player.$inject = ['PlayerService', 'OverlayService' ];
+    player.$inject = [ 'PlayerService', 'OverlayService' ];
 
-    function player(){
+    function player( PlayerService, OverlayService ){
 
         return  {
 
@@ -23,58 +23,48 @@
 
             link: function(scope){
 
-                scope.goFullScreen = function(playerObject){
-                    var video = playerObject.element;
-                    if (video.requestFullscreen) {
-                        video.requestFullscreen();
-                    } else if (video.mozRequestFullScreen) {
-                        video.mozRequestFullScreen(); // Firefox
-                    } else if (video.webkitRequestFullscreen) {
-                        video.webkitRequestFullscreen(); // Chrome and Safari
-                    }
+                scope.goFullScreen = function() {
+                    PlayerService.goFullScreen();
                 };
 
-                scope.togglePlayback = function( playerObject, episode ){
-                    //var mediaType = episode.mediaType === 0 ? 'audio' : 'video';
-                    //playerObject.element = document.getElementsByTagName(mediaType)[0];
-                    //playerObject.elementWrapper =  jQuery('#' + mediaType + 'Player');
+                scope.togglePlayback = function( episode ){
                     PlayerService.togglePlayback( episode );
                 };
 
-                scope.togglePlaybackIcon = function( playerObject, episode ){
-                    return PlayerService.togglePlaybackIcon( playerObject, episode );
+                scope.togglePlaybackIcon = function( episode ){
+                    return PlayerService.togglePlaybackIcon( episode );
                 };
 
                 scope.showEpisodeDetails = function( episode ){
-                    OverlayService.setOverlay( scope.overlayObject, episode );
+                    OverlayService.setOverlay( episode );
                 };
 
-                scope.rewind = function( playerObject ){
-                    return PlayerService.rewind( playerObject );
+                scope.rewind = function(){
+                    return PlayerService.rewind();
                 };
 
-                scope.forward = function( playerObject ){
-                    return PlayerService.forward( playerObject );
+                scope.forward = function(){
+                    return PlayerService.forward();
                 };
 
-                scope.jumpBack = function( playerObject ){
-                    return PlayerService.jumpBack( playerObject );
+                scope.jumpBack = function(){
+                    return PlayerService.jumpBack();
                 };
 
-                scope.jumpAhead = function( playerObject ){
-                    return PlayerService.jumpAhead( playerObject );
+                scope.jumpAhead = function(){
+                    return PlayerService.jumpAhead();
                 };
 
-                scope.volumeUp = function( playerObject ){
-                    return PlayerService.volumeUp( playerObject );
+                scope.volumeUp = function(){
+                    return PlayerService.volumeUp();
                 };
 
-                scope.volumeDown = function( playerObject ){
-                    return PlayerService.volumeDown( playerObject );
+                scope.volumeDown = function(){
+                    return PlayerService.volumeDown();
                 };
 
-                scope.setVolumeTo = function( playerObject ){
-                    return PlayerService.setVolumeTo( playerObject );
+                scope.setVolumeTo = function(){
+                    return PlayerService.setVolumeTo();
                 };
             }
         };

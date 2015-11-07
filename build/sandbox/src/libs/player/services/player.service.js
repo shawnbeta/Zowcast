@@ -9,17 +9,10 @@
 
     function PlayerService($interval, $sce, MediaService){
 
-        var self = this;
         var ticker;
 
         var playerService = {
-            //playerObject: {
-            //    loadedEpisode: {
-            //        id: null
-            //    }
-            //},
-            //playerElement: null,
-            //playerElementWrapper: null,
+
             togglePlayback: togglePlayback,
             loadMedia: loadMedia,
             togglePlaybackIcon: togglePlaybackIcon,
@@ -32,15 +25,14 @@
             jumpBack: jumpBack,
             volumeDown: volumeDown,
             volumeUp: volumeUp,
-            setVolumeTo: setVolumeTo
+            setVolumeTo: setVolumeTo,
+            goFullScreen: goFullScreen
         };
 
         return playerService;
 
 
         function togglePlayback( episode ){
-            console.log( episode );
-            console.log( MediaService.mediaPlayer );
             var mediaPlayer = MediaService.mediaPlayer;
             var firstRun;
             if(episode.id !== mediaPlayer.loadedEpisode.id){
@@ -58,7 +50,8 @@
             var mediaType = episode.mediaType === 0 ? 'audio' : 'video';
             mediaPlayer.element = document.getElementsByTagName(mediaType)[0];
             mediaPlayer.elementWrapper =  jQuery('#' + mediaType + 'Player');
-            mediaPlayer.element.src = $sce.trustAsResourceUrl(episode.src);
+            //mediaPlayer.element.src = $sce.trustAsResourceUrl(episode.src);
+            mediaPlayer.loadedEpisode.location = $sce.trustAsResourceUrl(episode.src);
             return mediaPlayer;
         }
 
@@ -68,28 +61,19 @@
         }
 
         function playAction(  firstRun ){
-            console.log(firstRun)
             var mediaPlayer = MediaService.mediaPlayer;
-
-            console.log(MediaService.mediaPlayer);
-
             startCounter( );
             mediaPlayer.status = 'playing';
             mediaPlayer.episodePlaying = mediaPlayer.loadedEpisode.id;
-            console.log(MediaService.mediaPlayer);
-
             if(firstRun){
-                //self.firstRun = false;
-                console.log(mediaPlayer.element.src);
                 mediaPlayer.element.oncanplay = function(){
                     mediaPlayer.element.play();
-                    mediaPlayer.runtime = self.getDuration(mediaPlayer.element.duration);
-                    console.log('can player')
+                    mediaPlayer.runtime = getDuration(mediaPlayer.element.duration);
                 };
             }else{
                 mediaPlayer.element.play();
             }
-            console.log(mediaPlayer.element.paused)
+
             return mediaPlayer;
         }
 
@@ -101,7 +85,6 @@
             mediaPlayer.episodePlaying = false;
             return mediaPlayer;
         }
-
 
         function startCounter(  ){
             ticker = $interval(function( ){
@@ -141,45 +124,55 @@
             return counter;
         }
 
-        function rewind( ){
+        function rewind(){
             var currentTime = parseInt(MediaService.mediaPlayer.element.currentTime);
             MediaService.mediaPlayer.element.currentTime = currentTime - 20;
             return MediaService.mediaPlayer;
         }
 
-        function forward( ){
+        function forward(){
             var currentTime = parseInt(MediaService.mediaPlayer.element.currentTime);
             MediaService.mediaPlayer.element.currentTime = currentTime + 20;
             return MediaService.mediaPlayer.element;
         }
 
-        function jumpBack(  ){
+        function jumpBack(){
             var currentTime = parseInt( MediaService.mediaPlayer.element.currentTime);
             MediaService.mediaPlayer.element.currentTime = currentTime - 300;
             return MediaService.mediaPlayer.element;
         }
 
-        function jumpAhead(  ){
+        function jumpAhead(){
             var currentTime = parseInt(MediaService.mediaPlayer.element.currentTime);
             MediaService.mediaPlayer.element.currentTime = currentTime + 300;
             return MediaService.mediaPlayer.element;
         }
 
-        function volumeDown(  ){
+        function volumeDown(){
             MediaService.mediaPlayer.element.volume-=0.1;
             return MediaService.mediaPlayer.element;
         }
 
-        function volumeUp(  ){
+        function volumeUp(){
             MediaService.mediaPlayer.element.volume+=0.1;
             return MediaService.mediaPlayer.element;
         }
 
-        function setVolumeTo( ){
+        function setVolumeTo(){
             MediaService.mediaPlayer.element.volume=val;
             return MediaService.mediaPlayer.element;
         }
 
+        function goFullScreen() {
+            var video = MediaService.mediaPlayer.element;
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen(); // Firefox
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen(); // Chrome and Safari
+            }
+        }
 
     }
 })();

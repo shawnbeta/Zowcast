@@ -3,40 +3,47 @@
     <div class="swContainer clearfix">
 
         <div class="logoWrapper actionWrapper">
-            <button ng-click="go('about')" ng-class="{'selected' : currentPath == '/about'}"
+            <button ng-click="go('about')" ng-class="{'selected' : vm.currentPath == '/about'}"
                     class="actionButton swLogo" href="/" title="About the App">
-
-
 
                 <div>zowcast</div>
             </button>
 
+        </div>
 
-            <button ng-click="go('episodes')" title="episodes" class="actionButton linkItems"
-                    ng-class="{ 'selected' : currentPath == 'episodes' }">
-                episode
-                <!--<i class="fa fa-{{link.icon}}"></i>-->
-            </button>
+            <div class="actionWrapper">
+                <button ng-click="go('episodes')" title="episodes" class="actionButton linkItems"
+                        ng-class="{ 'selected' : vm.currentPath == '/episodes' }">
+                    <div>episode</div>
+                </button>
+            </div>
 
 
+            <div class="actionWrapper">
             <button ng-click="go('subscriptions')" title="subscriptions" class="actionButton linkItems"
-                    ng-class="{ 'selected' : currentPath == 'subscriptions' }">
-                subscriptions
-                <!--<i class="fa fa-{{link.icon}}"></i>-->
+                    ng-class="{ 'selected' : vm.currentPath == '/subscriptions' }">
+                <div>subscriptions</div>
             </button>
+            </div>
 
+            <div class="actionWrapper">
             <button ng-click="go('add')" title="add subscription" class="actionButton linkItems"
-                    ng-class="{ 'selected' : currentPath == 'add' }">
+                    ng-class="{ 'selected' : vm.currentPath == '/add' }">
                 <i class="fa fa-plus"></i>
             </button>
+            </div>
 
+            <div class="actionWrapper">
             <button ng-click="go('settings')" title="settings" class="actionButton linkItems"
-                    ng-class="{ 'selected' : currentPath == 'settings' }">
+                    ng-class="{ 'selected' : vm.currentPath == '/settings' }">
                 <i class="fa fa-cog"></i>
             </button>
+            </div>
+
+
+
 
     </div>
 
 </div>
 
-</div>

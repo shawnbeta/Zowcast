@@ -6,28 +6,28 @@
         .controller('ActionController', ActionController);
 
     ActionController.$inject = [  '$scope', '$location', 'MediaService', 'EpisodeService', 'SubscriptionService',
-     'DataService'];
+     'DataService', 'UtilityService', 'UIService'];
 
-    function ActionController(  $scope, $location, MediaService, EpisodeService, SubscriptionService, DataService ){
+    function ActionController(  $scope, $location, MediaService, EpisodeService, SubscriptionService, DataService,
+                                UtilityService, UIService ){
 
         var vm = this;
         vm.navigation = DataService.nav();
+        vm.currentPath = UtilityService.getCurrentPath();
 
         $scope.go = go;
-
         $scope.sync = sync;
-
-        $scope.loadSamples = function(){
-            //clearLocalStorage();
-            EpisodeService.loadSampleEpisodes();
-            SubscriptionService.loadSampleSubscriptions();
-        };
-
+        $scope.loadSamples = loadSamples;
         $scope.clearLocalStorage = clearLocalStorage;
+        $scope.$on('$routeChangeSuccess', function(){
+            vm.currentPath = UtilityService.getCurrentPath();
+        });
 
+        /////////////
 
         function go(path){
             $location.path(path);
+            UIService.scrollToTop();
         }
 
         function clearLocalStorage(){
@@ -36,10 +36,11 @@
             MediaService.purgeAll();
         }
 
-        //function loadSampleEpisodes(EpisodeService){
-        //    console.log('working');
-        //    EpisodeService.loadSampleEpisodes(EpisodeService);
-        //}
+        function loadSamples(){
+            //clearLocalStorage();
+            EpisodeService.loadSampleEpisodes();
+            SubscriptionService.loadSampleSubscriptions();
+        }
 
         function sync(){
             vm.loadingObject = true;
