@@ -3,9 +3,9 @@
 
     angular
         .module('app.ui')
-        .directive('loading', loading);
+        .directive('mask', mask);
 
-    function loading(){
+    function mask(){
 
         return {
 
@@ -16,7 +16,7 @@
             controllerAs: 'vm',
             bindToController: true,
 
-            templateUrl: 'src/libs/ui/templates/loading.html'
+            templateUrl: 'src/libs/ui/templates/mask.html'
 
         };
     }

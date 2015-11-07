@@ -19,7 +19,7 @@
 
         function load( data ){
             UIDataService.overlay.title = data.title;
-            UIDataService.overlay.description = data.description;
+                UIDataService.overlay.description = data.description;
             if(data.pubDate)
                 UIDataService.overlay.pubDate = data.pubDate;
             UIDataService.overlay.style = 'style_' + data.mediaType;

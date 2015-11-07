@@ -50,14 +50,18 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'build/sandbox/css/contrib/bootstrap-lite.css': 'less/contrib/bootstrap-lite.less',
-                    'build/sandbox/css/libs/media/main.css': 'less/media/main.less',
+                    'build/sandbox/css/libs/media/esb.css': 'less/media/esb.less',
                     'build/sandbox/css/libs/media/grid.css': 'less/media/grid.less',
                     'build/sandbox/css/libs/media/list.css': 'less/media/list.less',
-                    'build/sandbox/css/libs/message.css': 'less/message.less',
-                    'build/sandbox/css/libs/overlay.css': 'less/overlay.less',
+                    'build/sandbox/css/libs/media/main.css': 'less/media/main.less',
+                    'build/sandbox/css/libs/ui/mask.css': 'less/ui/mask.less',
+                    'build/sandbox/css/libs/ui/nav.css': 'less/ui/nav.less',
+                    'build/sandbox/css/libs/ui/overlay.css': 'less/ui/overlay.less',
+                    'build/sandbox/css/libs/ui/message.css': 'less/ui/message.less',
+
+
                     'build/sandbox/css/libs/globals.css': 'less/globals.less',
                     'build/sandbox/css/libs/main.css': 'less/main.less',
-                    'build/sandbox/css/libs/nav.css': 'less/nav.less',
                     'build/sandbox/css/libs/player.css': 'less/player.less',
                     'build/sandbox/css/libs/variables.css': 'less/variables.less'
                 }

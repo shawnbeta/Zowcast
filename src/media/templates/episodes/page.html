@@ -3,10 +3,10 @@
         <span ng-if="!vm.activeSubscription.id">Episodes</span>
         <span ng-if="vm.activeSubscription.id">{{vm.activeSubscription.title}}</span></h1>
     <div class="headerMenu">
-        <button class="ebsShowAll swButton" ng-click="ebsShowAll()">
+        <button ng-if="vm.activeSubscription.id" class="ebsShowAll swButton" ng-click="ebsShowAll()">
             All Episodes
         </button>
-        <button class="ebsToggler swButton" ng-click="toggleEBS()">
+        <button class="ebsToggler swButton" ng-click="toggleEBSDisplay()">
             By Subscription
         </button>
         <button class="viewSwitch" ng-click="switchViewStyle('list')">
@@ -23,13 +23,14 @@
 
 <ebs></ebs>
 
-
 <div class="{{vm.viewStyle}}" ng-if="vm.episodes">
-    <episode-item ng-repeat="e in vm.episodes | orderByPubDate | ebs"></episode-item>
+    <episode-item ng-repeat="e in vm.episodes | orderByPubDate | ebsFilter"></episode-item>
 </div>
 
-<span >
+<span ng-if="!vm.episodes">
         <p>You have no episodes. First you'll need to add a subscription.<br/>
             Select sync to add subscriptions from the server or select add to enter a URL.</p>
         <admin-bar></admin-bar>
 </span>
+
+{{vm.ebsIsActive}}

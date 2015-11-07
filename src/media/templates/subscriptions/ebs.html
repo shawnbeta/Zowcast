@@ -1,8 +1,15 @@
-<div class="ebsContainer">
-    <ul class="ebs clearfix">
+<div ng-show="vm.ebsDisplay" class="ebsContainer">
 
-        <ebs-item ng-repeat="s in vm.subscriptions | orderByTitle ">
-        </ebs-item>
 
-    </ul>
+    <div class="ebs">
+        <i ng-click="toggleEBSDisplay()" class="fa fa-close swCloseIcon"></i>
+        <header class="clearfix">
+            <div class="swTitle">Browse Episodes by Subscriptionfff</div>
+        </header>
+        <ul class="clearfix">
+            <ebs-item ng-repeat="s in vm.subscriptions | orderByTitle ">
+            </ebs-item>
+        </ul>
+    </div>
+
 </div>

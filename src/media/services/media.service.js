@@ -26,8 +26,9 @@
             setSubscriptions: setSubscriptions,
             getSubscriptions: getSubscriptions,
             purgeAll: purgeAll,
-            setEBS: setEBS,
-            setActiveSubscription: setActiveSubscription
+            toggleEBSActive: toggleEBSActive,
+            setActiveSubscription: setActiveSubscription,
+            toggleEBSDisplay: toggleEBSDisplay
         };
 
         return mediaService;
@@ -58,13 +59,18 @@
             mediaService.episodes = [];
         }
 
-        function setEBS( val ){
+        function toggleEBSActive( val ){
+            console.log(val)
             mediaService.ebsIsActive = val;
         }
 
         function setActiveSubscription( subscription ){
             mediaService.activeSubscription.id = subscription.id;
             mediaService.activeSubscription.title = subscription.title;
+        }
+
+        function toggleEBSDisplay(){
+
         }
 
 

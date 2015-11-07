@@ -15,9 +15,9 @@
 
         scope: true,
 
-        controller: 'EpisodeController',
-        controllerAs: 'vm',
-        bindToController: true,
+        //controller: 'EpisodeController',
+        //controllerAs: 'vm',
+        //bindToController: true,
 
         link: function(scope){
 

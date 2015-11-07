@@ -1,15 +1,11 @@
-@import (reference) 'styles.less';
+@import (reference) '../styles.less';
 
-.mask{
-  position: fixed;
-  width: 100%;
-}
-.overlayWrapper {
+.overlayContainer {
   position: absolute;
   width: 100%;
 }
 
-.overlayWrapper {
+.overlayContainer {
   height: 0;
   overflow: visible;
   z-index: 7;
@@ -26,7 +22,7 @@
     }
     header{
       display: block;
-      margin-bottom: 20px;
+      //margin-bottom: 20px;
       background: @base-color;
       color: @white1;
       padding: 8px 20px;
@@ -36,16 +32,6 @@
       //height: 300px;
     }
   }
-}
-
-.mask {
-  z-index: 5;
-  background: #000;
-  opacity: .6;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 

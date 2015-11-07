@@ -13,8 +13,8 @@
         return {
             restrict : 'E',
             controller: 'EpisodeController',
-            controllerAs: 'vm',
-            bindToController: true,
+            //controllerAs: 'vm',
+            //bindToController: true,
 
             //scope: true,
             //

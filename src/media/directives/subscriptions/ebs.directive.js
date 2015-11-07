@@ -9,7 +9,9 @@
 
         return {
             restrict : 'E',
-            //scope: '=',
+            //controller: 'EpisodeController',
+            //controllerAs: 'vm',
+            //bindToController: true,
             //
             //link: function(scope){
             //    scope.episodesBySubscription = function(subscription){

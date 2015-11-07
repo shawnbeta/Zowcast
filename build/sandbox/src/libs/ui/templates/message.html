@@ -2,6 +2,6 @@
 
     <div class="swText ">
         <i ng-click="closeMessage()" class="fa fa-close swCloseIcon"></i>
-        {{vm.message.text}}
+        <span ng-bind-html="vm.message.text"></span>
     </div>
 </div>

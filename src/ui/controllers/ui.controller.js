@@ -13,6 +13,8 @@
 
         vm.message = UIDataService.message;
         vm.overlay = UIDataService.overlay;
+        vm.loading = UIDataService.loading;
+        vm.mask = UIDataService.mask;
         // Needed to present subscriptions in overlay
         vm.subscriptions = MediaService.subscriptions;
 
@@ -21,8 +23,10 @@
         };
 
         $scope.closeOverlay = function(){
-            UIDataService.closeOverlay();
+            if(UIDataService.overlay.style)
+                UIDataService.closeOverlay();
         }
+
 
     }
 })();

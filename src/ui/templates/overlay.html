@@ -1,5 +1,4 @@
-<div ng-if="vm.overlay.style" ng-click="closeOverlay()" class="mask"></div>
-<div ng-show="vm.overlay.style" class="overlayWrapper">
+<div ng-show="vm.overlay.style" class="overlayContainer">
 
   <div class="overlay {{overlay.style}}">
       <i ng-click="closeOverlay()" class="fa fa-close swCloseIcon"></i>
@@ -8,7 +7,7 @@
           <div class="swDate" ng-if="vm.overlay.pubDate">Published: {{vm.overlay.pubDate | date: 'MMMM d, yyyy'}}</div>
       </header>
       <div class="swDescription" ng-if="vm.overlay.description" ng-bind-html="vm.overlay.description"></div>
-      <ebs></ebs>
+
   </div>
 
 <div>

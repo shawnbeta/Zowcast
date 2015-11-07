@@ -9,15 +9,17 @@
         "bootstrap-lite"
       ],
       "libs": [
+        "media/esb",
         "media/main",
         "media/grid",
         "media/list",
-        "footer",
-        "overlay",
+        "ui/mask",
+        "ui/message",
+        "ui/nav",
+        "ui/overlay",
         "message",
         "globals",
         "main",
-        "nav",
         "player",
         "variables"
       ]
@@ -70,6 +72,7 @@
         "ui/controllers/action.controller",
         "ui/controllers/ui.controller",
         "ui/directives/navigation.directive",
+        "ui/directives/mask.directive",
         "ui/directives/menu-toggler.directive",
         "ui/directives/message.directive",
         "ui/directives/overlay.directive",

@@ -11,8 +11,12 @@
 
             message: {},
             overlay: {},
+            loading: false,
+            mask: false,
             closeMessage: closeMessage,
-            closeOverlay: closeOverlay
+            closeOverlay: closeOverlay,
+            toggleLoading: toggleLoading,
+            toggleMask: toggleMask
 
         };
 
@@ -24,6 +28,16 @@
 
         function closeOverlay(){
             uiDataService.overlay.style = null;
+            uiDataService.mask = false;
+        }
+
+        function toggleLoading(val){
+            uiDataService.loading = val;
+            uiDataService.mask = val;
+        }
+
+        function toggleMask(val){
+            uiDataService.mask = val;
         }
 
 

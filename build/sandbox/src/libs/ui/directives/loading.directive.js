@@ -10,6 +10,11 @@
         return {
 
             restrict : 'E',
+            scope: true,
+
+            controller: 'UIController',
+            controllerAs: 'vm',
+            bindToController: true,
 
             templateUrl: 'src/libs/ui/templates/loading.html'
 

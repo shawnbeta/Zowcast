@@ -11,7 +11,7 @@
 
             positionOverlay: function(){
                 var topPosition = jQuery('body').scrollTop();
-                jQuery('.overlayWrapper').css({ 'top': topPosition});
+                jQuery('.overlayContainer').css({ 'top': topPosition});
             },
 
             getHTML: function( element ){

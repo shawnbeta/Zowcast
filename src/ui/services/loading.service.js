@@ -5,21 +5,21 @@
         .module('app.ui')
         .factory('LoadingService', LoadingService);
 
-    function LoadingService(){
+    LoadingService.$inject = [ 'UIDataService'  ];
 
-        return {
 
-            loadingObject: false,
+    function LoadingService( UIDataService ){
 
-            displayLoading: function( ){
-                 this.loadingObject = true;
-            },
-
-            hideLoading: function(  ){
-                this.loadingObject = false;
-            }
-
+        var loadingService = {
+            toggleLoading: toggleLoading
         };
+
+        return loadingService;
+
+        function toggleLoading(val){
+            UIDataService.toggleLoading(val);
+        }
+
 
 
     }

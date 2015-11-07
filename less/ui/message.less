@@ -1,9 +1,9 @@
-@import (reference) 'styles.less';
+@import (reference) '../styles.less';
 
 .swMessage{
   position: absolute;
   top: 100px;
-  z-index: 6;
+  z-index: 9;
   left: 10px;
   right: 10px;
   &.fixed {
@@ -27,6 +27,11 @@
         color: @status2;
       }
     }
+  }
+
+  .swTitle {
+    font-weight: 600;
+    font-style: italic;
   }
 
   .swText {
