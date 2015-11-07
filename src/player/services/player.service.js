@@ -5,9 +5,9 @@
         .module('app.player')
         .factory('PlayerService', PlayerService);
 
-    PlayerService.$inject = ['$interval', '$sce', 'MediaService'];
+    PlayerService.$inject = ['$interval', '$sce', 'MediaService', 'LoadingService'];
 
-    function PlayerService($interval, $sce, MediaService){
+    function PlayerService($interval, $sce, MediaService, LoadingService){
 
         var ticker;
 
@@ -41,7 +41,7 @@
             }
             if(mediaPlayer.status != 'playing' || mediaPlayer.status == 'playing' && firstRun)
                 return playAction( firstRun );
-            return pauseAction( );
+            return pauseAction();
         }
 
         function loadMedia( episode ){
@@ -61,6 +61,7 @@
         }
 
         function playAction(  firstRun ){
+            LoadingService.displayLoading(true);
             var mediaPlayer = MediaService.mediaPlayer;
             startCounter( );
             mediaPlayer.status = 'playing';
@@ -69,10 +70,13 @@
                 mediaPlayer.element.oncanplay = function(){
                     mediaPlayer.element.play();
                     mediaPlayer.runtime = getDuration(mediaPlayer.element.duration);
+                    LoadingService.displayLoading(false);
                 };
             }else{
+                LoadingService.displayLoading(false);
                 mediaPlayer.element.play();
             }
+
 
             return mediaPlayer;
         }
@@ -83,6 +87,7 @@
             mediaPlayer.element.pause();
             mediaPlayer.status = 'paused';
             mediaPlayer.episodePlaying = false;
+            LoadingService.displayLoading(false);
             return mediaPlayer;
         }
 

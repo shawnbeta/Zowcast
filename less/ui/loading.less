@@ -1,0 +1,18 @@
+@import (reference) '../styles.less';
+
+
+.loading {
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  margin-top: 100px;
+  color: @secondary-color;
+  width: 100%;
+  &:before{
+    .fa-spin;
+    .fa-pulse;
+    content: '\f110';
+    font-family: @fa;
+    font-size: 250px;
+  }
+}

@@ -11,13 +11,12 @@
 
             message: {},
             overlay: {},
-            loading: false,
-            mask: false,
+            loading: {},
+            mask: {},
             closeMessage: closeMessage,
             closeOverlay: closeOverlay,
-            toggleLoading: toggleLoading,
-            toggleMask: toggleMask
-
+            displayLoading: displayLoading,
+            displayMask: displayMask
         };
 
         return uiDataService;
@@ -28,16 +27,16 @@
 
         function closeOverlay(){
             uiDataService.overlay.style = null;
-            uiDataService.mask = false;
+            uiDataService.mask.visible  = false;
         }
 
-        function toggleLoading(val){
-            uiDataService.loading = val;
-            uiDataService.mask = val;
+        function displayLoading(val){
+            uiDataService.loading.visible = val;
+            uiDataService.mask.visible = val;
         }
 
-        function toggleMask(val){
-            uiDataService.mask = val;
+        function displayMask(val){
+            uiDataService.mask.visible  = val;
         }
 
 

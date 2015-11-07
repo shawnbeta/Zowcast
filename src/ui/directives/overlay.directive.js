@@ -5,9 +5,9 @@
         .module('app.ui')
         .directive('overlay', overlay);
 
-    overlay.$inject = ['OverlayService'];
+    //overlay.$inject = ['OverlayService'];
 
-    function overlay(OverlayService){
+    function overlay(){
 
         return {
             restrict : 'E',
@@ -18,13 +18,13 @@
             controllerAs: 'vm',
             bindToController: true,
 
-
-            links: function(scope){
-
-                scope.closeOverlay = function(){
-                    OverlayService.clearOverlay();
-                };
-            },
+            //
+            //links: function(scope){
+            //
+            //    scope.closeOverlay = function(){
+            //        OverlayService.clearOverlay();
+            //    };
+            //},
 
             templateUrl: 'src/libs/ui/templates/overlay.html'
         };

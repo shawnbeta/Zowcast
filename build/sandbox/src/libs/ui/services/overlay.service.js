@@ -5,9 +5,9 @@
         .module('app.ui')
         .factory('OverlayService', OverlayService);
 
-    OverlayService.$inject = [ 'UIDataService', 'DOMService' ];
+    OverlayService.$inject = [ 'UIDataService', 'DOMService', 'MaskService' ];
 
-    function OverlayService( UIDataService, DOMService ){
+    function OverlayService( UIDataService, DOMService, MaskService ){
 
         var overlayService = {
             load: load,
@@ -27,7 +27,10 @@
 
         function setOverlay( data ){
             load( data );
+            // Position the overlay element in the correct position.
             DOMService.positionOverlay();
+            //MaskService.displayMask(true);
+            UIDataService.mask.visible = true;
         }
 
         function close(){

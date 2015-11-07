@@ -1,7 +1,9 @@
 <div data-ng-controller="CoreController as vm">
 
+    <mask></mask>
     <player></player>
     <overlay></overlay>
+    <loading></loading>
 
     <message></message>
 
@@ -11,9 +13,8 @@
 
         <sw-navigation></sw-navigation>
 
-        <loading></loading>
 
-        <div ng-show="!loading" data-ng-view class="swContainer"></div>
+        <div data-ng-view class="swContainer"></div>
 
     </div>
 

@@ -6,10 +6,10 @@
         .controller('EpisodeController', EpisodeController);
 
     EpisodeController.$inject = [ '$scope', '$filter', 'MediaService', 'EpisodeService', 'SubscriptionService', 'OverlayService',
-        'DOMService', 'MessageService', 'UIDataService' ];
+        'DOMService', 'MessageService', 'UIDataService', 'LoadingService'];
 
     function EpisodeController( $scope, $filter, MediaService, EpisodeService, SubscriptionService, OverlayService,
-                                DOMService, MessageService, UIDataService ){
+                                DOMService, MessageService, UIDataService, LoadingService ){
 
         var vm = this;
 
@@ -20,8 +20,8 @@
         vm.mediaPlayer = MediaService.mediaPlayer;
         vm.ebsIsActive = MediaService.ebsIsActive;
         vm.activeSubscription = MediaService.activeSubscription;
-        vm.loading = UIDataService.loading;
-        vm.mask = UIDataService.mask;
+        //vm.loading = UIDataService.loading;
+        //vm.mask = UIDataService.mask;
 
         vm.ebsDisplay = false;
 
@@ -33,16 +33,14 @@
         initialize();
 
         function initialize(){
-            UIDataService.toggleLoading( true );
+            LoadingService.displayLoading( true );
             if( vm.episodes.length === 0 ){
                 EpisodeService.loadFromLocalStorage();
             }
-
             if( vm.subscriptions.length === 0){
                 SubscriptionService.loadFromLocalStorage();
             }
-            UIDataService.toggleLoading( true );
-            console.log(UIDataService);
+            LoadingService.displayLoading( false );
         }
 
         function switchViewStyle( newStyle ){

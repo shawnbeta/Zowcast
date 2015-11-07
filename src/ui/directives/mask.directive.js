@@ -16,7 +16,7 @@
             controllerAs: 'vm',
             bindToController: true,
 
-            templateUrl: 'src/libs/ui/templates/mask.html'
+            templateUrl: 'src/libs/ui/templates/mask.tpl.html'
 
         };
     }

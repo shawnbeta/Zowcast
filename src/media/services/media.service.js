@@ -46,7 +46,6 @@
         }
 
         function setSubscriptions( subscriptionCollection ){
-            console.log(subscriptionCollection);
             Array.prototype.push.apply(mediaService.subscriptions, subscriptionCollection); // Works! the solution?
         }
 
@@ -60,7 +59,6 @@
         }
 
         function toggleEBSActive( val ){
-            console.log(val)
             mediaService.ebsIsActive = val;
         }
 
@@ -72,6 +70,8 @@
         function toggleEBSDisplay(){
 
         }
+
+
 
 
 

@@ -5,9 +5,9 @@
         .module('app.media')
         .directive('episodeItem', episodeItem);
 
-    episodeItem.$inject = ['PlayerService', 'MessageService', 'OverlayService', 'DOMService'];
+    episodeItem.$inject = ['PlayerService', 'MessageService', 'OverlayService', 'DOMService', 'MaskService'];
 
-    function episodeItem(PlayerService, MessageService, OverlayService, DOMService){
+    function episodeItem(PlayerService, MessageService, OverlayService, DOMService, MaskService){
 
     return  {
 
@@ -39,6 +39,7 @@
 
             scope.showEpisodeDetails = function( episode ){
                 OverlayService.setOverlay( episode );
+                MaskService.displayMask(true);
             };
 
             scope.updateWatched = function(){

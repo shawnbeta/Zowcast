@@ -5,9 +5,9 @@
         .module('app.media')
         .factory('SubscriptionService', SubscriptionService);
     
-    SubscriptionService.$inject = [ 'MediaService' ];
+    SubscriptionService.$inject = [ 'MediaService', 'LoadingService', 'UtilityService', 'MessageService' ];
 
-    function SubscriptionService( MediaService ){
+    function SubscriptionService( MediaService, LoadingService, UtilityService, MessageService ){
 
 
 
@@ -17,11 +17,51 @@
             loadFromLocalStorage: loadFromLocalStorage,
             loadSampleSubscriptions: loadSampleSubscriptions,
             buildSubscription: buildSubscription,
-            getSubscriptions: getSubscriptions(this)
+            getSubscriptions: getSubscriptions,
+            add: add
 
         };
 
         return service;
+
+        function add( formData ){
+
+            LoadingService.displayLoading(true);
+            var data = {
+                src: formData.src
+            };
+
+            var addRsp = UtilityService.postRequest( data, 'add' );
+
+            addRsp.then(function(response){
+                    if(response.data.subscription){
+                        MediaService.subscriptions.push(response.data.subscription);
+                        Array.prototype.push.apply(MediaService.episodes, response.data.episodes);
+                        localStorage.setItem('subscriptions', JSON.stringify(MediaService.subscriptions));
+                        localStorage.setItem('episodes', JSON.stringify(MediaService.episodes));
+                        LoadingService.displayLoading(false);
+                        MessageService.displayMessage(
+                            'New Subscription Added.', 'swSuccess', MessageService.closeMessageTimer()
+                        );
+                    }else{
+                        LoadingService.displayLoading(false);
+                        MessageService.displayMessage(
+                            'Subscription Addition Failed. Please try another URL.', 'swError',
+                            MessageService.closeMessageTimer()
+                        );
+                    }
+                },
+                function(){
+                    LoadingService.displayLoading(false);
+                    MessageService.displayMessage(
+                        'Adding the Requested URL resuled in failure', 'swError',
+                        MessageService.closeMessageTimer()
+                    );
+                }
+
+            );
+
+        }
 
         function getSubscriptions(service){
             return service.subscriptionCollection;
@@ -51,24 +91,30 @@
             // Get the users(BROWSERS) current subscriptions from localStorage
             var syncedSubscriptions = localStorage.getItem('syncedSubscriptions') ?
                 localStorage.getItem('syncedSubscriptions') : null;
-            var rsp = $http({
-                method: 'POST',
-                url: ConfigService.serverPath + 'sync',
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                transformRequest: function(obj) {
-                    var str = [];
-                    for(var p in obj)
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    return str.join("&");
-                },
-                data: {syncedSubscriptions: syncedSubscriptions}
-            });
+
+
+            var data = { syncedSubscriptions: syncedSubscriptions };
+            var rsp = UtilityService.postRequest( data, 'sync' );
+
+
+            //var rsp = $http({
+            //    method: 'POST',
+            //    url: ConfigService.serverPath + 'sync',
+            //    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            //    transformRequest: function(obj) {
+            //        var str = [];
+            //        for(var p in obj)
+            //            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+            //        return str.join("&");
+            //    },
+            //    data: {syncedSubscriptions: syncedSubscriptions}
+            //});
 
             var rspA = rsp.then(function(response){
-                SubscriptionService.setMediaAdditions($scope, response);
+                setMediaAdditions(response);
             });
             rspA.then(function(){
-                SubscriptionService.setSyncedSubscriptions($scope);
+                SubscriptionService.setSyncedSubscriptions();
                 vm.loadingObject = false;
                 vm.messageObject = {
                     text: 'Subscriptions Synced.',
@@ -80,6 +126,28 @@
             return rspA;
 
 
+        }
+
+        function setMediaAdditions(response){
+
+            MediaService.subscriptions =  response.data.subscriptions;
+            MediaService.episodes =  response.data.episodes;
+
+            // Subscriptions to local storage overwriting existing values
+            localStorage.setItem('subscriptions', JSON.stringify(response.data.subscriptions));
+
+            // Subscriptions to local storage overwriting existing values
+            localStorage.setItem('episodes', JSON.stringify(response.data.subscriptions));
+
+        }
+
+        function setSyncedSubscriptions(){
+            var count = MediaService.subscriptions.length;
+            var syncedSubscriptions = [];
+            for(var i=0;i<count;i++){
+                syncedSubscriptions.push(MediaService.subscriptions[i]['id']);
+            }
+            localStorage.setItem('syncedSubscriptions', JSON.stringify(syncedSubscriptions));
         }
 
 

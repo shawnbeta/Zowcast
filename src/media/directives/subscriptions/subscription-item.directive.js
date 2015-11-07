@@ -25,7 +25,7 @@
                 };
 
                 scope.showSubscriptionDetails = function(subscription){
-                    OverlayService.setOverlay( scope.overlayObject, subscription );
+                    OverlayService.setOverlay( subscription );
                 };
 
                 scope.removeSubscription = function(){

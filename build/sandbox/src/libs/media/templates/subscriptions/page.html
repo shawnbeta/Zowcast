@@ -5,7 +5,7 @@
 <subscription-details></subscription-details>
 
 <ul class="grid" ng-if="vm.subscriptions">
-    <subscription-item ng-repeat="s in vm.subscriptions | orderByTitle">1</subscription-item>
+    <subscription-item ng-repeat="s in vm.subscriptions | orderByTitle"></subscription-item>
 </ul>
 
 <span ng-if="vm.subscriptions.length < 1">

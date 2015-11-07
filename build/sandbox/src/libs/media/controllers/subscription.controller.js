@@ -14,8 +14,9 @@
         vm.title = "Subscription";
         vm.subscriptions = MediaService.subscriptions;
 
+
         $scope.add = function( ){
-            SubscriptionService.add( $scope );
+            SubscriptionService.add( $scope.formData );
         };
 
         initialize();

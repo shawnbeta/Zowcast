@@ -13,7 +13,7 @@
             loadFromLocalStorage: loadFromLocalStorage,
             loadSampleEpisodes: loadSampleEpisodes,
                buildEpisode: buildEpisode,
-               getSampleEpisodes: getSampleEpisodes,
+               getSampleEpisodes: getSampleEpisodes
         };
 
         return episodeService;

@@ -17,8 +17,6 @@
             controllerAs: 'vm',
             bindToController: true,
             templateUrl: 'src/libs/ui/templates/message.html'
-
-
         };
 
     }

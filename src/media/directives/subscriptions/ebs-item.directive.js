@@ -12,7 +12,7 @@
 
         return {
             restrict : 'E',
-            controller: 'EpisodeController',
+            //controller: 'EpisodeController',
             //controllerAs: 'vm',
             //bindToController: true,
 

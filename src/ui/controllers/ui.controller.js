@@ -25,8 +25,10 @@
         $scope.closeOverlay = function(){
             if(UIDataService.overlay.style)
                 UIDataService.closeOverlay();
-        }
+        };
 
+
+        console.log(UIDataService.mask);
 
     }
 })();

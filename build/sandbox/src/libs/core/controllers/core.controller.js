@@ -5,11 +5,11 @@
         .module('app.core')
         .controller('CoreController', CoreController);
 
+    CoreController.$inject = [ 'UIDataService'  ];
 
     /* @ngInject */
-    function CoreController( ){
-
-
-
+    function CoreController( UIDataService ){
+        var vm = this;
+        vm.loading = UIDataService.loading;
     }
 })();

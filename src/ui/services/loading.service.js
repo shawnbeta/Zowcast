@@ -11,13 +11,13 @@
     function LoadingService( UIDataService ){
 
         var loadingService = {
-            toggleLoading: toggleLoading
+            displayLoading: displayLoading
         };
 
         return loadingService;
 
-        function toggleLoading(val){
-            UIDataService.toggleLoading(val);
+        function displayLoading(val){
+            UIDataService.displayLoading(val);
         }
 
 
