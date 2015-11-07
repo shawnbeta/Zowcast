@@ -13,13 +13,7 @@
         var ticker;
 
         var playerService = {
-            //playerObject: {
-            //    loadedEpisode: {
-            //        id: null
-            //    }
-            //},
-            //playerElement: null,
-            //playerElementWrapper: null,
+
             togglePlayback: togglePlayback,
             loadMedia: loadMedia,
             togglePlaybackIcon: togglePlaybackIcon,
@@ -83,13 +77,12 @@
                 console.log(mediaPlayer.element.src);
                 mediaPlayer.element.oncanplay = function(){
                     mediaPlayer.element.play();
-                    mediaPlayer.runtime = self.getDuration(mediaPlayer.element.duration);
+                    mediaPlayer.runtime = getDuration(mediaPlayer.element.duration);
                     console.log('can player')
                 };
             }else{
                 mediaPlayer.element.play();
             }
-            console.log(mediaPlayer.element.paused)
             return mediaPlayer;
         }
 
