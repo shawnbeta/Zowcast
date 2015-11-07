@@ -159,8 +159,12 @@ a:hover {
     float: left;
   }
 }
-.viewHeader .headerMenu {
-  margin-top: 10px;
+@media (max-width: 767px) {
+  .viewHeader .headerMenu {
+    background: #808080;
+    margin: 10px -15px;
+    padding: 10px 15px;
+  }
 }
 @media (min-width: 768px) {
   .viewHeader .headerMenu {

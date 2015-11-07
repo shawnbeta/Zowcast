@@ -5,9 +5,9 @@
         .module('app.media')
         .controller('EpisodeController', EpisodeController);
 
-    EpisodeController.$inject = [ '$scope', 'MediaService', 'EpisodeService', 'SubscriptionService', 'UIService' ];
+    EpisodeController.$inject = [ '$scope', 'MediaService', 'EpisodeService', 'SubscriptionService', 'UIDataService' ];
 
-    function EpisodeController( $scope, MediaService, EpisodeService, SubscriptionService, UIService ){
+    function EpisodeController( $scope, MediaService, EpisodeService, SubscriptionService, UIDataService ){
 
         var vm = this;
 
@@ -16,17 +16,13 @@
         vm.episodes = MediaService.episodes;
         vm.subscriptions = MediaService.subscriptions;
         vm.mediaPlayer = MediaService.mediaPlayer;
+        //vm.message = UIDataService.message;
+        //vm.overlay = UIDataService.overlay;
 
         vm.subscriptionFilterStatus = false;
         vm.activeSubscription = 0;
 
-        $scope.setViewStyle = function(newStyle){
-            vm.viewStyle = newStyle;
-        };
 
-        $scope.toggleBrowseBySubscription = function(){
-            UIService.toggleBrowseBySubscription();
-        };
 
         initialize();
 

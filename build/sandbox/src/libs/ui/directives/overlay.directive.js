@@ -12,12 +12,17 @@
         return {
             restrict : 'E',
 
-            scope: '=',
+            scope: true,
+
+            controller: 'UIController',
+            controllerAs: 'vm',
+            bindToController: true,
+
 
             links: function(scope){
 
-                scope.closeOverlay = function( overlayObject ){
-                    OverlayService.clearOverlay( overlayObject );
+                scope.closeOverlay = function(){
+                    OverlayService.clearOverlay();
                 };
             },
 

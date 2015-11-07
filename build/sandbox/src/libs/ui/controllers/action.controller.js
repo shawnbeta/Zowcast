@@ -30,8 +30,6 @@
             UIService.scrollToTop();
         }
 
-
-
         function clearLocalStorage(){
             localStorage.removeItem('subscriptions');
             localStorage.removeItem('episodes');

@@ -5,35 +5,42 @@
         .module('app.ui')
         .factory('MessageService', MessageService);
 
-    MessageService.$inject = [ '$rootScope', '$interval' ];
+    MessageService.$inject = [ '$interval', 'UIDataService' ];
 
-    function MessageService( $rootScope, $interval ){
+    function MessageService( $interval, UIDataService ){
 
         var mTimer;
 
-        return {
+        var messageService = {
+            displayMessage: displayMessage,
+            closeMessageTimer: closeMessageTimer,
+            closeMessage: closeMessage
+        };
 
-            displayMessage: function( text, msgType, _closeMessageTimer ){
-                $rootScope.messageObject.text = text;
-                $rootScope.messageObject.style = msgType;
+        return messageService;
+
+            function displayMessage( text, msgType, _closeMessageTimer ){
+                UIDataService.message.text = text;
+                UIDataService.message.style = msgType;
                 if(_closeMessageTimer)
                     _closeMessageTimer( );
-            },
+            }
 
-            closeMessageTimer: function(  ){
+            function closeMessageTimer(  ){
                 if(angular.isDefined(mTimer)) return;
                 mTimer = $interval(function(){
+                    messageService.closeMessage();
                     $interval.cancel(mTimer);
                     mTimer = undefined;
                 }, 4000);
 
-            },
-
-            closeMessage: function( ){
-                return { text: null };
             }
 
-        };
+            function closeMessage( ){
+                UIDataService.closeMessage();
+            }
+
+
 
 
     }

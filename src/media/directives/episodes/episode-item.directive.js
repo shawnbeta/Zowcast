@@ -5,9 +5,9 @@
         .module('app.media')
         .directive('episodeItem', episodeItem);
 
-    episodeItem.$inject = ['PlayerService', 'MessageService', 'OverlayService'];
+    episodeItem.$inject = ['PlayerService', 'MessageService', 'OverlayService', 'UIService'];
 
-    function episodeItem(PlayerService, MessageService, OverlayService){
+    function episodeItem(PlayerService, MessageService, OverlayService, UIService){
 
     return  {
 
@@ -15,7 +15,19 @@
 
         scope: true,
 
+        controller: 'EpisodeController',
+        controllerAs: 'vm',
+        bindToController: true,
+
         link: function(scope){
+
+            scope.setViewStyle = function(newStyle){
+                scope.viewStyle = newStyle;
+            };
+
+            scope.toggleBrowseBySubscription = function(){
+                UIService.toggleBrowseBySubscription();
+            };
 
             scope.togglePlayback = function( episode ){
                 PlayerService.togglePlayback( episode );

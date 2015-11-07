@@ -5,12 +5,20 @@
         .module('app.ui')
         .directive('message', message);
 
-    function message(){
+    message.$inject = [ 'UIDataService' ];
+
+    function message( UIDataService ){
+
 
         return {
             restrict : 'E',
-            scope: '=',
+            scope: true,
+            controller: 'UIController',
+            controllerAs: 'vm',
+            bindToController: true,
             templateUrl: 'src/libs/ui/templates/message.html'
+
+
         };
 
     }
