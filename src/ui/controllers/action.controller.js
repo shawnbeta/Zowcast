@@ -47,8 +47,7 @@
         }
 
         function sync(){
-            vm.loadingObject = true;
-            var rsp = SubscriptionService.sync();
+            SubscriptionService.sync();
         }
 
     }

@@ -14,12 +14,12 @@
         var service = {
             // An array to hold all of our subscription objects
             subscriptionCollection: [],
+            add: add,
+            sync: sync,
             loadFromLocalStorage: loadFromLocalStorage,
             loadSampleSubscriptions: loadSampleSubscriptions,
             buildSubscription: buildSubscription,
-            getSubscriptions: getSubscriptions,
-            add: add
-
+            getSubscriptions: getSubscriptions
         };
 
         return service;
@@ -37,6 +37,7 @@
                     if(response.data.subscription){
                         MediaService.subscriptions.push(response.data.subscription);
                         Array.prototype.push.apply(MediaService.episodes, response.data.episodes);
+                        //MediaService.episodes.push(response.data.episodes);
                         localStorage.setItem('subscriptions', JSON.stringify(MediaService.subscriptions));
                         localStorage.setItem('episodes', JSON.stringify(MediaService.episodes));
                         LoadingService.displayLoading(false);
@@ -61,30 +62,6 @@
 
             );
 
-        }
-
-        function getSubscriptions(service){
-            return service.subscriptionCollection;
-        }
-
-        function loadFromLocalStorage() {
-            var subscriptionCollection = localStorage.getItem('subscriptions') ?
-            JSON.parse(localStorage.getItem('subscriptions')) : [];
-            MediaService.setSubscriptions( subscriptionCollection );
-        }
-
-        function loadSampleSubscriptions(){
-            var subscriptionCollection = getSampleSubscriptions();
-            localStorage.setItem('subscriptions', JSON.stringify( subscriptionCollection ));
-            MediaService.setSubscriptions( subscriptionCollection );
-        }
-
-        function buildSubscription( subscription ){
-            subscription.id =  parseInt(subscription.id);
-            subscription.auto_download = parseInt(subscription.auto_download);
-            subscription.create_date = parseInt(subscription.create_date);
-            subscription.modified_date = parseInt(subscription.modified_date);
-            return subscription;
         }
 
         function sync(){
@@ -114,19 +91,50 @@
                 setMediaAdditions(response);
             });
             rspA.then(function(){
-                SubscriptionService.setSyncedSubscriptions();
-                vm.loadingObject = false;
-                vm.messageObject = {
-                    text: 'Subscriptions Synced.',
-                    style: 'swSuccess'
-                };
-                MessageService.closeMessageTimer();
+                setSyncedSubscriptions();
+                LoadingService.displayLoading(false);
+                MessageService.displayMessage(
+                    'Subscriptions Synced.', 'swSuccess',
+                    MessageService.closeMessageTimer()
+                );
+                //vm.loadingObject = false;
+                //vm.messageObject = {
+                //    text: 'Subscriptions Synced.',
+                //    style: 'swSuccess'
+                //};
+                //MessageService.closeMessageTimer();
             });
 
             return rspA;
 
 
         }
+
+        function getSubscriptions(service){
+            return service.subscriptionCollection;
+        }
+
+        function loadFromLocalStorage() {
+            var subscriptionCollection = localStorage.getItem('subscriptions') ?
+            JSON.parse(localStorage.getItem('subscriptions')) : [];
+            MediaService.setSubscriptions( subscriptionCollection );
+        }
+
+        function loadSampleSubscriptions(){
+            var subscriptionCollection = getSampleSubscriptions();
+            localStorage.setItem('subscriptions', JSON.stringify( subscriptionCollection ));
+            MediaService.setSubscriptions( subscriptionCollection );
+        }
+
+        function buildSubscription( subscription ){
+            subscription.id =  parseInt(subscription.id);
+            subscription.auto_download = parseInt(subscription.auto_download);
+            subscription.create_date = parseInt(subscription.create_date);
+            subscription.modified_date = parseInt(subscription.modified_date);
+            return subscription
+        }
+
+
 
         function setMediaAdditions(response){
 
@@ -137,7 +145,7 @@
             localStorage.setItem('subscriptions', JSON.stringify(response.data.subscriptions));
 
             // Subscriptions to local storage overwriting existing values
-            localStorage.setItem('episodes', JSON.stringify(response.data.subscriptions));
+            localStorage.setItem('episodes', JSON.stringify(response.data.episodes));
 
         }
 

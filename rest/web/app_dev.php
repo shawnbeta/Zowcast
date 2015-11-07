@@ -18,6 +18,9 @@ use Symfony\Component\Debug\Debug;
 //     exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 // }
 
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
 Debug::enable();
 

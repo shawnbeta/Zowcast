@@ -29,7 +29,7 @@
     <episode-item ng-repeat="e in vm.episodes | orderByPubDate | ebsFilter"></episode-item>
 </div>
 
-<span ng-if="!vm.episodes">
+<span ng-if="vm.episodes.length == 0">
         <p>You have no episodes. First you'll need to add a subscription.<br/>
             Select sync to add subscriptions from the server or select add to enter a URL.</p>
         <admin-bar></admin-bar>
