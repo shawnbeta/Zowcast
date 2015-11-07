@@ -5,10 +5,10 @@
         .module('app.ui')
         .factory('LoadingService', LoadingService);
 
-    LoadingService.$inject = [ 'UIDataService'  ];
+    LoadingService.$inject = [ 'UIDataService', 'DOMService'];
 
 
-    function LoadingService( UIDataService ){
+    function LoadingService( UIDataService, DOMService ){
 
         var loadingService = {
             displayLoading: displayLoading
@@ -18,6 +18,7 @@
 
         function displayLoading(val){
             UIDataService.displayLoading(val);
+            DOMService.positionElement('.loading');
         }
 
 

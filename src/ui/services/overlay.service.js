@@ -28,7 +28,7 @@
         function setOverlay( data ){
             load( data );
             // Position the overlay element in the correct position.
-            DOMService.positionOverlay();
+            DOMService.positionElement('.overlayContainer');
             //MaskService.displayMask(true);
             UIDataService.mask.visible = true;
         }

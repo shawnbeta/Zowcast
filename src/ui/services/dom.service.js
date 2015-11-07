@@ -9,9 +9,9 @@
 
         return {
 
-            positionOverlay: function(){
+            positionElement: function( element ){
                 var topPosition = jQuery('body').scrollTop();
-                jQuery('.overlayContainer').css({ 'top': topPosition});
+                jQuery(element).css({ 'top': topPosition});
             },
 
             getHTML: function( element ){
