@@ -5,9 +5,9 @@
         .module('app.media')
         .directive('episodeItem', episodeItem);
 
-    episodeItem.$inject = ['PlayerService', 'MessageService', 'OverlayService', 'UIService'];
+    episodeItem.$inject = ['PlayerService', 'MessageService', 'OverlayService', 'DOMService'];
 
-    function episodeItem(PlayerService, MessageService, OverlayService, UIService){
+    function episodeItem(PlayerService, MessageService, OverlayService, DOMService){
 
     return  {
 
@@ -26,7 +26,7 @@
             };
 
             scope.toggleBrowseBySubscription = function(){
-                UIService.toggleBrowseBySubscription();
+                DOMService.toggleBrowseBySubscription();
             };
 
             scope.togglePlayback = function( episode ){
@@ -38,7 +38,7 @@
             };
 
             scope.showEpisodeDetails = function( episode ){
-                OverlayService.setOverlay( scope.overlayObject, episode );
+                OverlayService.setOverlay( episode );
             };
 
             scope.updateWatched = function(){

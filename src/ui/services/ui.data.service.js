@@ -11,7 +11,8 @@
 
             message: {},
             overlay: {},
-            closeMessage: closeMessage
+            closeMessage: closeMessage,
+            closeOverlay: closeOverlay
 
         };
 
@@ -21,6 +22,9 @@
             uiDataService.message.text = null;
         }
 
+        function closeOverlay(){
+            uiDataService.overlay.style = null;
+        }
 
 
     }

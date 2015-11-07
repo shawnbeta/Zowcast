@@ -11,10 +11,16 @@
 
         var vm = this;
 
-        vm.message = UIDataService.message
+        vm.message = UIDataService.message;
+        vm.overlay = UIDataService.overlay;
 
         $scope.closeMessage = function(){
             UIDataService.closeMessage();
         }
+
+        $scope.closeOverlay = function(){
+            UIDataService.closeOverlay();
+        }
+
     }
 })();

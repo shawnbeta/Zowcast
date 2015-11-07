@@ -6,10 +6,10 @@
         .controller('ActionController', ActionController);
 
     ActionController.$inject = [  '$scope', '$location', 'MediaService', 'EpisodeService', 'SubscriptionService',
-     'DataService', 'UtilityService', 'UIService'];
+     'DataService', 'UtilityService', 'DOMService'];
 
     function ActionController(  $scope, $location, MediaService, EpisodeService, SubscriptionService, DataService,
-                                UtilityService, UIService ){
+                                UtilityService, DOMService ){
 
         var vm = this;
         vm.navigation = DataService.nav();
@@ -22,12 +22,16 @@
         $scope.$on('$routeChangeSuccess', function(){
             vm.currentPath = UtilityService.getCurrentPath();
         });
+        $scope.toggleMenu  = function(){
+            DOMService.toggleMenu();
+        };
+
 
         /////////////
 
         function go(path){
             $location.path(path);
-            UIService.scrollToTop();
+            DOMService.scrollToTop();
         }
 
         function clearLocalStorage(){

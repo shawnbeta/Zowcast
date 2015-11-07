@@ -3,11 +3,16 @@
 
     angular
         .module('app.ui')
-        .factory('UIService', UIService);
+        .factory('DOMService', DOMService);
 
-    function UIService(){
+    function DOMService(){
 
         return {
+
+            positionOverlay: function(){
+                var topPosition = jQuery('body').scrollTop();
+                jQuery('.overlayWrapper').css({ 'top': topPosition});
+            },
 
             toggleBrowseBySubscription: function(){
                 var bebs =  jQuery('.episodeBySubscriptionBrowser');
