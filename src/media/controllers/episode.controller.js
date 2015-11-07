@@ -49,6 +49,7 @@
 
         function toggleEBSDisplay(){
             vm.ebsDisplay = vm.ebsDisplay ? false : true;
+            //UIDataService.mask.visible = true;
         }
 
         function setEBS( subscription ){
