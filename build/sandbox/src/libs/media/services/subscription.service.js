@@ -70,7 +70,6 @@
             var rsp = UtilityService.postRequest( data, 'sync' );
 
             var rspB = rsp.then(function(response){
-                console.log(response.data.subscriptions);
                 addSyncedSubscriptions(response.data.subscriptions, response.data.episodes);
                 addToLocalStorage();
                 setSyncedSubscriptions();
@@ -126,8 +125,6 @@
         }
 
         function setSyncedSubscriptions(){
-            console.log('Subscriptions', MediaService.subscriptions);
-            console.log('length', MediaService.subscriptions.length);
             var count = MediaService.subscriptions.length;
             var syncedSubscriptions = [];
             for(var i=0;i<count;i++){

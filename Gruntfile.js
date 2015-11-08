@@ -92,7 +92,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         flatten: true,
-                        src: 'node_modules/angular/angular.js',
+                        src: 'bower_components/angular/angular.js',
                         dest: 'build/sandbox/src/contrib/'
                     },
                     {
@@ -147,15 +147,6 @@ module.exports = function (grunt) {
                         expand: true,
                         flatten: true,
                         src: 'bower_components/toastr/toastr.js',
-                        dest: 'build/sandbox/src/contrib/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: [
-                            'bower_components/angularUtils/src/directives/pagination/dirPagination.js',
-                            'bower_components/angularUtils/src/directives/pagination/dirPagination.tpl.html'
-                        ],
                         dest: 'build/sandbox/src/contrib/'
                     }
                 ]
