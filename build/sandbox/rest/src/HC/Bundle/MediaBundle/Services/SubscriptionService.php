@@ -127,14 +127,21 @@ class SubscriptionService extends MediaService
 		return $Subscription;
 	}
 
+
 	public function sync($sr, $er, $subscriptions)
 	{
 
+		$subscriptions = preg_replace('/[^0-9\,]/', '', $subscriptions);
+
+
 		$subscriptions = array_map('intval', explode(',', $subscriptions));
 
-		$subscriptions = array_sum($subscriptions) < 1 ? $sr->findByPublic(true) : $sr->findById($subscriptions);
+		$subVal = array_sum($subscriptions);
 
-		$episodes = array_sum($subscriptions) < 1 ? $er->findByPublic(true) : $er->findBySubscription($subscriptions);
+		$subscriptions = $subVal < 1 ? $sr->findByPublic(true) : $sr->findById($subscriptions);
+
+
+		$episodes = $subVal < 1 ? $er->findByPublic(true) : $er->findBySubscription($subscriptions);
 		return $this->getSyncArrays($subscriptions, $episodes);
 	}
 
@@ -156,3 +163,5 @@ class SubscriptionService extends MediaService
 	}
 
 }
+
+

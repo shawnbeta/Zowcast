@@ -37,7 +37,8 @@
         function clearLocalStorage(){
             localStorage.removeItem('subscriptions');
             localStorage.removeItem('episodes');
-            MediaService.purgeAll();
+            MediaService.purgeSubscriptions();
+            MediaService.purgeEpisodes();
         }
 
         function loadSamples(){

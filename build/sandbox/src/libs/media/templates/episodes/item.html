@@ -3,7 +3,7 @@
             <div class="swTitle">{{e.title | htmlToPlaintext}}</div>
             <p class="swDescription">{{e.description | htmlToPlaintext}}</p>
         </header>
-        <div class="swImg"><img src="{{e.img}}"></div>
+        <div class="swImg"><img ng-src="{{e.img}}"></div>
         <div class="actionbar">
             <button ng-click="togglePlayback( e )">
                 <i class="fa fa-pause" ng-if="vm.mediaPlayer.loadedEpisode.id == e.id &&

@@ -18,7 +18,6 @@
         "ui/message",
         "ui/nav",
         "ui/overlay",
-        "message",
         "globals",
         "main",
         "player",
@@ -96,9 +95,7 @@
         "vendors/routerhelper",
         "vendors/underscore"
       ],
-      "remote": [
-        "http://fonts.googleapis.com/css?family=Quicksand:300,400,700"
-      ]
+      "remote": []
     }
   },
   "navBar": {

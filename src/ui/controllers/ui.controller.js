@@ -27,8 +27,5 @@
                 UIDataService.closeOverlay();
         };
 
-
-        console.log(UIDataService.mask);
-
     }
 })();

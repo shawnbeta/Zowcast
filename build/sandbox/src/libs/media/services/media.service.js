@@ -25,7 +25,8 @@
             getEpisodes: getEpisodes,
             setSubscriptions: setSubscriptions,
             getSubscriptions: getSubscriptions,
-            purgeAll: purgeAll,
+            purgeSubscriptions: purgeSubscriptions,
+            purgeEpisodes: purgeEpisodes,
             toggleEBSActive: toggleEBSActive,
             setActiveSubscription: setActiveSubscription,
             toggleEBSDisplay: toggleEBSDisplay
@@ -53,8 +54,11 @@
             return self.subscriptions;
         }
 
-        function purgeAll(){
+        function purgeSubscriptions(){
             mediaService.subscriptions = [];
+        }
+
+        function purgeEpisodes(){
             mediaService.episodes = [];
         }
 

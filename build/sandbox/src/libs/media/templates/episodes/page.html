@@ -25,7 +25,7 @@
 <ebs></ebs>
 
 <div class="{{vm.viewStyle}}" ng-if="vm.episodes">
-    <episode-item ng-repeat="e in vm.episodes | orderByPubDate | ebsFilter"></episode-item>
+    <episode-item ng-repeat="e in vm.episodes | orderByPubDate | ebsFilter track by $index"></episode-item>
 </div>
 
 <span ng-if="vm.episodes.length == 0">

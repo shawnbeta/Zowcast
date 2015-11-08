@@ -31,7 +31,6 @@
         }
 
         //function loadSampleEpisodes(service) {
-        //    //console.log(getSampleEpisodes());
         //    // Add JS samples to localStorage so they behave like REST data.
         //    service.episodeCollection = getSampleEpisodes();
         //    localStorage.setItem('episodes', JSON.stringify( service.episodeCollection ));
