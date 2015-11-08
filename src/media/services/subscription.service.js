@@ -91,6 +91,8 @@
         }
 
         function addSyncedSubscriptions(subscriptions, episodes){
+            MediaService.purgeSubscriptions();
+            MediaService.purgeEpisodes();
             MediaService.setSubscriptions( subscriptions );
             MediaService.setEpisodes( episodes );
         }
