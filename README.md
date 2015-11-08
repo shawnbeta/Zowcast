@@ -5,6 +5,7 @@ third party modules like SimplePie and and custom modules. For the front end I u
 create an intuitive user interface. The project uses Grunt to automate builds and for package management
 I use Bower/NPM and Composer.
 
+[Check out the Demo](zowcast.shawnbeta.com "Zowcast App")
 
 
 
