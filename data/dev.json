@@ -28,13 +28,11 @@
       "contrib" : [
         "angular",
         "angular-route",
-        "angular-ui-router",
         "angular-sanitize",
         "angular-touch",
         "truncate",
         "jquery",
-        "underscore",
-        "toastr"
+        "underscore"
       ],
       "libs": [
         "app.module",
@@ -43,9 +41,6 @@
         "core/core.routes",
         "core/controllers/core.controller",
         "core/directives/admin-bar.directive",
-        "core/services/data.service",
-        "core/constants",
-        "core/conf",
         "core/services/conf.service",
 
         "media/media.module",
@@ -81,6 +76,7 @@
         "ui/services/ui.data.service",
         "ui/services/mask.service",
         "ui/services/message.service",
+        "ui/services/navigation.service",
         "ui/services/overlay.service",
         "ui/services/loading.service",
 
@@ -89,10 +85,6 @@
         "utility/services/utility.service",
 
         "vendors/vendors.module",
-        "vendors/exception",
-        "vendors/exception-handler.provider",
-        "vendors/logger",
-        "vendors/routerhelper",
         "vendors/underscore"
       ],
       "remote": []

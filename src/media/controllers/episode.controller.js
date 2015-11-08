@@ -5,11 +5,8 @@
         .module('app.media')
         .controller('EpisodeController', EpisodeController);
 
-    EpisodeController.$inject = [ '$scope', '$filter', 'MediaService', 'EpisodeService', 'SubscriptionService', 'OverlayService',
-        'DOMService', 'MessageService', 'UIDataService', 'LoadingService'];
-
-    function EpisodeController( $scope, $filter, MediaService, EpisodeService, SubscriptionService, OverlayService,
-                                DOMService, MessageService, UIDataService, LoadingService ){
+    /* @ngInject */
+    function EpisodeController( $scope, $filter, EpisodeService, SubscriptionService, MediaService, MessageService, LoadingService ){
 
         var vm = this;
 

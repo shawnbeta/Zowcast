@@ -8,3 +8,8 @@ var app = angular.module('app', [
     'ngSanitize',
     'truncate'
 ]);
+
+// Router doesn't load without this
+
+app.run(['$route', function ($route) {
+}]);

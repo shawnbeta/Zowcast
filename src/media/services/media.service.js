@@ -28,8 +28,7 @@
             purgeSubscriptions: purgeSubscriptions,
             purgeEpisodes: purgeEpisodes,
             toggleEBSActive: toggleEBSActive,
-            setActiveSubscription: setActiveSubscription,
-            toggleEBSDisplay: toggleEBSDisplay
+            setActiveSubscription: setActiveSubscription
         };
 
         return mediaService;
@@ -71,9 +70,6 @@
             mediaService.activeSubscription.title = subscription.title;
         }
 
-        function toggleEBSDisplay(){
-
-        }
 
 
 

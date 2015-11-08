@@ -176,55 +176,68 @@ module.exports = function (grunt) {
                 src: [
                     'bower_components/angular/angular.js',
                     'bower_components/angular-route/angular-route.js',
+                    'bower_components/angular-ui-router/angular-ui-router.js',
                     'bower_components/angular-sanitize/angular-sanitize.js',
                     'bower_components/angular-touch/angular-touch.js',
                     'bower_components/angular-truncate/src/truncate.js',
                     'bower_components/jquery/dist/jquery.js',
                     'bower_components/underscore/underscore.js',
+                    'bower_components/toastr/toastr.js',
 
                     // libs
                     "src/app.module.js",
 
                     "src/core/core.module.js",
                     "src/core/core.routes.js",
-                    "src/core/Core.js",
-                    "src/core/services/ConfigService.js",
+                    "src/core/controllers/core.controller.js",
+                    "src/core/services/conf.service.js",
 
                     "src/media/media.module.js",
                     "src/media/media.routes.js",
-                    "src/media/Episode.js",
-                    "src/media/Subscription.js",
-                    "src/media/directives/episodes/EpisodeItemDirective.js",
-                    "src/media/directives/subscriptions/SubscriptionItemDirective.js",
-                    "src/media/directives/subscriptions/SubscriptionNavigationDirective.js",
-                    "src/media/directives/subscriptions/SubscriptionNavigationItemDirective.js",
-                    "src/media/filters/FilterBySubscription.js",
-                    "src/media/filters/OrderByPubDate.js",
-                    "src/media/filters/SubscriptionFilters.js",
-                    "src/media/services/EpisodeService.js",
-                    "src/media/services/SubscriptionService.js",
+                    "src/media/controllers/episode.controller",
+                    "src/media/controllers/subscription.controller.js",
+                    "src/media/directives/episodes/episode-item.directive.js",
+                    "src/media/directives/subscriptions/subscription-item.directive.js",
+                    "src/media/directives/subscriptions/ebs.directive.js",
+                    "src/media/directives/subscriptions/ebs-item.directive.js",
+                    "src/media/filters/ebs.filter.js",
+                    "src/media/filters/order-by-pub-date.filter.js",
+                    "src/media/filters/order-by-title.filter.js",
+                    "src/media/services/media.service.js",
+                    "src/media/services/episode.service.js",
+                    "src/media/services/subscription.service.js",
 
                     "src/player/player.module.js",
-                    "src/player/directives/PlayerDirective.js",
-                    "src/player/services/PlayerService.js",
+                    "src/player/controllers/player.controller",
+                    "src/player/directives/player.directive.js",
+                    "src/player/services/player.service.js",
 
                     "src/ui/ui.module.js",
-                    "src/ui/controllers/NavigationController.js",
-                    "src/ui/directives/MessageDirective.js",
-                    "src/ui/directives/OverlayDirective.js",
-                    "src/ui/services/UIService.js",
-                    "src/ui/services/MessageService.js",
-                    "src/ui/services/OverlayService.js",
+                    "src/ui/controllers/action.controller.js",
+                    "src/ui/controllers/ui.controller",
+                    "src/ui/directives/navigation.directive",
+                    "src/ui/directives/mask.directive",
+                    "src/ui/directives/menu-toggler.directive",
+                    "src/ui/directives/message.directive",
+                    "src/ui/directives/overlay.directive",
+                    "src/ui/directives/loading.directive",
+                    "src/ui/services/dom.service.js",
+                    "src/ui/services/ui.service.js",
+                    "src/ui/services/mask.service.js",
+                    "src/ui/services/message.service.js",
+                    "src/ui/services/overlay.service.js",
+                    "src/ui/services/loading.service.js",
 
                     "src/utility/utility.module.js",
-                    "src/utility/directives/LoadingDirective.js",
-                    "src/utility/filters/UtilityFilters.js",
-                    "src/utility/services/UtilityService.js",
+                    "src/utility/filters/utility.filter.js",
+                    "src/utility/services/utility.service.js",
 
                     "src/vendors/vendors.module.js",
-                    "src/vendors/services/UnderscoreService.js"
-
-
+                    //"src/vendors/exception.js",
+                    //"src/vendors/exception-handler.provider.js",
+                    //"src/vendors/logger.js",
+                    "src/vendors/routerhelper.js",
+                    "src/vendors/underscore.js"
                 ],
                 dest: 'build/temp/main.js'
             }
@@ -353,7 +366,7 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['clean:dev', 'copy:dev', 'karma']);
     grunt.registerTask('dev', ['clean:dev', 'mustache_render:dev', 'less:dev',
         'copy:dev', 'jshint:beforeconcat', /*'protractor', 'karma'*/]);
-    grunt.registerTask('staging', ['clean:staging', 'mustache_render:staging', 'mustache_render:core', 'less:staging',
+    grunt.registerTask('staging', ['clean:staging', 'mustache_render:staging', 'less:staging',
         'concat:staging', 'copy:staging', 'uglify:staging', 'cssmin:staging', 'clean:temp']);
 
 

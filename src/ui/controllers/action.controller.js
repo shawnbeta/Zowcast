@@ -5,14 +5,15 @@
         .module('app.ui')
         .controller('ActionController', ActionController);
 
-    ActionController.$inject = [  '$scope', '$location', 'MediaService', 'EpisodeService', 'SubscriptionService',
-     'DataService', 'UtilityService', 'DOMService'];
+    //ActionController.$inject = [  '$scope', '$location', 'MediaService', 'EpisodeService', 'SubscriptionService',
+    // 'NavigationService', 'UtilityService', 'DOMService'];
 
-    function ActionController(  $scope, $location, MediaService, EpisodeService, SubscriptionService, DataService,
+    /* @ngInject */
+    function ActionController(  $scope, $location, MediaService, EpisodeService, SubscriptionService, NavigationService,
                                 UtilityService, DOMService ){
 
         var vm = this;
-        vm.navigation = DataService.nav();
+        vm.navigation = NavigationService.getNavigation();
         vm.currentPath = UtilityService.getCurrentPath();
 
         $scope.go = go;
