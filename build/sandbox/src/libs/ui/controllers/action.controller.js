@@ -5,10 +5,10 @@
         .module('app.ui')
         .controller('ActionController', ActionController);
 
-    //ActionController.$inject = [  '$scope', '$location', 'MediaService', 'EpisodeService', 'SubscriptionService',
-    // 'NavigationService', 'UtilityService', 'DOMService'];
+    ActionController.$inject = [  '$scope', '$location', 'MediaService', 'EpisodeService', 'SubscriptionService',
+     'NavigationService', 'UtilityService', 'DOMService'];
 
-    /* @ngInject */
+
     function ActionController(  $scope, $location, MediaService, EpisodeService, SubscriptionService, NavigationService,
                                 UtilityService, DOMService ){
 
@@ -53,7 +53,7 @@
             rsp.then(function(response){
                 EpisodeService.loadSyncedEpisodes(response.data.episodes);
                 SubscriptionService.loadSyncedSubscriptions(response.data.subscriptions);
-            })
+            });
 
         }
 

@@ -9,7 +9,7 @@ class SimplePieService
 
     public function __construct($url){
         $simplePie = new \SimplePie();
-        $simplePie->set_cache_location($_SERVER['DOCUMENT_ROOT'] . '/zowcast/rest/cache');
+        $simplePie->set_cache_location(getcwd(). '/cache');
         $simplePie->set_feed_url($url);
         $simplePie->init();
         $simplePie->handle_content_type();

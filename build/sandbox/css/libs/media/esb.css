@@ -23,15 +23,26 @@
   z-index: 6;
   top: 0;
   background: red;
+  margin: 0 -15px;
 }
 .ebsContainer .ebs {
   background: green;
-  width: 90%;
-  margin: 20px auto;
   background: #ffffff;
-  max-width: 800px;
   min-height: 200px;
   position: relative;
+}
+@media (max-width: 767px) {
+  .ebsContainer .ebs {
+    margin: 20px auto;
+    width: 95%;
+  }
+}
+@media (min-width: 768px) {
+  .ebsContainer .ebs {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+  }
 }
 .ebsContainer .ebs .swCloseIcon {
   color: #f1c604;
