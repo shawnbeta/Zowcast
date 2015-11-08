@@ -9,8 +9,6 @@
 
     function SubscriptionService( MediaService, LoadingService, UtilityService, MessageService ){
 
-
-
         var service = {
             // An array to hold all of our subscription objects
             subscriptionCollection: [],
@@ -55,30 +53,19 @@
                     );
                 });
 
-            var rspB = rspA.then(function(){
-                //addToLocalStorage();
-            });
-            var rspC = rspB.then(function(){
+            rspA.then(function(){
                 //setSyncedSubscriptions();
                 LoadingService.displayLoading(false);
                 MessageService.displayMessage(
                     'New Subscription Added.', 'swSuccess', MessageService.closeMessageTimer()
                 );
             });
-            return rspC;
-
-
-
         }
 
         function sync(){
             // Get the users(BROWSERS) current subscriptions from localStorage
             var syncedSubscriptions = localStorage.getItem('syncedSubscriptions') ?
                 localStorage.getItem('syncedSubscriptions') : null;
-
-            console.log('SyncedSUbs', syncedSubscriptions);
-
-
             var data = { syncedSubscriptions: syncedSubscriptions };
             var rsp = UtilityService.postRequest( data, 'sync' );
 
@@ -87,14 +74,9 @@
                 addSyncedSubscriptions(response.data.subscriptions, response.data.episodes);
                 addToLocalStorage();
                 setSyncedSubscriptions();
-                //MediaService.setSubscriptions(primaryResponse.data.subscriptions);
             });
 
-            var rspC = rspB.then(function(){
-                //MediaService.setSubscriptions(primaryResponse.data.subscriptions);
-                //MediaService.setEpisodes(response.data.episodes);
-                //addToLocalStorage();
-                //setSyncedSubscriptions();
+            rspB.then(function(){
                 LoadingService.displayLoading(false);
                 MessageService.displayMessage(
                     'Subscriptions Synced.', 'swSuccess',
@@ -110,20 +92,11 @@
         }
 
         function addSyncedSubscriptions(subscriptions, episodes){
-            // Clear out the existing service subscriptions
-            //MediaService.purgeSubscriptions();
-            //
-            //Array.prototype.push.apply(MediaService.subscriptions, response.data.subscriptions);
-            MediaService.subscriptions = subscriptions;
-            MediaService.episodes = episodes;
+            MediaService.setSubscriptions( subscriptions );
+            MediaService.setEpisodes( episodes );
         }
 
-
-
-
         function addToLocalStorage(){
-            console.log(MediaService.subscriptions);
-            console.log('beans');
             localStorage.setItem('subscriptions', JSON.stringify(MediaService.subscriptions));
             localStorage.setItem('episodes', JSON.stringify(MediaService.episodes));
         }
@@ -152,26 +125,16 @@
             return subscription;
         }
 
-
-
-
-
-
-
         function setSyncedSubscriptions(){
             console.log('Subscriptions', MediaService.subscriptions);
             console.log('length', MediaService.subscriptions.length);
             var count = MediaService.subscriptions.length;
             var syncedSubscriptions = [];
             for(var i=0;i<count;i++){
-                //console.log(MediaService.subscriptions[i]['id']);
-                //console.log(MediaService.subscriptions[i].id);
-
                 syncedSubscriptions.push(MediaService.subscriptions[i].id);
             }
             localStorage.setItem('syncedSubscriptions', JSON.stringify(syncedSubscriptions));
         }
-
 
         function getSampleSubscriptions() {
             return [{
