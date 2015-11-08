@@ -7,7 +7,6 @@
 
     config.$inject = ['$routeProvider'];
 
-    ///* @ngInject */
     function config($routeProvider) {
         $routeProvider
             .when('/episodes', {

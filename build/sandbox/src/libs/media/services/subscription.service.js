@@ -17,7 +17,9 @@
             loadFromLocalStorage: loadFromLocalStorage,
             loadSampleSubscriptions: loadSampleSubscriptions,
             buildSubscription: buildSubscription,
-            getSubscriptions: getSubscriptions
+            getSubscriptions: getSubscriptions,
+            getSampleSubscriptions: getSampleSubscriptions,
+            loadSyncedSubscriptions: loadSyncedSubscriptions
         };
 
         return service;
@@ -67,21 +69,14 @@
             var syncedSubscriptions = localStorage.getItem('syncedSubscriptions') ?
                 localStorage.getItem('syncedSubscriptions') : null;
             var data = { syncedSubscriptions: syncedSubscriptions };
-            var rsp = UtilityService.postRequest( data, 'sync' );
+            return UtilityService.postRequest( data, 'sync' );
+        }
 
-            var rspB = rsp.then(function(response){
-                addSyncedSubscriptions(response.data.subscriptions, response.data.episodes);
-                addToLocalStorage();
-                setSyncedSubscriptions();
-            });
 
-            rspB.then(function(){
-                LoadingService.displayLoading(false);
-                MessageService.displayMessage(
-                    'Subscriptions Synced.', 'swSuccess',
-                    MessageService.closeMessageTimer()
-                );
-            });
+
+        function loadSyncedSubscriptions(subscriptions){
+            localStorage.setItem('subscriptions', JSON.stringify( subscriptions ));
+            MediaService.setSubscriptions( subscriptions );
         }
 
         function addNewSubscription(subscription, episodes){
@@ -90,12 +85,6 @@
             Array.prototype.push.apply(MediaService.episodes, episodes);
         }
 
-        function addSyncedSubscriptions(subscriptions, episodes){
-            MediaService.purgeSubscriptions();
-            MediaService.purgeEpisodes();
-            MediaService.setSubscriptions( subscriptions );
-            MediaService.setEpisodes( episodes );
-        }
 
         function addToLocalStorage(){
             localStorage.setItem('subscriptions', JSON.stringify(MediaService.subscriptions));

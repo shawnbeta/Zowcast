@@ -6,7 +6,8 @@
         .module('app.core')
         .config(config);
 
-    /* @ngInject */
+    config.$inject = ['$routeProvider'];
+
     function config($routeProvider) {
         $routeProvider
             .when('/', {

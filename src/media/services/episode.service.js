@@ -7,13 +7,14 @@
 
     EpisodeService.$inject = [ 'MediaService' ];
 
-    function EpisodeService( MediaService ) {
+    function EpisodeService( MediaService) {
 
         var episodeService = {
             loadFromLocalStorage: loadFromLocalStorage,
             loadSampleEpisodes: loadSampleEpisodes,
                buildEpisode: buildEpisode,
-               getSampleEpisodes: getSampleEpisodes
+               getSampleEpisodes: getSampleEpisodes,
+            loadSyncedEpisodes: loadSyncedEpisodes
         };
 
         return episodeService;
@@ -30,27 +31,11 @@
             MediaService.setEpisodes( episodeCollection );
         }
 
-        //function loadSampleEpisodes(service) {
-        //    // Add JS samples to localStorage so they behave like REST data.
-        //    service.episodeCollection = getSampleEpisodes();
-        //    localStorage.setItem('episodes', JSON.stringify( service.episodeCollection ));
-        //    return service.episodeCollection;
-        //}
+        function loadSyncedEpisodes(episodes){
+            localStorage.setItem('episodes', JSON.stringify( episodes ));
+            MediaService.setEpisodes( episodes );
+        }
 
-        //function devEpisode(id) {
-        //        return {
-        //            id: 88 + id,
-        //            title: 'Test Episode' + id,
-        //            description: 'This is a test for an Episode object' + id,
-        //            src: 'http:shawnbeta.com' + id,
-        //            watched: 0,
-        //            bookmark: 2.2,
-        //            pub_date: 555,
-        //            create_date: 1543,
-        //            modified_date: 661,
-        //            subscription_id: 10
-        //        };
-        //    }
 
         function buildEpisode(episode, subscriptions) {
             episode.id = parseInt(episode.id);

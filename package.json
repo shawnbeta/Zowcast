@@ -25,7 +25,8 @@
     "karma-ng-html2js-preprocessor": "~0.1.2",
     "grunt-contrib-jshint": "~0.11.3",
     "grunt-protractor-runner": "~2.1.0",
-    "protractor": "~2.5.1"
+    "protractor": "~2.5.1",
+    "grunt-ng-annotate": "~1.0.1"
   },
   "scripts": {
     "test": "karma start"

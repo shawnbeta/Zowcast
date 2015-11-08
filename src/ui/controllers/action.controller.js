@@ -49,7 +49,12 @@
         }
 
         function sync(){
-            SubscriptionService.sync();
+            var rsp = SubscriptionService.sync();
+            rsp.then(function(response){
+                EpisodeService.loadSyncedEpisodes(response.data.episodes);
+                SubscriptionService.loadSyncedSubscriptions(response.data.subscriptions);
+            })
+
         }
 
     }

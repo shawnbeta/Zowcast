@@ -5,8 +5,12 @@
         .module('app.media')
         .controller('EpisodeController', EpisodeController);
 
-    /* @ngInject */
-    function EpisodeController( $scope, $filter, EpisodeService, SubscriptionService, MediaService, MessageService, LoadingService ){
+    EpisodeController.$inject = ['$scope', '$filter', 'EpisodeService', 'SubscriptionService', 'MediaService',
+        'MessageService', 'LoadingService'];
+
+
+    function EpisodeController( $scope, $filter, EpisodeService, SubscriptionService, MediaService,
+                                MessageService, LoadingService ){
 
         var vm = this;
 
