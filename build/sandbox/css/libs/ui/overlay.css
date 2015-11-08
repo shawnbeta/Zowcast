@@ -1,0 +1,46 @@
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after,
+.pager:before,
+.pager:after {
+  content: " ";
+  display: table;
+}
+.container:after,
+.container-fluid:after,
+.row:after,
+.pager:after {
+  clear: both;
+}
+.overlayContainer {
+  position: absolute;
+  width: 100%;
+}
+.overlayContainer {
+  height: 0;
+  overflow: visible;
+  z-index: 7;
+}
+.overlayContainer .overlay {
+  width: 90%;
+  margin: 20px auto;
+  background: #ffffff;
+  max-width: 600px;
+  min-height: 300px;
+  position: relative;
+}
+.overlayContainer .overlay .swCloseIcon {
+  color: #f1c604;
+}
+.overlayContainer .overlay header {
+  display: block;
+  background: #d73e33;
+  color: #ffffff;
+  padding: 8px 20px;
+}
+.overlayContainer .overlay .swDescription {
+  padding: 8px 10px 20px;
+}

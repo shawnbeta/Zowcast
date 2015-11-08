@@ -1,0 +1,30 @@
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after,
+.pager:before,
+.pager:after {
+  content: " ";
+  display: table;
+}
+.container:after,
+.container-fluid:after,
+.row:after,
+.pager:after {
+  clear: both;
+}
+.mask {
+  position: fixed;
+  width: 100%;
+}
+.mask {
+  z-index: 5;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
